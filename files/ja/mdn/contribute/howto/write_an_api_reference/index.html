@@ -1,0 +1,479 @@
+---
+title: API リファレンスの書き方
+slug: MDN/Contribute/Howto/Write_an_API_reference
+tags:
+  - API
+  - Documentation
+  - Guide
+  - Howto
+  - MDN Meta
+translation_of: MDN/Contribute/Howto/Write_an_API_reference
+---
+<div>{{MDNSidebar}}</div>
+
+<div class="summary">
+<p><span class="seoSummary">このガイドでは、 MDN で API リファレンスを書くために必要なことをすべて説明しています。</span></p>
+</div>
+
+<h2 id="Getting_prepared">準備</h2>
+
+<p>API のドキュメントを実際に書き始める前に、事前に準備や計画をしておくべきことがいくつかあります。</p>
+
+<h3 id="Prerequisite_knowledge">前提知識</h3>
+
+<p>このガイドを読む前に、以下の知識を持っている人を想定しています。</p>
+
+<ul>
+ <li>HTML、CSS、JavaScript などのウェブ技術。 JavaScript が最も重要です。</li>
+ <li>ウェブ技術の仕様書の読み取り。 API を文書化する際に何度も見ることになるでしょう。</li>
+</ul>
+
+<p>それ以外のことは、途中で学ぶことができます。</p>
+
+<div class="note notecard">
+<p><strong>訳注</strong>: リファレンス記事は最初に英語版の記事を書いてください。英語版の記事なしに、日本語版のリファレンス記事を書くことはできません。したがって、執筆には英語の知識が必要です。</p>
+</div>
+
+<h3 id="Prerequisite_resources">前提リソース</h3>
+
+<p>API の文書化を始める前に、次のものが利用できるようにしてください。</p>
+
+<ol>
+ <li>最新の仕様書。 W3C 勧告であろうと、初期の編集者の草稿であろうと、その API をカバーする仕様書 (または仕様書群) を参照する必要があります。ふつうはウェブ検索で見つけられます。最新版は、仕様書のすべての版からリンクされていることが多く、 "latest draft" などと記載されています。</li>
+ <li>最新のモダンウェブブラウザー。 <a href="https://nightly.mozilla.org/">Firefox Nightly</a> や <a href="https://www.google.com/intl/en/chrome/browser/canary.html">Chrome Canary</a> のような実験的/アルファビルドで、文書化しようとしている機能をサポートしている可能性が高いものが望ましいです。これは、新しい/実験的な API を文書化する場合に特に重要です。</li>
+ <li>デモ、ブログ記事、その他の情報。できる限り多くの情報を見つけてください。</li>
+ <li>有用なエンジニアの連絡先。 API の標準化やブラウザーへの実装に関わっている人など、仕様について質問できる親切なエンジニアの連絡先を見つけておくと本当に便利です。連絡先を見つけるには以下のような方法があります。
+  <ul>
+   <li>関連する会社に勤めているのであれば、社内のアドレス帳。</li>
+   <li>その API の議論に関与している公開メーリングリスト。例えば、 Mozilla の <a href="https://lists.mozilla.org/listinfo/dev-platform">dev-platform</a> や <a href="https://lists.mozilla.org/listinfo/dev-webapi">dev-webapi</a>、あるいは  W3C の <a href="https://lists.w3.org/Archives/Public/public-webapps/">public-webapps</a> など。</li>
+   <li>仕様書そのもの。例えば、 <a href="https://webaudio.github.io/web-audio-api/">Web Audio API spec</a> では、先頭に筆者とその連絡先が書かれています。</li>
+  </ul>
+ </li>
+</ol>
+
+<h3 id="Take_some_time_to_play_with_the_API">時間を取って API を使ってみる</h3>
+
+<p>API を文書化する過程で、何度もデモの作成に戻ることになりますが、まずは API がどのように動作するかに慣れることに時間を費やすことが有益です。主なインターフェース、プロパティ、メソッドが何であるか、主な利用法は何か、そしてそれを使ってどのように簡単な機能を書くかを学びましょう。</p>
+
+<p>API が変更された場合、参考にしたり学んだりする既存のデモが古くなっていないか注意する必要があります。デモで使われている主な構成要素が、最新の仕様と一致しているかどうかを確認してください。また、最新のブラウザーでは動作しないかもしれませんが、古い機能が後方互換性のために対応し続けていることが多いので、これはあまり信頼できるテストではありません。</p>
+
+<div class="note notecard">
+<p><strong>注</strong>: 仕様が最近更新されたばかりで、メソッドの定義が変わったが、古いメソッドがまだブラウザーで動作している場合、新旧のメソッドをカバーするために、両方を同じ場所に記述しなければならないことがよくあります。困ったときは、見つけたデモを参考にしたり、エンジニアに聞いてみたりしてください。</p>
+</div>
+
+<h3 id="Create_the_list_of_documents_you_need_to_write_or_update">執筆や更新が必要なドキュメントの一覧の作成</h3>
+
+<p>API リファレンスには、通常、以下のページが含まれます。各ページの内容、例、テンプレートなどの詳細については、<a href="/ja/docs/MDN/Structures/Page_types">ページの種類</a>の記事をご覧ください。始める前に、作成すべきすべてのページのリストを書き出してください。</p>
+
+<ol>
+ <li>概要ページ</li>
+ <li>インターフェイスページ</li>
+ <li>コンストラクターページ</li>
+ <li>メソッドページ</li>
+ <li>プロパティページ (イベントハンドラープロパティを含む)</li>
+ <li>イベントページ</li>
+ <li>概要/ガイドページ</li>
+ <li>例</li>
+</ol>
+
+<div class="note">
+<p><strong>注</strong>: この記事では例として <a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API</a> を参照します。</p>
+</div>
+
+<h4 id="Overview_pages">概要ページ</h4>
+
+<p>単一の API 概要ページは、 API の役割、最上位のインターフェイス、他のインターフェイスに含まれる関連機能、その他の高レベルの詳細を説明するために使用されます。その名前とスラッグは、 API の名前と末尾に "API" を付けたものでなければなりません。 <a href="/en-US/docs/Web/API">https://developer.mozilla.org/en-US/docs/Web/API</a> の子として、 API リファレンスの最上位に配置されます。</p>
+
+<p>例:</p>
+
+<ul>
+ <li>タイトル: <em>Web Audio API</em></li>
+ <li>スラッグ: <em>Web_Audio_API</em></li>
+ <li>URL: <a href="/en-US/docs/Web/API/Web_Audio_API">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API</a></li>
+</ul>
+
+<h4 id="Interface_pages">インターフェイスページ</h4>
+
+<p>それぞれのインターフェイスには独自のページがあり、インターフェイスの目的を説明し、すべてのメンバー (コンストラクター、メソッド、プロパティなど) をリストアップし、どのブラウザーで互換性があるかを示しています。ページの名前とスラッグは、仕様書に書かれている通りのインターフェイスの名前でなければなりません。各ページは、 <a href="/en-US/docs/Web/API">https://developer.mozilla.org/en-US/docs/Web/API</a> の子として、 API リファレンスの最上位に配置されます。</p>
+
+<p>例:</p>
+
+<ul>
+ <li>タイトル: <em>AudioContext</em></li>
+ <li>スラッグ: <em>AudioContext</em></li>
+ <li>URL: <a href="/en-US/docs/Web/API/AudioContext">https://developer.mozilla.org/en-US/docs/Web/API/AudioContext</a></li>
+</ul>
+
+<ul>
+ <li>タイトル: <em>AudioNode</em></li>
+ <li>スラッグ: <em>AudioNode</em></li>
+ <li>URL: <a href="/en-US/docs/Web/API/AudioNode">https://developer.mozilla.org/en-US/docs/Web/API/AudioNode</a></li>
+</ul>
+
+<div class="note">
+<p><strong>注:</strong> 私たちは、インターフェイスに登場するすべてのメンバーを記録しています。以下のルールを意識してください。</p>
+
+<ul>
+ <li>このインターフェイスを実装するオブジェクトのプロトタイプで定義されたメソッド (インスタンスメソッド) と、実際のクラス自体で定義されたメソッド (静的メソッド) を文書化してください。稀に同じインターフェイス上に両方が存在することがありますが、ページ内の別々の節 (Static methods/Instance methods) に記載する必要があります。通常はインスタンスメソッドのみが存在するので、その場合は "Methods" というタイトルで記載してください。</li>
+ <li>インターフェイスの継承されたプロパティやメソッドは文書化していません。それぞれの親インターフェイスに記載されています。しかし、それが存在するというヒントを紹介します。</li>
+ <li>ミックスインで定義されたプロパティとメソッドは文書化しています。詳しくは、 <a href="/ja/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#mixins">ミックスインの執筆ガイド</a>をご覧ください。</li>
+ <li>文字列化 (<code>toString()</code>) や JSON 化 (<code>toJSON()</code>) などの特別なメソッドが存在する場合は、それらも記載します。</li>
+ <li>名前付きコンストラクター ({{domxref("HTMLImageElement")}} の <code>Image()</code> など) も、関連性があれば掲載してください。</li>
+</ul>
+</div>
+
+<h4 id="Constructor_pages">コンストラクターページ</h4>
+
+<p>各インターフェイスには 0 個または 1 個のコンストラクターがあり、インターフェイスのページのサブページに文書化します。コンストラクターの目的を記載し、どのような構文なのか、使用例、ブラウザー互換性情報などを示します。スラッグはインターフェイス名とまったく同じコンストラクター名で、タイトルはインターフェイス名、ドット、コンストラクター名、そして最後に括弧が入ります。</p>
+
+<p>例:</p>
+
+<ul>
+ <li>タイトル: <em>AudioContext.AudioContext()</em></li>
+ <li>スラッグ: <em>AudioContext</em></li>
+ <li>URL: <a href="/en-US/docs/Web/API/AudioContext/AudioContext">https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/AudioContext</a></li>
+</ul>
+
+<h4 id="Property_pages">プロパティページ</h4>
+
+<p>各インターフェイスには 0 個以上のプロパティがあり、インターフェイスのページのサブページに文書化します。各ページには、プロパティの目的を記載し、どのような構文なのか、使用例、ブラウザー互換性情報などを示します。スラッグはプロパティの名前で、タイトルはインターフェイス名、ドット、プロパティ名の順になっています。</p>
+
+<p>例:</p>
+
+<ul>
+ <li>タイトル: <em>AudioContext.state</em></li>
+ <li>スラッグ: <em>state</em></li>
+ <li>URL: <a href="/en-US/docs/Web/API/BaseAudioContext/state">https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/state</a></li>
+</ul>
+
+<ul>
+ <li>タイトル: <em>AudioContext.onstatechange</em></li>
+ <li>スラッグ: <em>onstatechange</em></li>
+ <li>URL: <a href="/en-US/docs/Web/API/BaseAudioContext/onstatechange">https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/onstatechange</a></li>
+</ul>
+
+<div class="note">
+<p><strong>注:</strong> イベントハンドラープロパティは、通常のプロパティと同じように扱われますが、インターフェースページでは一般的に別の節に記載されます。</p>
+</div>
+
+<h4 id="Method_pages">メソッドページ</h4>
+
+<p>各インターフェイスには 0 個以上のメソッドがあり、インターフェイスのページのサブページに文書化します。各ページには、メソッドの目的を記載し、どのような構文なのか、使用例、ブラウザー互換性情報などを示します。タイトルはインターフェイス名、ドット、メソッド名、そして最後に括弧が入ります。</p>
+
+<p>例:</p>
+
+<ul>
+ <li>タイトル: <em>AudioContext.close()</em></li>
+ <li>スラッグ: <em>close</em></li>
+ <li>URL: <a href="/en-US/docs/Web/API/AudioContext/close">https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/close</a></li>
+</ul>
+
+<ul>
+ <li>タイトル: <em>AudioContext.createGain()</em></li>
+ <li>スラッグ: <em>createGain</em></li>
+ <li>URL: <a href="/en-US/docs/Web/API/BaseAudioContext/createGain">https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createGain</a></li>
+</ul>
+
+<h4 id="Event_pages">Event pages</h4>
+
+<p>Each event handler property you create will have a corresponding event page, describing the event that causes the handler to fire, documented on a subpage of <a href="/en-US/docs/Web/Events">https://developer.mozilla.org/en-US/docs/Web/Events</a>. Each page describes the purpose of the event and shows what its syntax looks like, usage examples, browser compatibility information, etc. Its slug and title is the name of the event.</p>
+
+<p>Example:</p>
+
+<ul>
+ <li>Title: <em>statechange</em></li>
+ <li>Slug: <em>statechange</em></li>
+ <li>URL: <a href="/en-US/docs/Web/API/RTCIceTransport/statechange_event">https://developer.mozilla.org/en-US/docs/Web/Events/statechange</a></li>
+</ul>
+
+<h4 id="Conceptguide_pages">Concept/guide pages</h4>
+
+<p>Most API references have at least one guide and sometimes also a concept page to accompany it. At minimum, an API reference should contain a guide called "Using the <em>name-of-api</em>", which will provide a basic guide to how to use the API. More complex APIs may require multiple usage guides to explain how to use different aspects of the API.</p>
+
+<p>If required, you can also including a concepts article called "<em>name-of-api</em> concepts", which will provide explanation of the theory behind any concepts related to the API that developers should understand to effectively use it.</p>
+
+<p>These articles should all be created as subpages of the API overview page. For example, the Web Audio has four guides and a concept article:</p>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API</a></li>
+</ul>
+
+<h4 id="Examples">Examples</h4>
+
+<p>You should create some examples that demonstrate at least the most common use cases of the API. You can put these anywhere that is appropriate, although the recommended place is the <a href="https://github.com/mdn/">MDN GitHub repo</a>.</p>
+
+<h4 id="Listing_them_all">Listing them all</h4>
+
+<p>Creating a list of all these subpages is a good way to track them. For example:</p>
+
+<ul>
+ <li>Web_Audio_API</li>
+ <li>AudioContext
+  <ul>
+   <li>AudioContext.currentTime</li>
+   <li>AudioContext.destination</li>
+   <li>AudioContext.listener</li>
+   <li>  ...</li>
+   <li>AudioContext.createBuffer()</li>
+   <li>AudioContext.createBufferSource()</li>
+   <li>  ...</li>
+  </ul>
+ </li>
+ <li>AudioNode
+  <ul>
+   <li>AudioNode.context</li>
+   <li>AudioNode.numberOfInputs</li>
+   <li>AudioNode.numberOfOutputs</li>
+   <li>  ...</li>
+   <li>AudioNode.connect(Param)</li>
+   <li>  ...</li>
+  </ul>
+ </li>
+ <li>AudioParam</li>
+ <li>Events (update list)
+  <ul>
+   <li>start</li>
+   <li>end</li>
+   <li>…</li>
+  </ul>
+ </li>
+</ul>
+
+<p>Each interface in the list has a separate page created for it as a subpage of https://developer.mozilla.org/en-US/docs/Web/API; for example, the document for {{domxref("AudioContext")}} would be located at https://developer.mozilla.org/en-US/docs/Web/API/AudioContext. Each {{anch("Interface pages", "interface page")}} explains what that interface does and provides a list of the methods and properties that comprise the interface. Then each method and property is documented on its own page, which is created as a subpage of the interface it's a member of. For instance, {{domxref("BaseAudioContext/currentTime")}} is documented at https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/currentTime.</p>
+
+<h2 id="Create_the_pages">Create the pages</h2>
+
+<p>Now create the pages you need, according to the structures below. Our <a href="https://github.com/mdn/content#adding-a-new-document">MDN content README</a> contains instructions on creating a new document, and our <a href="/en-US/docs/MDN/Structures/Page_types">Page types</a> guide contains further examples and page templates that might be useful.</p>
+
+<h3 id="Structure_of_an_overview_page">Structure of an overview page</h3>
+
+<p>API landing pages will differ greatly in length, depending on how big the API is, but they will all have basically the same features. See <a href="/en-US/docs/Web/API/Web_Audio_API">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API</a> for an example of a big landing page.</p>
+
+<p>The features of a landing page are outlined below:</p>
+
+<ol>
+ <li><strong>Description</strong>: the first paragraph of the landing page should provide a short, concise description of the API's overarching purpose.</li>
+ <li><strong>Concepts and usage section</strong>: The next section should be titled "[name  of  API] concepts and usage", and provide an overview of all the main functionality that the API provides, what problems it solves, and how it  works — all at a high level. This section should be fairly short,  and not go into code or specific implementation details.</li>
+ <li><strong>List of interfaces</strong>: This section should be titled "[name of API]  interfaces", and provide links to the reference page for each interface that makes up the API, along with a short description of what each one does. See the "Referencing other API features with the \{{domxref}} macro" section for a quicker way to create new pages.</li>
+ <li><strong>Examples</strong>: This section should show a simple use case or two for the API.</li>
+ <li><strong>Specifications table</strong>: At this point you need to include a  specifications table — see the "Creating a spec reference table"  section for more details.</li>
+ <li><strong>Browser compatibility</strong>: Now you need to include a browser compatibility table. See <a href="/en-US/docs/MDN/Structures/Compatibility_tables">Compatibility tables</a> for details.</li>
+ <li><strong>See also</strong>: The "See also" section is a good place to include further links that may be useful when learning about this technology, including MDN (and external) tutorials, examples, libraries, etc.</li>
+ <li><strong>Tags</strong>: There is a set of standard tags you should include for each reference page — see the "Tags" section for more.</li>
+</ol>
+
+<h3 id="Structure_of_an_interface_page">Structure of an interface page</h3>
+
+<p>Now you should be ready to start writing your interface pages. Each interface reference page should observe the following structure:</p>
+
+<ol>
+ <li><strong>\{{APIRef}}</strong>: Include the \{{APIRef}} macro in the first line of each interface page, including the name of the API as an argument, so for example \{{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left hand side of the interface page, including properties and methods, and other quicklinks as defined in the <a href="https://github.com/mdn/kumascript/blob/master/macros/GroupData.json">GroupData</a> macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.<br>
+  <img alt="This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro " src="apiref-links.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li><strong>Standardization status</strong>: The banner indicating the standardization status should be added next (these can be placed on the same line as the \{{APIRef}} macro.):
+  <ul>
+   <li>\{{SeeCompatTable}} for an experimental feature (i.e. the spec is not at the CR level.)</li>
+   <li>\{{Deprecated_header}}</li>
+   <li>\{{Non-standard_header}}</li>
+  </ul>
+ </li>
+ <li><strong>Description</strong>: the first paragraph of the interface page should provide a short concise description of the interface's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. If the interface is actually a dictionary, you should use that term instead of "interface".</li>
+ <li><strong>Inheritance diagram:</strong> Use the {{TemplateLink("InheritanceDiagram")}} macro to embed an SVG inheritance diagram for the interface. For most interfaces, you won't need any parameters, but if the inheritance chain is long, you may need to use \{{InheritanceDiagram(600, 120)}} to make room vertically for two rows of boxes.</li>
+ <li>
+  <p><strong>List of properties, List of methods</strong>: These sections should be titled  "Properties" and "Methods", and provide links (using the \{{domxref}} macro) to a reference  page for each property/method of that interface, along with a description of what  each one does. These should be marked up using description/definition  lists, which can be created using the  "Definition List", "Definition  Term", and "Definition Description" buttons on the MDN editor toolbar. Each description should be short and concise — one sentence if possible. See the "Referencing other API features with the \{{domxref}} macro" section for a quicker way to create links to other pages.<br>
+   <br>
+   At the beginning of both sections, before the beginning of the list of properties/methods, indicate inheritance using the appropriate sentence, in italics:<br>
+   <em>This interface doesn't implement any specific properties, but inherits properties from \{{domxref("XYZ")}}, and \{{domxref("XYZ2")}}.</em><br>
+   <em>This interface also inherits properties from \{{domxref("XYZ")}}, and \{{domxref("XYZ2")}}.</em><br>
+   <em>This interface doesn't implement any specific methods, but inherits methods from \{{domxref("XYZ")}}, and \{{domxref("XYZ2")}}.</em><br>
+   <em>This interface also inherits methods from \{{domxref("XYZ")}}, and \{{domxref("XYZ2")}}.</em>
+  </p>
+
+  <div class="note notecard">
+  <p><strong>Note</strong>: If the interface features event handlers, put these inside the "Properties" section (they are a type of property) under a subheading of "Event handlers".</p>
+  </div>
+
+  <div class="note notecard">
+  <p><strong>Note</strong>:  Properties that are read-only should have the \{{readonlyInline}} macro, which creates a nifty little "Read only" badge, included on the same line as their \{{domxref}} links (after the use of the \{{experimentalInline}}, \{{non-standard_Inline}} and \{{deprecatedInline}} macros, if some of these are needed.</p>
+  </div>
+ </li>
+ <li><strong>Examples</strong>: Include a code listing to show typical usage of a major feature of the API. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you could reference a <a href="https://github.com/">Github</a> repo containing the full example, and you could  also link to a live example created using the <a href="https://help.github.com/articles/creating-project-pages-manually/">Github gh-pages </a>feature (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN <a href="/en-US/docs/MDN/Structures/Live_samples">Live Sample</a> feature to make it live and playable in the page.
+ </li>
+ <li><strong>Specifications table</strong>: At this point you need to include a specifications table — see the "Creating a spec reference table" section  for more details.</li>
+ <li><strong>Browser compatibility</strong>: Now you need to include a browser compatibility table. See <a href="/en-US/docs/MDN/Structures/Compatibility_tables">Compatibility tables</a> for details.</li>
+ <li><strong>Polyfill</strong>: If appropriate, include this section, providing code for a polyfill that enables the API to be used even on browsers that don't implement it. If no polyfill exists or is needed, leave this section out entirely.</li>
+ <li><strong>See also</strong>: The "See also" section is a good place to include further links that may be useful when learning about this technology, including MDN (and external) tutorials, examples, libraries, etc. We have a liberal policy for linking to external sources, but pay attention:
+  <ul>
+   <li>Do not include pages with the same information as another page in the MDN; link to that page instead.</li>
+   <li>Do not put author names — we are a writer-neutral documentation site. Link to the document; the author name will be displayed there.</li>
+   <li>Pay special attention to blog posts: they tend to become outdated (old syntax, wrong compat information). Link to them only if they have a clear added value that can't be found in a maintained document.</li>
+   <li>Do not use action verb like "See … for more information" or "Click to…", you don't know if your reader is able to see, or to click on the link (like on a paper version of the document).</li>
+  </ul>
+ </li>
+ <li><strong>Tags</strong>: There is a set of standard tags you should include for each reference page — see the "Tags" section for more.</li>
+</ol>
+
+<h4 id="Interface_page_examples">Interface page examples</h4>
+
+<p>The following are exemplary examples of Interface pages:</p>
+
+<ul>
+ <li>{{domxref("Request")}} from the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</li>
+ <li>{{domxref("SpeechSynthesis")}} from the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a>.</li>
+</ul>
+
+<h3 id="Structure_of_a_property_page">Structure of a property page</h3>
+
+<p>Create your property pages as subpages of the interface they are implemented on. Copy the structure of another property page to act as the basis for your new page.</p>
+
+<p>Edit the property page name to follow the <code>Interface.property_name</code> convention.</p>
+
+<p>Property pages must have the following sections:</p>
+
+<ol>
+ <li><strong>Title</strong>: the title of the page must be <strong>InterfaceName.propertyName</strong>. The interface name must start with a capital letter. Although an interface is implemented in JavaScript on the prototype of objects, we don't include <code>.prototype.</code> in the title, like we do in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a>.</li>
+ <li><strong>\{{APIRef}}</strong>: Include the \{{APIRef}} macro in the first line of each property page, including the name of the API as an argument, so for example \{{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left hand side of the interface page, including properties and methods, and other quicklinks as defined in the <a href="https://github.com/mdn/kumascript/blob/master/macros/GroupData.json">GroupData</a> macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.<br>
+  <img alt="This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro " src="apiref-links.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li><strong>Standardization status</strong>: The banner indicating the standardization status should be added next to the interface name (these can be placed on the same line as the \{{APIRef}} macro):
+  <ul style="margin-left: 40px;">
+   <li>\{{SeeCompatTable}} for an experimental feature (i.e. the spec is not at the CR level.)</li>
+   <li>\{{Deprecated_header}}</li>
+   <li>\{{Non-standard_header}}</li>
+  </ul>
+ </li>
+ <li><strong>Description</strong>: the first paragraph of the property page should provide a short, concise description of the property's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Obvious extra information to include is its default/initial value, and whether it's read only or not. The structure of the first sentence must be:
+  <dl>
+   <dt>For read-only properties</dt>
+   <dd>The <code><strong>InterfaceName.property</strong></code> read-only property returns a \{{domxref("type")}} that...</dd>
+   <dt>For other properties</dt>
+   <dd>The <strong><code>InterfaceName.property</code></strong> property is a \{{domxref("type")}} that…</dd>
+  </dl>
+
+  <div class="note"><strong>Note</strong>: <code>InterfaceName.property</code> should be in <code>&lt;code&gt;</code>, and should additionally be in bold (<code>&lt;strong&gt;</code>) the first time it's used.</div>
+ </li>
+ <li><strong>Syntax</strong>: The syntax section should show how to get the property, and how to set it, if it's not read only. Use the <code>syntaxbox</code> class for it and italics for part to be replaced by the actual variable name. For example:
+  <pre class="syntaxbox">var <em>myType</em> = <em>oscillator</em>.type;
+<em>oscillator</em>.type = <em>aType;</em>
+</pre>
+  The syntax section should also have a subsection — "Value", which will contain a description of the property's value. This should contain the data type of the property, and what it represents. For an example, see {{domxref("SpeechRecognition.grammars")}}</li>
+ <li>
+  <p><strong>Examples</strong>: Include a code listing to show typical usage of the property in question. You should start with a simple example that shows how an object of the type is created and how to access the property. More complex examples can be added after such an example. In these additional examples, rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you can reference a <a href="https://github.com/">Github</a> repo containing the full example, and you could also link to a live example created using the <a href="https://help.github.com/articles/creating-project-pages-manually/">github gh-pages feature</a> (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN <a href="/en-US/docs/MDN/Structures/Live_samples">Live Sample</a> feature to make it live and playable in the page.</p>
+ </li>
+ <li><strong>Specifications table</strong>: At this point you need to include a specifications table — see the "Creating a spec reference table"  section for more details.</li>
+ <li><strong>Browser compatibility</strong>: Now you need to include a browser compatibility table. See <a href="/en-US/docs/MDN/Structures/Compatibility_tables">Compatibility tables</a> for details.</li>
+ <li><strong>See also</strong>: The "See also" section is a good place to include further links that may be useful when using this technology: like methods and properties affected by a change of this property or events thrown in relation to it. More links useful when learning about this technology, including MDN (and external) tutorials, examples, libraries,… can be added, though it may be useful to consider adding them on the interface reference page instead.</li>
+ <li><strong>Tags</strong>: There is a set of standard tags you should include for each property page — see the "Tags" section for more.</li>
+</ol>
+
+<h4 id="Property_page_examples">Property page examples</h4>
+
+<p>The following are exemplary examples of property pages:</p>
+
+<ul>
+ <li>{{domxref("Request.method")}} from the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</li>
+ <li>{{domxref("SpeechSynthesis.speaking")}} from the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a>.</li>
+</ul>
+
+<h3 id="Structure_of_a_method_page">Structure of a method page</h3>
+
+<p>Create your method pages as subpages of the interface they are implemented on. Copy the structure of another method page to act as the basis for your new page.</p>
+
+<p>Method pages need the following sections:</p>
+
+<ol>
+ <li><strong>Title</strong>: the title of the page must be <strong>InterfaceName.method()</strong> (with the two terminal parentheses), but the slug (the end of the page URL) must not include the brackets. Also the  interface name must start with a capital. Although an interface is implemented in JavaScript on the prototype of objects, we don't put <code>.prototype.</code> in the title, like we do in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a>.</li>
+ <li><strong>\{{APIRef}}</strong>: Include the \{{APIRef}} macro in the first line of each method page, including the name of the API as an argument, so for example \{{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left hand side of the interface page, including properties and methods, and other quicklinks as defined in the <a href="https://github.com/mdn/kumascript/blob/master/macros/GroupData.json">GroupData</a> macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.<br>
+  <img alt="This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro " src="apiref-links.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li><strong>Standardization status</strong>: Next, the banner indicating the standardization status should be added (these can be placed on the same line as the \{{APIRef}} macro):
+  <ul>
+   <li>\{{SeeCompatTable}} for an experimental feature (i.e. the spec is not at the CR level.)</li>
+   <li>\{{Deprecated_header}}</li>
+   <li>\{{Non-standard_header}}</li>
+  </ul>
+ </li>
+ <li><strong>Description</strong>: The first paragraph of the method page should provide a short concise description of the method's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Obvious extra information to include is its default parameter values, any theory that the method relies on, and what the parameter values do.
+  <dl>
+   <dt>The beginning of the first sentence must follow the following structure:</dt>
+   <dd>The <strong>InterfaceName.method()</strong> method interface ...</dd>
+  </dl>
+
+  <div class="note notecard"><strong>Note:</strong> <code>InterfaceName.method()</code> should be in <code>&lt;code&gt;</code>, and should also be in bold (<code>&lt;strong&gt;</code>) the first time it's used.</div>
+ </li>
+ <li><strong>Syntax</strong>: The syntax section should include a 2–3 line example — usually just construction of the  interface, then calling of the interface method.
+  <dl>
+   <dt>The syntax should be of the form:</dt>
+   <dd>var  &lt;em&gt;returnValue&lt;/em&gt; =  &lt;em&gt;ifName&lt;/em&gt;.method(&lt;em&gt;param1&lt;/em&gt;,  &lt;em&gt;param2&lt;/em&gt;, ...)</dd>
+   <dt>If the method has no return value (<code>void</code> as return value in the webidl), use:</dt>
+   <dd>&lt;em&gt;ifName&lt;/em&gt;.method(&lt;em&gt;param1&lt;/em&gt;,  &lt;em&gt;param2&lt;/em&gt;, ...)</dd>
+  </dl>
+  The syntax section should include three subsections (see {{domxref("SubtleCrypto.sign()")}} for an example):
+
+  <ul>
+   <li>"Parameters": This should contain a definition list (or unordered list) that names and describes the different parameters the method takes. You should include the {{optional_inline}} macro next to the parameter name, in the case of optional parameters. If there are no parameters, this section should be omitted.</li>
+   <li>"Return value": This should say what return value the method has, be it a simple value like a double or boolean, or a more complex value like another interface object, in which case you can use \{{domxref}} macro to link to the MDN API page covering that interface (if it exists.) A method might return nothing, in which case the return value should be written as "\{{jsxref('undefined')}}" (which will look like this in the rendered page: {{jsxref("undefined")}}).</li>
+   <li>"Exceptions": This should list the different exceptions that can be raised when invoking the method, and what circumstances cause them. If there are no exceptions, this section should be omitted.</li>
+  </ul>
+ </li>
+ <li><strong>Examples</strong>: Include a code listing to show typical usage of the method in question. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you should reference a <a href="https://github.com/">Github</a> repo containing the full example, and you could also link to a live example created using the <a href="https://help.github.com/articles/creating-project-pages-manually/">Github gh-pages feature</a> (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN <a href="/en-US/docs/MDN/Structures/Live_samples">Live Sample</a> feature to make it live and playable in the page.</li>
+ <li><strong>Specifications table</strong>: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.</li>
+ <li><strong>Browser compatibility</strong>: Now you need to include a browser compatibility table. See <a href="/en-US/docs/MDN/Structures/Compatibility_tables">Compatibility tables</a> for details.</li>
+</ol>
+
+<h4 id="Method_page_examples">Method page examples</h4>
+
+<p>The following are exemplary examples of Interface pages:</p>
+
+<ul>
+ <li>{{domxref("Document.getAnimations")}} from the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>.</li>
+ <li>{{domxref("WindowOrWorkerGlobalScope/fetch")}} from the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</li>
+</ul>
+
+<h2 id="Tagging">Tagging</h2>
+
+<p>For API reference pages, there are standard tags that all pages should have:</p>
+
+<ul>
+ <li>"API"</li>
+ <li>"Reference"</li>
+ <li>Name of API (e.g. "Web Audio API")</li>
+ <li>Any pertinent related keywords (e.g. "audio") </li>
+</ul>
+
+<p>For Interface pages, also add:</p>
+
+<ul>
+ <li>"Interface"</li>
+ <li>The name of the interface, e.g. "AudioContext"</li>
+</ul>
+
+<p>For method pages, also add:</p>
+
+<ul>
+ <li>"Method"</li>
+ <li>The name of the interface the method relates to, e.g. "AudioContext"</li>
+ <li>The name of the method, e.g. "createBuffer"</li>
+</ul>
+
+<p>For property pages, also add:</p>
+
+<ul>
+ <li>"Property"</li>
+ <li>The name of the interface the property relates to, e.g. "AudioContext"</li>
+ <li>The name of the property, e.g. "currentTime" </li>
+</ul>
+
+<p>In all cases, also add a keyword indicating the standardization status:</p>
+
+<ul>
+ <li>Deprecated</li>
+ <li>Non-standard</li>
+</ul>
+
+<p>These tags will be used to generate correct quicklinks, with nice icons. See <a href="/en-US/docs/MDN/Contribute/Howto/Tag">How to properly tag pages</a> for additional information on tagging, as well as about other tags you may find useful.</p>
+
+<h2 id="Sidebars">Sidebars</h2>
+
+<p>Once you've created your API reference pages, you'll want to insert the correct sidebars on them to associate the pages together. Our <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars">API reference sidebars</a> guide explains how.</p>
