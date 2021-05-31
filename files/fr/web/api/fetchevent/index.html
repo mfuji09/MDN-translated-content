@@ -43,7 +43,7 @@ translation_of: Web/API/FetchEvent
  <dd>Promesse qui est résolue en retournant une {{domxref("Response")}} ou une <a href="http://fetch.spec.whatwg.org/#concept-network-error">erreur réseau</a>  à <code style="font-style: normal;"><a href="http://fetch.spec.whatwg.org/#concept-fetch">Fetch</a></code>.</dd>
  <dt>{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}</dt>
  <dd>
- <p>Etend la durée de vie de l'évènement. Cette méthode est destinée à être appelée dans l'{{domxref("EventHandler")}} {{event("install")}} pour le worker {{domxref("ServiceWorkerRegistration.installing", "installing")}}, et dans l'{{domxref("EventHandler")}} {{event("active")}} pour le worker {{domxref("ServiceWorkerRegistration.active", "active")}}.</p>
+ <p>Etend la durée de vie de l'évènement. Cette méthode est destinée à être appelée dans l'{{event("Event_handlers", "event handler")}} {{event("install")}} pour le worker {{domxref("ServiceWorkerRegistration.installing", "installing")}}, et dans l'{{event("Event_handlers", "event handler")}} {{event("active")}} pour le worker {{domxref("ServiceWorkerRegistration.active", "active")}}.</p>
  </dd>
 </dl>
 
@@ -97,59 +97,7 @@ translation_of: Web/API/FetchEvent
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Support de base</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{ CompatGeckoDesktop("44.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>24</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Support de base</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("44.0") }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(44.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<p>{{Compat("api.FetchEvent")}}</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

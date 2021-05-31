@@ -45,7 +45,7 @@ translation_of: Web/API/ExtendableEvent
 
 <dl>
  <dt>{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}</dt>
- <dd>Étend la durée de vie de l'évènement. Cette méthode doit être appelée dans {{event("install")}}{{domxref("EventHandler")}} pour le worker {{domxref("ServiceWorkerRegistration.installing", "installing")}} et dans {{event("active")}} {{domxref("EventHandler")}} pour le worker {{domxref("ServiceWorkerRegistration.active", "active")}}. </dd>
+ <dd>Étend la durée de vie de l'évènement. Cette méthode doit être appelée dans {{event("install")}}{{event("Event_handlers", "event handler")}} pour le worker {{domxref("ServiceWorkerRegistration.installing", "installing")}} et dans {{event("active")}} {{event("Event_handlers", "event handler")}} pour le worker {{domxref("ServiceWorkerRegistration.active", "active")}}. </dd>
 </dl>
 
 <h2 id="Exemples">Exemples</h2>
@@ -106,57 +106,7 @@ self.addEventListener('install', function(event) {
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Support de base</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{ CompatGeckoDesktop("44.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>24</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Support de base</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("44.0") }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<p>{{Compat("api.ExtendableEvent")}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -35,11 +35,11 @@ translation_of: Web/API/EventSource
 
 <dl>
  <dt>{{domxref("EventSource.onerror")}}</dt>
- <dd>Un objet {{domxref("EventHandler")}} qui est appelé lorsqu'une erreur se produit et que l'évènement {{event("error")}} est envoyé à l'objet <code>EventSource</code>.</dd>
+ <dd>Un objet {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'une erreur se produit et que l'évènement {{event("error")}} est envoyé à l'objet <code>EventSource</code>.</dd>
  <dt>{{domxref("EventSource.onmessage")}}</dt>
- <dd>Un objet {{domxref("EventHandler")}} qui est appelé lorsqu'un évènement {{event("message")}} est reçu (ce qui signifie qu'on a reçu un message de la source).</dd>
+ <dd>Un objet {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'un évènement {{event("message")}} est reçu (ce qui signifie qu'on a reçu un message de la source).</dd>
  <dt>{{domxref("EventSource.onopen")}}</dt>
- <dd>Un objet {{domxref("EventHandler")}} qui est appelé lorsqu'un évènement {{event("open")}} est reçu, ce qui indique que la connexion vient d'être ouverte.</dd>
+ <dd>Un objet {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'un évènement {{event("open")}} est reçu, ce qui indique que la connexion vient d'être ouverte.</dd>
 </dl>
 
 <h2 id="Méthodes">Méthodes</h2>
@@ -86,74 +86,7 @@ evtSource.onmessage = function(e) {
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Support simple</td>
-   <td>6</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("6.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>5</td>
-  </tr>
-  <tr>
-   <td>Disponible dans les <em>workers</em> dédiés et partagés<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("53.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Support simple</td>
-   <td>4.4</td>
-   <td>45</td>
-   <td>{{CompatNo}}</td>
-   <td>12</td>
-   <td>4.1</td>
-  </tr>
-  <tr>
-   <td>Disponible dans les <em>workers</em> dédiés et partagés<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("53.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] <a href="https://github.com/w3c/ServiceWorker/issues/947">Pas encore disponible pour les <em>service workers</em></a>.</p>
+<p>{{Compat("api.EventSource")}}</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
