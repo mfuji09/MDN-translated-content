@@ -1,40 +1,24 @@
 ---
-title: 段階変数用のCSSカスタムプロパティ
+title: カスケード変数用の CSS カスタムプロパティ
 slug: Web/CSS/CSS_Variables
 tags:
   - CSS
-  - CSS Variables
-  - Overview
-  - Reference
+  - CSS 変数
+  - ガイド
+  - 概要
+  - リファレンス
 translation_of: Web/CSS/CSS_Variables
 ---
-<div>{{cssref}}</div>
+{{CSSRef}}
 
-<p><strong>段階変数用のCSSカスタムプロパティ</strong>とは何度も繰り返して用いられるカスタムプロパティを作成できる<a href="/ja/docs/Web/CSS">CSS</a>モジュールです。</p>
+**カスケード変数用の CSS カスタムプロパティ**は [CSS](/ja/docs/Web/CSS) のモジュールで、何度も繰り返して用いることができるカスタムプロパティを作することができます。
 
-<h2 id="CSSプロパティ">CSSプロパティ</h2>
+## CSS プロパティ
 
-<div class="index">
-<ul>
- <li>{{cssxref("--*")}}</li>
-</ul>
-</div>
+- {{cssxref("--*")}}
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Variables")}}</td>
-   <td>{{Spec2("CSS3 Variables")}}</td>
-   <td>初期仕様</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                         | 状態                        | 備考     |
+| ------------------------------ | --------------------------- | -------- |
+| {{SpecName("CSS3 Variables")}} | {{Spec2("CSS3 Variables")}} | 初回定義 |
