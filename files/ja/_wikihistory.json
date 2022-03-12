@@ -47137,18 +47137,10 @@
     ]
   },
   "Web/XPath": {
-    "modified": "2020-10-24T08:12:08.073Z",
+    "modified": "2019-03-30T15:46:42.224Z",
     "contributors": [
       "silverskyvicto",
-      "mfuji09",
-      "ExE-Boss",
-      "SphinxKnight",
-      "ethertank",
-      "fscholz",
-      "Mgjbot",
-      "Shoot",
-      "Gakuueda",
-      "Okome"
+      "ExE-Boss"
     ]
   },
   "Web/XPath/Axes": {
@@ -48565,13 +48557,6 @@
     "modified": "2020-10-15T22:23:11.378Z",
     "contributors": [
       "reodog"
-    ]
-  },
-  "conflicting/Web/XPath": {
-    "modified": "2019-03-30T15:46:42.224Z",
-    "contributors": [
-      "silverskyvicto",
-      "ExE-Boss"
     ]
   },
   "conflicting/Web/XSLT": {
