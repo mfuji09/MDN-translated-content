@@ -4196,20 +4196,6 @@
       "composite"
     ]
   },
-  "Web/API/Element/contextmenu_event": {
-    "modified": "2019-03-23T22:08:19.174Z",
-    "contributors": [
-      "project42da"
-    ]
-  },
-  "Web/API/Element/dblclick_event": {
-    "modified": "2020-10-15T22:05:47.608Z",
-    "contributors": [
-      "baleineindigo",
-      "alattalatta",
-      "chocojoa"
-    ]
-  },
   "Web/API/Element/getAttribute": {
     "modified": "2020-10-15T21:30:04.251Z",
     "contributors": [
@@ -4274,12 +4260,6 @@
       "lifeisnovel"
     ]
   },
-  "Web/API/Element/pointerenter_event": {
-    "modified": "2020-10-15T22:31:17.998Z",
-    "contributors": [
-      "baleineindigo"
-    ]
-  },
   "Web/API/Element/removeAttribute": {
     "modified": "2020-10-15T21:33:44.118Z",
     "contributors": [
@@ -4302,12 +4282,6 @@
       "fscholz",
       "khalid32",
       "hooriza"
-    ]
-  },
-  "Web/API/Element/scroll_event": {
-    "modified": "2020-10-15T22:22:09.396Z",
-    "contributors": [
-      "rodeck826"
     ]
   },
   "Web/API/Element/tagName": {
@@ -4734,6 +4708,45 @@
       "jwhitlock"
     ]
   },
+  "Web/API/GlobalEventHandlers/onclick": {
+    "modified": "2020-10-15T22:10:25.598Z",
+    "contributors": [
+      "alattalatta",
+      "Parcovia"
+    ]
+  },
+  "Web/API/GlobalEventHandlers/oncontextmenu": {
+    "modified": "2019-03-23T22:08:19.174Z",
+    "contributors": [
+      "project42da"
+    ]
+  },
+  "Web/API/GlobalEventHandlers/ondblclick": {
+    "modified": "2020-10-15T22:05:47.608Z",
+    "contributors": [
+      "baleineindigo",
+      "alattalatta",
+      "chocojoa"
+    ]
+  },
+  "Web/API/GlobalEventHandlers/onpointerenter": {
+    "modified": "2020-10-15T22:31:17.998Z",
+    "contributors": [
+      "baleineindigo"
+    ]
+  },
+  "Web/API/GlobalEventHandlers/onscroll": {
+    "modified": "2020-10-15T22:22:09.396Z",
+    "contributors": [
+      "rodeck826"
+    ]
+  },
+  "Web/API/GlobalEventHandlers/onsubmit": {
+    "modified": "2019-03-23T22:27:57.488Z",
+    "contributors": [
+      "hoony"
+    ]
+  },
   "Web/API/HTMLAnchorElement/href": {
     "modified": "2020-10-15T22:15:22.693Z",
     "contributors": [
@@ -4857,12 +4870,6 @@
       "jsx",
       "teoli",
       "Netaras"
-    ]
-  },
-  "Web/API/HTMLFormElement/submit_event": {
-    "modified": "2019-03-23T22:27:57.488Z",
-    "contributors": [
-      "hoony"
     ]
   },
   "Web/API/HTMLInputElement/select_event": {
@@ -17027,13 +17034,6 @@
     "modified": "2019-03-23T23:26:56.400Z",
     "contributors": [
       "Sheppy"
-    ]
-  },
-  "conflicting/Web/API/Element/click_event": {
-    "modified": "2020-10-15T22:10:25.598Z",
-    "contributors": [
-      "alattalatta",
-      "Parcovia"
     ]
   },
   "conflicting/Web/API/Element/keydown_event": {

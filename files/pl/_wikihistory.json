@@ -1152,6 +1152,96 @@
       "Bobqu"
     ]
   },
+  "Tools": {
+    "modified": "2020-07-16T22:44:16.950Z",
+    "contributors": [
+      "SphinxKnight",
+      "Katarzyna89",
+      "Arekusandoru",
+      "rolevicz",
+      "kasia725792",
+      "Zioberokr",
+      "Emerson2718",
+      "Bajerka86",
+      "alimar@poczta.onet.pl",
+      "Woren82",
+      "dawisko1",
+      "SCPD",
+      "teoli",
+      "Andrzej.Salata",
+      "Kosia90",
+      "splewako",
+      "mirekczechxmm",
+      "Diablownik",
+      "Ptak82",
+      "Mgjbot",
+      "Andreas Wuest",
+      "Listek",
+      "Dria"
+    ]
+  },
+  "Tools/Debugger": {
+    "modified": "2020-07-16T22:35:05.314Z",
+    "contributors": [
+      "kaiga747",
+      "bassam",
+      "kuba1o3"
+    ]
+  },
+  "Tools/Debugger/How_to": {
+    "modified": "2020-07-16T22:35:08.058Z",
+    "contributors": [
+      "jwhitlock",
+      "wbamberg"
+    ]
+  },
+  "Tools/Page_Inspector": {
+    "modified": "2020-07-16T22:34:28.762Z",
+    "contributors": [
+      "kubutekf",
+      "Mlodyemoka"
+    ]
+  },
+  "Tools/Page_Inspector/How_to": {
+    "modified": "2020-07-16T22:34:31.602Z",
+    "contributors": [
+      "jwhitlock",
+      "sidgan"
+    ]
+  },
+  "Tools/Page_Inspector/How_to/Open_the_Inspector": {
+    "modified": "2020-07-16T22:34:32.873Z",
+    "contributors": [
+      "jwhitlock",
+      "kubutekf",
+      "Mlodyemoka"
+    ]
+  },
+  "Tools/Page_Inspector/UI_Tour": {
+    "modified": "2020-07-16T22:34:49.477Z",
+    "contributors": [
+      "kubutekf"
+    ]
+  },
+  "Tools/Validators": {
+    "modified": "2020-07-16T22:35:03.596Z",
+    "contributors": [
+      "vviruzz",
+      "Mgjbot",
+      "Diablownik",
+      "Ptak82",
+      "Witia",
+      "Chlopczyk"
+    ]
+  },
+  "Tools/about:debugging": {
+    "modified": "2020-07-16T22:36:32.890Z",
+    "contributors": [
+      "programistka",
+      "Jacob99",
+      "BajlandoKG"
+    ]
+  },
   "Web": {
     "modified": "2019-03-23T23:30:00.154Z",
     "contributors": [
@@ -1945,16 +2035,6 @@
       "Ptak82"
     ]
   },
-  "Web/API/Element/click_event": {
-    "modified": "2019-03-24T00:04:00.144Z",
-    "contributors": [
-      "teoli",
-      "AshfaqHossain",
-      "fscholz",
-      "Bedi",
-      "Jan Dudek"
-    ]
-  },
   "Web/API/Element/clientHeight": {
     "modified": "2019-03-23T23:43:28.841Z",
     "contributors": [
@@ -2431,6 +2511,26 @@
     "modified": "2019-03-18T21:40:36.589Z",
     "contributors": [
       "chrisdavidmills"
+    ]
+  },
+  "Web/API/GlobalEventHandlers/onclick": {
+    "modified": "2019-03-24T00:04:00.144Z",
+    "contributors": [
+      "teoli",
+      "AshfaqHossain",
+      "fscholz",
+      "Bedi",
+      "Jan Dudek"
+    ]
+  },
+  "Web/API/GlobalEventHandlers/onload": {
+    "modified": "2019-03-24T00:18:31.426Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "AshfaqHossain",
+      "wojciech.fornal",
+      "Ptak82"
     ]
   },
   "Web/API/HTMLCanvasElement": {
@@ -3624,16 +3724,6 @@
       "Rev"
     ]
   },
-  "Web/API/Window/load_event": {
-    "modified": "2019-03-24T00:18:31.426Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "AshfaqHossain",
-      "wojciech.fornal",
-      "Ptak82"
-    ]
-  },
   "Web/API/Window/localStorage": {
     "modified": "2019-03-23T22:47:52.730Z",
     "contributors": [
@@ -4133,13 +4223,6 @@
     "modified": "2019-03-18T21:39:51.689Z",
     "contributors": [
       "andrzejkrecicki"
-    ]
-  },
-  "Web/CSS/CSS_Fonts": {
-    "modified": "2019-01-22T18:17:17.900Z",
-    "contributors": [
-      "teoli",
-      "Witia"
     ]
   },
   "Web/CSS/CSS_Grid_Layout": {
@@ -5335,6 +5418,13 @@
       "Witia"
     ]
   },
+  "Web/HTML/Element/basefont": {
+    "modified": "2019-01-22T18:17:17.900Z",
+    "contributors": [
+      "teoli",
+      "Witia"
+    ]
+  },
   "Web/HTML/Element/bdo": {
     "modified": "2019-03-18T21:12:41.027Z",
     "contributors": [
@@ -5839,6 +5929,15 @@
       "maciejmarczak"
     ]
   },
+  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
+    "modified": "2019-01-16T16:02:28.093Z",
+    "contributors": [
+      "teoli",
+      "Mgjbot",
+      "Diablownik",
+      "Ptak82"
+    ]
+  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2019-01-16T15:45:03.435Z",
     "contributors": [
@@ -5932,7 +6031,7 @@
       "pceuropa"
     ]
   },
-  "Web/JavaScript/JavaScript_technologies_overview": {
+  "Web/JavaScript/Language_Resources": {
     "modified": "2019-01-16T16:04:32.529Z",
     "contributors": [
       "teoli",
@@ -9973,15 +10072,6 @@
       "Grzybu",
       "Takenbot",
       "gandalf"
-    ]
-  },
-  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
-    "modified": "2019-01-16T16:02:28.093Z",
-    "contributors": [
-      "teoli",
-      "Mgjbot",
-      "Diablownik",
-      "Ptak82"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
