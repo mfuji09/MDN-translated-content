@@ -4318,6 +4318,12 @@
       "willamesoares"
     ]
   },
+  "Web/API/Element/contextmenu_event": {
+    "modified": "2019-03-23T22:28:42.538Z",
+    "contributors": [
+      "cezaraugusto"
+    ]
+  },
   "Web/API/Element/focus_event": {
     "modified": "2019-03-23T22:03:56.654Z",
     "contributors": [
@@ -4955,18 +4961,6 @@
     "modified": "2019-03-23T22:31:33.398Z",
     "contributors": [
       "teoli"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onclick": {
-    "modified": "2020-10-15T22:17:11.589Z",
-    "contributors": [
-      "g-otn"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/oncontextmenu": {
-    "modified": "2019-03-23T22:28:42.538Z",
-    "contributors": [
-      "cezaraugusto"
     ]
   },
   "Web/API/GlobalEventHandlers/onerror": {
@@ -15941,6 +15935,12 @@
     "modified": "2019-03-23T23:35:40.503Z",
     "contributors": [
       "teoli"
+    ]
+  },
+  "conflicting/Web/API/Element/click_event": {
+    "modified": "2020-10-15T22:17:11.589Z",
+    "contributors": [
+      "g-otn"
     ]
   },
   "conflicting/Web/API/Element/keyup_event": {
