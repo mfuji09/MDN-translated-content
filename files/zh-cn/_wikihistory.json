@@ -23360,12 +23360,6 @@
       "jack-chensonglin"
     ]
   },
-  "Web/Accessibility/ARIA/forms/alerts": {
-    "modified": "2020-10-07T05:07:53.958Z",
-    "contributors": [
-      "phone-burner"
-    ]
-  },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
     "modified": "2019-03-23T22:13:24.205Z",
     "contributors": [
@@ -46124,16 +46118,6 @@
       "KingMario"
     ]
   },
-  "conflicting/Web/API/Window/error_event": {
-    "modified": "2020-04-01T12:26:07.930Z",
-    "contributors": [
-      "liangbus",
-      "zhangchen",
-      "coolguy",
-      "xgqfrms-GitHub",
-      "KingMario"
-    ]
-  },
   "conflicting/Web/API/Window/focus_event": {
     "modified": "2019-03-24T00:18:09.356Z",
     "contributors": [
@@ -46301,6 +46285,12 @@
     "modified": "2019-03-23T22:29:25.203Z",
     "contributors": [
       "qianzhangcheng"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA": {
+    "modified": "2020-10-07T05:07:53.958Z",
+    "contributors": [
+      "phone-burner"
     ]
   },
   "conflicting/Web/CSS": {
