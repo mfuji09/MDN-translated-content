@@ -1,5 +1,6 @@
 ---
 title: 运行实例
+<<<<<<<< HEAD:files/zh-cn/conflicting/mdn/writing_guidelines/page_structures_479b8c93d0b37a3f2a020112ae60e692/index.md
 slug: >-
   conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
 tags:
@@ -9,10 +10,16 @@ tags:
   - Structures
 translation_of: MDN/Structures/Live_samples
 original_slug: MDN/Structures/Live_samples
+========
+slug: MDN/Writing_guidelines/Page_structures/Live_samples
+translation_of: MDN/Writing_guidelines/Page_structures/Live_samples
+>>>>>>>> upstream/main:files/zh-cn/mdn/writing_guidelines/page_structures/live_samples/index.md
 ---
 {{MDNSidebar}}
 
-MDN 支持将文章中的示例代码转化为读者可以实际查看的运行实例。运行实例可以包括 HTML、CSS 和 JavaScript 的任意组合。注意，“运行”的实例是 _非交互性_ 的。但是，它们确保了示例展现的输出与示例代码相匹配，因为它仅仅由代码实例生成。
+MDN 支持将文章中的示例代码转化为读者可以实际查看的在线演示。这被称为*运行实例*，使得用户可以查看代码的实际输出。这使得文档变得更具动态性和指导性。
+
+运行实例可以包括 HTML、CSS 和 JavaScript 的任意组合。注意，“运行”实例是*非交互性*的。但是，它们确保了示例展现的输出与示例代码相匹配，因为它仅仅由代码实例生成。
 
 ## 运行实例系统如何工作
 
@@ -23,27 +30,27 @@ MDN 支持将文章中的示例代码转化为读者可以实际查看的运行�
 
 一个代码块的“集合”，在此上下文中，以标题或块级元素（类似 {{HTMLElement("div")}}）的 id 作为标识。
 
-- 如果这个 id 属于一个块级元素，该集合将包含此块级元素包含范围内的所有代码。
-- 如果这个 id 属于一个标题，该集合将包含此标题之后到下个同级标题之前的所有代码。请注意，子标题下的代码块也会被包含，如果不希望这样的效果，可以使用块级元素的 id。
+- 如果 id 属于一个块级元素，该集合将包含此块级元素包含范围内的所有代码。
+- 如果 id 属于一个标题，该集合将包含此标题之后到下个同级标题之前的所有代码。请注意，子标题下的代码块也会被包含，如果不希望得到这样的效果，可以使用块级元素的 id。
 
-宏使用一个特殊的 URL 来取得一个分组中的代码示例，例如：`https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/animation/_sample_.Cylon_Eye.html`。总体结构是 `https://url-of-page/_sample_.group-id.html`，`group-id` 指代码所在标题或者块级元素的 id。
+宏使用一个特殊的 URL 来取得一个分组中的代码示例，例如：`https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/animation/_sample_.Cylon_Eye.html`。总体结构是 `https://url-of-page/_sample_.group-id.html`，其中的 `group-id` 指代码所在标题或者块级元素的 id。
 
-用来展示运行结果的框架 (或页面) 会运行在沙盒中，在安全条件下实现任何想在网络上实现的功能。当然，在实践中，代码需要针对于包含它的页面，MDN 上运行的随意的内容会被社区编辑移除。
+用来展示运行结果的框架（或页面）会运行在沙盒中，在安全条件下实现任何想在 web 上实现的功能。当然，在实践中，代码需要针对包含它的页面，MDN 上运行的随意的内容会被社区移除。
 
 > **备注：** **必须**使用宏来展示运行实例的输出。
 
-每个包含示例代码的 {{HTMLElement("pre")}} 段落都有一个 class 指示它由何种语言写成（HTML、CSS 或 JavaScript）。这些 class 的值是“brush: html”、“brush: css”或“brush: js”。这些 class 必须与代码匹配以被维基正确使用。一般情况下，当你在使用编辑器工具栏的语法高亮时候，这些属性会被自动添加。
+每个包含示例代码的 {{HTMLElement("pre")}} 块都有一个 class 指示它由何种语言写成（HTML、CSS 或 JavaScript）。这些 class 的值是“brush: html”、“brush: css”或“brush: js”。这些 class 必须与对应的代码块匹配。
 
 运行实例系统由很多可用选项，我们会分解开来讲解。
 
 ### 运行实例宏
 
-你可以用两种宏来展示实例：
+你可以用两种宏来展示运行实例：
 
 - [`EmbedLiveSample`](https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedLiveSample.ejs) 将一个运行实例嵌入到页面中
 - [`LiveSampleLink`](https://github.com/mdn/yari/blob/master/kumascript/macros/LiveSampleLink.ejs) 创建一个链接，在新的页面中打开运行实例
 
-在很多情况下，可以很便捷地在页面中使用 `EmbedLiveSample` 或 `LiveSampleLink` 宏。只要代码示例可以通过一个标题的 id 或一个块级元素的 id 的区分开，就可以简单的插入宏来实现功能。
+在很多情况下，可以很方便地在页面中使用 `EmbedLiveSample` 或 `LiveSampleLink` 宏。只要代码示例可以通过一个标题的 id 或一个块级元素的 id 的区分开，就可以简单的插入宏来实现功能。
 
 #### 页内运行实例（EmbedLiveSample）宏
 
@@ -52,17 +59,17 @@ MDN 支持将文章中的示例代码转化为读者可以实际查看的运行�
 ```
 
 - block_ID
-  - : 必需。包含示例代码的标题或块级元素的 id。保证 id 正确的最好的办法是在内容表中查看 URL，也可以通过查看网页源码的方式检查。
+  - : 必需。包含示例代码的标题或块级元素的 id。保证 id 正确的最好的办法是在页面的内容列表中查看 URL，也可以通过查看网页源码的方式检查。
 - width
-  - : 可选。创建的 {{HTMLElement("iframe")}} 元素的宽度，以 `px` 为单位。若忽略该项，系统会使用一个合理的默认宽度。请注意，如果需要指定该项，那么 _必须_ 同时指定高度。
+  - : 可选。创建的 {{HTMLElement("iframe")}} 元素的宽度，以 `px` 为单位。若忽略该项，系统会使用一个合理的默认宽度。请注意，如果需要指定该项，那么*必须*同时指定高度。
 - height
-  - : 可选。创建的 {{HTMLElement("iframe")}} 元素的高度，以 `px` 为单位。若忽略该项，系统会使用一个合理的默认高度。请注意，如果需要指定该项，那么 _必须_ 同时指定宽度。如果仅仅指定了高度和宽度中的一个，那么系统会应用默认尺寸。
+  - : 可选。创建的 {{HTMLElement("iframe")}} 元素的高度，以 `px` 为单位。若忽略该项，系统会使用一个合理的默认高度。请注意，如果需要指定该项，那么*必须*同时指定宽度。如果仅仅指定了高度和宽度中的一个，那么系统会应用默认尺寸。
 - screenshot_URL
-  - : 可选。截屏 URL 显示了运行实例的效果。对于用户浏览器尚未支持的新技术很有用，他们就可以看到结果的快照。如果指定该项，截屏会带着相关标题显示在运行实例之后。
+  - : 可选。屏幕截图的 URL，显示了运行实例的效果。对于用户浏览器尚未支持的新技术很有用，他们就可以看到结果的快照。如果指定该项，屏幕截图会带着相关标题显示在运行实例旁边。
 - page_slug
-  - : 可选。包含示例的页面的代称。若忽略该项，示例将会从宏所在页面拉取。
+  - : 可选。包含示例的页面的代称。若忽略该项，示例将会从宏所在页面获取。
 
-    > **警告：** 要在不同的目标页面中显示来自一个包含代码的页面的运行实例时，这个包含代码的页面自身必须使用 [`EmbedLiveSample`](https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs) 宏将运行实例嵌入到它自己的页面中。否则，如果这个包含代码的页面自己没有使用 [`EmbedLiveSample`](https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs) 宏，运行实例将无法在其它所有的目标页面中显示。（参见 [Yari issue #2243](https://github.com/mdn/yari/issues/2243)。）
+    > **警告：** 这个参数已被弃用。请不要再新的示例中使用它，并将其从你找到的示例中移除。我们正在主动移除对这个参数的使用，在移除了所有的使用后，我们将会移除对它的支持。
 
 #### 链接运行实例（LiveSampleLink）宏
 
@@ -71,7 +78,7 @@ MDN 支持将文章中的示例代码转化为读者可以实际查看的运行�
 ```
 
 - block_ID
-  - : 必需。包含示例代码的标题或块级元素的 id。保证使用正确 id 的最好的办法是在页面的目录中查找 URL，也可以通过查看网页源码的方式检查。
+  - : 必需。包含示例代码的标题或块级元素的 id。保证使用正确 id 的最好的办法是在页面的内容目录中查找 URL，也可以通过查看网页源码的方式检查。
 - link_text
   - : 链接文本。
 
@@ -79,7 +86,7 @@ MDN 支持将文章中的示例代码转化为读者可以实际查看的运行�
 
 以下部分描述了一些运行实例系统的常见用例。
 
-### 将片段转为运行实例
+### 将代码片段转为运行实例
 
 一个常见的用例是将 MDN 中已有代码片段转为运行实例。
 
@@ -89,7 +96,7 @@ MDN 支持将文章中的示例代码转化为读者可以实际查看的运行�
 
 每段代码都需要包含在正确标记其语言的 {{HTMLElement("pre")}} 块中，一个代码块只能包含一种语言。多数情况下，这些步骤都没问题，不过再检查一遍总是好的。当 `<pre>` 元素 class 的值为 `brush:language-type`，且 _language-type_ 是该代码块的语言类型（如：`html`、`css` 或 `js`）时，说明这一步已经完成。
 
-> **备注：** 每种语言的代码可以分布在几个代码块里，所有代码会被拼接起来。这个特性允许一块代码对应一块简介。这样有利于制作教程，比如代码间夹杂着大量的注释。
+> **备注：** 每种语言的代码可以分布在几个代码块里，所有代码会被拼接起来。这个特性允许一块代码对应一块简介。这样有利于制作教程，比如代码间夹杂着大量解释性的文本。
 
 所以在确认 {{HTMLElement("pre")}} 块被正确标记为其所用语言以提供语言的语法高亮之后，你就可以继续了。
 
@@ -103,7 +110,7 @@ MDN 支持将文章中的示例代码转化为读者可以实际查看的运行�
 
 ### HTML
 
-这段 HTML 代码创建了一个段落和几个块级元素（`div`）以定位和风格化信息。
+这段 HTML 代码创建了一个段落和几个块级元素（`div`）以定位和为信息添加样式。
 
 ```html
 <p>A simple example of the live sample system in action.</p>
@@ -134,7 +141,7 @@ MDN 支持将文章中的示例代码转化为读者可以实际查看的运行�
 
 ### JavaScript
 
-这段代码很简单，只是增加了一个点击事件来弹出信息。
+这段代码很简单，只是增加了一个点击事件处理器来弹出信息。
 
 ```js
 var el = document.getElementById('item');

@@ -13068,13 +13068,6 @@
       "loella16"
     ]
   },
-  "Web/API/Document/popupNode": {
-    "modified": "2019-04-19T19:08:29.481Z",
-    "contributors": [
-      "wbamberg",
-      "loella16"
-    ]
-  },
   "Web/API/Document/preferredStyleSheetSet": {
     "modified": "2019-03-18T21:17:09.649Z",
     "contributors": [
@@ -13208,12 +13201,6 @@
     "contributors": [
       "Hell_Carlito",
       "Akio08"
-    ]
-  },
-  "Web/API/Document/tooltipNode": {
-    "modified": "2019-03-18T21:39:13.843Z",
-    "contributors": [
-      "loella16"
     ]
   },
   "Web/API/Document/touchend_event": {
@@ -40680,58 +40667,11 @@
       "tristantheb"
     ]
   },
-  "conflicting/Web/API/Window/load_event": {
-    "modified": "2019-03-23T23:45:30.027Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "Mgjbot",
-      "BenoitL"
-    ]
-  },
   "conflicting/Web/Accessibility/ARIA": {
-    "modified": "2019-03-23T23:17:54.084Z",
-    "contributors": [
-      "P45QU10U",
-      "hmore",
-      "Goofy",
-      "Fredchat"
-    ]
-  },
-  "conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122": {
-    "modified": "2019-03-23T23:16:38.785Z",
-    "contributors": [
-      "sdumetz",
-      "dFegnoux",
-      "Mozinet",
-      "Fredchat"
-    ]
-  },
-  "conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155": {
     "modified": "2019-01-16T21:44:15.383Z",
     "contributors": [
       "Waxaal",
       "julianosilvaa"
-    ]
-  },
-  "conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea": {
-    "modified": "2019-03-23T23:17:50.755Z",
-    "contributors": [
-      "hmore",
-      "Goofy",
-      "Fredchat"
-    ]
-  },
-  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
-    "modified": "2020-03-12T19:37:01.767Z",
-    "contributors": [
-      "SphinxKnight",
-      "zatamine",
-      "teoli",
-      "Delapouite",
-      "Mgjbot",
-      "BenoitL"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {

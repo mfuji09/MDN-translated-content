@@ -19,7 +19,7 @@
 /fr/docs/Accessibilité/ARIA/Accessible_Rich_Internet_Applications	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Accessibilité/ARIA/Applications_riches_Internet_accessibles	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Accessibilité/ARIA/Comment_deposer_un_bug_lie_a_ARIA	/fr/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
-/fr/docs/Accessibilité/ARIA/FAQ_Applications_Web_et_ARIA	/fr/docs/conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122
+/fr/docs/Accessibilité/ARIA/FAQ_Applications_Web_et_ARIA	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Accessibilité/ARIA/Guides_ARIA	/fr/docs/Web/Accessibility/ARIA/ARIA_Guides
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utilisation_du_groupe_switch	/fr/docs/Web/Accessibility/ARIA/Roles/Switch_role
@@ -52,8 +52,8 @@
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog	/fr/docs/Web/Accessibility/ARIA/Roles/dialog_role
 /fr/docs/Accessibilité/ARIA/Zones_live_ARIA	/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
 /fr/docs/Accessibilité/ARIA/formulaires	/fr/docs/Web/Accessibility/ARIA/forms
-/fr/docs/Accessibilité/ARIA/formulaires/Alertes	/fr/docs/conflicting/Web/Accessibility/ARIA
-/fr/docs/Accessibilité/ARIA/formulaires/Indications_elementaires_pour_les_formulaires	/fr/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
+/fr/docs/Accessibilité/ARIA/formulaires/Alertes	/fr/docs/Web/Accessibility/ARIA
+/fr/docs/Accessibilité/ARIA/formulaires/Indications_elementaires_pour_les_formulaires	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Accessibilité/ARIA/formulaires/Labels_multi-options	/fr/docs/Web/Accessibility/ARIA/forms/Multipart_labels
 /fr/docs/Accessibilité/An_overview_of_accessible_web_applications_and_widgets	/fr/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /fr/docs/Accessibilité/Aperçu_d_applications_Web_et_de_composants_dynamiques_accessibles	/fr/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
@@ -1025,7 +1025,7 @@
 /fr/docs/DOM/window.navigator.onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/DOM/window.navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
 /fr/docs/DOM/window.onbeforeunload	/fr/docs/Web/API/Window/beforeunload_event
-/fr/docs/DOM/window.onload	/fr/docs/conflicting/Web/API/Window/load_event
+/fr/docs/DOM/window.onload	/fr/docs/Web/API/Window/load_event
 /fr/docs/DOM/window.onpopstate	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/DOM/window.open	/fr/docs/Web/API/Window/open
 /fr/docs/DOM/window.openDialog	/fr/docs/Web/API/Window/openDialog
@@ -1173,7 +1173,7 @@
 /fr/docs/DOM:window.navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator/mozIsLocallyAvailable
 /fr/docs/DOM:window.navigator.onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/DOM:window.navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
-/fr/docs/DOM:window.onload	/fr/docs/conflicting/Web/API/Window/load_event
+/fr/docs/DOM:window.onload	/fr/docs/Web/API/Window/load_event
 /fr/docs/DOM:window.open	/fr/docs/Web/API/Window/open
 /fr/docs/DOM:window.opener	/fr/docs/Web/API/Window/opener
 /fr/docs/DOM:window.parent	/fr/docs/Web/API/Window/parent
@@ -1191,7 +1191,7 @@
 /fr/docs/Développement_Web	/fr/docs/Web/Guide
 /fr/docs/Développement_Web/Développer_des_sites_à_compatibilité_descendante	/fr/docs/Web/Guide/Writing_forward-compatible_websites
 /fr/docs/Développement_Web/Introduction_au_développement_web	/fr/docs/Web/Guide/Introduction_to_Web_development
-/fr/docs/ECMAScript	/fr/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
+/fr/docs/ECMAScript	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/EXSLT	/fr/docs/Web/EXSLT
 /fr/docs/EXSLT/exsl	/fr/docs/Web/EXSLT/exsl
 /fr/docs/EXSLT/exsl/node-set	/fr/docs/Web/EXSLT/exsl/node-set
@@ -2161,7 +2161,7 @@
 /fr/docs/JavaScript/Guide/Égalité_en_JavaScript	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/JavaScript/Guide_JavaScript	/fr/docs/Web/JavaScript/Guide
 /fr/docs/JavaScript/JavaScript_technologies_overview	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
-/fr/docs/JavaScript/Language_Resources	/fr/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
+/fr/docs/JavaScript/Language_Resources	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/JavaScript/Les_différents_tests_d_égalité_comment_les_utiliser	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/JavaScript/Reference	/fr/docs/Web/JavaScript/Reference
 /fr/docs/JavaScript/Reference/A_propos	/fr/docs/Web/JavaScript/Reference/About
@@ -3833,7 +3833,7 @@
 /fr/docs/Web/API/GlobalEventHandlers/onkeydown	/fr/docs/Web/API/Element/keydown_event
 /fr/docs/Web/API/GlobalEventHandlers/onkeypress	/fr/docs/Web/API/Element/keypress_event
 /fr/docs/Web/API/GlobalEventHandlers/onkeyup	/fr/docs/Web/API/Element/keyup_event
-/fr/docs/Web/API/GlobalEventHandlers/onload	/fr/docs/conflicting/Web/API/Window/load_event
+/fr/docs/Web/API/GlobalEventHandlers/onload	/fr/docs/Web/API/Window/load_event
 /fr/docs/Web/API/GlobalEventHandlers/onloadend	/fr/docs/Web/API/XMLHttpRequest/loadend_event
 /fr/docs/Web/API/GlobalEventHandlers/onloadstart	/fr/docs/Web/API/HTMLMediaElement/loadstart_event
 /fr/docs/Web/API/GlobalEventHandlers/onmousedown	/fr/docs/Web/API/Element/mousedown_event
@@ -3998,7 +3998,7 @@
 /fr/docs/Web/API/Window.matchMedia	/fr/docs/Web/API/Window/matchMedia
 /fr/docs/Web/API/Window.navigator	/fr/docs/Web/API/Window/navigator
 /fr/docs/Web/API/Window.onbeforeunload	/fr/docs/Web/API/Window/beforeunload_event
-/fr/docs/Web/API/Window.onload	/fr/docs/conflicting/Web/API/Window/load_event
+/fr/docs/Web/API/Window.onload	/fr/docs/Web/API/Window/load_event
 /fr/docs/Web/API/Window.onpopstate	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/Web/API/Window.onresize	/fr/docs/Web/API/Window/resize_event
 /fr/docs/Web/API/Window.openDialog	/fr/docs/Web/API/Window/openDialog
@@ -4090,11 +4090,11 @@
 /fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role	/fr/docs/Web/Accessibility/ARIA/Roles/progressbar_role
 /fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role	/fr/docs/Web/Accessibility/ARIA/Roles/slider_role
 /fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role	/fr/docs/Web/Accessibility/ARIA/Roles/status_role
-/fr/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/fr/docs/conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122
-/fr/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/fr/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
-/fr/docs/Web/Accessibility/ARIA/forms/alerts	/fr/docs/conflicting/Web/Accessibility/ARIA
-/fr/docs/Web/Accessibility/ARIA/widgets	/fr/docs/conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155
-/fr/docs/Web/Accessibility/ARIA/widgets/overview	/fr/docs/conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155
+/fr/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/fr/docs/Web/Accessibility/ARIA
+/fr/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/fr/docs/Web/Accessibility/ARIA
+/fr/docs/Web/Accessibility/ARIA/forms/alerts	/fr/docs/Web/Accessibility/ARIA
+/fr/docs/Web/Accessibility/ARIA/widgets	/fr/docs/conflicting/Web/Accessibility/ARIA
+/fr/docs/Web/Accessibility/ARIA/widgets/overview	/fr/docs/conflicting/Web/Accessibility/ARIA
 /fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Contraste_de_la_couleur	/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 /fr/docs/Web/Accessibility/Web_Development	/fr/docs/Web/Accessibility
 /fr/docs/Web/Apps/Build/Audio_and_video_delivery	/fr/docs/Web/Guide/Audio_and_video_delivery
@@ -4287,7 +4287,6 @@
 /fr/docs/Web/CSS/CSS_questions_frequentes	/fr/docs/Learn/CSS/Howto/CSS_FAQ
 /fr/docs/Web/CSS/CSS_values_serialization	/fr/docs/Web/CSS
 /fr/docs/Web/CSS/CSS_values_syntax	/fr/docs/Web/CSS
-/fr/docs/Web/CSS/Cascade	/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
 /fr/docs/Web/CSS/Colonnes_CSS	/fr/docs/Web/CSS/CSS_Columns
 /fr/docs/Web/CSS/Colonnes_CSS/Colonnes_CSS3	/fr/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
 /fr/docs/Web/CSS/Colonnes_CSS/Concepts_base_multi-colonnes	/fr/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
@@ -4825,7 +4824,7 @@
 /fr/docs/Web/JavaScript/Héritage_et_chaîne_de_prototypes	/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /fr/docs/Web/JavaScript/Introduction_à_JavaScript_orienté_objet	/fr/docs/Learn/JavaScript/Objects
 /fr/docs/Web/JavaScript/Introduction_à_l_utilisation_de_XPath_avec_JavaScript	/fr/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
-/fr/docs/Web/JavaScript/Language_Resources	/fr/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
+/fr/docs/Web/JavaScript/Language_Resources	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/Web/JavaScript/Les_différents_tests_d_égalité	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/Web/JavaScript/Les_différents_tests_d_égalité_comment_les_utiliser	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/Web/JavaScript/Performance_les_dangers_liés_à_la_modification_de_Prototype	/fr/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation
@@ -6254,6 +6253,7 @@
 /fr/docs/conflicting/Web/API/Window/beforeunload_event	/fr/docs/Web/API/Window/beforeunload_event
 /fr/docs/conflicting/Web/API/Window/hashchange_event	/fr/docs/Web/API/Window/hashchange_event
 /fr/docs/conflicting/Web/API/Window/languagechange_event	/fr/docs/Web/API/Window/languagechange_event
+/fr/docs/conflicting/Web/API/Window/load_event	/fr/docs/Web/API/Window/load_event
 /fr/docs/conflicting/Web/API/Window/localStorage	/fr/docs/Web/API/Window/localStorage
 /fr/docs/conflicting/Web/API/Window/offline_event	/fr/docs/Web/API/Window/offline_event
 /fr/docs/conflicting/Web/API/Window/online_event	/fr/docs/Web/API/Window/online_event
@@ -6264,7 +6264,9 @@
 /fr/docs/conflicting/Web/API/btoa	/fr/docs/Web/API/btoa
 /fr/docs/conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3	/fr/docs/Web/API
 /fr/docs/conflicting/Web/Accessibility	/fr/docs/Web/Accessibility
-/fr/docs/conflicting/Web/Accessibility/ARIA/widgets	/fr/docs/conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155
+/fr/docs/conflicting/Web/Accessibility/ARIA/widgets	/fr/docs/conflicting/Web/Accessibility/ARIA
+/fr/docs/conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122	/fr/docs/Web/Accessibility/ARIA
+/fr/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/conflicting/Web/CSS	/fr/docs/Web/CSS
 /fr/docs/conflicting/Web/CSS/::placeholder	/fr/docs/Web/CSS/::placeholder
 /fr/docs/conflicting/Web/CSS/:is	/fr/docs/Web/CSS/:is
@@ -6325,6 +6327,7 @@
 /fr/docs/conflicting/Web/JavaScript/Guide/Introduction_6f341ba6db4b060ccbd8dce4a0d5214b	/fr/docs/Web/JavaScript/Guide/Introduction
 /fr/docs/conflicting/Web/JavaScript/Guide/Regular_Expressions/Assertions	/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions
 /fr/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain	/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+/fr/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type	/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_type
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects	/fr/docs/Web/JavaScript/Reference/Global_Objects
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
