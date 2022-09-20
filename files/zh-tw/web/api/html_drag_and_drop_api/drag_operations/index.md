@@ -2,6 +2,7 @@
 title: 拖曳操作
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 本文會一一說明拖曳各步驟的作業。
@@ -123,31 +124,6 @@ function dragWithCustomImage(event) {
 ```
 
 上面我們的 canvas 是 50 x 50px 大小，然後我們位移一半 25 讓圖片落在滑鼠指標中央。
-
-在 Gecko 上開發，比如說外掛或 Mozllia 應用程式，Gecko9.0{{geckoRelease("9.0")}}支援使用{{XULElem("panel")}}元素作為拖曳圖片，簡單將 XUL panel 元素傳入 setDragImage 方法即可。
-
-試想下面這個 {{XULElem("panel")}}元素:
-
-```xml
-<panel id="panel" style="opacity: 0.6">
-  <description id="pb">Drag Me</description>
-</panel>
-
-<vbox align="start" style="border: 1px solid black;" ondragstart="startDrag(event)">
-  <description>Drag Me</description>
-</vbox>
-```
-
-當使用者拖曳{{XULElem("vbox")}} 元素時，startDrag 函數會被呼叫。
-
-```js
-function startDrag(event) {
-  event.dataTransfer.setData("text/plain", "<strong>Body</strong>");
-  event.dataTransfer.setDragImage(document.getElementById("panel"), 20, 20);
-}
-```
-
-我們用 HTML 格式的"\<strong>Body\</strong>"作為資料，然後用 pnael 元素作為圖片。
 
 ## 拖曳效果
 

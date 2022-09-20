@@ -2,6 +2,7 @@
 title: 'Express 教學 7: 佈署到生產環境'
 slug: Learn/Server-side/Express_Nodejs/deployment
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 現在你已經創建（並測試）了一個不錯的 本地圖書館 網站了，你打算把它發佈到一個公共網絡服務器，這樣圖書館管理員和網路上的其他成員就可以訪問它了。這篇文章總結了你可以怎樣找到一台主機部署你的網站，以及你需要為網站準備好佈署到生產環境該做什麼。
@@ -254,7 +255,7 @@ Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/
 
 4. 按 **Create repository**.
 5. 單擊新倉庫頁面上的綠色“克隆或下載”按鈕 "**Clone or download**" 。
-6. 從顯示的對話框的文本字段，複製 URL 值（它應該類似於：**https\://github.com/_\<your_git_user_id>_/express-locallibrary-tutorial.git**）。
+6. 從顯示的對話框的文本字段，複製 URL 值（它應該類似於：`https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git`）。
 
 現在創建了儲存庫（“repo”），我們將要在本地計算機上克隆它：
 
