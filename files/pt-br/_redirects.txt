@@ -788,6 +788,7 @@
 /pt-BR/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data	/pt-BR/docs/Learn/Forms/Sending_and_retrieving_form_data
 /pt-BR/docs/Web/Guide/HTML/Using_data_attributes	/pt-BR/docs/Learn/HTML/Howto/Use_data_attributes
 /pt-BR/docs/Web/Guide/Introducao_ao_Desenvolvimento_Web	/pt-BR/docs/Web/Guide/Introduction_to_Web_development
+/pt-BR/docs/Web/Guide/Mobile/Separate_sites	/pt-BR/docs/conflicting/Web/Progressive_web_apps
 /pt-BR/docs/Web/HTML/Applying_color	/pt-BR/docs/Web/CSS/CSS_Colors/Applying_color
 /pt-BR/docs/Web/HTML/CORS_imagens_habilitadas	/pt-BR/docs/Web/HTML/CORS_enabled_image
 /pt-BR/docs/Web/HTML/Canvas	/pt-BR/docs/Web/API/Canvas_API
@@ -869,9 +870,10 @@
 /pt-BR/docs/Web/JavaScript/Reference/Indice_metodos_js	/pt-BR/docs/Web/JavaScript/Reference
 /pt-BR/docs/Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao	/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 /pt-BR/docs/Web/JavaScript/Reference/Operators/Inicializador_Objeto	/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer
+/pt-BR/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator	/pt-BR/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
 /pt-BR/docs/Web/JavaScript/Reference/Operators/Operador_Condicional	/pt-BR/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 /pt-BR/docs/Web/JavaScript/Reference/Operators/Operador_Virgula	/pt-BR/docs/Web/JavaScript/Reference/Operators/Comma_Operator
-/pt-BR/docs/Web/JavaScript/Reference/Operators/operador_de_coalescencia_nula	/pt-BR/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
+/pt-BR/docs/Web/JavaScript/Reference/Operators/operador_de_coalescencia_nula	/pt-BR/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
 /pt-BR/docs/Web/JavaScript/Reference/Properties_Index	/pt-BR/docs/Web/JavaScript/Reference
 /pt-BR/docs/Web/JavaScript/Reference/Statements/funcoes_assincronas	/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function
 /pt-BR/docs/Web/JavaScript/Reference/Statements/import.meta	/pt-BR/docs/Web/JavaScript/Reference/Operators/import.meta
@@ -896,7 +898,7 @@
 /pt-BR/docs/WebSockets/Writing_WebSocket_server	/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_server
 /pt-BR/docs/WebSockets/Writing_WebSocket_servers	/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_servers
 /pt-BR/docs/Web_Development/Mobile/Mobile-friendliness	/pt-BR/docs/Web/Guide/Mobile/Mobile-friendliness
-/pt-BR/docs/Web_Development/Mobile/Sites_separados	/pt-BR/docs/Web/Guide/Mobile/Separate_sites
+/pt-BR/docs/Web_Development/Mobile/Sites_separados	/pt-BR/docs/conflicting/Web/Progressive_web_apps
 /pt-BR/docs/XHTML	/pt-BR/docs/Glossary/XHTML
 /pt-BR/docs/c_temp	/pt-BR/docs/Web/API/Console
 /pt-BR/docs/dez_anos_de_MDN	/pt-BR/docs/MDN/At_ten

@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
+
 {{JSRef}}
 
 O método **`some()`** testa se ao menos um dos elementos no array passa no teste implementado pela função atribuída e retorna um valor **`true`** ou **`false`**.
