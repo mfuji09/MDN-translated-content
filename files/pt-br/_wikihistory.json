@@ -5828,10 +5828,6 @@
     "modified": "2019-03-18T21:16:20.736Z",
     "contributors": ["ygormaximo"]
   },
-  "Web/Guide/HTML/Editable_content": {
-    "modified": "2019-03-23T22:43:02.407Z",
-    "contributors": ["expalmer", "fellyph"]
-  },
   "Web/Guide/Introduction_to_Web_development": {
     "modified": "2019-07-28T16:57:13.368Z",
     "contributors": ["rvenson"]
@@ -5842,10 +5838,6 @@
   },
   "Web/Guide/Mobile/Mobile-friendliness": {
     "modified": "2019-03-23T23:28:21.815Z",
-    "contributors": ["clebermatheus1"]
-  },
-  "Web/Guide/Mobile/Separate_sites": {
-    "modified": "2019-03-23T23:28:15.359Z",
     "contributors": ["clebermatheus1"]
   },
   "Web/Guide/Performance": {
@@ -10136,7 +10128,7 @@
     "modified": "2020-03-12T19:39:46.309Z",
     "contributors": ["SphinxKnight", "cirocosta"]
   },
-  "Web/JavaScript/Reference/Operators/Nullish_coalescing_operator": {
+  "Web/JavaScript/Reference/Operators/Nullish_coalescing": {
     "modified": "2020-10-15T22:27:35.360Z",
     "contributors": ["mateusvelleda", "yagoag", "marlonveiga-santos"]
   },
@@ -11216,6 +11208,10 @@
     "modified": "2019-03-23T23:28:19.402Z",
     "contributors": ["clebermatheus1", "wbamberg"]
   },
+  "conflicting/Web/HTML/Global_attributes/contenteditable": {
+    "modified": "2019-03-23T22:43:02.407Z",
+    "contributors": ["expalmer", "fellyph"]
+  },
   "conflicting/Web/HTTP/CORS": {
     "modified": "2020-04-19T11:26:06.291Z",
     "contributors": ["marcio1002"]
@@ -11396,8 +11392,8 @@
     "contributors": ["alefesouza"]
   },
   "conflicting/Web/Progressive_web_apps": {
-    "modified": "2020-08-27T09:35:40.497Z",
-    "contributors": ["bermarques", "clebermatheus1"]
+    "modified": "2019-03-23T23:28:15.359Z",
+    "contributors": ["clebermatheus1"]
   },
   "conflicting/Web/SVG/Element/animate": {
     "modified": "2019-03-23T22:57:25.579Z",

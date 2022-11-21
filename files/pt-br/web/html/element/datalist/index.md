@@ -1,8 +1,8 @@
 ---
 title: datalist
 slug: Web/HTML/Element/datalist
-translation_of: Web/HTML/Element/datalist
 ---
+
 ## Sumário
 
 O elemento HTML _Datalist_ (\<datalist>) contém um conjunto de elementos {{ HTMLElement("option") }} que representam as opções possíveis para o valor de outros controles.
@@ -55,5 +55,3 @@ Inclua este polyfill para fornecer suporte para navegadores mais antigos e atual
 
 - O elemento {{ HTMLElement("input") }}, especialmente seu atributo {{ htmlattrxref("list", "input") }};
 - O elemento {{ HTMLElement("option") }}.
-
-{{ languages({ "zh-cn": "zh-cn/HTML/Element/datalist", "ja": "ja/HTML/Element/datalist" }) }}

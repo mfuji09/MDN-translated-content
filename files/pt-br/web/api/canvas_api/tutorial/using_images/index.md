@@ -1,17 +1,17 @@
 ---
 title: Using images
 slug: Web/API/Canvas_API/Tutorial/Using_images
-translation_of: Web/API/Canvas_API/Tutorial/Using_images
 original_slug: Web/Guide/HTML/Canvas_tutorial/Using_images
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
 
 Até agora nós criamos nossos próprios [shapes](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) e aplicamos estilos([applied styles](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)) a eles. Um dos recursos mais interessantes do {{HTMLElement("canvas")}} é a capacidade de usar imagens. Eles podem ser usados para composição dinâmica de fotos ou como pano de fundo de gráficos, como sprites em jogos e assim por diante. Imagens externas podem ser usadas em qualquer formato suportado pelo navegador, tais como PNG, GIF, ou JPEG. Você pode até usar a imagem produzida por outros elementos da tela na mesma página que a fonte!
 
 A importação de imagens para o canvas é basicamente um processo de duas etapas:
 
-1.  Obter uma referência a um objeto {{domxref("HTMLImageElement")}} ou a outro elemento do canvas como fonte. Também é possível usar imagens fornecendo uma URL.
-2.  Desenhar a imagem no canvas usando a função `drawImage()` .
+1. Obter uma referência a um objeto {{domxref("HTMLImageElement")}} ou a outro elemento do canvas como fonte. Também é possível usar imagens fornecendo uma URL.
+2. Desenhar a imagem no canvas usando a função `drawImage()` .
 
 Vamos dar uma olhada em como fazer isso.
 
@@ -75,7 +75,7 @@ If you're only using one external image this can be a good approach, but once yo
 
 ### Embedding an image via data: URL
 
-Another possible way to include images is via the [data: url](/pt-BR/docs/Web/HTTP/data_URIs "http://en.wikipedia.org/wiki/Data:_URL"). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
+Another possible way to include images is via the [data: url](/pt-BR/docs/Web/HTTP/data_URIs). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
 
 ```js
 var img = new Image();   // Create new img element

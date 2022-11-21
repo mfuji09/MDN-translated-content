@@ -55,10 +55,10 @@ slug: Web/HTML/Element/time
 
 ## 瀏覽器支援度
 
-{{Compat("html.elements.time")}}
+{{Compat}}
 
 ## 延伸閱讀
 
 - The {{HTMLElement("data")}} element, allowing to signal other kind of values.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

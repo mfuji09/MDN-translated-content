@@ -2,6 +2,7 @@
 title: 等価性の比較と同一性
 slug: Web/JavaScript/Equality_comparisons_and_sameness
 ---
+
 {{jsSidebar("Intermediate")}}
 
 ES2015 には、4 種類の等価性アルゴリズムがあります。
@@ -233,7 +234,7 @@ ES2015 より前は、二重等号と三重等号について、一方は他方�
 
 - [`- (単項否定演算子)`](/ja/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29)
 
-  - :&#x20;
+  - : &#x20;
 
     ```js
     let stoppingForce = obj.mass * -obj.velocity;

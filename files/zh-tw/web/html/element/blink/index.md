@@ -62,7 +62,7 @@ blink {
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.blink")}}
+{{Compat}}
 
 ## 參見
 
@@ -71,4 +71,4 @@ blink {
 - {{htmlelement("marquee")}}，類似的非標準元素。
 - [CSS 動畫](/zh-TW/docs/Web/Guide/CSS/Using_CSS_animations)能得出與此元素相同的效果。
 
-{{HTMLRef}}
+{{HTMLSidebar}}

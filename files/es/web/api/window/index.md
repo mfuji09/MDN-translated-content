@@ -12,7 +12,7 @@ translation_of: Web/API/Window
 
 El objeto `window` representa la ventana que contiene un documento DOM; la propiedad `document` apunta al [DOM document](/es/docs/DOM/document) cargado en esa ventana. El objeto window al que pertenece un documento puede ser obtenido usando la propiedad {{Domxref("document.defaultView")}}.
 
-Esta sección proporciona una pequeña referencia a todos los métodos, propiedades y eventos disponibles a través del objeto DOM `window`. El objeto `window` implementa la interfaz `Window` , que a su vez hereda de la interfaz [`AbstractView`](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Algunas funciones como globales adicionales, espacios de nombres, interfaces, y constructores no típicamente asociados con el objeto window pero disponibles en éste, están listados en las [Referencia de JavaScript](/es/docs/Web/JavaScript/Referencia) y en el [Referencia DOM de Gecko](/es/docs/Referencia_DOM_de_Gecko "/en-US/docs/DOM/DOM_Reference").
+Esta sección proporciona una pequeña referencia a todos los métodos, propiedades y eventos disponibles a través del objeto DOM `window`. El objeto `window` implementa la interfaz `Window` , que a su vez hereda de la interfaz [`AbstractView`](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Algunas funciones como globales adicionales, espacios de nombres, interfaces, y constructores no típicamente asociados con el objeto window pero disponibles en éste, están listados en las [Referencia de JavaScript](/es/docs/Web/JavaScript/Referencia) y en el [Referencia DOM de Gecko](/es/docs/Referencia_DOM_de_Gecko).
 
 En un navegador con pestañas, como Firefox, cada pestaña contine su propio `window` object (y si está escribiendo una extensión, la ventana del navegador es una ventana separada también - para más información vea [Trabajar con ventanas desde el código chrome](/es/docs/Trabajar_con_ventanas_desde_código_chrome#Content_windows)). Esto significa que el objeto `window` no se comparte entre diferentes pestañas de la misma ventana del navegador. Algunos métodos, como {{Domxref("window.resizeTo")}} y {{Domxref("window.resizeBy")}} se aplican sobre toda la ventana del navegador y no sobre una pestaña específica a la que pertenece el objeto `window`. Generalmente, cualquier cosa que razonablemente no pueda pertenecer a una pestaña, pertenece a la ventana.
 
@@ -45,7 +45,7 @@ _Esta interface hereda propiedades de {{domxref("EventTarget")}} interface e imp
 
 Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prototipos de los elementos built-in) son descritos en una sección separada más abajo.
 
-- {{domxref("Window.applicationCache")}} {{readOnlyInline}} {{gecko_minversion_inline("1.9")}}
+- {{domxref("Window.applicationCache")}} {{readOnlyInline}}
   - : An {{domxref("OfflineResourceList")}} object providing access to the offline resources for the window.
 - {{domxref("Window.closed")}} {{Non-standard_inline}}{{readOnlyInline}}
   - : Esta propiedad indica si la actual ventana esta cerrada o abierta.
@@ -53,7 +53,7 @@ Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prot
   - : El punto de acceso a muchas propiedades [XPCOM](/es/docs/XPCOM). Algunas propiedades, ej. [classes](/es/docs/Components.classes), son disponibles solamente a codigo suficientemente privilegiado. **El codigo Web no deberia usar esta propiedad.**
 - {{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Retorna una referencia al objeto de la consola proveyendo acceso a la consola debugger del navegador.
-- {{domxref("Window.content")}} and Window.\_content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
+- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
   - : Returns a reference to the content element in the current window. The obsolete variant with underscore is no longer available from Web content.
 - {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
   - : Returns the XUL controller objects for the current chrome window.
@@ -73,9 +73,9 @@ Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prot
   - : Returns the element in which the window is embedded, or null if the window is not embedded.
 - {{domxref("Window.frames")}} {{readOnlyInline}}
   - : Returns an array of the subframes in the current window.
-- {{domxref("Window.fullScreen")}} {{gecko_minversion_inline("1.9")}}
+- {{domxref("Window.fullScreen")}}
   - : Esta propiedad indica si la ventana esta desplegada en pantalla completa o no.
-- `{{domxref("window.globalStorage")}} `{{gecko_minversion_inline("1.8.1")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
+- `{{domxref("window.globalStorage")}}` {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
   - : Unsupported since Gecko 13 (Firefox 13). Use {{domxref("Window.localStorage")}} instead.
     Was: Multiple storage objects that are used for storing data across multiple pages.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
@@ -90,19 +90,19 @@ Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prot
   - : Obtiene/fija la location, o URL actual, del objeto de la ventana.
 - {{domxref("Window.locationbar")}} {{ReadOnlyInline}}
   - : Retorna el objeto locationbar, cuya visibilidad puede ser fijada en la ventana.
-- {{domxref("Window.localStorage")}} {{readOnlyInline}}{{gecko_minversion_inline("1.9.1")}}
+- {{domxref("Window.localStorage")}} {{readOnlyInline}}
   - : Retorna una referencia al objeto almacenamiento local usado para almacenar datos que pueden ser de accedidos por el origen que los creo.
 - {{domxref("Window.menubar")}} {{ReadOnlyInline}}
   - : Retorna el objeto barra de menu, cuya visibilidad puede ser fijada en la ventana.
-- {{domxref("Window.messageManager")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.messageManager")}}
   - : Retorna el objeto [message manager](/es/docs/The_message_manager) para esta ventana.
-- {{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}}{{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}}
   - : The time in milliseconds since epoch at which the current animation cycle began.
-- {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}
   - : Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` in `nsIDOMWindowUtils` for a conversion factor to adapt to screen pixels if needed.
-- {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}
   - : Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` for a conversion factor to adapt to screen pixels if needed.
-- {{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}}
   - : Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.
 - {{domxref("Window.name")}}
   - : Gets/sets the name of the window.
@@ -164,7 +164,7 @@ Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prot
   - : Returns a reference to the topmost window in the window hierarchy. This property is read only.
 - {{domxref("Window.window")}} {{ReadOnlyInline}}
   - : Returns a reference to the current window.
-- `window[0]`,` window[1]`, etc.
+- `window[0]`, `window[1]`, etc.
   - : Returns a reference to the `window` object in the frames. See {{domxref("Window.frames")}} for more details.
 
 ## Methods
@@ -221,7 +221,7 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
   - : Returns the selection object representing the selected item(s).
 - {{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}
   - : Regresa el navegador a la pagina de inicio.
-- {{domxref("Window.matchMedia()")}} {{gecko_minversion_inline("6.0")}}
+- {{domxref("Window.matchMedia()")}}
   - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
 - {{domxref("Window.maximize()")}}
   - : {{todo("NeedsContents")}}
@@ -231,7 +231,7 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
   - : Mueve la ventana actual por una cantidad especificada.
 - {{domxref("Window.moveTo()")}}
   - : Mueve la ventana a una coordenada especificada.
-- {{domxref("Window.mozRequestAnimationFrame()")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.mozRequestAnimationFrame()")}}
   - : Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame. This will cause a `MozBeforePaint` event to fire before that repaint occurs.
 - {{domxref("Window.open()")}}
   - : Abre una nueva ventana.
@@ -308,9 +308,9 @@ _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTa
   - : An event handler property for right-click events on the window.
 - {{domxref("Window.ondevicelight")}}
   - : An event handler property for any ambient light levels changes
-- {{domxref("Window.ondevicemotion")}} {{gecko_minversion_inline("6.0")}}
+- {{domxref("Window.ondevicemotion")}}
   - : {{todo("NeedsContents")}}
-- {{domxref("Window.ondeviceorientation")}} {{gecko_minversion_inline("6.0")}}
+- {{domxref("Window.ondeviceorientation")}}
   - : An event handler property for any device orientation changes
 - {{domxref("Window.ondeviceproximity")}}
   - : An event handler property for device proximity event
@@ -318,7 +318,7 @@ _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTa
   - : An event handler property for {{event("error")}} events raised on the window.
 - {{domxref("GlobalEventHandlers.onfocus")}}
   - : An event handler property for {{event("focus")}} events on the window.
-- {{domxref("WindowEventHandlers.onhashchange")}} {{gecko_minversion_inline("1.9.2")}}
+- {{domxref("WindowEventHandlers.onhashchange")}}
   - : An event handler property for hash change events on the window; called when the part of the URL after the hash mark ("#") changes.
 - {{domxref("GlobalEventHandlers.onkeydown")}}
   - : An event handler property for {{event("keydown")}} events on the window.
@@ -340,7 +340,7 @@ _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTa
   - : An event handler property for mouseover events on the window.
 - {{domxref("GlobalEventHandlers.onmouseup")}}
   - : An event handler property for mouseup events on the window.
-- {{domxref("Window.onmozbeforepaint")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.onmozbeforepaint")}}
   - : An event handler property for the `MozBeforePaint` event, which is sent before repainting the window if the event has been requested by a call to the {{domxref("Window.mozRequestAnimationFrame()")}} method.
 - {{domxref("WindowEventHandlers.onpageshow")}}
   - : An event handler property for pageshow events on the window.
@@ -348,7 +348,7 @@ _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTa
   - : An event handler property for pagehide events on the window.
 - {{domxref("Window.onpaint")}}
   - : An event handler property for paint events on the window.
-- {{domxref("WindowEventHandlers.onpopstate")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("WindowEventHandlers.onpopstate")}}
   - : An event handler property for popstate events, which are fired when navigating to a session history entry representing a state object.
 - {{domxref("GlobalEventHandlers.onreset")}}
   - : An event handler property for reset events on the window.

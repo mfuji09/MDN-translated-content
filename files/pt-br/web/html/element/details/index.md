@@ -1,8 +1,8 @@
 ---
 title: details
 slug: Web/HTML/Element/details
-translation_of: Web/HTML/Element/details
 ---
+
 ## Sumário
 
 O elemento HTML _details_ (`<details>`) é usado como uma ferramenta de onde o usuário irá obter informações adicionais.
@@ -46,5 +46,3 @@ Esse elemento implemena a interface[`HTMLDetailsElement`](/en/DOM/HTMLDetailsEle
 ## Veja também
 
 - {{ HTMLElement("summary") }}
-
-{{ languages({ "en": "en/HTML/Element/details", "ja": "ja/HTML/Element/details" }) }}

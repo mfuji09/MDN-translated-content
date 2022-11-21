@@ -42,12 +42,12 @@ If you want DOM to get parsed as fast as possible after the user had requested t
 
 ## 瀏覽器相容性
 
-{{Compat("api.Window.DOMContentLoaded_event")}}
+{{Compat}}
 
 ## Related Events
 
-- {{event("DOMContentLoaded")}}
-- {{event("readystatechange")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/zh-TW/docs/Web/API/Window/DOMContentLoaded_event)
+- [`readystatechange`](/zh-TW/docs/Web/API/Document/readystatechange_event)
+- [`load`](/zh-TW/docs/Web/API/Window/load_event)
+- [`beforeunload`](/zh-TW/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/zh-TW/docs/Web/API/Window/unload_event)

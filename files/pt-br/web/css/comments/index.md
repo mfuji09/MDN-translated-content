@@ -1,13 +1,9 @@
 ---
 title: Comentário
 slug: Web/CSS/Comments
-tags:
-  - CSS
-  - CSS Reference
-  - Iniciante
-translation_of: Web/CSS/Comments
 original_slug: Web/CSS/Comentário
 ---
+
 ios{{CSSRef}}
 
 ## Sumário
@@ -46,4 +42,3 @@ The `/* */` comment syntax is used for both single and multi line comments. Ther
 ## Veja também
 
 - [CSS Reference](/pt-BR/docs/Web/CSS/Reference)
-- {{CSS_key_concepts}}

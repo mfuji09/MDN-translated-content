@@ -1,13 +1,8 @@
 ---
 title: Document.write()
 slug: Web/API/Document/write
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-translation_of: Web/API/Document/write
 ---
+
 {{ApiRef("DOM")}}
 
 O método **`Document.write()`** grava uma sequência de caracteres em um documento aberto por {{domxref("document.open()")}}.
@@ -69,7 +64,7 @@ Se chamar `document.write()` incorporada em uma tag HTML `<script>` embutida, en
 
 > **Nota:** Somente no Edge, chamando `document.write` mais de uma vez em {{HTMLElement("iframe")}} causa o erro "SCRIPT70: Permission denied".
 
-> **Nota:** A partir de 55, Chrome não executará elementos `<script>` injetados via `document.write()` caso haja falta de cache HTTP para usuários em uma conexão 2G. Há [uma lista de condições ](https://developers.google.com/web/updates/2016/08/removing-document-write)que precisam ser atendidas para que isso seja verdade.
+> **Nota:** A partir de 55, Chrome não executará elementos `<script>` injetados via `document.write()` caso haja falta de cache HTTP para usuários em uma conexão 2G. Há [uma lista de condições](https://developers.google.com/web/updates/2016/08/removing-document-write) que precisam ser atendidas para que isso seja verdade.
 
 ## Especificações
 

@@ -2,6 +2,7 @@
 title: ':where()'
 slug: Web/CSS/:where
 ---
+
 {{CSSRef}}
 
 **`:where()`** [CSS 伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)函数接受[选择器列表](/zh-CN/docs/Web/CSS/Selector_list)作为它的参数，将会选择所有能被该选择器列表中任何一条规则选中的元素。
@@ -25,9 +26,9 @@ footer p:hover {
 
 `:where()` 和 {{CSSxRef(":is", ":is()")}} 的不同之处在于，`:where()` 的[优先级](/zh-CN/docs/Web/CSS/Specificity)总是为 0，但是 `:is()` 的优先级是由它的选择器列表中优先级最高的[选择器](/zh-CN/docs/Glossary/CSS_Selector)决定的。
 
-### 容许解析错误的选择器
+### 可容错选择器解析
 
-规范指定了 `:is()` 和 `:where()` 可以接受一个[有错误的选择器列表](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list).
+规范将 `:is()` 和 `:where()` 定义为接受一个[可容错选择器列表](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)。
 
 在 CSS 中使用选择器列表时，如果任何选择器无效，则整个列表被视为无效。当使用 `:is()` 或 `:where()` 而不是整个选择器列表时，如果某个选择器无法解析，则被视为无效，不正确或不受支持的选择器将被忽略，其他选择器将被使用。
 

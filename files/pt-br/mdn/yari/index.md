@@ -1,18 +1,16 @@
 ---
 title: 'Kuma: MDN''s wiki platform'
 slug: MDN/Yari
-tags:
-  - projeto kuma
-translation_of: MDN/Kuma
 original_slug: MDN/Kuma
 ---
+
 {{MDNSidebar}}
 
 Kuma é a plataforma wiki que auxilia o Mozilla Developer Network. É uma plataforma open source escrita em [Python](http://www.python.org/) utilizando o framework [Django](https://www.djangoproject.com/).
 
 ## Documentação do Kuma
 
-- [A API Kuma](/pt-BR/docs/Project:MDN/Kuma/API "/en-US/docs/Project:About")
+- [A API Kuma](/pt-BR/docs/Project:MDN/Kuma/API)
   - : Kuma provê de uma simples API que lhe permite acessar informações através das páginas, e até enviar novas páginas de conteúdo.
 - [Introdução ao KumaScript](/pt-BR/docs/Project:Introduction_to_KumaScript):
   - : ...o modelo de linguagem Kuma.

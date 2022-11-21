@@ -1,12 +1,6 @@
 ---
 title: touchstart
 slug: Web/API/Element/touchstart_event
-tags:
-  - Event
-  - Evento Toque
-  - Toque
-  - TouchEvent
-translation_of: Web/API/Element/touchstart_event
 ---
 `O evento touchstart` é acionado quando o ponteiro de toque*(dedo ou caneta)* é aplicado sobre à superfície de toque da tela*(toque sobre a tela no elemento alvo)*.
 
@@ -33,7 +27,7 @@ translation_of: Web/API/Element/touchstart_event
 | `type` {{readonlyInline}}           | DOMString    | The type of event.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `bubbles` {{readonlyInline}}        | Boolean      | Whether the event normally bubbles or not.                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `cancelable` {{readonlyInline}}     | Boolean      | Whether the event is cancellable or not.                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `view` {{readonlyInline}}           | WindowProxy  | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView "In browsers, document.defaultView returns the window object associated with a document, or null if none is available.") (`window` of the document)                                                                                                                                                                                                                                        |
+| `view` {{readonlyInline}}           | WindowProxy  | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView) (`window` of the document)                                                                                                                                                                                                                                        |
 | `detail` {{readonlyInline}}         | long (float) | 0.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `touches` {{readonlyInline}}        | TouchList    | A list of [`Touch`](/en/DOM/Touch)es for every point of contact currently touching the surface.                                                                                                                                                                                                                                                                                                                                                              |
 | `targetTouches` {{readonlyInline}}  | TouchList    | A list of [`Touch`](/en/DOM/Touch)es for every point of contact that is touching the surface and started on the element that is the target of the current event.                                                                                                                                                                                                                                                                                             |
@@ -45,7 +39,7 @@ translation_of: Web/API/Element/touchstart_event
 
 ## Exemplos
 
-Os códigos de exemplos para este evento estão disponíveis nesta página dedicada: [Touch events](/en-US/DOM/Touch_events).
+Os códigos de exemplos para este evento estão disponíveis nesta página dedicada: [Touch events](/pt-BR/DOM/Touch_events).
 
 ## Compatibilidade com navegadores
 

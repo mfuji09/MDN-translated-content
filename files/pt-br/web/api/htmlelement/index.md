@@ -1,18 +1,8 @@
 ---
 title: HTMLElement
 slug: Web/API/HTMLElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsMobileBrowserCompatibility
-  - NeedsNewLayout
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - TopicStub
-translation_of: Web/API/HTMLElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 A interface **`HTMLElement`** representa qualquer elemento [HTML](/pt-BR/docs/Web/HTML). Alguns elementos implementam diretamente essa interface, outros a implementam por meio de uma interface que a herda.
@@ -68,7 +58,7 @@ _Propriedades herdadas do elemento pai, {{domxref("Element")}}, e aquelas implem
 - {{domxref("HTMLElement.properties")}} {{readonlyInline}}{{experimental_inline}}
   - : Returns an {{domxref("HTMLPropertiesCollection")}}…
 - {{domxref("HTMLElement.spellcheck")}}{{ gecko_minversion_inline("1.9")}}
-  - : Is a {{jsxref("Boolean")}} that controls [spell-checking](/pt-BR/docs/HTML/Controlling_spell_checking_in_HTML_forms "en/Controlling_spell_checking_in_HTML_forms"). It is present on all HTML elements, though it hasn't an effect on all of them.
+  - : Is a {{jsxref("Boolean")}} that controls [spell-checking](/pt-BR/docs/HTML/Controlling_spell_checking_in_HTML_forms). It is present on all HTML elements, though it hasn't an effect on all of them.
 - {{domxref("HTMLElement.style")}}
   - : Is {{domxref("CSSStyleDeclaration")}}, an object representing the declarations of an element's style attributes.
 - {{domxref("HTMLElement.tabIndex")}}

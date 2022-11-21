@@ -2,6 +2,7 @@
 title: 启用了 CORS 的图片
 slug: Web/HTML/CORS_enabled_image
 ---
+
 HTML 规范中图片有一个 `{{ htmlattrxref("crossorigin", "img") }}` 属性，结合合适的 `{{Glossary("CORS")}}` 响应头，就可以实现在画布中使用跨域 `{{ HTMLElement("img") }}` 元素的图像，就像在原生 `{{ HTMLElement("canvas") }}` 中使用一样。
 
 查看 [CORS settings attributes](/zh-CN/docs/Web/HTML/CORS_settings_attributes) 来了解更多 `crossorigin` 属性的用法。
@@ -64,7 +65,7 @@ function startDownload() {
 }
 ```
 
-使用 "硬编码" 图片网址可以很方便的允许图片来自任何地址。当开始下载图片时，我们使用 `{{domxref("HTMLImageElement.Image", "Image()")}}` 构造器创建新的 `{{domxref("HTMLImageElement")}}` 对象，将图片的 `crossOrigin` 属性设置为"`匿名`"（即，允许对未经过验证的图像进行跨域下载）。添加图片的 `{{event("load")}}`事件的监听来判断图片数据是否已接收。
+使用 "硬编码" 图片网址可以很方便的允许图片来自任何地址。当开始下载图片时，我们使用 `{{domxref("HTMLImageElement.Image", "Image()")}}` 构造器创建新的 `{{domxref("HTMLImageElement")}}` 对象，将图片的 `crossOrigin` 属性设置为"`匿名`"（即，允许对未经过验证的图像进行跨域下载）。添加图片的 `[`load`](/zh-CN/docs/Web/API/Window/load_event)`事件的监听来判断图片数据是否已接收。
 
 最后，将图片的 `{{domxref("HTMLImageElement.src", "src")}}`属性设置为图片的 URL 以触发图片下载。
 

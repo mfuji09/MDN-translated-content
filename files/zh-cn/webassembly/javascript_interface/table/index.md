@@ -3,6 +3,7 @@ title: WebAssembly.Table()
 slug: WebAssembly/JavaScript_interface/Table
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 ---
+
 {{JSRef}}
 
 **`WebAssembly.Table()`** 构造函数根据给定的大小和元素类型创建一个 Table 对象。
@@ -24,16 +25,16 @@ var myTable = new WebAssembly.Table(tableDescriptor);
   - : 该对象具有以下属性：
 
     - _element_
-      - : 一个表明储存在该 Table 中对象的类型。 目前只能是： `"anyfunc"` (函数)。
+      - : 一个表明储存在该 Table 中对象的类型。目前只能是： `"anyfunc"` (函数)。
     - _initial_
       - : 该 WebAssembly Table 初始大小。
-    - _maximum {{optional_inline}}_
+    - _maximum_ {{optional_inline}}
       - : 该 WebAssembly Table 允许扩展到的最大大小。
 
 ### 异常
 
 - 如果 `tableDescriptor` 不是对象类型，将会抛出 {{jsxref("TypeError")}} 异常。
-- 如果申明了 `maximum` 属性并且比 `initial 小`, 将会抛出{{jsxref("RangeError")}} 异常。
+- 如果申明了 `maximum` 属性并且比 `initial` 小，将会抛出 {{jsxref("RangeError")}} 异常。
 
 ## `Table` Instance
 
@@ -55,7 +56,7 @@ var myTable = new WebAssembly.Table(tableDescriptor);
 - {{jsxref("WebAssembly/Table/set","Table.prototype.set()")}}
   - : Sets an element stored at a given index to a given value.
 
-## 例子
+## 示例
 
 The following example (see table2.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)) creates a new WebAssembly Table instance with an initial size of 2 elements. We then print out the table length and contents of the two indexes (retrieved via {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} to show that the length is two and both elements are {{jsxref("null")}}.
 

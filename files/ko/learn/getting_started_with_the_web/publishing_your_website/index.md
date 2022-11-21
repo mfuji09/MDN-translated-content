@@ -37,7 +37,7 @@ original_slug: Learn/Getting_started_with_the_web/웹사이트_출판하기
 
 어떤 도구들은 여러분이 여러분의 웹사이트를 온라인에 출판할 수 있게 해줍니다:
 
-- [GitHub](https://github.com/) 은 "소셜 코딩" 사이트입니다. 여러분이 [Git](http://git-scm.com/) **버전 관리 시스템** 안에 저장을 위한 코드 저장소를 업로드하게 해줍니다.\*\* \*\*코드 프로젝트에서 협업할 수 있고, 기본적으로 시스템은 오픈 소스가 됩니다, 이 것은 세상의 누구든 여러분의 GitHub 코드를 찾아볼 수 있다는 말입니다, 사용하세요, 이것으로부터 배우세요, 그리고 개선하세요. 여러분으 다른 사람들의 코드에도 마찬가지로 작업 할 수 있습니다! 이건 참여하기에 아주 중요하고 유용한 커뮤니티입니다, 그리고 Git/GitHub 은 아주 유명한 [버전 관리 시스템](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) 입니다 — 대부분의 기술 회사들은 현재 이것을 그들의 작업흐름에서 사용하고 있습니다. GitHub 은 웹에서 존재하는 웹사이트 코드를 전시할 수 있도록 해주는 [GitHub pages](https://pages.github.com/) 라는 아주 유용한 특징을 갖습니다.
+- [GitHub](https://github.com/) 은 "소셜 코딩" 사이트입니다. 여러분이 [Git](http://git-scm.com/) **버전 관리 시스템** 안에 저장을 위한 코드 저장소를 업로드하게 해줍니다. 코드 프로젝트에서 협업할 수 있고, 기본적으로 시스템은 오픈 소스가 됩니다, 이 것은 세상의 누구든 여러분의 GitHub 코드를 찾아볼 수 있다는 말입니다, 사용하세요, 이것으로부터 배우세요, 그리고 개선하세요. 여러분으 다른 사람들의 코드에도 마찬가지로 작업 할 수 있습니다! 이건 참여하기에 아주 중요하고 유용한 커뮤니티입니다, 그리고 Git/GitHub 은 아주 유명한 [버전 관리 시스템](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) 입니다 — 대부분의 기술 회사들은 현재 이것을 그들의 작업흐름에서 사용하고 있습니다. GitHub 은 웹에서 존재하는 웹사이트 코드를 전시할 수 있도록 해주는 [GitHub pages](https://pages.github.com/) 라는 아주 유용한 특징을 갖습니다.
 - [Dropbox](https://www.dropbox.com/) 는 웹에 여러분의 파일들을 저장하고 어떤 컴퓨터에서든 사용가능하게 해주는 파일 저장 시스템입니다. 인터넷 접속이 되는 누구든 여러분이 공개적으로 접근가능하게 해둔 Dropbox 폴더에 접근할 수 있습니다. 만약 그 폴더가 웹사이트 파일을 포함한다면, 자동적으로 웹사이트로써 제공될 것입니다. 더 많은 정보는 [Dropbox 로 웹사이트 관리하기](http://www.dropboxwiki.com/tips-and-tricks/host-websites-with-dropbox) 를 확인하세요.
 
 대부분의 호스팅과 다르게, 많은 도구들은 일반적으로 무료이지만, 여러분은 제한된 기능들만 사용할 수 있습니다.
@@ -150,11 +150,11 @@ _another commit_ 대신에 여러분이 막 변경했던 것을 설명할 수 �
 
 ## In this module
 
-- [Installing basic software](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [Installing basic software](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software)
+- [What will your website look like?](/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+- [Dealing with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)
+- [HTML basics](/en-US/Learn/Getting_started_with_the_web/HTML_basics)
+- [CSS basics](/en-US/Learn/Getting_started_with_the_web/CSS_basics)
+- [JavaScript basics](/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [Publishing your website](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
+- [How the web works](/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)

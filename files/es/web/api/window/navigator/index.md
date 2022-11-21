@@ -13,9 +13,10 @@ tags:
   - Window.navigator
 translation_of: Web/API/Window/navigator
 ---
-{{ApiRef}}La propiedad de solo lectura `Window.navigator `es una referencia al objeto {{domxref("Navigator")}}, el cual puede ser utilizado para obtener información sobre la aplicación que está ejecutando el script.
 
-##
+{{ApiRef}}
+
+La propiedad de solo lectura `Window.navigator` es una referencia al objeto {{domxref("Navigator")}}, el cual puede ser utilizado para obtener información sobre la aplicación que está ejecutando el script.
 
 ## Sintaxis
 
@@ -23,11 +24,9 @@ translation_of: Web/API/Window/navigator
 navigatorObject = window.navigator
 ```
 
-##
-
 ## Ejemplos
 
-### Ejemplo #1: Detectar un navegador y retornar un string
+### Ejemplon 1: Detectar un navegador y retornar un string
 
 ```js
 var sBrowser, sUsrAg = navigator.userAgent;
@@ -47,7 +46,7 @@ if(sUsrAg.indexOf("Chrome") > -1) {
 alert("Usted está utilizando: " + sBrowser);
 ```
 
-### Ejemplo #2: Detectar un navegador y retornar un índice
+### Ejemplo 2: Detectar un navegador y retornar un índice
 
 ```js
 function obtenerIdNavegador() {

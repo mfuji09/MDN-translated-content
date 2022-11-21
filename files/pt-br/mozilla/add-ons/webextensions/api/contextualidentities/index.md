@@ -1,11 +1,8 @@
 ---
 title: contextualIdentities
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities
-tags:
-  - Extensões Web
-  - Identidade contextual
-translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities
 ---
+
 {{AddonSidebar}}
 
 Trabalhar com identidades contextuais: listar, criar, remover e atualizar identidades contextuais.
@@ -43,12 +40,11 @@ Para usar esta API você precisará incluir a [permissão](/pt-BR/docs/Mozilla/A
   - : Atualiza as propriedades existentes de uma identidade contextual.
 - {{WebExtAPIRef("contextualIdentities.remove()")}}
   - : Exclui uma identidade contextual.
-- ## Eventos
 
-  {{WebExtAPIRef("contextualIdentities.onCreated")}}
+## Eventos
 
+- {{WebExtAPIRef("contextualIdentities.onCreated")}}
   - : Disparado quando uma identidade contextual é criada.
-
 - {{WebExtAPIRef("contextualIdentities.onRemoved")}}
   - : Disparado quando uma identidade contextual é removida.
 - {{WebExtAPIRef("contextualIdentities.onUpdated")}}

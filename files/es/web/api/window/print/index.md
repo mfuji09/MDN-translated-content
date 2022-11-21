@@ -29,7 +29,7 @@ window.print()
 
 ## Notas
 
-Empezando con Chrome {{CompatChrome(46.0)}} este método esta bloqueado dentro de un {{htmlelement("iframe")}} a menos que el atributo del contenedor tenga el valor `allow-modal`.
+Empezando con Chrome 46.0 este método esta bloqueado dentro de un {{htmlelement("iframe")}} a menos que el atributo del contenedor tenga el valor `allow-modal`.
 
 ## Especificación
 
@@ -39,6 +39,6 @@ Empezando con Chrome {{CompatChrome(46.0)}} este método esta bloqueado dentro d
 
 ## Ver también
 
-- [Impresión](/en/Printing "en/Printing")
+- [Impresión](/en/Printing)
 - {{ domxref("window.onbeforeprint") }}
 - {{ domxref("window.onafterprint") }}

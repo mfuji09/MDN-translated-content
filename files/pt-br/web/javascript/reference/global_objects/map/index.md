@@ -1,15 +1,8 @@
 ---
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Reference
-  - Polyfill
-browser-compat: javascript.builtins.Map
 ---
+
 {{JSRef}}
 
 O objeto **`Map`** contém pares de chave-valor e lembra a ordem original da inserção das chaves. Qualquer valor (objetos e {{glossary("Primitive", "valores primitivos")}}) podem ser usados como chave ou valor.
@@ -122,7 +115,7 @@ Porém, existem diferenças importantes que fazem o `Map` ser preferido em algun
             >protocolo de iteração</a>, e os objetos não podem ser iterados diretamente usando o <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of"
             >for...of</a
           > (por padrão).
-        </>
+        </p>
         <div class="notecard note">
           <p><strong>Nota:</strong></p>
           <ul>

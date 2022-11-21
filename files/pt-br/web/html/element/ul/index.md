@@ -1,18 +1,8 @@
 ---
 title: <ul>
 slug: Web/HTML/Element/ul
-tags:
-  - Elemento
-  - Guía
-  - HTML
-  - Indentação
-  - Intermediário
-  - Lista
-  - Listagem <ul>
-  - Referencia
-  - menu+HTML
-translation_of: Web/HTML/Element/ul
 ---
+
 O **elemento HTML`<ul>`** (ou _elemento_ _HTML de Lista desordenada_) representa uma lista de itens sem ordem rígida, isto é, uma coleção de itens que não trazem uma ordenação numérica e as suas posições, nessa lista, são irrelevantes. Caracteristicamente, os itens em uma lista desordenada são exibidos com um marcador que pode ter várias formas, como um ponto, um círculo, ou um quadrado. O tipo de marcador não é definido na descrição HTML da página, mas na CSS associada, utilizando a propriedade {{ cssxref("list-style-type") }}.
 
 Não há nenhuma limitação para a profundidade e a imbricação das listas definidas com os elementos {{ HTMLElement("ol") }} e {{ HTMLElement("ul") }}.
@@ -25,14 +15,13 @@ Não há nenhuma limitação para a profundidade e a imbricação das listas def
   <tbody>
     <tr>
       <td>
-        <a href="/en/HTML/Content_categories" title="en/HTML/Content categories"
+        <a href="/en/HTML/Content_categories"
           >Categorias de conteúdo</a
         >
       </td>
       <td>
         <a
           href="/en/HTML/Content_categories#flow_content"
-          title="en/HTML/Content categories#Flow content"
           >Flutuantes</a
         >
       </td>
@@ -72,8 +61,6 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
   - : Este atributo booleano sugere que a lista será processada em um modelo compacto. A interpretação deste atributo depende do perfil de navegação (_user agent_) e não funciona em todos os navegadores.
 
     > **Note:** **Nota de utilização:** Não aplique este atributo, que foi preterido - o elemento {{ HTMLElement("ul") }} deve ser definido utilizando-se a folha de estilos [CSS](/en/CSS). Para dar um efeito similar ao atributo compacto, a propriedade [line-height](/en/CSS/line-height) (espaçamento), da [CSS](/en/CSS), pode ser utilizada com um valor de 80%.
-
-<!---->
 
 - {{ htmlattrdef("type") }}{{ Deprecated_inline() }}
 
@@ -182,6 +169,4 @@ A saída HTML acima será:
   - a propriedade [line-height](/en/CSS/line-height), válida para simular o atributo ultrapassado {{ htmlattrxref("compact", "ul") }},
   - a propriedade [margin](/en/CSS/margin), proveitosa para controlar a indentação da lista.
 
-{{ languages({ "en":"en/HTML/Element/ul", "de":"de/HTML/Element/ul", "ja":"ja/HTML/Element/ul", "pl":"pl/HTML/Element/ul"}) }}
-
-{{ HTMLRef }}
+{{ HTMLSidebar }}

@@ -1,13 +1,8 @@
 ---
 title: summary
 slug: Web/HTML/Element/summary
-tags:
-  - Element
-  - HTML
-  - Summary
-  - Web
-translation_of: Web/HTML/Element/summary
 ---
+
 ## Sumário
 
 O elemento HTML _summary_ (`<summary>`) é utilizado como um sumário ou legenda para o conteúdo de um elemento {{ HTMLElement("details") }}.
@@ -41,5 +36,3 @@ Veja a página {{ HTMLElement("details") }} para ver exemplos com `<summary>`.
 ## Veja também
 
 - {{ HTMLElement("details") }}
-
-{{ languages({ "en": "en/HTML/Element/summary", "ja": "ja/HTML/Element/summary" }) }}

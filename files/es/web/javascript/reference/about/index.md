@@ -14,7 +14,7 @@ JavaScript versión 1.5 provee las siguientes nuevas características y extensio
 
 **Errores en tiempo de ejecución**
 
-Los errores en tiempo de ejecución son ahora reportados como [excepciones](/es/Guía_JavaScript_1.5/Sentencias_de_manejo_de_excepciones "es/Guía_JavaScript_1.5/Sentencias_de_manejo_de_excepciones").
+Los errores en tiempo de ejecución son ahora reportados como [excepciones](/es/Guía_JavaScript_1.5/Sentencias_de_manejo_de_excepciones).
 
 **Extensiones para el formato de números**
 
@@ -24,9 +24,9 @@ El formato de números ha sido extendido para incluir los métodos `Number.proto
 
 Las siguientes extensiones para expresiones regulares han sido añadidas:
 
-- Cuantificadores avaros: `— +, *, ? y {}`:ahora pueden seguirse por un `?` para forzarlos ha no ser avaros. Para la entrada **?** Véase la página [Escribir un patrón de expresiones regulares](/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales "es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales").
-- Paréntesis sin captura: `(?:x)`:pueden ser usados en vez de paréntesis con captura `(x)`. Cuando son utilizados, las sub expresiones de compatibilidad {{ mediawiki.external('match') }} no están disponibles como referencias de respaldo {{ mediawiki.external('back-references') }}. Para la entrada **(?:x)** Véase la página: [Escribir un patrón de expresiones regulares](/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales "es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales").
-- Aserciones predictivas {{ mediawiki.external('lookahead assertions') }} positivas y negativas son soportadas. Las dos aserguran una comparación dependiente de lo que sigue en la cadena de texto que está siendo cotejada. Ver las entradas para `x(?=y) y x(?!y)` en la página: [Escribir un patrón de expresiónes regulares](/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales "es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales").
+- Cuantificadores avaros: `— +, *, ? y {}`:ahora pueden seguirse por un `?` para forzarlos ha no ser avaros. Para la entrada **?** Véase la página [Escribir un patrón de expresiones regulares](/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales).
+- Paréntesis sin captura: `(?:x)`:pueden ser usados en vez de paréntesis con captura `(x)`. Cuando son utilizados, las sub expresiones de compatibilidad `[match]` no están disponibles como referencias de respaldo `[back-references]`. Para la entrada **(?:x)** Véase la página: [Escribir un patrón de expresiones regulares](/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales).
+- Aserciones predictivas `[lookahead assertions]` positivas y negativas son soportadas. Las dos aserguran una comparación dependiente de lo que sigue en la cadena de texto que está siendo cotejada. Ver las entradas para `x(?=y) y x(?!y)` en la página: [Escribir un patrón de expresiónes regulares](/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales).
 - La bandera m ha sido añadida para especificar que la expresión regular deberá cotejarse sobre múltiples líneas.
 
 **Declaraciones condicionales de funciones**
@@ -47,14 +47,14 @@ Constantes nominadas como sólo de lectura son soportadas. Esta característica 
 
 **Obtenedores y Modificadores (Getters and Setters)**
 
-Los editores de JavaScript ahora pueden añadir obtenedores {{ mediawiki.external('getters') }} y modificadores {{ mediawiki.external('setters') }} a sus objetos. Esta característica está disponible únicamente en la implementación C de JavaScript.
+Los editores de JavaScript ahora pueden añadir obtenedores `[getters]` y modificadores `[setters]` a sus objetos. Esta característica está disponible únicamente en la implementación C de JavaScript.
 
 ### Qué debería saberse ya
 
 Esta referencia asume que usted tiene a su respaldo el siguiente conocimiento básico:
 
 - Un entendimiento general de la Internet y de la World Wide Web (WWW).
-- Un conocimiento práctico del lenguaje de marcas para Hipertexto {{ mediawiki.external('HyperText Markup Language') }} ([HTML](/es/HTML "es/HTML")).
+- Un conocimiento práctico del lenguaje de marcas para Hipertexto `[HyperText Markup Language]` ([HTML](/es/HTML)).
 
 Es beneficioso alguna experiencia en programación en lenguajes como C o Visual Basic, pero no es requerido.
 
@@ -90,20 +90,20 @@ Cada versión del servidor Netscape Enterprise también soporta una versión dif
 
 La documentación de JavaScript incluye los siguientes libros:
 
-- [Guía de JavaScript 1.5](/es/Guía_JavaScript_1.5 "es/Guía_JavaScript_1.5") provee la información sobre el lenguaje JavaScript y sus objetos.
-- [Referencia de JavaScript 1.5](/es/Referencia_de_JavaScript_1.5 "es/Referencia_de_JavaScript_1.5") (éste manual) provee material de referencia para el lenguaje JavaScript.
+- [Guía de JavaScript 1.5](/es/Guía_JavaScript_1.5) provee la información sobre el lenguaje JavaScript y sus objetos.
+- [Referencia de JavaScript 1.5](/es/Referencia_de_JavaScript_1.5) (éste manual) provee material de referencia para el lenguaje JavaScript.
 
-Si usted es principiante con JavaScript, comience por la [Guía de JavaScript](/es/Guía_JavaScript_1.5 "es/Guía_JavaScript_1.5") y una vez que haya obtenido firmes entendimientos de sus fundamentos, debe seguir con la [Referencia de JavaScript 1.5](/es/Referencia_de_JavaScript_1.5 "es/Referencia_de_JavaScript_1.5") para conseguir más detalles individuales acerca de los objetos y las sentencias.
+Si usted es principiante con JavaScript, comience por la [Guía de JavaScript](/es/Guía_JavaScript_1.5) y una vez que haya obtenido firmes entendimientos de sus fundamentos, debe seguir con la [Referencia de JavaScript 1.5](/es/Referencia_de_JavaScript_1.5) para conseguir más detalles individuales acerca de los objetos y las sentencias.
 
 ### Convenciones en el documento
 
-Las aplicaciones JavaScript se ejecutan en muchos sistemas operativos; la información en este libro se aplica a todas las versiones. Las rutas {{ mediawiki.external('paths') }} para archivos y directorios están dadas en un formato Windows (con backslashes separando los nombres de directorios). Para las versiones Unix, la ruta de los directorios son las mismas, excepto que deben usarse slashes en vez de backslashes para separar los directorios.
+Las aplicaciones JavaScript se ejecutan en muchos sistemas operativos; la información en este libro se aplica a todas las versiones. Las rutas `[paths]` para archivos y directorios están dadas en un formato Windows (con backslashes separando los nombres de directorios). Para las versiones Unix, la ruta de los directorios son las mismas, excepto que deben usarse slashes en vez de backslashes para separar los directorios.
 
-Esta guía utiliza los localizadores uniformes de recursos {{ mediawiki.external('uniform resource locators') }} (URLs) de la siguiente forma:
+Esta guía utiliza los localizadores uniformes de recursos `[uniform resource locators]` (URLs) de la siguiente forma:
 
 `http://servidor.dominio/path/file.html`
 
-En estos URLs, "servidor" representa el nombre del servidor en el cual puede ejecutar su aplicación (p.e., busqueda1, www), "dominio" representa un nombre de dominio de Internet (p.e., netscape.com, uiuc.edu), "path" representa la estructura de directorios en el servidor y "file.html" representa un nombre individual de archivo. En general, los items en italica en un URLs se mantienen en su lugar y los items en un tipo normal de fuente monospace son literales. Si su servidor tiene habilitada la capa de sockets seguros {{ mediawiki.external('Secure Sockets Layer') }} (SSL), deberá usar https en lugar de http en el URL.
+En estos URLs, "servidor" representa el nombre del servidor en el cual puede ejecutar su aplicación (p.e., busqueda1, www), "dominio" representa un nombre de dominio de Internet (p.e., netscape.com, uiuc.edu), "path" representa la estructura de directorios en el servidor y "file.html" representa un nombre individual de archivo. En general, los items en italica en un URLs se mantienen en su lugar y los items en un tipo normal de fuente monospace son literales. Si su servidor tiene habilitada la capa de sockets seguros `[Secure Sockets Layer]` (SSL), deberá usar https en lugar de http en el URL.
 
 Esta guía utiliza las siguientes convenciones de tipo de fuente:
 

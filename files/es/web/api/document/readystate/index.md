@@ -3,7 +3,7 @@ title: Document.readyState
 slug: Web/API/Document/readyState
 translation_of: Web/API/Document/readyState
 ---
-{{APIRef("DOM")}} {{ gecko_minversion_header("1.9.2") }}
+{{APIRef("DOM")}}
 
 ## Resumen
 
@@ -79,6 +79,7 @@ document.onreadystatechange = function () {
 ## Compatibilidad del Navegador
 
 {{Compat}}
+
 ## Ver también
 
 - Evento {{event("readystatechange")}}

@@ -2,6 +2,7 @@
 title: ループと反復処理
 slug: Web/JavaScript/Guide/Loops_and_iteration
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 ループは繰り返し何かを実行するための簡便な方法を提供します。本章では JavaScript で利用可能な反復処理を行う数々の文を紹介します。
@@ -203,7 +204,7 @@ break [ラベル];
 1. 最初の形では最も内側のループや `switch` を終了します
 2. 2 つ目の形では指定した外側のラベルつき文を終了します。
 
-### **例** **1**
+### 例 1
 
 次の例では、値が `theValue` である要素のインデックスを探すまで配列の要素を反復します。:
 
@@ -215,7 +216,7 @@ for (let i = 0; i < a.length; i++) {
 }
 ```
 
-### **例 2:** ラベルまでブレーク
+### 例 2: ラベルまでブレーク
 
 ```js
 let x = 0;

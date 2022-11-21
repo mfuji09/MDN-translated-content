@@ -1,23 +1,23 @@
 ---
 title: JSON
 slug: Glossary/JSON
-translation_of: Glossary/JSON
 original_slug: JSON
 ---
+
 **JSON** (Notação de Objetos JavaScript) e um formato de dados permutável. Ele assemelha - se próximo a um sub tipo da sintaxe do [JavaScript](/pt-BR/docs/Trash/MDN/JavaScript/About_JavaScript), mas ele não é um tipo de script. (Veja [JSON](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON) em [Referências JavaScript](/en/JavaScript/Reference) para todos os detalhes). Isto é útil quando escrevemos qualquer tipo de aplicação baseada em JavaScript, incluindo web sites e extensões de navegadores. Por exemplo, você pode armazenar informações no formato em JSON no formato de [cookies](/en/DOM/document.cookie), ou você pode armazenar as preferências de extensões em JSON como valor de texto nas preferências do navegador.
 
 JSON e capaz de representar números, booleanos, textos, vazios, e listas (sequência ordenada de valores) e objetos (mapeamento de valores de texto) composto por estes valores (ou por outras listas e objetos). Ele não representa nativamente tipos complexos de dados como funções, expressões regulares, datas, e muito mais. (Objetos de dados por padrão inicializam como texto contendo os dados no formato ISO, enquanto eles não mudam, a informação não é completamente perdida.) Se você precisa preservar muitos valores, você pode transformar valores como eles são inicializados, ou prioritariamente descontinuados, para habilitar JSON para representar tipos de dados adicionais.
 
 ## Documentação
 
-- [Objetos JSON](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/JSON)
+- [Objetos JSON](/en/JavaScript/Reference/Global_Objects/JSON)
   - : Os objetos JSON contém métodos para converter valores para Notação de objetos javascript (JSON) e para converter JSON para valores.
 - [Usando o JSON nativo](/en/Using_native_JSON)
   - : Este artigo cobre o ECMAScript 5 compilando a linguagem nativa JSON somado em Gecko 1.9.1.
 - [Caminho JSON](/en/JSON/JSONPath)
   - : Caminho JSON significa o uso XPath como sintaxe para a estrutura de requisições do JSON. Ele não é o padrão, mas apresenta maneiras de requisição em JavaScript diretamente sem precisar converte - la para xml.
 - [Baixando JSON e extensões em Javascript](/en/Downloading_JSON_and_JavaScript_in_extensions)
-  - : A pratica habitual encontrada em muitas extensões está usando XMLHttpRequest (ou outros mecanismos) para baixar Javascript ou [JSON ](/en/JSON)(eles são diferentes) para um site web remoto. Uma vez o conteúdo já sido baixado, a extensão escrita procedida pelo uso [eval()](/en/Core_JavaScript_1.5_Reference/Functions/eval) para decodificar o texto contendo objetos JavaScript, a escolha e uma prática perigosa e não deve, de fato passar na revisão [AMO.](http://addons.mozilla.org) Este artigo mostra como evitar isto.
+  - : A pratica habitual encontrada em muitas extensões está usando XMLHttpRequest (ou outros mecanismos) para baixar Javascript ou [JSON](/en/JSON) (eles são diferentes) para um site web remoto. Uma vez o conteúdo já sido baixado, a extensão escrita procedida pelo uso [eval()](/en/Core_JavaScript_1.5_Reference/Functions/eval) para decodificar o texto contendo objetos JavaScript, a escolha e uma prática perigosa e não deve, de fato passar na revisão [AMO.](http://addons.mozilla.org) Este artigo mostra como evitar isto.
 - [JXON](/en/JXON)
   - : JXON padrões sem perdas de Notação de Objetos JavaScript XML, ele é um nome genérico pelo qual e definida a representação da árvore dos objetos JavaScript (JSON) usando XML.
 - [`Método JSON.stringify`](/en/JavaScript/Reference/Global_Objects/JSON/stringify)
