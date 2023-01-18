@@ -538,6 +538,7 @@
 /ko/docs/Web/API/WebGL_API/Lighting_in_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 /ko/docs/Web/API/WebGL_API/Using_shaders_to_apply_color_in_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /ko/docs/Web/API/WebGL_API/Using_textures_in_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+/ko/docs/Web/API/WebRTC_API/adapter.js	/ko/docs/orphaned/Web/API/WebRTC_API/adapter.js
 /ko/docs/Web/API/Web_Workers_API/basic_usage	/ko/docs/Web/API/Web_Workers_API/Using_web_workers
 /ko/docs/Web/API/Window/crypto	/ko/docs/Web/API/crypto_property
 /ko/docs/Web/API/WindowEventHandlers	/ko/docs/orphaned/Web/API/WindowEventHandlers
@@ -690,6 +691,8 @@
 /ko/docs/Web/HTML/HTML에서_폼	/ko/docs/Learn/Forms
 /ko/docs/Web/HTML/Index	/ko/docs/Web/HTML
 /ko/docs/Web/HTML/Introduction	/ko/docs/Learn/HTML/Introduction_to_HTML
+/ko/docs/Web/HTML/Link_types	/ko/docs/Web/HTML/Attributes/rel
+/ko/docs/Web/HTML/Link_types/preload	/ko/docs/Web/HTML/Attributes/rel/preload
 /ko/docs/Web/HTTP/Access_control_CORS	/ko/docs/Web/HTTP/CORS
 /ko/docs/Web/HTTP/Access_control_CORS/Errors	/ko/docs/Web/HTTP/CORS/Errors
 /ko/docs/Web/HTTP/Access_control_CORS/Errors/CORSDidNotSucceed	/ko/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed
