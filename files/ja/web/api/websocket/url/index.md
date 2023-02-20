@@ -1,9 +1,8 @@
 ---
-title: "WebSocket: url プロパティ"
-short-title: url
+title: WebSocket.url
 slug: Web/API/WebSocket/url
 l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
 ---
 
 {{APIRef("Web Sockets API")}}
