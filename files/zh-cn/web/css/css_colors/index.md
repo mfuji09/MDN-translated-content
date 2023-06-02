@@ -1,6 +1,6 @@
 ---
 title: CSS Color
-slug: Web/CSS/CSS_Colors
+slug: Web/CSS/CSS_colors
 original_slug: Web/CSS/CSS_Color
 ---
 
@@ -29,7 +29,7 @@ original_slug: Web/CSS/CSS_Color
 
 ## 工具
 
-- [Color picker tool](/zh-CN/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [Color picker tool](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)
   - : 该工具能让你创建、调整和试验自定义颜色变得简单。
 
 ## 规范
@@ -40,7 +40,7 @@ original_slug: Web/CSS/CSS_Color
 
 {{Compat}}
 
-## 同时参阅
+## 参见
 
-- 有与颜色有关属性的其他规范：{{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- 在 CSS 中，渐变不是颜色，而是 [images](/zh-CN/docs/Web/CSS/CSS_Images).
+- 有与颜色有关属性的其他规范：{{cssxref("background-color")}}、{{cssxref("border-color")}}、{{cssxref("outline-color")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-shadow")}}、{{cssxref("caret-color")}} 和 {{cssxref("column-rule-color")}}
+- 在 CSS 中，渐变不是颜色，而是[图像](/zh-CN/docs/Web/CSS/CSS_images)。
