@@ -2,10 +2,12 @@
 title: 画像としての SVG
 slug: Web/SVG/SVG_as_an_Image
 l10n:
-  sourceCommit: f4f8e2f18ccf19a0bee59e1fe78753e276b98232
+  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
 
-SVG 画像は、様々な場面で画像形式の一つとして使用することができます。多くのブラウザーは SVG 画像を以下の場所で対応しています。
+{{SVGRef}}
+
+SVG 画像は、画像形式の一つとして使用することができます。ブラウザーは SVG 画像に以下の場所で対応しています。
 
 - HTML の {{HTMLElement("img")}} または {{SVGElement("svg")}} 要素
 - CSS の {{cssxref("background-image")}}
@@ -29,7 +31,3 @@ SVG 画像は、様々な場面で画像形式の一つとして使用するこ�
 ## 仕様書
 
 {{Specifications}}
-
-## 関連情報
-
-- [HTML 内の SVG 入門](/ja/docs/SVG_In_HTML_Introduction)
