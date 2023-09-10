@@ -8,7 +8,7 @@ l10n:
 
 {{deprecated_header}}{{ ApiRef("Push API")}}
 
-**`unregister()`** メソッドは、システムに特定の端点の登録を脱退して削除するよう依頼するために使用していました。
+**`unregister()`** メソッドは、システムに特定のエンドポイントの登録を脱退して削除するよう依頼するために使用していました。
 
 > **メモ:** 更新された API では、サブスクリプションは {{domxref("PushSubscription.unsubscribe()")}} メソッドで脱退することができます。
 
@@ -21,20 +21,20 @@ unregister(pushEndpoint)
 ### 引数
 
 - `pushEndpoint`
-  - : 脱退する端点です。
+  - : 脱退するエンドポイントです。
 
 ### 返値
 
 `DOMRequest` オブジェクトで、このメソッド呼び出しの成功または失敗を扱います。
 
-メソッドの呼び出しが成功した場合、リクエストの `result` は登録解除された端点を表す [PushRegistration](#pushregistration) オブジェクトになります。
+メソッドの呼び出しが成功した場合、リクエストの `result` は登録解除されたエンドポイントを表す [PushRegistration](#pushregistration) オブジェクトになります。
 
 ### PushRegistration
 
 このオブジェクトは無名の JavaScript オブジェクトで、以下のプロパティがあります。
 
 - `pushEndpoint`
-  - : 登録解除する端点の URL を表す文字列です。
+  - : 登録解除するエンドポイントの URL を表す文字列です。
 - `version`
   - : `unregister.onsuccess` が呼び出された際には `undefined` です。
 
