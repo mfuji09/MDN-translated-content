@@ -35,7 +35,7 @@ new Promise((resolveOuter) => {
   resolveOuter(
     new Promise((resolveInner) => {
       setTimeout(resolveInner, 1000);
-    })
+    }),
   );
 });
 ```
@@ -151,9 +151,9 @@ const aThenable = {
 Promise.resolve(aThenable); // プロミスは 42 で履行
 ```
 
-### プロミスの並列処理
+### プロミスの並行処理
 
-`Promise` クラスは，非同期タスクの[並列処理](https://en.wikipedia.org/wiki/Concurrent_computing)を容易にするために、4 つの静的メソッドを提供しています。
+`Promise` クラスは，非同期タスクの[並行処理](https://en.wikipedia.org/wiki/Concurrent_computing)を容易にするために、4 つの静的メソッドを提供しています。
 
 - {{jsxref("Promise.all()")}}
   - : **すべて**のが履行されたときに履行され、**いずれか**のプロミスが拒否されると拒否される。
@@ -164,7 +164,7 @@ Promise.resolve(aThenable); // プロミスは 42 で履行
 - {{jsxref("Promise.race()")}}
   - : **いずれか**のプロミスが決定されたときに決定されます。すなわち、いずれかのプロミスが履行されれば履行され、いずれかのプロミスが拒否されれば拒否されます。
 
-これらのメソッドはすべて、プロミスの[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)オブジェクト（正確には [Thenable](#thenable)）を受け取り、新しいプロミスを返します。これらはすべてサブクラス化に対応しています。つまり、 `Promise` のサブクラスに対して呼び出すことができ、その結果はサブクラスの種類を持つプロミスになります。そのためには、サブクラスのコンストラクターに [`Promise()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) と同じ定義を実装する必要があります。すなわち、単一の `executor` 関数を取り、これが `resolve` と `reject` コールバック関数を引数として取るようにします。また、サブクラスには静的メソッドの `resolve` も必要です。これは {{jsxref("Promise.resolve()")}} のように呼び出すことができ、値をプロミスに解決するためのメソッドです。
+これらのメソッドはすべて、プロミスの[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)オブジェクト（正確には [Thenable](#thenable)）を受け取り、新しいプロミスを返します。これらはすべてサブクラス化に対応しています。つまり、 `Promise` のサブクラスに対して呼び出すことができ、その結果はサブクラスの種類を持つプロミスになります。そのためには、サブクラスのコンストラクターに [`Promise()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) と同じ定義を実装する必要があります。すなわち、単一の `executor` 関数を取り、これが `resolve` と `reject` コールバック関数を引数として取るようにします。また、サブクラスには静的メソッドの `resolve` も必要です。これは {{jsxref("Promise.resolve()")}} のように呼び出すことができ、値をプロミスに解決するためのメソッドです。
 
 JavaScript はもともと[シングルスレッド](/ja/docs/Glossary/Thread)なので、指定された瞬間には 1 つのタスクしか実行されませんが、異なるプロミス間で制御が移り、プロミスの実行が同時に行われるように見えることがあることに注意してください。JavaScript で[並列実行](https://ja.wikipedia.org/wiki/並列計算)を行うには、[ワーカースレッド](/ja/docs/Web/API/Web_Workers_API)を使うしかありません。
 
@@ -342,13 +342,16 @@ function testPromise() {
     // プロミスを解決または拒否する機能を持つ実行関数が呼び出されます
     log.insertAdjacentHTML(
       "beforeend",
-      `${thisPromiseCount}) Promise コンストラクター<br>`
+      `${thisPromiseCount}) Promise コンストラクター<br>`,
     );
     // これは単に非同期にするための例に過ぎません
-    setTimeout(() => {
-      // プロミスを履行させます
-      resolve(thisPromiseCount);
-    }, Math.random() * 2000 + 1000);
+    setTimeout(
+      () => {
+        // プロミスを履行させます
+        resolve(thisPromiseCount);
+      },
+      Math.random() * 2000 + 1000,
+    );
   });
 
   // プロミスが解決されたときの処理を then() の呼び出しで定義します。
@@ -385,7 +388,7 @@ btn.addEventListener("click", testPromise);
 これをもう少し詳しく説明するために、文書に埋め込まれた [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) がホストとどのように通信するかを見てみましょう。すべての Web API は現行の設定オブジェクトを認識しているため、以下のようにすればすべてのブラウザーで動作します。
 
 ```html
-<!DOCTYPE html> <iframe></iframe>
+<!doctype html> <iframe></iframe>
 <!-- ここが領域です -->
 <script>
   // ここも同様に領域です
@@ -401,7 +404,7 @@ btn.addEventListener("click", testPromise);
 同じ概念をプロミスに適用します。上の例を少し変えてみると、こうなります。
 
 ```html
-<!DOCTYPE html> <iframe></iframe>
+<!doctype html> <iframe></iframe>
 <!-- ここが領域です -->
 <script>
   // ここも同様に領域です
@@ -418,7 +421,7 @@ btn.addEventListener("click", testPromise);
 
 ```html
 <!-- y.html -->
-<!DOCTYPE html>
+<!doctype html>
 <iframe src="x.html"></iframe>
 <script>
   const bound = frames[0].postMessage.bind(frames[0], "some data", "*");
@@ -428,7 +431,7 @@ btn.addEventListener("click", testPromise);
 
 ```html
 <!-- x.html -->
-<!DOCTYPE html>
+<!doctype html>
 <script>
   window.addEventListener(
     "message",
@@ -437,7 +440,7 @@ btn.addEventListener("click", testPromise);
       // このコードは現行の設定オブジェクトを追跡するブラウザーでしか動作しません
       console.log(event);
     },
-    false
+    false,
   );
 </script>
 ```
