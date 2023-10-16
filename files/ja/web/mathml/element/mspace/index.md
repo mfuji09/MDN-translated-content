@@ -2,7 +2,7 @@
 title: <mspace>
 slug: Web/MathML/Element/mspace
 l10n:
-  sourceCommit: 300849e10f993e94491937e2d1d3bca696908a95
+  sourceCommit: 67cbfbf7a408e7180137b286247025bc40716642
 ---
 
 {{MathMLRef}}
@@ -20,23 +20,20 @@ l10n:
 - `width`
   - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) で、この空間の希望の幅を示します。
 
-> **メモ:** `depth`、`height`、`width` 属性については、一部のブラウザーは[古い MathML における長さ](/ja/docs/Web/MathML/Attribute/Values#古い_mathml_における長さ)も受け入れることがあります。
+> **メモ:** `depth`、`height`、`width` 属性については、一部のブラウザーは[古い MathML における長さ](/ja/docs/Web/MathML/Values#mathml_における古い長さ)も受け入れることがあります。
 
 ## 例
 
-```html
+```html-nolint
 <math display="block">
   <mn>1</mn>
-  <mspace
-    depth="40px"
-    height="20px"
-    width="100px"
-    style="background: lightblue;" />
+  <mspace depth="40px" height="20px" width="100px"
+          style="background: lightblue;"/>
   <mn>2</mn>
 </math>
 ```
 
-{{ EmbedLiveSample('mspace_example', 700, 200, "", "") }}
+{{EmbedLiveSample('Examples')}}
 
 ## 仕様書
 
