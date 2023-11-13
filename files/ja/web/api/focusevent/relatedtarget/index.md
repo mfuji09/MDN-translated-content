@@ -1,8 +1,9 @@
 ---
-title: FocusEvent.relatedTarget
+title: "FocusEvent: relatedTarget プロパティ"
+short-title: relatedTarget
 slug: Web/API/FocusEvent/relatedTarget
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{ apiref("DOM Events") }}
@@ -43,7 +44,7 @@ l10n:
   </tbody>
 </table>
 
-なお、[多くの要素はフォーカスを受け取ることができない](https://stackoverflow.com/questions/42764494/blur-event-relatedtarget-returns-null/42764495)ことが、 `relatedTarget` が `null` になる良くある理由です。 `relatedTarget` はタブ移動でページをでたり入ったりする場合など、セキュリティ上の理由で `null` になることもあります。
+なお、[多くの要素はフォーカスを受け取ることができません](https://stackoverflow.com/questions/42764494/blur-event-relatedtarget-returns-null/42764495)。これが、 `relatedTarget` が `null` になる良くある理由です。 `relatedTarget` はタブ移動でページをでたり入ったりする場合など、セキュリティ上の理由で `null` になることもあります。
 
 {{domxref("MouseEvent.relatedTarget")}} はマウスイベントにおける同様のプロパティです。
 
