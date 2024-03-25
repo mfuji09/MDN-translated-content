@@ -270,7 +270,7 @@ const greeting = "I'm a bad example";
 
 ローカライズは [gettext](https://www.gnu.org/software/gettext/) 形式の JSON ファイルとして [Yari](https://github.com/mdn/yari/tree/main/markdown/localizations) に格納されています。これらのファイルを参照して、そのロケールの "Note:" や "Warning:" の代わりに使用する文字列を決定してください。ロケールファイルを定義されていない場合、フォールバックとして英語が使用されます。
 
-例えば、ドイツ語の "Warnung" を "Warning" に使用した場合、ドイツ語のページではこう書きます。
+例えば、ドイツ語の "Warnung" を "Warning" に使用したい場合、ドイツ語のページではこう書きます。
 
 ```md
 > **Warnung:** So schreibt man eine Warnung.
