@@ -47,7 +47,7 @@ browser-compat-data リポジトリーに格納されるステータスに合わ
 - `\{{Deprecated_Header}}` — 「**非推奨**」バナーを生成して、この技術の利用を[避けるべき](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)であることを示します。
 - `\{{Non-standard_Header}}` — 「**標準外**」バナーを生成して、この技術が複数のブラウザーで実装されていても、正式な仕様書の一部ではないことを示します。
 
-値を変更するのであれば、 [browser-compat-data リポジトリーで機能の状態を更新](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)してください。
+値を変更するのであれば、 [browser-compat-data リポジトリーで機能状態を更新](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)してください。
 
 > **メモ:** コンテンツ内でこれらのマクロを手動で更新することはできますが、ブラウザー互換性データと一致しない値は置き換えられたり除去されたりします。
 
