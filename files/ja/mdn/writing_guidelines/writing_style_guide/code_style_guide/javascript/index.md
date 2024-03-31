@@ -564,13 +564,23 @@ class Person {
     this.pronouns = pronouns;
   }
 
-  greeting() {
-    console.log(`Hi! I'm ${this.name}`);
+    greeting() {
+      console.log(`Hi! I'm ${this.name}`);
+    }
   }
-}
-```
+  ```
 
 継承には `extends` を使用してください。
+
+  ```js example-good
+  class Teacher extends Person {
+    // …
+  }
+  ```
+
+### メソッド
+
+メソッドを定義するには、メソッド定義構文を使用してください。
 
 ```js example-good
 class Teacher extends Person {
