@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`Object.defineProperties()`** メソッドは、オブジェクトに直接新しいプロパティを定義し、あるいは既存のプロパティを変更して、そのオブジェクトを返します。
+**`Object.defineProperties()`** 静的メソッドは、オブジェクトに直接新しいプロパティを定義し、あるいは既存のプロパティを変更して、そのオブジェクトを返します。
 
 {{EmbedInteractiveExample("pages/js/object-defineproperties.html")}}
 
@@ -40,7 +40,6 @@ Object.defineProperties(obj, props)
       - : プロパティに関連づける値。 JavaScript で有効な任意の値です (数値、オブジェクト、関数など)。
         **既定値は {{jsxref("undefined")}}。**
     - `writable`
-
       - : プロパティに関連づけられた値が{{jsxref("Operators", "assignment operator", "代入演算子", 1)}}で変更できる場合のみ `true`。
         **既定値は `false`。**
 
