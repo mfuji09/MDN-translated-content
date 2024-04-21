@@ -82,9 +82,9 @@ JSON.stringify(value, replacer, space)
 
 `replacer` 関数は、まず文字列化されるオブジェクトについて呼び出され、このときの `key` は空文字列 (`""`) です。その後、文字列化されるオブジェクトや配列のそれぞれのプロパティについて呼び出されます。配列の添字は、文字列として `key` に入ります。処理中のプロパティの値は、文字列化において `replacer` の返値に置き換えられます。すなわち:
 
-- 数値、文字列、論理値、`null` を返すと、その値を直接文字列化したものがプロパティの値として使用されます。（長整数を返すと、例外が発生します。）
-- 関数 ({{jsxref("Function")}})、シンボル ({{jsxref("Symbol")}})、{{jsxref("undefined")}} を返すと、出力にはそのプロパティが含まれなくなります。
-- それ以外のオブジェクトを返した場合、そのオブジェクトのそれぞれのプロパティに `replacer` 関数を呼び出して再帰的に文字列化します。
+- 数値 ({{JSxRef("Number")}})、文字列 ({{JSxRef("String")}})、論理値 ({{JSxRef("Boolean")}})、[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返すと、その値を直接文字列化したものがプロパティの値として使用されます。({{JSxRef("BigInt")}} を返すと、例外が発生します)
+- 関数 ({{JSxRef("Function")}})、シンボル ({{JSxRef("Symbol")}})、{{JSxRef("undefined")}} を返すと、出力にはそのプロパティが含まれなくなります。
+- その他のオブジェクトを返した場合、そのオブジェクトのそれぞれのプロパティに `replacer` 関数を呼び出して再帰的に文字列化します。
 
 > **メモ:** `replacer` 関数を用いて生成した JSON を解釈する際は、逆変換のために引数 [`reviver`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#reviver_%E5%BC%95%E6%95%B0%E3%81%AE%E4%BD%BF%E7%94%A8) を用いたくなる可能性が高いでしょう。
 
