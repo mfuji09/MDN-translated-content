@@ -14092,6 +14092,10 @@
       "Potappo"
     ]
   },
+  "Web/API/Window/indexedDB": {
+    "modified": "2019-03-23T22:01:21.947Z",
+    "contributors": ["Marsf"]
+  },
   "Web/API/Window/innerHeight": {
     "modified": "2020-11-20T13:43:14.616Z",
     "contributors": [
@@ -14116,6 +14120,10 @@
       "Mgjbot",
       "Potappo"
     ]
+  },
+  "Web/API/Window/isSecureContext": {
+    "modified": "2020-10-15T22:08:54.038Z",
+    "contributors": ["k-kuwahara"]
   },
   "Web/API/Window/languagechange_event": {
     "modified": "2020-10-15T22:28:08.684Z",
@@ -14264,6 +14272,10 @@
   "Web/API/Window/orientationchange_event": {
     "modified": "2020-10-15T21:52:18.082Z",
     "contributors": ["mfuji09", "fscholz", "shuuji3"]
+  },
+  "Web/API/Window/origin": {
+    "modified": "2020-10-15T22:08:52.985Z",
+    "contributors": ["k-kuwahara"]
   },
   "Web/API/Window/outerHeight": {
     "modified": "2020-10-15T21:16:37.970Z",
@@ -15179,18 +15191,6 @@
       "Piroro-hs",
       "chikoski"
     ]
-  },
-  "Web/API/indexedDB": {
-    "modified": "2019-03-23T22:01:21.947Z",
-    "contributors": ["Marsf"]
-  },
-  "Web/API/isSecureContext": {
-    "modified": "2020-10-15T22:08:54.038Z",
-    "contributors": ["k-kuwahara"]
-  },
-  "Web/API/origin": {
-    "modified": "2020-10-15T22:08:52.985Z",
-    "contributors": ["k-kuwahara"]
   },
   "Web/API/performance_property": {
     "modified": "2020-10-15T22:08:48.553Z",
@@ -30202,10 +30202,6 @@
       "kenji-yamasaki",
       "sii"
     ]
-  },
-  "conflicting/MDN/MDN_Product_Advisory_Board": {
-    "modified": "2020-03-14T06:36:03.749Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
   },
   "conflicting/MDN/Writing_guidelines": {
     "modified": "2020-09-30T15:30:23.873Z",
