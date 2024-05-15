@@ -9,11 +9,11 @@ l10n:
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`report-uri`** ディレクティブは非推奨で、ディレクティブは、コンテンツセキュリティポリシーに違反する試みを報告するよう、 ユーザーエージェントに指示します。これらの違反報告は、指定された URI への HTTP POST リクエストで送られる JSON 文書で構成されます。
 
-> **警告:** {{CSP("report-to")}} ディレクティブは、非推奨の **`report-uri`** ディレクティブを置き換えるためのものですが、{{CSP("report-to")}} は、まだほとんどのブラウザーで対応されていません。
-> そのため、現在のブラウザーとの互換性を保ちつつ、ブラウザーが {{CSP("report-to")}} に対応したときに前方互換性を持たせられるよう、 **`report-uri`** と {{CSP("report-to")}} の両方を指定することができるようになっています。
+> **警告:** {{CSP("report-to")}} ディレクティブは、非推奨の **`report-uri`** ディレクティブを置き換えるためのものですが、 {{CSP("report-to")}} は、まだすべてのブラウザーで対応されているわけではありません。
+> 互換性のために、 **`report-uri`** と {{CSP("report-to")}} の両方を指定することができます。
 >
 > ```http
-> Content-Security-Policy: …; report-uri https://endpoint.com; report-to groupname
+> Content-Security-Policy: …; report-uri https://example.com/endpoint; report-to csp-endpoint
 > ```
 >
 > {{CSP("report-to")}} に対応しているブラウザーでは、**`report-uri`** ディレクティブは無視されます。
