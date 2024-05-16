@@ -2,14 +2,14 @@
 title: filter
 slug: Web/SVG/Attribute/filter
 l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+  sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
 
 {{SVGRef}}
 
 **`filter`** 属性は、　{{SVGElement("filter")}}　要素で定義したフィルター効果を指定します。
 
-> **メモ:** プレゼンテーション属性として、 `filter` は CSS プロパティとして使用することができます。詳しい情報は {{cssxref("filter", "CSS filter")}} を参照してください。
+> **メモ:** プレゼンテーション属性として、 `filter` は CSS プロパティとして使用することができます。詳しい情報は {{cssxref("filter", "CSS の filter")}} を参照してください。
 
 プレゼンテーション属性として、任意の要素に適用することができますが、効果があるのは[コンテナー要素](/ja/docs/Web/SVG/Element#コンテナー要素)（{{SVGElement("defs")}} 要素以外を除く）、すべての[グラフィック要素](/ja/docs/Web/SVG/Element#グラフィック要素)、および {{SVGElement("use")}} 要素のみです。
 
@@ -44,7 +44,7 @@ svg {
       <td>
         <code>none</code>
         <a
-          href="/ja/docs/CSS/Value_definition_syntax#Single_bar"
+          href="/ja/docs/Web/CSS/Value_definition_syntax#single_bar"
           title="Single bar: exactly one of the entities must be present"
           >|</a
         >
