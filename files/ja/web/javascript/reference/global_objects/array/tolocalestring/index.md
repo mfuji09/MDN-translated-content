@@ -63,7 +63,7 @@ prices.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
 
 ### 疎配列に対する toLocaleString() の使用
 
-toLocaleString()` は空のスロットを `undefined` と同じように扱い、区切り文字を追加します。
+`toLocaleString()` は空のスロットを `undefined` と同じように扱い、区切り文字を追加します。
 
 ```js
 console.log([1, , 3].toLocaleString()); // '1,,3'
