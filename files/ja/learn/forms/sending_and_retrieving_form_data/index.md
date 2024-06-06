@@ -50,7 +50,7 @@ l10n:
 
 ### action 属性
 
-[`action`](/ja/docs/Web/HTML/Element/form#action) 属性は、どこにデータを送信するかを定義します。値は妥当な相対/絶対 [URL](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URLL) でなければなりません。この属性が与えられなかった場合は、フォームが含まれているページの URL にデータが送信されます。
+[`action`](/ja/docs/Web/HTML/Element/form#action) 属性は、どこにデータを送信するかを定義します。値は妥当な相対/絶対 [URL](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL) でなければなりません。この属性が与えられなかった場合は、フォームが含まれているページの URL にデータが送信されます。
 
 この例では、データを絶対 URL の `http://example.com` に送信します。
 
