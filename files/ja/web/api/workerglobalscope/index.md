@@ -22,7 +22,7 @@ _このインターフェイスには、 {{domxref("EventTarget")}} インター
 - {{domxref("console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : ワーカーに関連付けられた {{domxref("console")}} オブジェクトを返します。
 - {{domxref("WorkerGlobalScope.crossOriginIsolated")}} {{ReadOnlyInline}}
-  - : 論理値で、ウェブサイトがオリジン間隔離状態にあるかどうかを返します。
+  - : 論理値で、ウェブサイトがオリジン間分離状態にあるかどうかを返します。
 - {{domxref("WorkerGlobalScope.crypto")}} {{ReadOnlyInline}}
   - : グローバルオブジェクトに関連付けられた {{domxref("Crypto")}} オブジェクトを返します。
 - {{domxref("WorkerGlobalScope.fonts")}} {{ReadOnlyInline}}
