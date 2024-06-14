@@ -1,9 +1,9 @@
 ---
 title: "Document: bgColor プロパティ"
+short-title: bgColor
 slug: Web/API/Document/bgColor
 l10n:
   sourceCommit: 23fb12ae62339140281b9aad2c9f856e2e5a4762
-short-title: bgColor
 ---
 
 {{APIRef("DOM")}} {{Deprecated_Header}}
