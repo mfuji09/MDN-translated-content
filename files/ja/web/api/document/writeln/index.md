@@ -1,5 +1,5 @@
 ---
-title: "Document: writeln() method"
+title: "Document: writeln() メソッド"
 short-title: writeln()
 slug: Web/API/Document/writeln
 l10n:
