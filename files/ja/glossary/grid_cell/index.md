@@ -2,7 +2,7 @@
 title: Grid Cell (グリッドセル)
 slug: Glossary/Grid_Cell
 l10n:
-  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
+  sourceCommit: 3c5185e55298c2ca14e4e63913a50bb81e3c5609
 ---
 
 {{GlossarySidebar}}
@@ -11,7 +11,7 @@ l10n:
 
 ![グリッド上の個々のセルを示す図。](1_grid_cell.png)
 
-各アイテムのグリッド配置の方法を指定しなければ、グリッドコンテナ直下の子アイテムは自動配置アルゴリズムに従って個別のグリッドセルに一つずつ配置されます。全てのアイテムを保持できるように、行もしくは列 {{glossary("grid tracks", "トラック")}} が自動的に追加されます。
+各アイテムのグリッド配置の方法を指定しなければ、グリッドコンテナー直下の子アイテムは自動配置アルゴリズムに従って個別のグリッドセルに一つずつ配置されます。全てのアイテムを保持できるように、行または列{{glossary("grid tracks", "トラック")}}が自動的に追加されます。
 
 ## 例
 
@@ -68,5 +68,5 @@ l10n:
 
 ### 参考資料
 
-- CSS グリッドレイアウトガイド: [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [CSS グリッドレイアウト仕様におけるグリッドセルの定義](https://drafts.csswg.org/css-grid/#grid-track-concept)

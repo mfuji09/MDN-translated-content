@@ -2,7 +2,7 @@
 title: Grid Areas (グリッド領域)
 slug: Glossary/Grid_Areas
 l10n:
-  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
+  sourceCommit: 3c5185e55298c2ca14e4e63913a50bb81e3c5609
 ---
 
 {{GlossarySidebar}}
@@ -76,6 +76,7 @@ l10n:
 
 ### 参考資料
 
-- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
-- CSS グリッドレイアウトガイド: _[グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)_
-- [Definition of Grid Areas in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-area-concept)
+- CSS グリッドレイアウトガイド:
+  - [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+  - [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- [Definition of grid areas in the CSS grid layout specification](https://drafts.csswg.org/css-grid/#grid-area-concept)
