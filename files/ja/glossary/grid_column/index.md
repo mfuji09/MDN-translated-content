@@ -2,7 +2,7 @@
 title: Grid Column (グリッド列)
 slug: Glossary/Grid_Column
 l10n:
-  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
+  sourceCommit: 3c5185e55298c2ca14e4e63913a50bb81e3c5609
 ---
 
 {{GlossarySidebar}}
@@ -24,4 +24,4 @@ l10n:
 
 ### 参考情報
 
-- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

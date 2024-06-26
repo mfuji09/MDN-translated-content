@@ -2,7 +2,7 @@
 title: Grid Line (グリッド線)
 slug: Glossary/Grid_Lines
 l10n:
-  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
+  sourceCommit: 3c5185e55298c2ca14e4e63913a50bb81e3c5609
 ---
 
 {{GlossarySidebar}}
@@ -58,7 +58,7 @@ l10n:
 
 線は線番号で指定できます。英語や日本語のように左から右方向に、列の線 1 がグリッドの左端、行の線 1 が上端となります。線番号は文書の[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)を考慮するため、右書きの言語においては例えば列の線 1 はグリッドの右端となります。下の画像では左書きの言語でのグリッドにおける線番号を図示しています。
 
-![行番号でグリッドを示す図。](1_diagram_numbered_grid_lines.png)
+![番号つきの線でグリッドを示す図。](1_diagram_numbered_grid_lines.png)
 
 明示的グリッド外にコンテンツを保持するため暗黙的トラックが作成されると暗黙的グリッド上にも線は作成されますが、それらの線は番号で指定することはできません。
 

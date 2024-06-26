@@ -2,7 +2,7 @@
 title: Grid Row (グリッド行)
 slug: Glossary/Grid_Row
 l10n:
-  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
+  sourceCommit: 3c5185e55298c2ca14e4e63913a50bb81e3c5609
 ---
 
 {{GlossarySidebar}}
@@ -22,6 +22,6 @@ l10n:
 - {{cssxref("grid")}}
 - {{cssxref("grid-template")}}
 
-### 参考情報
+### 参考文献
 
-- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
