@@ -1,6 +1,9 @@
 ---
-title: BaseAudioContext.audioWorklet
+title: "BaseAudioContext: audioWorklet プロパティ"
+short-title: audioWorklet
 slug: Web/API/BaseAudioContext/audioWorklet
+l10n:
+  sourceCommit: dd3048a4eb74a53395c9a2015baefaa46ef77a56
 ---
 
 {{ APIRef("Web Audio API") }}{{securecontext_header}}
