@@ -2,7 +2,7 @@
 title: クリップボード API
 slug: Web/API/Clipboard_API
 l10n:
-  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+  sourceCommit: aa02c85428e4ebdf2df8a84f97f0a6cabefdf813
 ---
 
 {{DefaultAPISidebar("Clipboard API")}}
