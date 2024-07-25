@@ -3,7 +3,7 @@ title: "HTMLAllCollection: namedItem() メソッド"
 short-title: namedItem()
 slug: Web/API/HTMLAllCollection/namedItem
 l10n:
-  sourceCommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
+  sourceCommit: 45088e6e93e190ba453db2cd6e2360af48904cae
 ---
 
 {{APIRef("DOM")}}
