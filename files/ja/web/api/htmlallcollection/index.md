@@ -2,7 +2,7 @@
 title: HTMLAllCollection
 slug: Web/API/HTMLAllCollection
 l10n:
-  sourceCommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
+  sourceCommit: e8e22a6e6d6455222c8c1a1e1346a149d300ab35
 ---
 
 {{APIRef("DOM")}}{{Deprecated_Header}}
