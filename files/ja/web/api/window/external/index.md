@@ -2,40 +2,38 @@
 title: "Window: external プロパティ"
 short-title: external
 slug: Web/API/Window/external
-page-type: web-api-instance-property
-status:
-  - deprecated
-browser-compat: api.Window.external
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}} {{deprecated_header}}
 
-The `external` property of the {{domxref("Window")}} API returns an instance of the `External` interface, which was intended to contain functions related to adding external search providers to the browser. However, this is now deprecated, and the contained methods are now dummy functions that do nothing as per spec.
+`external` は {{domxref("Window")}} API のプロパティで、`External` インターフェイスのインスタンスを返します。このインターフェイスは外部の検索プロバイダーをブラウザーに追加する関連の関数を格納するように意図されていました。しかし、これは現在非推奨のものであり、含まれるメソッドは仕様通り何もしないダミー関数になっています。
 
-## Instance methods
+## インスタンスメソッド
 
-The `External` object has the following methods:
+`External` オブジェクトで、以下のメソッドがあります。
 
 <table class="fullwidth-table">
   <tbody>
     <tr>
-      <th>Method</th>
-      <th>Description</th>
+      <th>メソッド</th>
+      <th>説明</th>
     </tr>
     <tr>
       <td>
         <code>AddSearchProvider(<em>descriptionURL)</em></code>
       </td>
       <td>
-        Dummy function; does nothing. See
+        ダミー関数。何もしません。
         <a href="/ja/docs/Web/OpenSearch#autodiscovery_of_search_plugins"
-          >Autodiscovery of search plugins</a
-        >.
+          >検索プラグインの自動発見</a
+        >を参照してください。
       </td>
     </tr>
     <tr>
       <td><code>IsSearchProviderInstalled()</code></td>
-      <td>Dummy function; does nothing.</td>
+      <td>ダミー関数。何もしません。</td>
     </tr>
   </tbody>
 </table>
