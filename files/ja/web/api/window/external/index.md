@@ -1,5 +1,5 @@
 ---
-title: "Window: external property"
+title: "Window: external プロパティ"
 short-title: external
 slug: Web/API/Window/external
 page-type: web-api-instance-property
