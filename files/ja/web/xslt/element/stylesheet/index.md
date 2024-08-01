@@ -2,7 +2,7 @@
 title: <xsl:stylesheet>
 slug: Web/XSLT/Element/stylesheet
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: b6f343538eac4a803943b4e99b0c0545b372645a
 ---
 
 {{XsltSidebar}}
