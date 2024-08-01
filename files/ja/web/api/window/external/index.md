@@ -1,12 +1,11 @@
 ---
 title: "Window: external プロパティ"
-short-title: external
 slug: Web/API/Window/external
 l10n:
   sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}} {{deprecated_header}}
+{{APIRef}} {{Deprecated_Header}}
 
 `external` は {{domxref("Window")}} API のプロパティで、`External` インターフェイスのインスタンスを返します。このインターフェイスは外部の検索プロバイダーをブラウザーに追加する関連の関数を格納するように意図されていました。しかし、これは現在非推奨のものであり、含まれるメソッドは仕様通り何もしないダミー関数になっています。
 
@@ -40,8 +39,9 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+Mozilla 固有です。どの標準にも属しません。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+Firefox 102 で環境設定に隠されました。
+詳細は、 [`window.external`](/ja/docs/Web/API/Window/external#ブラウザーの互換性) の Firefox 互換性情報を参照してください。
