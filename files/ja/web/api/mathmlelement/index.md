@@ -1,35 +1,35 @@
 ---
 title: MathMLElement
 slug: Web/API/MathMLElement
-page-type: web-api-interface
-browser-compat: api.MathMLElement
+l10n:
+  sourceCommit: 4f263d8dfb90fa2253e090ee339ae14d1907fa63
 ---
 
 {{APIRef("MathML")}}
 
-The **`MathMLElement`** interface represents any [MathML](/en-US/docs/Web/MathML) element.
+**`MathMLElement`** インターフェイスはあらゆる [MathML](/ja/docs/Web/MathML) 要素を表します。
 
 {{InheritanceDiagram}}
 
-## Instance properties
+## インスタンスプロパティ
 
-_Also inherits properties from its parent, {{DOMxRef("Element")}}_.
+_親である {{DOMxRef("Element")}} から継承したプロパティもあります。_
 
 - {{DOMxRef("MathMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
-  - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's `style` attribute.
+  - : 要素の `style` 属性の宣言を表す {{DOMxRef("StylePropertyMap")}} です。
 - {{DOMxRef("MathMLElement.style")}}
-  - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's `style` attribute.
+  - : 要素の `style` 属性の宣言を表す {{DOMxRef("CSSStyleDeclaration")}} です。
 
-## Instance methods
+## インスタンスメソッド
 
-_This interface has no methods, but inherits methods from its parent, {{DOMxRef("Element")}}_.
+_このインターフェイスにはメソッドがありませんが、親である {{DOMxRef("Element")}} から継承したメソッドがあります。_
 
-## Examples
+## 例
 
 ### MathML
 
 ```html
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+<math>
   <msqrt>
     <mi>x</mi>
   </msqrt>
@@ -42,15 +42,15 @@ _This interface has no methods, but inherits methods from its parent, {{DOMxRef(
 document.querySelector("msqrt").constructor.name; // MathMLElement
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{DOMxRef("Element")}}
 - {{DOMxRef("HTMLElement")}}
