@@ -1,32 +1,32 @@
 ---
-title: "MathMLElement: attributeStyleMap property"
+title: "MathMLElement: attributeStyleMap プロパティ"
 short-title: attributeStyleMap
 slug: Web/API/MathMLElement/attributeStyleMap
-page-type: web-api-instance-property
-browser-compat: api.MathMLElement.attributeStyleMap
+l10n:
+  sourceCommit: 4f263d8dfb90fa2253e090ee339ae14d1907fa63
 ---
 
 {{APIRef("CSSOM")}}
 
-The **`attributeStyleMap`** read-only property of the {{domxref("MathMLElement")}} interface returns a live {{domxref("StylePropertyMap")}} object that contains a list of style properties of the element that are defined in the element's inline `style` attribute, or assigned using the {{domxref("MathMLElement.style", "style")}} property of the {{domxref("MathMLElement")}} interface via script.
+**`attributeStyleMap`** は {{domxref("MathMLElement")}} インターフェイスの読み取り専用プロパティで、生きた {{domxref("StylePropertyMap")}} オブジェクトを返します。これは、要素のインラインの `style` 属性で定義されているか、スクリプトを介して {{domxref("MathMLElement")}} インターフェイスの {{domxref("MathMLElement.style", "style")}} プロパティを使用して割り当てられている、要素のスタイルプロパティのリストです。
 
-Shorthand properties are expanded. If you set `border-top: 1px solid black`, the longhand properties ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, and {{cssxref("border-top-width")}}) are set instead.
+一括指定プロパティは展開されます。`border-top: 1px solid black` を設定すると、個別指定プロパティ ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, {{cssxref("border-top-width")}}) が代わりに設定されます。
 
-The main difference between {{domxref("MathMLElement.style", "style")}} property and `attributeStyleMap` property is that, the `style` property will return a {{domxref("CSSStyleDeclaration")}} object, while the `attributeStyleMap` property will return a {{domxref("StylePropertyMap")}} object.
+{{domxref("MathMLElement.style", "style")}} プロパティと `attributeStyleMap` プロパティの主な違いは、`style` プロパティが {{domxref("CSSStyleDeclaration")}} オブジェクトを返すのに対し、`attributeStyleMap` プロパティは {{domxref("StylePropertyMap")}} オブジェクトを返すことです。
 
-Though the property itself is not writable, you could read and write inline styles through the {{domxref("StylePropertyMap")}} object that it returns, just like through the {{domxref("CSSStyleDeclaration")}} object that returns via the `style` property.
+自分自身を書き込むことはできませんが、{{domxref("StylePropertyMap")}} オブジェクトを通してインラインスタイルを読み書きすることができます。これは `style` プロパティから返される {{domxref("CSSStyleDeclaration")}} オブジェクトと同様です。
 
-## Value
+## 値
 
-A live {{domxref("StylePropertyMap")}} object.
+生きた {{domxref("StylePropertyMap")}} オブジェクトです。
 
-## Examples
+## 例
 
-The following code snippet shows the relationship between the `style` attribute and the `attributeStyleMap` property:
+以下は `style` 属性と `attributeStyleMap` プロパティの関係を示すコードです。
 
 ```html
 <div style="white-space: pre-line;">
-  <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <math>
     <mrow>
       <mi>f</mi>
       <mo stretchy="false">(</mo>
@@ -57,15 +57,15 @@ for (const property of element.attributeStyleMap) {
 
 {{EmbedLiveSample("Examples", "200", "200")}}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{domxref("MathMLElement.style")}}
 - {{domxref("HTMLElement.attributeStyleMap")}}
