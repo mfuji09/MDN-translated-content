@@ -32,7 +32,7 @@ getCapabilities()
   - : [`ConstrainBoolean`](/ja/docs/Web/API/MediaTrackConstraints#constrainboolean) オブジェクトで、ソースが自動ゲイン制御ができるかどうかを報告します。
     この機能がスクリプトで制御できる場合、ソースは true と false の両方を可能な値として報告します。
 - `channelCount`
-  - : [`ConstrainULong`](/ja/docs/Web/API/MediaTrackConstraints#constrainulong) で、チャンネル数またはチャンネルカウントの範囲が入ります。
+  - : [`ConstrainULong`](/ja/docs/Web/API/MediaTrackConstraints#constrainulong) で、チャンネル数またはチャンネル数の範囲が入ります。
 - `echoCancellation`
   - : [`ConstrainBoolean`](/ja/docs/Web/API/MediaTrackConstraints#constrainboolean) オブジェクトで、ソースがエコーキャンセルができるかどうかを報告します。
     この機能がスクリプトで制御できる場合、ソースは true と false の両方を可能な値として報告します。
