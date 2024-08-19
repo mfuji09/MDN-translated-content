@@ -2,7 +2,7 @@
 title: "::file-selector-button"
 slug: Web/CSS/::file-selector-button
 l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+  sourceCommit: 62c5c3f5655002f230bf0153fbdf8a883611014a
 ---
 
 {{CSSRef}}
