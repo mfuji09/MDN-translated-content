@@ -69,7 +69,7 @@ Firefox 18 は米国時間 2013 年 1 月 8 日にリリースされました。
 - `nsIEditor`
   - : `addEditorObserver()` が削除されました。代わりに `setEditorObserver()` を使ってください。 `removeEditorObserver()` は `nsIEditorObserver` 引数を受け取らなくなります。([Firefox バグ 785091](https://bugzil.la/785091))
 - `nsIHttpProtocolHandler`
-  - : `http-on-modify-request` オブザーバが `nsIChannel.asyncOpen()` 中に同期的に呼ばれる保証はなくなります。`asyncOpen()` 中に呼び出される必要のあるオブザーバには新しく `http-on-opening-request` オブザーバトピックが追加されています`。詳細は`([Firefox バグ 800799](https://bugzil.la/800799))をご覧ください。
+  - : `http-on-modify-request` オブザーバーが `nsIChannel.asyncOpen()` 中に同期的に呼ばれる保証はなくなります。`asyncOpen()` 中に呼び出される必要のあるオブザーバーには新しく `http-on-opening-request` オブザーバートピックが追加されています`。詳細は`([Firefox バグ 800799](https://bugzil.la/800799))をご覧ください。
 - `nsIProtocolProxyService`
   - : `resolve` メソッドは削除されました。 `asyncResolve` メソッドだけが使用できるようになりました。 ([Firefox バグ 769764](https://bugzil.la/769764)) を参照してください。
 
