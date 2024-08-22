@@ -21,7 +21,7 @@ l10n:
 
 ## 例
 
-この例では、交差オブザーバのルート要素の {{cssxref("border")}} を、 2 ピクセルの中緑色の線に設定しています。
+この例では、交差オブザーバーのルート要素の {{cssxref("border")}} を、 2 ピクセルの中緑色の線に設定しています。
 
 ```js
 observer.root.style.border = "2px solid #44aa44";
