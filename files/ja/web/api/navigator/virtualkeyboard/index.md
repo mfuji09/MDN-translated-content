@@ -3,7 +3,7 @@ title: "Navigator: virtualKeyboard プロパティ"
 short-title: virtualKeyboard
 slug: Web/API/Navigator/virtualKeyboard
 l10n:
-  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
+  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
 {{APIRef("VirtualKeyboard")}}{{SeeCompatTable}}{{SecureContext_Header}}
