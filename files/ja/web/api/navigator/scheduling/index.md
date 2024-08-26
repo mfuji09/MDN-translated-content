@@ -3,7 +3,7 @@ title: "Navigator: scheduling プロパティ"
 short-title: scheduling
 slug: Web/API/Navigator/scheduling
 l10n:
-  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
+  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
 ---
 
 {{SeeCompatTable}}{{APIRef("Prioritized Task Scheduling API")}}
