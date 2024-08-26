@@ -3,7 +3,7 @@ title: "Navigator: usb プロパティ"
 short-title: usb
 slug: Web/API/Navigator/usb
 l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
 {{APIRef("WebUSB API")}}{{SecureContext_Header}}
