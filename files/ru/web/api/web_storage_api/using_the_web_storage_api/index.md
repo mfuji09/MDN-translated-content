@@ -3,6 +3,8 @@ title: Использование Web Storage API
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
 
+{{DefaultAPISidebar("Web Storage API")}}
+
 Web Storage API предоставляет механизм, при помощи которого браузер может безопасно хранить пары ключей/значений в намного более интуитивной форме, чем используя cookies. Эта статья предоставляет пошаговое руководство о том, как использовать эту простую технологию.
 
 ## Основные концепции
@@ -70,7 +72,8 @@ if (storageAvailable("localStorage")) {
 
 ![](event-output.png)
 
-> **Примечание:** Помимо просмотра примеров выше, используя приведённые ссылки выше , вы можете также [просмотреть исходный код](https://github.com/mdn/dom-examples/tree/master/web-storage).
+> [!NOTE]
+> Помимо просмотра примеров выше, используя приведённые ссылки выше , вы можете также [просмотреть исходный код](https://github.com/mdn/dom-examples/tree/master/web-storage).
 
 ## Проверка на заполненность хранилища
 
