@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Performance API")}}
 
-読み取り専用の **`detail`** プロパティは、構築時にマークに記載された任意のメタデータを返します（{{domxref("Performance.mark","performance.mark()")}} または {{domxref("PerformanceMark.PerformanceMark","PerformanceMark()")}} コンストラクターを使用する場合）。
+読み取り専用の **`detail`** プロパティは、（{{domxref("Performance.mark","performance.mark()")}} または {{domxref("PerformanceMark.PerformanceMark","PerformanceMark()")}} コンストラクターを使用して）構築時にマークに記載された任意のメタデータを返します。
 
 ## 値
 
