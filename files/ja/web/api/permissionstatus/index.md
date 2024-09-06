@@ -2,7 +2,7 @@
 title: PermissionStatus
 slug: Web/API/PermissionStatus
 l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+  sourceCommit: ee253ac58d71b2ed336b705ab97dbe93122b3e04
 ---
 
 {{APIRef("Permissions API")}}{{AvailableInWorkers}}
