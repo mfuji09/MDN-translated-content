@@ -78,7 +78,7 @@ canvas.addEventListener("pointermove", (e) => {
 
 {{EmbedLiveSample("Example", "", "320")}}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
