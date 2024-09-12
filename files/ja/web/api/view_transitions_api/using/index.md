@@ -424,8 +424,7 @@ window.addEventListener("pageswap", async (e) => {
 });
 ```
 
-> [!NOTE]
-> `view-transition-name` の値は、それぞれの場合でスナップショットが取得された後に除去します。 設定したままにしておくと、ナビゲーションの際に [bfcache](/ja/docs/Glossary/bfcache) に保存されるページの状態に保存されてしまいます。 その後、戻るボタンが押されると、ナビゲーション前のページの `pagereveal` イベントハンドラーが、異なる要素に対して同じ `view-transition-name` の値を設定しようと試みます。 複数の要素に同じ `view-transition-name` 設定されている場合、ビュー遷移はスキップされます。
+> **メモ:** `view-transition-name` の値は、それぞれの場合でスナップショットが取得された後に除去します。 設定したままにしておくと、ナビゲーションの際に [bfcache](/ja/docs/Glossary/bfcache) に保存されるページの状態に保存されてしまいます。 その後、戻るボタンが押されると、ナビゲーション前のページの `pagereveal` イベントハンドラーが、異なる要素に対して同じ `view-transition-name` の値を設定しようと試みます。 複数の要素に同じ `view-transition-name` 設定されている場合、ビュー遷移はスキップされます。
 
 {{domxref("Window.pagereveal_event", "pagereveal")}} イベントのリスナーは、以下のようにします。これは、`pageswap` イベントリスナーと似た方法で動作しますが、新しいページのページ要素に対して "to" アニメーションをカスタマイズしていることに留意してください。
 
