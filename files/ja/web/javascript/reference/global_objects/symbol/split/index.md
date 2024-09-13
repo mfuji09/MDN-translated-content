@@ -1,15 +1,23 @@
 ---
 title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
+l10n:
+  sourceCommit: e2dd7ae35f27c814d6017b79dac87e23c7996837
 ---
 
 {{JSRef}}
 
-**`Symbol.split`** ウェルノウンシンボルは、正規表現に一致する位置で文字列を分割するメソッドを指定します。この関数は {{jsxref("String.prototype.split()")}} メソッドによって呼び出されます。
+**`Symbol.split`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.split` を表します。{{jsxref("String.prototype.split()")}} メソッドは第一引数から、文字列内で現在のオブジェクトに一致する場所を返すメソッドを、このシンボルで探します。
 
-詳しくは、 {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} と {{jsxref("String.prototype.split()")}} を参照してください。
+詳しくは、[`RegExp.prototype[Symbol.split]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split) と {{jsxref("String.prototype.split()")}} を参照してください。s
 
-{{EmbedInteractiveExample("pages/js/symbol-split.html")}}{{js_property_attributes(0,0,0)}}
+{{EmbedInteractiveExample("pages/js/symbol-split.html", "taller")}}
+
+## 値
+
+ウェルノウンシンボル `Symbol.split` です。
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 例
 
@@ -24,7 +32,7 @@ class ReverseSplit {
 }
 
 console.log("Another one bites the dust".split(new ReverseSplit()));
-// expected output: [ "dust", "the", "bites", "one", "Another" ]
+// [ "dust", "the", "bites", "one", "Another" ]
 ```
 
 ## 仕様書
@@ -37,7 +45,10 @@ console.log("Another one bites the dust".split(new ReverseSplit()));
 
 ## 関連情報
 
+- [`Symbol.split` (`core-js`)](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.matchAll")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}
-- {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}
+- {{jsxref("String.prototype.split()")}}
+- [`RegExp.prototype[Symbol.split]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)
