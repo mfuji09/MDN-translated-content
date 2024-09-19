@@ -122,8 +122,7 @@ l10n:
     - `allow-storage-access-by-user-activation` {{experimental_inline}}
       - : `<iframe>` で読み込んだ文書が{{domxref("Storage Access API", "ストレージアクセス API", "", "nocode")}} を使用して、分離されていないクッキーへのアクセスをリクエストできるようにします。
     - `allow-top-navigation`
-      - : リソースが最上位の閲覧コンテキスト（`_top` という名前のもの
-      に移動できるようにします。
+      - : リソースが最上位の閲覧コンテキスト（`_top` という名前のものに移動できるようにします。
     - `allow-top-navigation-by-user-activation`
       - : リソースが最上位の閲覧コンテキストに移動できるようにしますが、ユーザーの操作によって開始されたものに限ります。
     - `allow-top-navigation-to-custom-protocols`
@@ -141,8 +140,7 @@ l10n:
 
   - : 埋め込むページの URL です。[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy#オリジンの継承)に従う空白ページを埋め込む場合は、 `about:blank` の値を使用してください。また、プログラムから `<iframe>` の src 属性を削除すると (例えば {{domxref("Element.removeAttribute()")}} などで)、 Firefox (バージョン 65 以降)、 Chromium ベースのブラウザー、 Safari/iOS では `about:blank` が読み込まれます。
 
-    > [!NOTE]
-    > `about:blank` ページは、アンカーリンクなどの相対 URL を解決するときに、埋め込み文書の URL をベース URL として使用します。
+    > **メモ:** `about:blank` ページは、アンカーリンクなどの相対 URL を解決するときに、埋め込み文書の URL をベース URL として使用します。
 
 - `srcdoc`
 
@@ -192,8 +190,7 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 [置換要素](/ja/docs/Web/CSS/Replaced_element)なので、 `<iframe>` 要素のボックス内における埋め込み文書の位置は、 {{cssxref("object-position")}} プロパティで設定することができます。
 
-> [!NOTE]
-> {{cssxref("object-fit")}} プロパティは、`<iframe>` 要素には効果がありません。
+> **メモ:** {{cssxref("object-fit")}} プロパティは、`<iframe>` 要素には効果がありません。
 
 ## `error` および `load` イベントの動作
 
