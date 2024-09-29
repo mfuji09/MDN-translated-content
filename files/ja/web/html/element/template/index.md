@@ -2,7 +2,7 @@
 title: "<template>: コンテンツテンプレート要素"
 slug: Web/HTML/Element/template
 l10n:
-  sourceCommit: 5618052b7314a29552ff9e4331dd3da13dc19f5e
+  sourceCommit: b64f587034fbb610fe12ad819b0384f4f4ce1d4f
 ---
 
 {{HTMLSidebar}}
@@ -363,5 +363,5 @@ container.appendChild(secondClone);
 - [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) インターフェイス
 - [テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)
 - [CSS スコープ化](/ja/docs/Web/CSS/CSS_scoping) モジュール
-- [宣言的シャドウ DOM （HTML による）](/ja/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html) （シャドウ DOM の使用）
+- [宣言的シャドウ DOM （HTML による）](/ja/docs/Web/API/Web_components/Using_shadow_DOM#html_で宣言的に) （シャドウ DOM の使用）
 - [Declarative shadow DOM](https://developer.chrome.com/docs/css-ui/declarative-shadow-dom) (developer.chrome.com, 2023)
