@@ -1,11 +1,13 @@
 ---
 title: font-family
 slug: Web/CSS/font-family
+l10n:
+  sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
 ---
 
 {{CSSRef}}
 
-CSS の **`font-family`** プロパティは、選択した要素に対して、フォントファミリー名や総称ファミリー名の優先順位リストを指定することができます。
+**`font-family`** は [CSS](/ja/docs/Web/CSS) のプロパティで、選択した要素に対して、フォントファミリー名や総称ファミリー名の優先順位リストを指定することができます。
 
 {{EmbedInteractiveExample("pages/css/font-family.html")}}
 
@@ -43,6 +45,7 @@ font-family: fangsong;
 font-family: inherit;
 font-family: initial;
 font-family: revert;
+font-family: revert-layer;
 font-family: unset;
 ```
 
@@ -57,7 +60,13 @@ font-family: "Gill Sans Extrabold", sans-serif;
 ### 値
 
 - `<family-name>`
-  - : フォントファミリーの名称。例えば、 "Times" や "Helvetica" はフォントファミリーです。空白を含むフォントファミリー名は、引用符で囲む必要があります。
+
+  - : フォントファミリーの名前。これは、単一の {{cssxref("string")}} 値、または空白で区切られた {{cssxref("custom-ident")}} が並んだ値のいずれかでなければなりません。文字列値は引用符で囲む必要がありますが、任意のユニコード文字を含めることができます。カスタム識別子は引用符で囲みませんが、特定の文字はエスケープする必要があります。
+
+    空白、数字、ハイフン以外の区切り文字をフォントファミリー名に含む場合は、引用符で囲むのが良い方法です。
+
+    [有効なファミリー名](#有効なファミリー名)も参照してください。
+
 - `<generic-name>`
 
   - : 総称フォントファミリーは代替の仕組みです。この仕組みによって、指定されたフォントがどれも利用できなかった場合、スタイルシート製作者の意図を多少なりとも保つことができます。総称ファミリー名はキーワードであり、引用符で囲んではいけません。総称フォントファミリーは、フォントファミリー名リストの最終選択肢である必要があります。以下のキーワードが定義されています。
@@ -109,46 +118,6 @@ font-family: "Gill Sans Extrabold", sans-serif;
     - `fangsong`
       - : セリフ風の Song と手書き風の Kai の形の間にある中国語の文字の特定のスタイルです。このスタイルは政府文書によく使用されます。
 
-### 有効なファミリー名
-
-フォントファミリー名は、引用符で囲まれた文字列か、引用符で囲まれていない 1 つ以上の識別子でなければなりません。これは、引用符で囲まれていないフォントファミリー名において、各トークンの冒頭に区切り記号文字や数字がある場合、エスケープしなければならないということを意味します。
-
-ホワイトスペース、数字、ハイフン以外の区切り文字を含むフォントファミリー名を引用符でくくるのは**良い習慣**です。
-
-例えば、以下の宣言は有効です。
-
-```css example-good
-font-family: "Goudy Bookletter 1911", sans-serif;
-```
-
-以下の宣言は**無効**です。
-
-```css example-bad
-font-family:
-  Goudy Bookletter 1911,
-  sans-serif;
-font-family: Red/Black, sans-serif;
-font-family:
-  "Lucida" Grande,
-  sans-serif;
-font-family: Ahem!, sans-serif;
-font-family:
-  test @foo,
-  sans-serif;
-font-family: #POUND, sans-serif;
-font-family:
-  Hawaii 5-0,
-  sans-serif;
-```
-
-以下の例は技術的には**有効**ですが、推奨されません。
-
-```css
-font-family:
-  Gill Sans Extrabold,
-  sans-serif;
-```
-
 ## 公式定義
 
 {{cssinfo}}
@@ -159,7 +128,7 @@ font-family:
 
 ## 例
 
-<h3 id="Some_common_font_families">よくあるいくつかのフォントファミリー</h3>
+### よくあるいくつかのフォントファミリー
 
 ```css
 .serif {
@@ -214,6 +183,34 @@ font-family:
 ```
 
 {{EmbedLiveSample("Some_common_font_families", 600, 220)}}
+
+### 有効なファミリー名
+
+以下の宣言は有効です。
+
+```css example-good
+font-family: "Goudy Bookletter 1911", sans-serif;
+```
+
+以下の宣言は無効です。
+
+```css-nolint example-bad
+font-family: Goudy Bookletter 1911, sans-serif;
+font-family: Red/Black, sans-serif;
+font-family: "Lucida" Grande, sans-serif;
+font-family: Ahem!, sans-serif;
+font-family: test@foo, sans-serif;
+font-family: #POUND, sans-serif;
+font-family: Hawaii 5-0, sans-serif;
+```
+
+以下の例は技術的には有効ですが、推奨されません。
+
+```css
+font-family:
+  Gill Sans Extrabold,
+  sans-serif;
+```
 
 ## 仕様書
 
