@@ -1,6 +1,8 @@
 ---
 title: box-sizing
 slug: Web/CSS/box-sizing
+l10n:
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
 {{CSSRef}}
@@ -31,6 +33,7 @@ box-sizing: content-box;
 box-sizing: inherit;
 box-sizing: initial;
 box-sizing: revert;
+box-sizing: revert-layer;
 box-sizing: unset;
 ```
 
@@ -60,7 +63,7 @@ box-sizing: unset;
 
 ## 例
 
-<h3 id="Box_sizes_with_content-box_and_border-box">content-box と border-box のボックスサイズ</h3>
+### content-box と border-box のボックスサイズ
 
 この例では、2つの `box-sizing` の値が、それ以外の条件が同じ要素のレンダリングの大きさをどのように変えるかを示します。
 
