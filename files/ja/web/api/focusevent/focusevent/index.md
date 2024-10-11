@@ -1,5 +1,6 @@
 ---
-title: FocusEvent()
+title: "FocusEvent: FocusEvent() コンストラクター"
+short-title: FocusEvent()
 slug: Web/API/FocusEvent/FocusEvent
 l10n:
   sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e

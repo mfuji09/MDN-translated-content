@@ -4,6 +4,7 @@ slug: Web/API/Device_orientation_events/Detecting_device_orientation
 l10n:
   sourceCommit: 6754a50ec57c8c9758a65a42691878e5fd1f910a
 ---
+{{SeeCompatTable}}
 
 {{DefaultAPISidebar("Device Orientation Events")}}{{securecontext_header}}
 
@@ -34,10 +35,10 @@ orientation イベントは 4 つの値を持ちます。
 
 ```js
 function handleOrientation(event) {
-  const absolute = event.absolute;
-  const alpha = event.alpha;
-  const beta = event.beta;
-  const gamma = event.gamma;
+  var absolute = event.absolute;
+  var alpha    = event.alpha;
+  var beta     = event.beta;
+  var gamma    = event.gamma;
 
   // 新たな方向データに基づいて処理を行う
 }
@@ -47,7 +48,7 @@ function handleOrientation(event) {
 
 ### 方向として示される値
 
-それぞれの軸で報告される値は、標準座標系の軸を中心にした回転量を表します。これらは[方向および動きとして示されるデータの説明](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)の記事で詳しく説明しており、ここでは概要を記載します。
+それぞれの軸で報告される値は、標準座標系の軸を中心にした回転量を表します。これらは[方向および動きとして示されるデータ](/ja/docs/Web/Events/Orientation_and_motion_data_explained)の記事で詳しく説明しており、ここでは概要を記載します。
 
 - {{domxref("DeviceOrientationEvent.alpha")}} の値は z 軸を中心にした端末の動きを表し、0 以上 360 未満の範囲による度数で表されます。
 - {{domxref("DeviceOrientationEvent.beta")}} の値は x 軸を中心にした端末の動きを表し、-180 以上 180 未満の範囲の値による度数で表されます。これは端末の前後の動きです。
@@ -55,7 +56,7 @@ function handleOrientation(event) {
 
 ### 例
 
-このサンプルは方向を検出可能な端末上で、 {{domxref("Window.deviceorientation_event", "deviceorientation")}} イベントに対応するブラウザーで実行する場合に動作します。
+このサンプルは方向を検出可能な端末上で、{{event("deviceorientation")}} イベントに対応するブラウザーで実行する場合に動作します。
 
 庭にボールがあると考えてください。
 
@@ -72,17 +73,17 @@ function handleOrientation(event) {
 ```css
 .garden {
   position: relative;
-  width: 200px;
+  width : 200px;
   height: 200px;
-  border: 5px solid #ccc;
+  border: 5px solid #CCC;
   border-radius: 10px;
 }
 
 .ball {
   position: absolute;
-  top: 90px;
-  left: 90px;
-  width: 20px;
+  top   : 90px;
+  left  : 90px;
+  width : 20px;
   height: 20px;
   background: green;
   border-radius: 100%;
@@ -92,12 +93,12 @@ function handleOrientation(event) {
 端末を動かすと、その動きに応じてボールが移動します。
 
 ```js
-const ball = document.querySelector(".ball");
-const garden = document.querySelector(".garden");
-const output = document.querySelector(".output");
+var ball   = document.querySelector('.ball');
+var garden = document.querySelector('.garden');
+var output = document.querySelector('.output');
 
-const maxX = garden.clientWidth - ball.clientWidth;
-const maxY = garden.clientHeight - ball.clientHeight;
+var maxX = garden.clientWidth  - ball.clientWidth;
+var maxY = garden.clientHeight - ball.clientHeight;
 
 function handleOrientation(event) {
   let x = event.beta; // [-180,180) の範囲で角度を表す
@@ -126,10 +127,10 @@ function handleOrientation(event) {
   ball.style.top = `${(maxX * x) / 180 - 10}px`; // X 軸を中心に端末を移動させると、ボールが垂直に移動
 }
 
-window.addEventListener("deviceorientation", handleOrientation);
+window.addEventListener('deviceorientation', handleOrientation);
 ```
 
-{{LiveSampleLink("Orientation_example", "こちらをクリック")}}すると、新しいウィンドウでこの例を開きます。 {{domxref("Window.deviceorientation_event", "deviceorientation")}} はどのブラウザーでも別オリジンの {{HTMLElement("iframe")}} では動作しないからです。
+{{LiveSampleLink("Orientation_example", "こちらをクリック")}}すると、新しいウィンドウでこの例を開きます。 {{domxref("Window/deviceorientation_event", "deviceorientation")}} はどのブラウザーでもオリジンをまたいだ {{HTMLElement("iframe")}} では動作しないからです。
 
 {{EmbedLiveSample('Orientation_example', '230', '260')}}
 
@@ -152,7 +153,7 @@ motion イベントは 4 つのプロパティを持ちます。
 
 ### 動きとして示される値
 
-{{domxref("DeviceMotionEvent")}} オブジェクトはウェブ開発者に、端末の位置や方向が変化した速度の情報を提供します。変化量は 3 つの軸 (詳しくは[方向および動きとして示されるデータの説明](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)をご覧ください) に沿って表します。
+{{domxref("DeviceMotionEvent")}} オブジェクトはウェブ開発者に、端末の位置や方向が変化した速度の情報を提供します。変化量は 3 つの軸 (詳しくは[方向および動きとして示されるデータ](/ja/docs/Web/Events/Orientation_and_motion_data_explained)をご覧ください) に沿って表します。
 
 {{domxref("DeviceMotionEvent.acceleration","acceleration")}} および {{domxref("DeviceMotionEvent.accelerationIncludingGravity","accelerationIncludingGravity")}} で対応する軸は以下のとおりです。
 
@@ -176,11 +177,19 @@ motion イベントは 4 つのプロパティを持ちます。
 
 ## 仕様書
 
-{{Specifications}}
+| 仕様書                                | 状態                                   | 備考                |
+| -------------------------------------------- | ---------------------------------------- | ---------------------- |
+| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | 初回定義 |
 
 ## ブラウザーの互換性
 
-{{Compat}}
+### `DeviceMotionEvent`
+
+{{Compat("api.DeviceMotionEvent")}}
+
+### `DeviceOrientationEvent`
+
+{{Compat("api.DeviceOrientationEvent")}}
 
 ## 関連情報
 
@@ -189,3 +198,5 @@ motion イベントは 4 つのプロパティを持ちます。
 - [方向および動きとして示されるデータの説明](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
 - [3D 座標変換での deviceorientation の使用](/ja/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
 - [Cyber Orb: 端末の向きを使用した 2D 迷路ゲーム](/ja/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation)
+
+<section id="Quick_links"><ul><li><a href="/ja/docs/Web/Events/Orientation_and_motion_data_explained">方向および動きとして示されるデータ</a></li><li>{{domxref("DeviceOrientationEvent")}}</li><li>{{domxref("DeviceMotionEvent")}}</li><li><a href="/ja/docs/Web/Events/Using_device_orientation_with_3D_transforms">三次元座標変換での deviceorientation の使用</a></li><li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベント入門</a></li></ul></section>

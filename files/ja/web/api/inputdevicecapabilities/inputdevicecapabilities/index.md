@@ -1,5 +1,6 @@
 ---
 title: "InputDeviceCapabilities: InputDeviceCapabilities() コンストラクター"
+short-title: InputDeviceCapabilities()
 slug: Web/API/InputDeviceCapabilities/InputDeviceCapabilities
 l10n:
   sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6

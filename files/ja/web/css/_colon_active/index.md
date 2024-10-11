@@ -77,9 +77,7 @@ p:active {
 ```html
 <form>
   <label for="my-button">ボタン: </label>
-  <button id="my-button" type="button">
-    ここかラベルをクリックしてみてください。
-  </button>
+  <button id="my-button" type="button">ここかラベルをクリックしてみてください。</button>
 </form>
 ```
 

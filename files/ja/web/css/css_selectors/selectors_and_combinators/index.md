@@ -109,17 +109,15 @@ h2 + p + p {
 
 ```html
 <h2 class="myClass" id="myId">
-  No selectors match. <span class="myClass">This span has an outline</span> as
-  it is both myClass and a child of #myId.
+  一致するセレクターなし。<span class="myClass">この span には輪郭線があります</span>。 myClass であり、 #myId の子でもあるためです。
 </h2>
-<p>The first paragraph is underlined. All the paragraphs are 1.1rem.</p>
+<p>最初の段落には下線が引かれています。すべての段落は 1.1rem です。</p>
 <p>
-  The second paragraph is red. This and the following paragraphs are italic.
+  2 つ目は赤です。この段落と以下の段落はイタリック体です。
 </p>
-<p>The third paragraph is NOT red. It is italic and 1.1rem.</p>
+<p>3 つ目は赤ではありません。イタリック体で 1.1rem です。</p>
 <p class="myClass">
-  Does not have an outline; this is a sibling of H2, not a child. It is italic
-  and 1.1rem.
+  H2 の兄弟であり、子ではありません。イタリック体で 1.1rem です。
 </p>
 ```
 
@@ -165,17 +163,15 @@ h2 {
 
 ```html
 <h2 class="myClass" id="myId">
-  No selectors match. <span class="myClass">This span has an outline</span> as
-  it is both myClass and a child of #myId.
+  一致するセレクターなし。<span class="myClass">この span には輪郭線があります</span>。 myClass であり、 #myId の子でもあるためです。
 </h2>
-<p>The first paragraph is underlined. All the paragraphs are 1.1rem.</p>
+<p>最初の段落には下線が引かれています。すべての段落は 1.1rem です。</p>
 <p>
-  The second paragraph is red. This and the following paragraphs are italic.
+  2 つ目は赤です。この段落と以下の段落はイタリック体です。
 </p>
-<p>The third paragraph is NOT red. It is italic and 1.1rem.</p>
+<p>3 つ目は赤ではありません。イタリック体で 1.1rem です。</p>
 <p class="myClass">
-  Does not have an outline; this is a sibling of H2, not a child. It is italic
-  and 1.1rem.
+  H2 の兄弟であり、子ではありません。イタリック体で 1.1rem です。
 </p>
 ```
 

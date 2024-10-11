@@ -24,7 +24,7 @@ toLocaleString(locales, options)
 - `locales` {{optional_inline}}
   - : BCP 47 言語タグの文字列か、その配列です。`locales` 引数の一般的な形式と解釈については、[`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
 - `options` {{optional_inline}}
-  - : 設定プロパティのオブジェクトです。数値に関しては {{jsxref("Number.prototype.toLocaleString()")}} を、日付に関しては {{jsxref("Date.prototype.toLocaleString()")}} を見てください。
+  - : 設定プロパティがあるオブジェクトです。数値に関しては {{jsxref("Number.prototype.toLocaleString()")}} を、日付に関しては {{jsxref("Date.prototype.toLocaleString()")}} を見てください。
 
 ### 返値
 
@@ -37,6 +37,12 @@ toLocaleString(locales, options)
 要素が `undefined`、`null` の場合、文字列 `"null"` または `"undefined"` の代わりに空文字列に変換されます。
 
 [疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#祖配列)で使用する場合、`toLocaleString()` メソッドは空のスロットを `undefined` という値があるかのように反復処理します。
+
+`toLocaleString()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。このメソッドは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
+
+要素が `undefined`, `null` の場合、文字列 `"null"` または `"undefined"` の代わりに空文字列に変換されます。
+
+[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)で使用した場合、 `toLocaleString()` メソッドは空のスロットを `undefined` という値があるかのように反復処理します。
 
 `toLocaleString()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。このメソッドは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 
