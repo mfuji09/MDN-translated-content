@@ -3,7 +3,7 @@ title: "HTMLVideoElement: poster プロパティ"
 short-title: poster
 slug: Web/API/HTMLVideoElement/poster
 l10n:
-  sourceCommit: 4cbb657f882495b1cd18cbbaa8d1c5237bce4eb8
+  sourceCommit: 85e913af9f01e216149d3381586eb0c784fefff7
 ---
 
 {{APIRef("HTML DOM")}}
