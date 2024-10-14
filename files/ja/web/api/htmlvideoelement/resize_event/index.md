@@ -3,7 +3,7 @@ title: "HTMLVideoElement: resize イベント"
 short-title: resize
 slug: Web/API/HTMLVideoElement/resize_event
 l10n:
-  sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
+  sourceCommit: 3b94f0e52c6c0384f68f10436ae5739bf218d053
 ---
 
 {{APIRef("HTML DOM")}}
