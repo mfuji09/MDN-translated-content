@@ -3,7 +3,7 @@ title: "HTMLAnchorElement: text プロパティ"
 short-title: text
 slug: Web/API/HTMLAnchorElement/text
 l10n:
-  sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
+  sourceCommit: 5d670c42df8ede57e3d6341cb15d8251eb188dc4
 ---
 
 {{ApiRef("HTML DOM")}}
