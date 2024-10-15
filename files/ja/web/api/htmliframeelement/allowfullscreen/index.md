@@ -3,7 +3,7 @@ title: "HTMLIFrameElement: allowFullscreen プロパティ"
 short-title: allowFullscreen
 slug: Web/API/HTMLIFrameElement/allowFullscreen
 l10n:
-  sourceCommit: 8beb479c558d4220932721e61b6a334d5b5c274a
+  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
 ---
 
 {{APIRef("HTML DOM")}}
