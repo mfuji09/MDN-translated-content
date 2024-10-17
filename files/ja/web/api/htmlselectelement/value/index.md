@@ -3,7 +3,7 @@ title: "HTMLSelectElement: value プロパティ"
 short-title: value
 slug: Web/API/HTMLSelectElement/value
 l10n:
-  sourceCommit: 2b29051262aa05ce9a630d0dd2d6958f493abe19
+  sourceCommit: 7f38ec3d1324a031bc25e70b3c103ca78c2cf04d
 ---
 
 {{ APIRef("HTML DOM") }}
