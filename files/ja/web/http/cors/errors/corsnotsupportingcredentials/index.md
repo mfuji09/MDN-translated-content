@@ -19,7 +19,7 @@ Reason: Credential is not supported if the CORS header 'Access-Control-Allow-Ori
 
 この問題をクライアント側で修正するには、 CORS リクエストを発行する際に認証フラグの値を確実に `false` にするだけです。
 
-- [フェッチ API](/en-US/docs/Web/API/Fetch_API) を使用している場合は、{{domxref("Request.credentials")}} が `"omit"` であることを確認してください。
+- [フェッチ API](/ja/docs/Web/API/Fetch_API) を使用している場合は、{{domxref("Request.credentials")}} が `"omit"` であることを確認してください。
 - リクエストが {{domxref("XMLHttpRequest")}} を用いて発行されている場合は、 {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}} に `true` を設定しないよう確認してください。
 - [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events) を使用している場合は、 {{domxref("EventSource.withCredentials")}} が `false` (既定値) であることを確認してください。
 
