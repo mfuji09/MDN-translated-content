@@ -3,7 +3,7 @@ title: "HTMLInputElement: autocomplete プロパティ"
 short-title: autocomplete
 slug: Web/API/HTMLInputElement/autocomplete
 l10n:
-  sourceCommit: a242996610e5a3335fcd0c5ee3c84d5543b9b8dd
+  sourceCommit: a24234ea6552cbd126d20fbf61e8f2bb010e1f20
 ---
 
 {{ APIRef("HTML DOM") }}
