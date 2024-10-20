@@ -3,7 +3,7 @@ title: "HTMLInputElement: name プロパティ"
 short-title: name
 slug: Web/API/HTMLInputElement/name
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: bc141099823c9ae2e46f560ac674be2bc4118351
 ---
 
 {{ApiRef("HTML DOM")}}
