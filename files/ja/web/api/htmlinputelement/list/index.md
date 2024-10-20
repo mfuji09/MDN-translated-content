@@ -3,7 +3,7 @@ title: "HTMLInputElement: list プロパティ"
 short-title: list
 slug: Web/API/HTMLInputElement/list
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 46bcde62d3767fdba91163dfa30fa4b9fdaac5a6
 ---
 
 {{ApiRef("HTML DOM")}}
