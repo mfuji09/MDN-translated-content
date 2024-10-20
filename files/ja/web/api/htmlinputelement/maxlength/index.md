@@ -3,7 +3,7 @@ title: "HTMLInputElement: maxLength プロパティ"
 short-title: maxLength
 slug: Web/API/HTMLInputElement/maxLength
 l10n:
-  sourceCommit: 97e0bb9c3087d24d09525a74619660c796cd635e
+  sourceCommit: 2d74302e9ea9c6aef27f02553fa1b421ef6a7e89
 ---
 
 {{ApiRef("HTML DOM")}}
