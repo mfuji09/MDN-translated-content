@@ -3,7 +3,7 @@ title: "HTMLInputElement: formMethod プロパティ"
 short-title: formMethod
 slug: Web/API/HTMLInputElement/formMethod
 l10n:
-  sourceCommit: b44ac907c042c0c1de23092412a80701e1ade87d
+  sourceCommit: 0f7f70e7fd76f8e32cd02261bc10630d753fbf0b
 ---
 
 {{APIRef("HTML DOM")}}
