@@ -139,8 +139,7 @@ HTML で位置指定された要素をアンカーに関連付けるには、[`a
 
 {{ EmbedLiveSample("HTML method", "100%", "120") }}
 
-> [!NOTE]
-> [`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) 属性は、CSS のものよりも対応が進んでいません。詳しくは、[`anchor` 属性の互換性表](/ja/docs/Web/HTML/Global_attributes/anchor#ブラウザーの互換性)をご覧ください。
+> **メモ:** [`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) 属性は、CSS のものよりも対応が進んでいません。詳しくは、[`anchor` 属性の互換性表](/ja/docs/Web/HTML/Global_attributes/anchor#ブラウザーの互換性)をご覧ください。
 
 2 つの要素は関連付けられましたが、まだ結び付けられていません。 それらを結び付けるには、位置指定された要素をアンカーに対して相対的に位置指定する必要があります。これは CSS で行います。
 
@@ -166,8 +165,7 @@ anchor(<anchor-element> <anchor-side>, <fallback>)
 - `<anchor-element>`
 
   - : 要素を相対的に配置したいアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/anchor-name) プロパティの値。これは `<dashed-ident>` 値です。省略した場合は、要素の**既定のアンカー**が使用されます。これは、[`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティで参照されたアンカー、または、HTML の [`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) 属性を介してこの要素に関連付けられたアンカーです。
-    > [!NOTE]
-    > `<anchor-element>` を指定すると、そのアンカーに対する要素の位置が指定されますが、要素の関連付けは指定されません。関連付けは、`position-anchor` プロパティと `anchor` 属性のみで指定できます。同じ要素上の異なる `anchor()` 関数内に[異なる`<anchor-element>` 値](/ja/docs/Web/CSS/anchor#element_positioned_relative_to_multiple_anchors)を指定することで、複数のアンカーに対する要素の位置を指定できますが、位置指定された要素は単一のアンカーと関連付けられます。
+    > **メモ:** `<anchor-element>` を指定すると、そのアンカーに対する要素の位置が指定されますが、要素の関連付けは指定されません。関連付けは、`position-anchor` プロパティと `anchor` 属性のみで指定できます。同じ要素上の異なる `anchor()` 関数内に[異なる`<anchor-element>` 値](/ja/docs/Web/CSS/anchor#element_positioned_relative_to_multiple_anchors)を指定することで、複数のアンカーに対する要素の位置を指定できますが、位置指定された要素は単一のアンカーと関連付けられます。
 
 - [`<anchor-side>`](/ja/docs/Web/CSS/anchor#anchor-side)
 
@@ -313,7 +311,7 @@ body {
 
 例えば、
 
-2つの値を指定することで、特定のグリッドマスに配置することができます。例えば、
+2 つの値を指定することで、特定のグリッドマスに配置することができます。例えば、
 
 - `top left`（等価な論理値は `start start`）は、位置指定要素を左上の位置に配置します。
 - `bottom center`（等価な論理値は `end center`）は、位置指定要素を下中央の位置に配置します。
