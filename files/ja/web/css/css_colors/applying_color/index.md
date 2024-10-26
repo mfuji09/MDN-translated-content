@@ -27,7 +27,7 @@ l10n:
 
 - {{cssxref("color")}}
 
-  - : テキストと[テキスト装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (下線や上線、打ち消し線などを付加するもの) に使用する色です。
+  - : テキストと[テキスト装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals#フォントスタイル、フォントの太さ、テキスト変換、テキスト装飾) (下線や上線、打ち消し線などを付加するもの) に使用する色です。
 
 - {{cssxref("background-color")}}
 
@@ -35,7 +35,7 @@ l10n:
 
 - {{cssxref("text-shadow")}}
 
-  - : テキストに適用する影の効果を設定します。影の設定には、影のベース色 (他のパラメータに基づいて背景をぼかして混色する色) があります。より詳しくは基本的な[テキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)の[テキストのドロップシャドウ](/ja/docs/Learn/CSS/Styling_text/Fundamentals#text_drop_shadows)を参照してください。
+  - : テキストに適用する影の効果を設定します。影の設定には、影のベース色 (他のパラメータに基づいて背景をぼかして混色する色) があります。より詳しくは基本的な[テキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)の[テキストのドロップシャドウ](/ja/docs/Learn/CSS/Styling_text/Fundamentals#テキストのドロップシャドウ)を参照してください。
 
 - {{cssxref("text-decoration-color")}}
 
