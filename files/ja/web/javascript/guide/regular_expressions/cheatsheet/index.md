@@ -340,7 +340,7 @@ l10n:
 
 ### その他のアサーション
 
-> **メモ:** `?` の文字は数量詞としても使用されます。
+> **メモ:** `?` の文字は数量子としても使用されます。
 
 <table class="standard-table">
   <thead>
@@ -493,9 +493,9 @@ l10n:
   </tbody>
 </table>
 
-## 数量詞
+## 数量子
 
-[数量詞](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)は、一致する文字や表現の数を示します。
+[数量子](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)は、一致する文字や表現の数を示します。
 
 > [!NOTE]
 > 以下の表の中で、*アイテム*は単一の文字だけでなく、[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)や[グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)を示すこともあります。
@@ -543,7 +543,7 @@ l10n:
           に一致します。
         </p>
         <p>
-          <code>*</code>、<code>+</code>、<code>?</code>、<code>{}</code> といった数量詞の直後に使用した場合、既定とは逆に、その数量詞を非貪欲（出現回数が最小のものに一致）とします。既定は貪欲（出現回数が最大のものに一致）です。
+          <code>*</code>、<code>+</code>、<code>?</code>、<code>{}</code> といった数量子の直後に使用した場合、既定とは逆に、その数量子を非貪欲（出現回数が最小のものに一致）とします。既定は貪欲（出現回数が最大のものに一致）です。
         </p>
       </td>
     </tr>
@@ -596,7 +596,7 @@ l10n:
       </td>
       <td>
         <p>
-          既定では <code>*</code> や <code>+</code> といった数量詞は貪欲です。つまり、できる限り多くの文字列と一致しようとします。数量詞の後に <code>?</code> の文字を指定すると、数量詞が「非貪欲」になります。つまり、一致が見つかるとすぐに停止します。例えば、"some &#x3C;foo> &#x3C;bar> new &#x3C;/bar> &#x3C;/foo> thing" といった文字列が与えられた場合は、
+          既定では <code>*</code> や <code>+</code> といった数量子は貪欲です。つまり、できる限り多くの文字列と一致しようとします。数量子の後に <code>?</code> の文字を指定すると、数量子が「非貪欲」になります。つまり、一致が見つかるとすぐに停止します。例えば、"some &#x3C;foo> &#x3C;bar> new &#x3C;/bar> &#x3C;/foo> thing" といった文字列が与えられた場合は、
         </p>
         <ul>
           <li>
