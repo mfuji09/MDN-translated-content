@@ -60,7 +60,7 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
   - : 異なるタイプの文字を判別します。例えば、アルファベットと数字を判別する。
 - [グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)ガイド
   - : グループは複数のパターンを全体としてグループ化し、キャプチャグループは正規表現パターンを使用して文字列と一致させる際に、追加のサブ一致情報を提供します。後方参照は、同じ正規表現で以前に捕捉されたグループを参照します。
-- [数量詞](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)ガイド
+- [数量子](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)ガイド
   - : 一致させる文字や式の数を示します。
 
 正規表現で利用可能なすべての特殊文字を一つの表で見たい場合は、以下を参照してください。
@@ -134,7 +134,7 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
         <p>
           <a
             href="/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers"
-            >数量詞</a
+            >数量子</a
           >
         </p>
       </td>
@@ -396,7 +396,7 @@ Unicode の正規表現は、同様に異なる動作をします。 [`RegExp.pr
 > 複数の例が次の場所にあります。
 >
 > - {{jsxref("RegExp/exec", "exec()")}}、{{jsxref("RegExp/test", "test()")}}、{{jsxref("String/match", "match()")}}、{{jsxref("String/matchAll", "matchAll()")}}、{{jsxref("String/search", "search()")}}、{{jsxref("String/replace", "replace()")}}、{{jsxref("String/split", "split()")}} のリファレンスページ
-> - ガイド記事の[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)、[アサーション](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)、[グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)、[数量詞](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+> - ガイド記事の[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)、[アサーション](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)、[グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)、[数量子](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
 
 ### 特殊文字を用いた入力の確認
 
