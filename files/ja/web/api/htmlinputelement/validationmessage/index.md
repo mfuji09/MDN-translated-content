@@ -12,7 +12,7 @@ l10n:
 
 この `<input>` 要素が制約検証の対象ではない場合（{{domxref("HTMLInputElement.willValidate")}} が `false` の場合）、または制約を満たしている場合は空文字列 (`""`) となります。
 
-もし、この要素が制約の検証対象（`willValidate` が `true`）であり、制約が満たされていない場合（{{domxref("HTMLInputElement.validity")}} オブジェクトの `valid` プロパティが `false`）、値は検証中にユーザーに表示されるエラーメッセージとなります。
+もし、この要素が制約検証の対象（`willValidate` が `true`）であり、制約が満たされていない場合（{{domxref("HTMLInputElement.validity")}} オブジェクトの `valid` プロパティが `false`）、値は検証中にユーザーに表示されるエラーメッセージとなります。
 
 ## 値
 
