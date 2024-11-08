@@ -3,7 +3,7 @@ title: "HTMLTextAreaElement: select() メソッド"
 short-title: select()
 slug: Web/API/HTMLTextAreaElement/select
 l10n:
-  sourceCommit: b921b8d779314f2098a1669d8269b36107ecfbb1
+  sourceCommit: 89d17a618d9a09519b1a667ecab74c4c40515e8f
 ---
 
 {{APIRef("HTML DOM")}}
