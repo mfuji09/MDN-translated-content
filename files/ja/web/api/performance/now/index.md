@@ -31,7 +31,7 @@ now()
 [`Date.now`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/now) とは異なり、`performance.now()` が返すタイムスタンプは 1 ミリ秒の解像度に制限されません。時刻をマイクロ秒精度までの浮動小数点数で表します。
 
 また、 `Date.now()` は Unix 元期 (1970-01-01T00:00:00Z) からの相対値で、システムクロックに依存しているため、システムクロックやユーザークロックの調整、クロックスキューなどの影響を受ける可能性があります。
-一方、 `performance.now()` メソッドは、 [monotonic clock](https://w3c.github.io/hr-time/#dfn-monotonic-clock) である `timeOrigin` プロパティ空の相対値です。その現在時刻は決して減少せず、調整の対象にはなりません。
+一方、 `performance.now()` メソッドは、 [monotonic clock](https://w3c.github.io/hr-time/#dfn-monotonic-clock) である `timeOrigin` プロパティからの相対値です。その現在時刻は決して減少せず、調整の対象にはなりません。
 
 ### `performance.now` の仕様の変更
 
@@ -79,8 +79,8 @@ console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
 
 タイミング攻撃や[フィンガープリンティング](/ja/docs/Glossary/Fingerprinting)から保護するために、 `performance.now()` はサイトの分離状態に基づいて粗くなります。
 
-- 独立したコンテキストでの解像度: 5 ミリ秒
-- 独立していないコンテキストでの解像度: 100 ミリ秒
+- 独立したコンテキストでの解像度: 5 マイクロ秒
+- 独立していないコンテキストでの解像度: 100 マイクロ秒
 
 {{HTTPHeader("Cross-Origin-Opener-Policy")}} と {{HTTPHeader("Cross-Origin-Embedder-Policy")}} ヘッダーを使用して、サイトをオリジン間分離します。
 

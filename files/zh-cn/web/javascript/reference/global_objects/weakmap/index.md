@@ -44,8 +44,8 @@ WeakMap 的键必须是可被垃圾回收的。大多数{{Glossary("Primitive", 
 
 - {{jsxref("Object/constructor", "WeakMap.prototype.constructor")}}
   - : 创建了该实例对象的构造函数。对于 `WeakMap` 实例，初始值是 {{jsxref("WeakMap/WeakMap", "WeakMap")}} 构造函数。
-- `WeakMap.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"WeakMap"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
+- `WeakMap.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"WeakMap"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
 
 ## 实例方法
 
@@ -254,7 +254,7 @@ function handleObjectValues(obj) {
 }
 ```
 
-只有当函数的输入是对象时才有效。此外，即使输入不再传入，结果依然永远保留在缓存中，更有效的方法是将 {{jsxref("Map")}} 与 {{jsxref("WeakRef")}} 对象配对使用，这允许你讲任何类型的输入值与各自的（很可能的）计算结果关联。有关更多详细信息，请参阅 [WeakRef 和 FinalizationRegistry](/zh-CN/docs/Web/JavaScript/Memory_management#weakrefs_and_finalizationregistry) 示例。
+只有当函数的输入是对象时才有效。此外，即使输入不再传入，结果依然永远保留在缓存中，更有效的方法是将 {{jsxref("Map")}} 与 {{jsxref("WeakRef")}} 对象配对使用，这允许你将任何类型的输入值与各自的（很可能的）计算结果关联。有关更多详细信息，请参阅 [WeakRef 和 FinalizationRegistry](/zh-CN/docs/Web/JavaScript/Memory_management#weakrefs_and_finalizationregistry) 示例。
 
 ## 规范
 
