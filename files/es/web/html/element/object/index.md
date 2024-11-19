@@ -55,7 +55,7 @@ La fuente original de este ejemplo interactivo está almacenada en un repositori
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Padres permitidos</th>
@@ -142,6 +142,5 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 
 ## See also
 
-- {{HTMLElement("applet")}} {{deprecated_inline}}
 - {{HTMLElement("embed")}}
 - {{HTMLElement("param")}}

@@ -13,7 +13,8 @@ Em um Formulário Web, o elemento HTML `<optgroup>` cria um agrupamento de opç�
 - _Elemento pai permitido_ Um elemento {{HTMLElement("select")}}.
 - _Interface DOM_ {{domxref("HTMLOptGroupElement")}}
 
-> **Nota:** Elementos do tipo <strong>optgroup</strong> não podem ser aninhados.
+> [!NOTE]
+> Elementos do tipo <strong>optgroup</strong> não podem ser aninhados.
 
 ## Atributos
 
@@ -57,6 +58,6 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## Veja também
 
-- Outros elementos de formularios relacionados: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
+- Outros elementos de formularios relacionados: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
 
 {{HTMLSidebar}}

@@ -47,7 +47,8 @@ l10n:
 
 아래에는 생각해보아야 하는 장애의 주요 유형들이 설명되어 있습니다. 웹 콘텐츠에 접근하기 위해 사용하는 특별한 도구가 있다면 함께 살펴보겠습니다. 이런 도구들은 보조 기술(**assistive technologies**, 또는 **ATs**)이라고 불립니다.
 
-> **참고:** 세계 보건 기구(WHO)의 [장애 및 보건 현황 보고서](https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health)에 따르면 전 세계 인구의 약 15%에 해당하는 10억명 이상의 사람들이 장애를 갖고 있으며 1억 1천만명에서 1억 9천만명 사이의 성인들이 심각한 장애를 갖고 있습니다.
+> [!NOTE]
+> 세계 보건 기구(WHO)의 [장애 및 보건 현황 보고서](https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health)에 따르면 전 세계 인구의 약 15%에 해당하는 10억명 이상의 사람들이 장애를 갖고 있으며 1억 1천만명에서 1억 9천만명 사이의 성인들이 심각한 장애를 갖고 있습니다.
 
 ### 시각 장애가 있는 사람
 
@@ -55,7 +56,7 @@ l10n:
 
 - [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) and [Dolphin Screen Reader](https://yourdolphin.com/en-gb/products/individuals/screen-reader) (Windows) 와 [Dolphin Screen Reader](https://yourdolphin.com/ScreenReader) (Windows) 같은 상업 소프트웨어
 - [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome), 그리고 [Orca](https://wiki.gnome.org/Projects/Orca) (Linux)와 같은 무료 소프트웨어
-- [VoiceOver](https://www.apple.com/accessibility/vision/) (macOS, iPadOS, iOS), [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows), [ChromeVox](https://www.chromevox.com/) (on Chrome OS), 그리고 [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android)와 같은 OS 자체 소프트웨어
+- [VoiceOver](https://www.apple.com/accessibility/vision/) (macOS, iPadOS, iOS), [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows), [ChromeVox](https://www.chromevox.com/) (on ChromeOS), 그리고 [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android)와 같은 OS 자체 소프트웨어
 
 이런 스크린 리더에 익숙해지기를 권장합니다. 직접 설치하고 다루어보면서 어떻게 동작하는지 감을 익혀보면 좋습니다. [Cross-browser testing screen readers guide](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)에서 사용 방법에 대한 더 자세한 내용을 확인할 수 있습니다. 아래의 영상에서도 이 경험에 대한 간단한 예시를 보여줍니다.
 

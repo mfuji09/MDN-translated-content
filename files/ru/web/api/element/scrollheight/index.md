@@ -7,7 +7,8 @@ slug: Web/API/Element/scrollHeight
 
 Свойство **`Element.scrollHeight`** (только чтение) - измерение высоты контента в элементе, включая содержимое, невидимое из-за прокрутки. Значение `scrollHeight` равно минимальному `clientHeight`, которое потребуется элементу для того, чтобы поместить всё содержимое в видимую область (viewport), не используя вертикальную полосу прокрутки. Оно включает в себя padding элемента, но не его margin.
 
-> **Примечание:** Это свойство округляет значение до целого числа. Если вам нужно дробное значение, используйте {{ domxref("Element.getBoundingClientRect()") }}.
+> [!NOTE]
+> Это свойство округляет значение до целого числа. Если вам нужно дробное значение, используйте {{ domxref("Element.getBoundingClientRect()") }}.
 
 ## Синтаксис
 
@@ -29,7 +30,7 @@ padding-bottom
 
 **Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
 
-![Image:scrollHeight.png](/@api/deki/files/840/=ScrollHeight.png)
+![](scrollheight.png)
 
 ## Проблемы и решения
 

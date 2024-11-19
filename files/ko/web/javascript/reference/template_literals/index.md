@@ -83,8 +83,8 @@ var classes = "header";
 classes += isLargeScreen()
   ? ""
   : item.isCollapsed
-  ? " icon-expander"
-  : " icon-collapser";
+    ? " icon-expander"
+    : " icon-collapser";
 ```
 
 ES2015에서 중첩(nesting)없이 템플릿 리터럴 사용한 경우:
@@ -223,7 +223,8 @@ latex`\unicode`;
 
 escape sequence 제한은 _tagged_ templates에만 적용되며 _untagged_ template literals에는 적용되지 않습니다.
 
-> **Warning:** let bad = `bad escape sequence: \unicode`;
+> [!WARNING]
+> let bad = `bad escape sequence: \unicode`;
 
 ## 명세서
 

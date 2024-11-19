@@ -47,7 +47,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 与此同时，你也可以先引入一个后台页面，再在后台页面中引入脚本。这样做能为后台脚本添加 ES 6 模块支持，算是一个优势。
 
-**manifest.json**
+manifest.json 的内容如下：
 
 ```json
 // manifest.json
@@ -57,7 +57,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 }
 ```
 
-**background-page.html**
+background-page.html 的内容如下：
 
 ```html
 <!doctype html>
@@ -75,7 +75,8 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 后台脚本在一个被称为后台页面的特殊页面的上下文环境中运行。此环境为其提供了全局变量 [`window`](/zh-CN/docs/Web/API/Window) ，也提供了所有的标准 DOM API。
 
-> **警告：** 在 Firefox 浏览器中，后台页面不支持使用 [`alert()`](/zh-CN/docs/Web/API/Window/alert), [`confirm()`](/zh-CN/docs/Web/API/Window/alert)和 [`prompt()`](/zh-CN/docs/Web/API/Window/alert)
+> [!WARNING]
+> 在 Firefox 浏览器中，后台页面不支持使用 [`alert()`](/zh-CN/docs/Web/API/Window/alert)、[`confirm()`](/zh-CN/docs/Web/API/Window/alert) 和 [`prompt()`](/zh-CN/docs/Web/API/Window/alert)
 
 #### WebExtension API
 
@@ -83,7 +84,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 #### 跨域访问
 
-后台脚本可以向任何拥有[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#%E4%B8%BB%E6%9C%BA%E6%9D%83%E9%99%90)的主机发送 XHR 请求。
+后台脚本可以向任何拥有[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)的主机发送 XHR 请求。
 
 #### 网页内容
 

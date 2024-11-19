@@ -21,7 +21,7 @@ JavaScript 型別陣列提供了存取二進制資料更有效率的機制。
 
 ### ArrayBuffer
 
-{{jsxref("ArrayBuffer")}} 是一種資料型態，用於表示通用的固定長度二進制資料緩衝區。 您不能直接操作 `ArrayBuffer` 的內容。但是，您可以建立一個型別陣列視圖 (typed array view) 或一個 {{jsxref("DataView")}}，它以特定格式代表緩衝區，並使用它讀取和寫入緩衝區的內容。
+{{jsxref("ArrayBuffer")}} 是一種資料型態，用於表示通用的固定長度二進制資料緩衝區。 你不能直接操作 `ArrayBuffer` 的內容。但是，你可以建立一個型別陣列視圖 (typed array view) 或一個 {{jsxref("DataView")}}，它以特定格式代表緩衝區，並使用它讀取和寫入緩衝區的內容。
 
 ### 型別陣列視圖 (Typed array views)
 
@@ -139,7 +139,8 @@ var amountDueView = new Float32Array(buffer, 20, 1);
 
 舉例來說，可以用 `amountDueView[0]` 存取 amountDue。
 
-> **備註：** C 結構的 [data structure alignment](http://en.wikipedia.org/wiki/Data_structure_alignment) 是與使用平台有關，須小心這些填充上的差異。
+> [!NOTE]
+> C 結構的[資料結構對齊](https://zh.wikipedia.org/wiki/数据结构对齐)是與使用平台有關，須小心這些填充上的差異。
 
 ### Conversion to normal arrays
 
@@ -157,5 +158,5 @@ normalArray.constructor === Array;
 - [Getting `ArrayBuffer`s or typed arrays from _Base64_-encoded strings](/zh-TW/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
 - [`StringView` – a C-like representation of strings based on typed arrays](/zh-TW/docs/Code_snippets/StringView)
 - [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays)
-- [Typed Arrays: Binary Data in the Browser](http://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
+- [型別陣列——瀏覽器中的二進位資料](https://web.dev/articles/webgl-typed-arrays)
 - {{Glossary("Endianness")}}

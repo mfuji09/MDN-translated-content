@@ -120,9 +120,11 @@ comment();
 console.log("Hello world");
 ```
 
-> **Примечание:** Hashbang comments in JavaScript mimic [shebangs in Unix](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) used to run files with proper interpreter.
+> [!NOTE]
+> Hashbang comments in JavaScript mimic [shebangs in Unix](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) used to run files with proper interpreter.
 
-> **Предупреждение:** Although [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) before hashbang comment will work in a browser it is not advised to use BOM in a script with hasbang. BOM will not work when you try to run the script in Unix/Linux. So use UTF-8 without BOM if you want to run scripts directly from shell.
+> [!WARNING]
+> Although [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) before hashbang comment will work in a browser it is not advised to use BOM in a script with hasbang. BOM will not work when you try to run the script in Unix/Linux. So use UTF-8 without BOM if you want to run scripts directly from shell.
 
 Для определения JavaScript интерпретатора используйте только `#!` . В любых других случаях используйте `//` (или многострочный комментарий).
 
@@ -253,7 +255,7 @@ false;
 0777; // распознается, как восьмеричное число, 511 - как десятичное число
 ```
 
-Имейте в виду, что литералы десятичных чисел могут начинаться с нуля (0), за которым следует другое десятичное число, но в случае, если число начинается с нуля и за ним идёт цифра меньше 8, то число будет распознано как восьмеричное. This won't throw in JavaScript, see {{bug(957513)}}. See also the page about `{{jsxref('Global_Objects/parseInt','parseInt()','Octal_interpretations_with_no_radix')}}`.
+Имейте в виду, что литералы десятичных чисел могут начинаться с нуля (0), за которым следует другое десятичное число, но в случае, если число начинается с нуля и за ним идёт цифра меньше 8, то число будет распознано как восьмеричное. This won't throw in JavaScript, see [Firefox bug 957513](https://bugzil.la/957513). See also the page about `{{jsxref('Global_Objects/parseInt','parseInt()','Octal_interpretations_with_no_radix')}}`.
 
 #### Binary (двоичные числа)
 

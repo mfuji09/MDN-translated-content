@@ -44,7 +44,7 @@ var height = (canvas.height = window.innerHeight);
 
 Вы увидите здесь, что мы объединяем несколько назначений вместе, чтобы все переменные были установлены быстрее - это совершенно нормально.
 
-Последний бит исходного скрипта выглядит следующим образом:
+Последняя часть исходного скрипта выглядит следующим образом:
 
 ```js
 function random(min, max) {
@@ -272,7 +272,8 @@ Ball.prototype.update = function () {
 
 3. Сохраните и обновите демо снова, и вы увидите, как ваши мячи меняют цвет, когда они сталкиваются!
 
-> **Примечание:** . Если вам не удаётся заставить этот пример работать, попробуйте сравнить код JavaScript с нашей [готовой версией](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (также смотрите, как он работает [в прямом эфире](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
+> [!NOTE]
+> Если вам не удаётся заставить этот пример работать, попробуйте сравнить код JavaScript с нашей [готовой версией](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (также смотрите, как он работает [в прямом эфире](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
 
 ## Резюме
 
@@ -290,13 +291,3 @@ Ball.prototype.update = function () {
 - [2D breakout game using Phaser](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser) — explains the basics of building a 2D game using a JavaScript game library.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
-
-## В этом модуле
-
-- [Основы объекта](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B)
-- [Объектно-ориентированный JavaScript для начинающих](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B/Object-oriented_JS)
-- [Прототипы объектов](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B/Object_prototypes)
-- [Наследование в JavaScript](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B/Inheritance)
-- [Работа с данными JSON](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B/JSON)
-- [Практика построения объектов](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B/Object_building_practice)
-- [Добавление функций в нашу демонстрацию прыгающих шаров](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B/Adding_bouncing_balls_features)

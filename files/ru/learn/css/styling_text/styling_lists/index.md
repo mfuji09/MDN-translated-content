@@ -279,7 +279,8 @@ ul {
 
 {{ EmbedLiveSample('reversed', '100%', 150) }}
 
-> **Примечание:** Если пунктов в списке в обратном списке больше, чем значение атрибута `start`, счёт продолжится до нуля и далее отрицательные значения.
+> [!NOTE]
+> Если пунктов в списке в обратном списке больше, чем значение атрибута `start`, счёт продолжится до нуля и далее отрицательные значения.
 
 ### value
 
@@ -300,7 +301,8 @@ ul {
 
 {{ EmbedLiveSample('value', '100%', 150) }}
 
-> **Примечание:** Даже если вы используете нечисловой {{cssxref("list-style-type")}}, вам всё равно надо использовать эквивалентное цифровое значение в атрибуте `value`.
+> [!NOTE]
+> Даже если вы используете нечисловой {{cssxref("list-style-type")}}, вам всё равно надо использовать эквивалентное цифровое значение в атрибуте `value`.
 
 ## Активное изучение: Стилизация вложенного списка
 
@@ -411,11 +413,3 @@ window.addEventListener("load", drawOutput);
 В плане стилизации списки сравнительно легко освоить, как только вы освоите несколько связанных базовых принципов и специфичные свойства. В следующей статье мы перейдём к методам стилизации ссылок.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
-
-## В этом модуле
-
-- [Основы стилизации текста и шрифта](/ru/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Стилизация списков](/ru/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Стилизация ссылок](/ru/docs/Learn/CSS/Styling_text/Styling_links)
-- [Веб-шрифты](/ru/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Вёрстка домашней страницы общественной школы](/ru/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

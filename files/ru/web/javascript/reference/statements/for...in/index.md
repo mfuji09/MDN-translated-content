@@ -83,17 +83,17 @@ for (var prop in obj) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Поддержка: инициализатор переменных
 
-До SpiderMonkey 40, можно было инициализировать переменные (`i=0`) в цикле `for...in`:
+До SpiderMonkey 40, можно было инициализировать переменные (`i = 0`) в цикле `for...in`:
 
-```js example-bad
-var obj = {a:1, b:2, c:3};
-for(var i=0 in obj) {
+```js-nolint example-bad
+var obj = { a: 1, b: 2, c: 3 };
+for (var i = 0 in obj) {
   console.log(obj[i]);
 }
 // 1
@@ -101,7 +101,7 @@ for(var i=0 in obj) {
 // 3
 ```
 
-Это нестандартное поведение игнорируется в версии 40 и более поздних, оно бросит предупреждение {{jsxref("SyntaxError")}} ("for-in loop head declarations may not have initializers") в консоль ({{bug(748550)}} и {{bug(1164741)}}).
+Это нестандартное поведение игнорируется в версии 40 и более поздних, оно бросит предупреждение {{jsxref("SyntaxError")}} ("for-in loop head declarations may not have initializers") в консоль ([Firefox bug 748550](https://bugzil.la/748550) и [Firefox bug 1164741](https://bugzil.la/1164741)).
 
 Другие движки, такие как v8 (Chrome), Chakra (IE/Edge) и JSC (WebKit/Safari) также собираются удалить это нестандартное поведение.
 

@@ -39,7 +39,8 @@ slug: Learn/Accessibility/What_is_accessibility
 
 残疾人士和正常人一样是多样化的，他们身患的残疾也多种多样。此处课题的关键是抛开思考你自己的电脑和你自己使用网页的方式，而是要开始了解别人如何使用网页——你不是你的用户。接下来会讲解需要考虑的主要残疾类型，以及他们访问网页内容时用到的一些特殊工具 (被称为辅助技术或 ATs)。
 
-> **备注：** 世界卫生组织的“残疾和健康”状况说明书指出：“超过 10 亿人，约占世界总人口的 15%，患有某种形式的残疾”，而且“有 1.1 亿至 1.9 亿之间的成年人在身体功能上存在重大困难。”
+> [!NOTE]
+> 世界卫生组织的“残疾和健康”状况说明书指出：“超过 10 亿人，约占世界总人口的 15%，患有某种形式的残疾”，而且“有 1.1 亿至 1.9 亿之间的成年人在身体功能上存在重大困难。”
 
 ### 有视觉障碍的人
 
@@ -47,7 +48,7 @@ slug: Learn/Accessibility/What_is_accessibility
 
 - 有些是付费产品，比如 [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS) (Windows) 和 [Window Eyes](http://www.gwmicro.com/window-eyes/) (Windows).
 - 有些是免费产品，比如 [NVDA](http://www.nvaccess.org/) (Windows)， [ChromeVox](http://www.chromevox.com/) (Chrome, Windows 和 Mac OS X)，和 [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- 有些内置在操作系统中，比如 [VoiceOver](http://www.apple.com/accessibility/osx/voiceover/) (Mac OS X and iOS)， [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) (Microsoft Windows)， [ChromeVox](http://www.chromevox.com/) (on Chrome OS)，和 [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- 有些内置在操作系统中，比如 [VoiceOver](http://www.apple.com/accessibility/osx/voiceover/) (Mac OS X and iOS)， [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) (Microsoft Windows)， [ChromeVox](http://www.chromevox.com/) (on ChromeOS)，和 [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 让自己熟悉屏幕阅读器是个好主意；你还应该设置一个屏幕阅读器并充分的使用它（盘它），以了解它是如何工作的。请参阅我们的[跨浏览器屏幕阅读器测试向导](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E5%B1%8F%E5%B9%95%E9%98%85%E8%AF%BB%E5%99%A8)，以了解更多使用它们的细节。下面的视频还提供了一个简单的例子说明了体验是怎样的。
 
@@ -121,7 +122,8 @@ slug: Learn/Accessibility/What_is_accessibility
 
 为了表明你关心并考虑了无障碍，请在你的网站上发布无障碍声明，其中详细说明你对无障碍的政策以及为使该站点可访问而采取的步骤。如果有人确实反映你的网站存在无障碍问题，请与他们展开对话，保持同情心，并采取合理的步骤尝试解决问题。
 
-> **备注：** 我们的“[处理常见的无障碍问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)”一文涵盖了应更详细地测试的无障碍细节。
+> [!NOTE]
+> 我们的“[处理常见的无障碍问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)”一文涵盖了应更详细地测试的无障碍细节。
 
 总结：
 

@@ -14,7 +14,7 @@ HTML-элемент **`<details>`** используется для раскры
 | [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#Flow_content), sectioning root, interactive content, palpable content. |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | Permitted content                                          | One {{HTMLElement("summary")}} element followed by [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content).      |
-| Tag omission                                               | {{no_tag_omission}}                                                                                                        |
+| Tag omission                                               | Нет, открывающий и закрывающий теги обязательны.                                                                           |
 | Permitted parents                                          | Any element that accepts [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content).                                |
 | Permitted ARIA roles                                       | None                                                                                                                       |
 | DOM interface                                              | {{domxref("HTMLDetailsElement")}}                                                                                          |
@@ -23,7 +23,7 @@ HTML-элемент **`<details>`** используется для раскры
 
 Элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("open")}}
+- `open`
   - : Данный логический атрибут указывает, будет ли дополнительная информация отображаться пользователю при загрузке страницы. По умолчанию установлено значение false, поэтому дополнительная информация будет скрыта.
 
 ## Пример
@@ -88,14 +88,14 @@ details[open] > summary::before {
 
 {{ EmbedLiveSample('Примеры_стилизации') }}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{HTMLElement("summary")}}

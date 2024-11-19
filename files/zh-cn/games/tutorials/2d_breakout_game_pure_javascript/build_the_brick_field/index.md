@@ -104,10 +104,11 @@ drawBricks();
 
 {{JSFiddleEmbed("https://jsfiddle.net/kundan333/myd4vbwg/2/","","320")}}
 
-> **备注：** 练习：尝试在行或列上改变砖块数量，或者它们的位置。
+> [!NOTE]
+> 练习：尝试在行或列上改变砖块数量，或者它们的位置。
 
 ## 下一节
 
-现在，我们有砖啦！但是球根本就没有和它们互动 —— 接下来的第七章我们将让球和砖产生碰撞：[碰撞检测](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection)。
+现在，我们有砖啦！但是球根本就没有和它们互动——接下来的第七章我们将让球和砖产生碰撞：[碰撞检测](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection)。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection")}}

@@ -7,7 +7,7 @@ slug: Web/SVG/Element/script
 
 任何定义在`script`元素中的函数拥有一个跨当前文档的全局范围。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -69,6 +69,6 @@ slug: Web/SVG/Element/script
 
 ## 参见
 
-- [HTML 中的`script`元素](/zh-CN/HTML/Element/Script)
+- [HTML 中的 `script` 元素](/zh-CN/HTML/Element/Script)
 
 {{SVGRef}}

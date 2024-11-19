@@ -50,12 +50,12 @@ Ambas funciones trabajan sobre cadenas de texto. Si desea trabajar con [ArrayBuf
     - crear una colección de métodos para los que los objetos parecidos a cadenas (de ahora en adelante, `stringView`s) funcionen estrictamente en arrays de números más que en cadenas JavaScript inmutables.
     - trabajar con otras codificaciones Unicode diferentes de las [`DOMString`](/es/docs/Web/JavaScript/Reference/Global_Objects/String)s UTF-16 por defecto de JavaScript.
 
-**Herramientas**
+## Herramientas
 
 - [Reescribir atob() y btoa() usando TypedArrays y UTF-8](/es/docs/glossary/base64#solution_.232_.e2.80.93_rewriting_atob%28%29_and_btoa%28%29_using_typedarrays_and_utf-8)
 - [`StringView`, una representación tipo C de cadenas basadas en arrays tipados](/es/docs/Web/JavaScript/Typed_arrays/StringView)
 
-**Temas relacionados**
+## Temas relacionados
 
 - [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 - [Vectores o arrays tipados](/es/docs/Web/JavaScript/Typed_arrays)
@@ -108,7 +108,8 @@ b64EncodeUnicode("✓ à la mode"); // "4pyTIMOgIGxhIG1vZGU="
 
 ### Solución 2 – reescribir `atob()` y `btoa()` usando `TypedArray`s y UTF-8
 
-> **Nota:** El siguiente código también es útil para obtener un [ArrayBuffer](/es/docs/Web/JavaScript/Typed_arrays/ArrayBuffer) a partir de una cadena _Base64_ y/o viceversa ([véase abajo](#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)). **Para una librería completa de arrays tipados, vea [este artículo](/es/docs/Web/JavaScript/Typed_arrays/StringView)**.
+> [!NOTE]
+> El siguiente código también es útil para obtener un [ArrayBuffer](/es/docs/Web/JavaScript/Typed_arrays/ArrayBuffer) a partir de una cadena _Base64_ y/o viceversa ([véase abajo](#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)). **Para una librería completa de arrays tipados, vea [este artículo](/es/docs/Web/JavaScript/Typed_arrays/StringView)**.
 
 ```js
 "use strict";
@@ -127,14 +128,14 @@ function b64ToUint6(nChr) {
   return nChr > 64 && nChr < 91
     ? nChr - 65
     : nChr > 96 && nChr < 123
-    ? nChr - 71
-    : nChr > 47 && nChr < 58
-    ? nChr + 4
-    : nChr === 43
-    ? 62
-    : nChr === 47
-    ? 63
-    : 0;
+      ? nChr - 71
+      : nChr > 47 && nChr < 58
+        ? nChr + 4
+        : nChr === 43
+          ? 62
+          : nChr === 47
+            ? 63
+            : 0;
 }
 
 function base64DecToArr(sBase64, nBlocksSize) {
@@ -169,14 +170,14 @@ function uint6ToB64(nUint6) {
   return nUint6 < 26
     ? nUint6 + 65
     : nUint6 < 52
-    ? nUint6 + 71
-    : nUint6 < 62
-    ? nUint6 - 4
-    : nUint6 === 62
-    ? 43
-    : nUint6 === 63
-    ? 47
-    : 65;
+      ? nUint6 + 71
+      : nUint6 < 62
+        ? nUint6 - 4
+        : nUint6 === 62
+          ? 43
+          : nUint6 === 63
+            ? 47
+            : 65;
 }
 
 function base64EncArr(aBytes) {
@@ -224,27 +225,27 @@ function UTF8ArrToStr(aBytes) {
             aBytes[++nIdx] -
             128
         : nPart > 247 && nPart < 252 && nIdx + 4 < nLen /* five bytes */
-        ? ((nPart - 248) << 24) +
-          ((aBytes[++nIdx] - 128) << 18) +
-          ((aBytes[++nIdx] - 128) << 12) +
-          ((aBytes[++nIdx] - 128) << 6) +
-          aBytes[++nIdx] -
-          128
-        : nPart > 239 && nPart < 248 && nIdx + 3 < nLen /* four bytes */
-        ? ((nPart - 240) << 18) +
-          ((aBytes[++nIdx] - 128) << 12) +
-          ((aBytes[++nIdx] - 128) << 6) +
-          aBytes[++nIdx] -
-          128
-        : nPart > 223 && nPart < 240 && nIdx + 2 < nLen /* three bytes */
-        ? ((nPart - 224) << 12) +
-          ((aBytes[++nIdx] - 128) << 6) +
-          aBytes[++nIdx] -
-          128
-        : nPart > 191 && nPart < 224 && nIdx + 1 < nLen /* two bytes */
-        ? ((nPart - 192) << 6) + aBytes[++nIdx] - 128
-        : /* nPart < 127 ? */ /* one byte */
-          nPart,
+          ? ((nPart - 248) << 24) +
+            ((aBytes[++nIdx] - 128) << 18) +
+            ((aBytes[++nIdx] - 128) << 12) +
+            ((aBytes[++nIdx] - 128) << 6) +
+            aBytes[++nIdx] -
+            128
+          : nPart > 239 && nPart < 248 && nIdx + 3 < nLen /* four bytes */
+            ? ((nPart - 240) << 18) +
+              ((aBytes[++nIdx] - 128) << 12) +
+              ((aBytes[++nIdx] - 128) << 6) +
+              aBytes[++nIdx] -
+              128
+            : nPart > 223 && nPart < 240 && nIdx + 2 < nLen /* three bytes */
+              ? ((nPart - 224) << 12) +
+                ((aBytes[++nIdx] - 128) << 6) +
+                aBytes[++nIdx] -
+                128
+              : nPart > 191 && nPart < 224 && nIdx + 1 < nLen /* two bytes */
+                ? ((nPart - 192) << 6) + aBytes[++nIdx] - 128
+                : /* nPart < 127 ? */ /* one byte */
+                  nPart,
     );
   }
 
@@ -265,14 +266,14 @@ function strToUTF8Arr(sDOMStr) {
       nChr < 0x80
         ? 1
         : nChr < 0x800
-        ? 2
-        : nChr < 0x10000
-        ? 3
-        : nChr < 0x200000
-        ? 4
-        : nChr < 0x4000000
-        ? 5
-        : 6;
+          ? 2
+          : nChr < 0x10000
+            ? 3
+            : nChr < 0x200000
+              ? 4
+              : nChr < 0x4000000
+                ? 5
+                : 6;
   }
 
   aBytes = new Uint8Array(nArrLen);
@@ -357,7 +358,8 @@ var myBuffer = base64DecToArr(
 alert(myBuffer.byteLength);
 ```
 
-> **Nota:** La función `base64DecToArr(sBase64[, nBlocksSize])` devuelve un [`uint8Array`](/es/docs/Web/JavaScript/Typed_arrays/Uint8Array) de bytes. Si tu objetivo es construir un búfer de datos crudos de 16, 32 o 64 bits, usa el argumento `nBlocksSize`, que es el número de bytes de los que la propiedad `uint8Array.buffer.bytesLength` debe devolver un múltiplo (1 u omitido para ASCII, [cadenas binarias](/es/docs/Web/API/DOMString/Binary) o cadenas UTF-8 codificacas, 2 para cadenas UTF-16, 4 para cadenas UTF-32).
+> [!NOTE]
+> La función `base64DecToArr(sBase64[, nBlocksSize])` devuelve un [`uint8Array`](/es/docs/Web/JavaScript/Typed_arrays/Uint8Array) de bytes. Si tu objetivo es construir un búfer de datos crudos de 16, 32 o 64 bits, usa el argumento `nBlocksSize`, que es el número de bytes de los que la propiedad `uint8Array.buffer.bytesLength` debe devolver un múltiplo (1 u omitido para ASCII, [cadenas binarias](/es/docs/Web/API/DOMString/Binary) o cadenas UTF-8 codificacas, 2 para cadenas UTF-16, 4 para cadenas UTF-32).
 
 Para una librería más completa, véase [`StringView`](/es/docs/Web/JavaScript/Typed_arrays/StringView)[, una representación tipo C de cadenas basadas en arrays tipados](/es/docs/Web/JavaScript/Typed_arrays/StringView).
 

@@ -9,7 +9,8 @@ l10n:
 
 **`WebAssembly.Table`** 是代表 WebAssembly Table 的 JavaScript 包装对象，具有类数组结构，存储了多个函数引用。在 JavaScript 或者 WebAssemble 中创建的 Table 对象可以同时被 JavaScript 或 WebAssembly 访问和更改。
 
-> **备注：** Table 对象目前只能存储函数引用，不过在将来可能会被扩展。
+> [!NOTE]
+> Table 对象目前只能存储函数引用，不过在将来可能会被扩展。
 
 ## 构造函数
 
@@ -51,7 +52,7 @@ const importObj = {
 };
 ```
 
-最后，我们使用 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiateStreaming) 方法加载并实例化一个 Wasm 模块（table2.wasm）。table2.wasm 模块包含两个函数（一个返回 42，另一个返回 83），并将这两个函数分别存储到导入 Table 的 0 号和 1 号元素中（参见[文本表示](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.wat)）。因此，在实例化之后，表的长度仍然是 2，但元素中现在包含了可调用的 [WebAssembly 导出函数](/zh-CN/docs/WebAssembly/Exported_functions)，可以通过 JS 调用这些函数。
+最后，我们使用 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) 方法加载并实例化一个 Wasm 模块（table2.wasm）。table2.wasm 模块包含两个函数（一个返回 42，另一个返回 83），并将这两个函数分别存储到导入 Table 的 0 号和 1 号元素中（参见[文本表示](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.wat)）。因此，在实例化之后，表的长度仍然是 2，但元素中现在包含了可调用的 [WebAssembly 导出函数](/zh-CN/docs/WebAssembly/Exported_functions)，可以通过 JS 调用这些函数。
 
 ```js
 WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(

@@ -37,7 +37,8 @@ slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 - [`:only-child`](/ru/docs/Web/CSS/:only-child)
 - [`:invalid`](/ru/docs/Web/CSS/:invalid)
 
-> **Примечание:** Правильно писать псевдоклассы и элементы без какого бы то ни было предшествующего им селектора элемента. В примере выше вы могли бы написать `:first-child` и правило было бы применено к _любому_ элементу, оказавшемуся первым дочерним для `<article>`, не только к первому дочернему абзацу — `:first-child` равнозначно `*:first-child`. Однако обычно вы хотите б*о*льшего контроля, поэтому вам нужен более специфичный селектор.
+> [!NOTE]
+> Правильно писать псевдоклассы и элементы без какого бы то ни было предшествующего им селектора элемента. В примере выше вы могли бы написать `:first-child` и правило было бы применено к _любому_ элементу, оказавшемуся первым дочерним для `<article>`, не только к первому дочернему абзацу — `:first-child` равнозначно `*:first-child`. Однако обычно вы хотите б*о*льшего контроля, поэтому вам нужен более специфичный селектор.
 
 ### Псевдоклассы пользовательского действия
 
@@ -56,7 +57,8 @@ slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 ::pseudo-element-name
 ```
 
-> **Примечание:** Некоторые ранние псевдоэлементы использовали синтаксис одинарного двоеточия, которое вы можете иногда видеть в коде или примерах. Современные браузеры поддерживают ранние псевдоэлементы с одинарным или двойным двоеточием синтаксиса для обратной совместимости.
+> [!NOTE]
+> Некоторые ранние псевдоэлементы использовали синтаксис одинарного двоеточия, которое вы можете иногда видеть в коде или примерах. Современные браузеры поддерживают ранние псевдоэлементы с одинарным или двойным двоеточием синтаксиса для обратной совместимости.
 
 Например, если вы хотите выбрать первую строку абзаца, вы могли бы обернуть её в `<span>` и использовать селектор элемента; однако это может не сработать, если количество слов, которые вы обернули, будет больше или меньше ширины родительского элемента. Поскольку мы, как правило, не знаем, сколько слов поместится в строке — т.к. их количество меняется, если меняется ширина экрана или размер шрифта — то надёжного решения при помощи HTML нет.
 
@@ -174,24 +176,3 @@ article p:first-child::first-line {
 | {{ Cssxref("::spelling-error") }} | Соответствует части документа, содержащей орфографическую ошибку, отмеченную браузером.                             |
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
-
-## В этом модуле
-
-1. [Каскад и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Селекторы CSS](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B)
-
-   - [Селекторы типа, класса и ID](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Type_Class_and_ID_Selectors)
-   - [Селекторы атрибута](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors)
-   - [Псевдоклассы и псевдоэлементы](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements)
-   - [Комбинаторы](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Combinators)
-
-3. [Модель коробки](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Фон и границы](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Обработка разных направлений текста](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Переполнение содержимого](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Значения и единицы измерения](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Изменение размеров в CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Элементы изображений, форм и медиа-элементы](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Стилизация таблиц](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Отладка CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Организация вашей CSS](/ru/docs/Learn/CSS/Building_blocks/Organizing)[](/ru/docs/Learn/CSS/Building_blocks/Organizing)

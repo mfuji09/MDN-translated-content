@@ -11,12 +11,13 @@ slug: Web/CSS/background-origin
 
 Обратите внимание, что `background-origin` игнорируется, когда {{cssxref("background-attachment")}} является `fixed`.
 
-> **Примечание:** Сокращение {{cssxref("background")}} сбрасывает значения этого свойства к его начальному значению, если оно не указано.
+> [!NOTE]
+> Сокращение {{cssxref("background")}} сбрасывает значения этого свойства к его начальному значению, если оно не указано.
 
 ## Синтаксис
 
 ```css
-/* Ключевые значения */
+/* Ключевые слова */
 background-origin: border-box;
 background-origin: padding-box;
 background-origin: content-box;
@@ -80,7 +81,7 @@ div {
 
 {{cssinfo}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

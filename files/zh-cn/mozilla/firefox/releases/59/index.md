@@ -90,18 +90,18 @@ _无变化。_
 
 ### SVG
 
-_无变化_
+_无变化。_
 
 ## Mozilla 和附加组件开发者应该注意的变化
 
 ### WebExtensions
 
-_无变化_
+_无变化。_
 
 ## 参见
 
 - Firefox 59 的站点兼容性
 
-## 历史版本
+## 更早期的版本
 
-{{Firefox_for_developers(58)}}
+{{Firefox_for_developers}}

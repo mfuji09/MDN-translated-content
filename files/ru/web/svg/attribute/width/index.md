@@ -9,6 +9,8 @@ slug: Web/SVG/Attribute/width
 
 Двадцать пять элементов используют эти атрибуты: {{SVGElement('feBlend')}}, {{SVGElement('feColorMatrix')}}, {{SVGElement('feComponentTransfer')}}, {{SVGElement('feComposite')}}, {{SVGElement('feConvolveMatrix')}}, {{SVGElement('feDiffuseLighting')}}, {{SVGElement('feDisplacementMap')}}, {{SVGElement('feDropShadow')}}, {{SVGElement('feFlood')}}, {{SVGElement('feGaussianBlur')}}, {{SVGElement('feImage')}}, {{SVGElement('feMerge')}}, {{SVGElement('feMorphology')}}, {{SVGElement('feOffset')}}, {{SVGElement('feSpecularLighting')}}, {{SVGElement('feTile')}}, {{SVGElement('feTurbulence')}}, {{SVGElement('filter')}}, {{SVGElement('foreignObject')}}, {{SVGElement('image')}}, {{SVGElement('mask')}}, {{SVGElement('pattern')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, and {{SVGElement('use')}}
 
+## Пример
+
 ```css hidden
 html,
 body,
@@ -26,7 +28,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{EmbedLiveSample("Пример", '100%', 200)}}
 
 ## feBlend
 
@@ -199,7 +201,8 @@ svg {
 | По умолчанию | `auto` (рассматривается как `0`)                                                                                           |
 | Animatable   | Да                                                                                                                         |
 
-> **Примечание:** Начиная с SVG2, `width` это геометрическое свойство, что означает, что этот атрибут может, также, быть использован как свойство CSS для `<foreignObject>`.
+> [!NOTE]
+> Начиная с SVG2, `width` это геометрическое свойство, что означает, что этот атрибут может, также, быть использован как свойство CSS для `<foreignObject>`.
 
 ## image
 
@@ -210,7 +213,8 @@ svg {
 | По умолчанию | `auto` (рассматривается как ширина изображения)                                                                            |
 | Animatable   | Да                                                                                                                         |
 
-> **Примечание:** Начиная с SVG2, `width` это геометрическое свойство, что означает, что этот атрибут может, также, быть использован как свойство CSS для изображений.
+> [!NOTE]
+> Начиная с SVG2, `width` это геометрическое свойство, что означает, что этот атрибут может, также, быть использован как свойство CSS для изображений.
 
 ## mask
 
@@ -239,20 +243,23 @@ svg {
 | По умолчанию | `auto` (рассматривается как `0`)                                                                                           |
 | Animatable   | Да                                                                                                                         |
 
-> **Примечание:** Начиная с SVG2, `width` это геометрическое свойство, что означает, что этот атрибут может, также, быть использован как свойство CSS для прямоугольника.
+> [!NOTE]
+> Начиная с SVG2, `width` это геометрическое свойство, что означает, что этот атрибут может, также, быть использован как свойство CSS для прямоугольника.
 
 ## svg
 
 Для {{SVGElement('svg')}}, `width` определяет горизонтальный размер отображаемой области вьюпорта SVG.
 
-> **Примечание:** В HTML документе, если оба атрибута {{SVGAttr('viewBox')}} и `width` опущены, [svg-элемент будет отображаться с шириной `300px`](https://svgwg.org/specs/integration/#svg-css-sizing)
+> [!NOTE]
+> В HTML документе, если оба атрибута {{SVGAttr('viewBox')}} и `width` опущены, [svg-элемент будет отображаться с шириной `300px`](https://svgwg.org/specs/integration/#svg-css-sizing)
 
 | Значение     | `auto` \| **[\<length>](/docs/Web/SVG/Content_type#Length)** \| **[\<percentage>](/docs/Web/SVG/Content_type#Percentage)** |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------- |
 | По умолчанию | `auto` (рассматривается как `100%`)                                                                                        |
 | Animatable   | Да                                                                                                                         |
 
-> **Примечание:** Начиная с SVG2, `width` это геометрическое свойство, что означает, что этот атрибут может, также, быть использован как свойство CSS для `<svg>`.
+> [!NOTE]
+> Начиная с SVG2, `width` это геометрическое свойство, что означает, что этот атрибут может, также, быть использован как свойство CSS для `<svg>`.
 
 ## use
 
@@ -263,7 +270,8 @@ svg {
 | По умолчанию | `auto` (рассматривается как `0`)                                                                                           |
 | Animatable   | Да                                                                                                                         |
 
-> **Примечание:** Начиная с SVG2, `width` это геометрическое свойство, что означает, что этот атрибут может, также, быть использован как свойство CSS для использованных элементов.
+> [!NOTE]
+> Начиная с SVG2, `width` это геометрическое свойство, что означает, что этот атрибут может, также, быть использован как свойство CSS для использованных элементов.
 
 ## Спецификации
 

@@ -70,7 +70,8 @@ person.greeting();
 
 Как видите, наш объект содержит некоторые данные, а также несколько методов. У нас же с помощью простого синтаксиса есть доступ к ним.
 
-> **Примечание:** Если у вас возникли проблемы с применением файла в работе, попробуйте сравнить ваш код с нашей версией — см. [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (также [see it running live](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). Одна из распространённых ошибок, когда вы начинаете с объектами ставить запятую в конце последнего члена — это приводит к ошибке.
+> [!NOTE]
+> Если у вас возникли проблемы с применением файла в работе, попробуйте сравнить ваш код с нашей версией — см. [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (также [see it running live](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). Одна из распространённых ошибок, когда вы начинаете с объектами ставить запятую в конце последнего члена — это приводит к ошибке.
 
 Итак что здесь происходит? Объект состоит из нескольких элементов, каждый из которых имеет своё название (пример `name` и `age` выше), и значение (пример `['Bob', 'Smith']` и `32`). Каждая пара название/значение должны быть разделены запятой, а название и значение в каждом случае разделяются двоеточием. Синтаксис всегда следует этому образцу:
 
@@ -280,7 +281,8 @@ const myNotification = new Notification("Hello!");
 
 Опять же, мы рассмотрим конструкторы в следующей статье.
 
-> **Примечание:** Полезно подумать о том, как объекты взаимодействуют посредством передачи сообщений - когда объекту требуется другой объект для выполнения какого-либо действия, он часто отправляет сообщение другому объекту через один из его методов и ждёт ответа, который мы знаем как возвращаемое (return) значение.
+> [!NOTE]
+> Полезно подумать о том, как объекты взаимодействуют посредством передачи сообщений - когда объекту требуется другой объект для выполнения какого-либо действия, он часто отправляет сообщение другому объекту через один из его методов и ждёт ответа, который мы знаем как возвращаемое (return) значение.
 
 ## Резюме
 
@@ -289,13 +291,3 @@ const myNotification = new Notification("Hello!");
 В следующей статье мы начнём рассматривать теорию объектно-ориентированного программирования (ООП) и как эти техники могут быть использованы в JavaScript
 
 {{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
-
-## В этом модуле
-
-- [Основы объекта](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B)
-- [Объектно-ориентированный JavaScript для начинающих](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B/Object-oriented_JS)
-- [Прототипы объектов](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B/Object_prototypes)
-- [Наследование в JavaScript](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B/Inheritance)
-- [Работа с данными JSON](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B/JSON)
-- [Практика построения объектов](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B/Object_building_practice)
-- [Добавление функций в нашу демонстрацию прыгающих шаров](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B/Adding_bouncing_balls_features)

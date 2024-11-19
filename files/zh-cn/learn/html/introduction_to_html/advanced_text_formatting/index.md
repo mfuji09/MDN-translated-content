@@ -32,9 +32,9 @@ HTML 中有许多其他元素可以用于格式化文本，我们没有在 [HTML
 
 ## 描述列表
 
-在 HTML 基础部分，我们讨论了如何在 HTML 中[标记基本的列表](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#列表_lists)，但是我们没有提到你偶尔会遇到的第三种类型的列表——**描述列表**（description list）。这种列表的目的是标记一组项目及其相关描述，例如术语和定义，或者是问题和答案等。让我们看一组术语和定义的示例：
+在 HTML 文本处理基础中，我们讨论了如何在 HTML 中[标记基本的列表](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#列表)，并且提到了你偶尔会遇到的第三种列表类型——**描述列表**（description list）。这种列表的目的是标记一组项目及其相关描述，例如术语和定义，或者是问题和答案等。让我们看一组术语和定义的示例：
 
-```
+```plain
 内心独白
 戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。
 语言独白
@@ -183,12 +183,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -417,12 +417,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -487,7 +487,8 @@ textarea.onkeyup = () => {
 
 {{EmbedLiveSample('缩略语示例', '100%', '150')}}
 
-> **备注：** 在之前版本的 html 中还包含对另一个元素 {{htmlelement("acronym")}} 的支持，但是它已经从 HTML spec 中移除，因为可以只使用 `<abbr>` 元素代表缩略语。不应再使用 `<acronym>`。
+> [!NOTE]
+> 在之前版本的 html 中还包含对另一个元素 {{htmlelement("acronym")}} 的支持，但是它已经从 HTML spec 中移除，因为可以只使用 `<abbr>` 元素代表缩略语。不应再使用 `<acronym>`。
 
 ### 主动学习：标记一个缩略语
 
@@ -575,12 +576,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -755,9 +756,9 @@ HTML 还支持将时间和日期标记为可供机器识别的格式的 {{htmlel
 <time datetime="2016-W04">The fourth week of 2016</time>
 ```
 
-## 测试你的技能！
+## 技能测试！
 
-你已经到达了本篇文章的末尾，但还能记得多少重要的东西呢？在进行下一步前，你可以找一些测试来验证知识留存的多少——请查看[测试你的技能：高级 HTML 文本](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text)。
+你已经到达了本篇文章的末尾，但还能记得多少重要的东西呢？在进行下一步前，你可以找一些测试来验证知识留存的多少——请查看[技能测试：高级 HTML 文本](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text)。
 
 ## 总结
 

@@ -15,7 +15,8 @@ slug: Learn/CSS/First_steps/Styling_a_biography_page
 
 Вы можете писать код в редакторе ниже или [скачать исходный код](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/), чтобы работать в вашем собственном редакторе. Это страница с кодом HTML и CSS внутри него. Если вам так удобнее, вы можете переместить CSS в отдельный файл на вашем компьютере. Или вы можете использовать онлайн-редакторы, такие как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/).
 
-> **Примечание:** Если у вас не получается, попросите о помощи — читайте раздел [Помощь](#помощь) с кодом ниже.
+> [!NOTE]
+> Если у вас не получается, попросите о помощи — читайте раздел [Помощь](#помощь) с кодом ниже.
 
 ## Работа с CSS
 
@@ -65,10 +66,3 @@ slug: Learn/CSS/First_steps/Styling_a_biography_page
 Поздравляем вас с завершением первого модуля! Теперь вы неплохо разбираетесь в CSS и можете разобраться в таблицах стилей. В следующем модуле, [Как устроен CSS](/ru/docs/Learn/CSS/Building_blocks), мы глубже разберёмся в некоторых аспектах языка.
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## В этом модуле
-
-1. [Что такое CSS?](/ru/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Начало работы с CSS](/ru/docs/Learn/CSS/First_steps/Getting_started)
-3. [Как структурирован CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)
-4. [Как работает CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)

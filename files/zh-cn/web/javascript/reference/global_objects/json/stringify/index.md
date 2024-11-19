@@ -183,7 +183,7 @@ JSON.stringify(circularReference);
 
 要序列化循环引用，你可以使用支持循环引用的库（例如 Douglas Crockford 的 [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)），或者自己实现一个解决方案，这需要找到循环引用，并用可序列化的值替换（或移除）它们。
 
-如果你在使用 `JSON.stringify()` 来深拷贝一个对象，你可能想要使用 [`structuredClone()`](/zh-CN/docs/Web/API/structuredClone)，它支持循环引用。JavaScript 引擎的二进制序列化 API，比如 [`v8.serialize()`](https://nodejs.org/api/v8.html#v8serializevalue)，也支持循环引用。
+如果你在使用 `JSON.stringify()` 来深拷贝一个对象，你可能想要使用 {{DOMxRef("Window.structuredClone", "structuredClone()")}}，它支持循环引用。JavaScript 引擎的二进制序列化 API，比如 [`v8.serialize()`](https://nodejs.org/api/v8.html#v8serializevalue)，也支持循环引用。
 
 ### `JSON.stringify`用作 JavaScript
 
@@ -250,7 +250,7 @@ console.log(restoredSession);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [`core-js` 中对现代 `JSON.stringify` 行为（符号和良好格式的 unicode）的 polyfill](https://github.com/zloirock/core-js#ecmascript-json)
 - {{JSxRef("JSON.parse()")}}
-- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) – Introduces two functions: `JSON.decycle` and `JSON.retrocycle`. These allow encoding and decoding of cyclical structures and DAGs into an extended and retrocompatible JSON format.

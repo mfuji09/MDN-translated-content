@@ -113,7 +113,6 @@ Un objet `HTMLDocument` donne également accès à différentes fonctionnalités
 - {{domxref("HTMLIFrameElement")}}
 - {{domxref("HTMLImageElement")}}
 - {{domxref("HTMLInputElement")}}
-- {{domxref("HTMLKeygenElement")}}
 - {{domxref("HTMLLabelElement")}}
 - {{domxref("HTMLLegendElement")}}
 - {{domxref("HTMLLIElement")}}
@@ -174,7 +173,6 @@ Un objet `HTMLDocument` donne également accès à différentes fonctionnalités
 
 ### Interfaces HTML obsolètes
 
-- {{domxref("HTMLBaseFontElement")}}
 - {{domxref("HTMLIsIndexElement")}}
 
 ## Interfaces SVG
@@ -284,7 +282,8 @@ Un objet `HTMLDocument` donne également accès à différentes fonctionnalités
 
 Voici l'API du DOM pour les types de donnée utilisés pour les propriétés et attributs SVG.
 
-> **Note :** À partir de Gecko 5.0, les interfaces suivantes relatives à SVG et qui représentent des listes d'objets sont indexées et permettent d'y accéder. Elles possèdent en plus une propriété de longueur qui indique le nombre d'éléments dans la liste : {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}} et {{domxref("SVGPointList")}}.
+> [!NOTE]
+> À partir de Gecko 5.0, les interfaces suivantes relatives à SVG et qui représentent des listes d'objets sont indexées et permettent d'y accéder. Elles possèdent en plus une propriété de longueur qui indique le nombre d'éléments dans la liste : {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}} et {{domxref("SVGPointList")}}.
 
 #### Interfaces statiques
 

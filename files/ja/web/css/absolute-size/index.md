@@ -2,7 +2,7 @@
 title: <absolute-size>
 slug: Web/CSS/absolute-size
 l10n:
-  sourceCommit: aeb87af1283cb24e735a00b1409b087b4ed2a0fb
+  sourceCommit: 2077d0702d038c9ccc743a53d8ad1c0c21fef5be
 ---
 
 {{CSSRef}}
@@ -119,7 +119,7 @@ li {
 
 #### 結果
 
-{{EmbedLiveSample('Comparing the keyword values', '100%', 400)}}
+{{EmbedLiveSample('キーワード値の比較', '100%', 400)}}
 
 ## 仕様書
 

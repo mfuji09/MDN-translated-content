@@ -68,7 +68,8 @@ CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们�
 
 出现在另一个元素下面的元素被描述为**块**元素，与出现在另一个元素旁边的**内联元素**不同，内联元素就像段落中的单个单词一样。
 
-> **备注：** 块元素内容的布局方向被描述为**块方向**。块方向在英语等具有水平**书写模式**(`writing mode`) 的语言中垂直运行。它可以在任何垂直书写模式的语言中水平运行。对应的**内联方向**是内联内容（如句子）的运行方向。
+> [!NOTE]
+> 块元素内容的布局方向被描述为**块方向**。块方向在英语等具有水平**书写模式**(`writing mode`) 的语言中垂直运行。它可以在任何垂直书写模式的语言中水平运行。对应的**内联方向**是内联内容（如句子）的运行方向。
 
 当你使用 css 创建一个布局时，你正在离开**正常布局流**，但是对于页面上的多数元素，**正常布局流**将完全可以创建你所需要的布局。从一个结构良好的 Html 文档开始是非常重要，因为你可以按照默认的方式来搭建页面，而不是自造车轮。
 
@@ -164,7 +165,8 @@ Flexbox 是 CSS 弹性盒子布局模块（[Flexible Box Layout](/zh-CN/docs/Web
 
 {{ EmbedLiveSample('设置 flex 属性', '300', '200') }}
 
-> **备注：** 为了找到更多关于 Flexbox 的信息，看看我们的 [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox) 的文章。
+> [!NOTE]
+> 为了找到更多关于 Flexbox 的信息，看看我们的 [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox) 的文章。
 
 ## Grid 布局
 
@@ -258,7 +260,8 @@ Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于
 
 {{ EmbedLiveSample('在网格内放置元素', '300', '330') }}
 
-> **备注：** 这两个例子只是展示了 grid 布局的冰山一角，要深入了解 grid 布局，请参阅我们的文章[Grid Layout](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)。
+> [!NOTE]
+> 这两个例子只是展示了 grid 布局的冰山一角，要深入了解 grid 布局，请参阅我们的文章[Grid Layout](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)。
 
 这篇指南的其余部分介绍了其他的布局方式，它们与你的页面的主要布局结构关系不大，但是却能够帮助你实现特殊的操作。同时，只要你理解了每一个布局任务的初衷，你就能够马上意识到哪一种布局更适合你的组件。
 
@@ -324,7 +327,8 @@ p {
 
 {{ EmbedLiveSample('浮动', '100%', 600) }}
 
-> **备注：** CSS 浮动的知识会在我们关于 [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)的教程当中被详细地解释。除此之外，如果你想要了解在 Flexbox 和 Grid 布局出现之前我们是如何进行列布局的（仍然有可能碰到这种情形），请阅读我们关于[传统布局方式](/zh-CN/docs/Learn/CSS/CSS_layout/%E4%BC%A0%E7%BB%9F%E7%9A%84%E5%B8%83%E5%B1%80%E6%96%B9%E6%B3%95)的文章。
+> [!NOTE]
+> CSS 浮动的知识会在我们关于 [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)的教程当中被详细地解释。除此之外，如果你想要了解在 Flexbox 和 Grid 布局出现之前我们是如何进行列布局的（仍然有可能碰到这种情形），请阅读我们关于[传统布局方式](/zh-CN/docs/Learn/CSS/CSS_layout/%E4%BC%A0%E7%BB%9F%E7%9A%84%E5%B8%83%E5%B1%80%E6%96%B9%E6%B3%95)的文章。
 
 ## 定位技术
 
@@ -629,7 +633,8 @@ body {
 
 {{ EmbedLiveSample('粘性定位', '100%', 200) }}
 
-> **备注：** 想要发现更多关于定位的信息，请参阅我们的[Positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)和[Practical positioning examples](/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)文章。
+> [!NOTE]
+> 想要发现更多关于定位的信息，请参阅我们的[Positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)和[Practical positioning examples](/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)文章。
 
 ## 表格布局
 
@@ -661,7 +666,7 @@ HTML 表格对于显示表格数据是很好的，但是很多年前——在浏
 
 现在，我们例子中的 CSS。除了使用 {{cssxref("display")}} 属性外，大多数 CSS 都是相当普通的。 {{htmlelement("form")}}, {{htmlelement("div")}}, {{htmlelement("label")}}和{{htmlelement("input")}}被告知要分别显示表、表行和表单元——基本上，它们会像 HTML 表格标记一样，导致标签和输入在默认情况下排列整齐。我们所要做的就是添加一些大小、边缘等等，让一切看起来都好一点，我们就完成了。
 
-你会注意到标题段落已经给出了 `display: table-caption;`——这使得它看起来就像一个表格{{htmlelement("caption")}} ——同时出于设计需要，我们通过`caption-side: bottom;` 告诉标题应该展示在表格的底部，即使这个{{htmlelement("p")}}标记在源码中是在`<input>`之前。这就能让你有一点灵活的弹性。
+你会注意到标题段落已经给出了 `display: table-caption;`——这使得它看起来就像一个表格 {{htmlelement("caption")}}——同时出于设计需要，我们通过 `caption-side: bottom;` 告诉标题应该展示在表格的底部，即使这个 {{htmlelement("p")}} 标记在源码中是在 `<input>` 之前。这就能让你有一点灵活的弹性。
 
 ```css
 html {

@@ -30,7 +30,8 @@ Isso significa que precisamos de um jeito para executar nossas funções de dese
 
 Primeiramente há as funções {{domxref("window.setInterval()")}} e {{domxref("window.setTimeout()")}}, que podem ser usadas para chamar uma função específica durante um certo período definido de tempo.
 
-> **Nota:** Nota: O método {{domxref("window.requestAnimationFrame()")}} agora é a maneira recomendada de programar animações. Vamos atualizar esse tutorial para abortar isso em breve.
+> [!NOTE]
+> Nota: O método {{domxref("window.requestAnimationFrame()")}} agora é a maneira recomendada de programar animações. Vamos atualizar esse tutorial para abortar isso em breve.
 
 - `setInterval(função,atraso)`
   - : Inicia repetidamente executando a função específica pela função a cada milissegundo de atraso.
@@ -330,7 +331,7 @@ Abaixo é o {{HTMLElement("canvas")}} em que a imagem é rolada. Note que a larg
 <canvas id="canvas" width="800" height="200"></canvas>
 ```
 
-**Live sample**
+##### Live sample
 
 {{EmbedLiveSample("A_looping_panorama", "830", "230")}}
 

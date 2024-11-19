@@ -5,7 +5,7 @@ slug: Learn/Accessibility/Multimedia
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
-可能导致无障碍问题（accessibility problems）的另一类内容是多媒体 ——视频，音频和图像内容需要提供适当的文本替代方式，以便辅助技术及其用户能够理解它们。本文展示了具体内容。
+可能导致无障碍（accessibility）问题的另一类内容是多媒体——视频、音频和图像内容需要提供适当的文本替代方式，以便辅助技术及其用户能够理解它们。本文展示了具体内容。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -48,7 +48,7 @@ slug: Learn/Accessibility/Multimedia
 
 ## 可访问的音频和视频控件
 
-基于 Web 的音频/视频执行控件不应该成为问题,对吗?让我们来调查一下。
+基于 Web 的音频/视频执行控件不应该成为问题，对吗？让我们来调查一下。
 
 ### 本地 HTML5 控件的问题
 
@@ -221,7 +221,7 @@ player.ontimeupdate = () => {
 
 #### 阅读延伸
 
-这为你提供了如何向视频/音频播放器实例添加自定义播放器功能的基本想法。有关如何向视频/音频播放器添加更复杂的功能(包括旧版浏览器的 Flash 回退) 的详细信息，请参阅：
+这为你提供了如何向视频/音频播放器实例添加自定义播放器功能的基本想法。有关如何向视频/音频播放器添加更复杂的功能（包括旧版浏览器的 Flash 回退）的详细信息，请参阅：
 
 - [Audio and video delivery](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery)
 - [Video player styling basics](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics)
@@ -257,19 +257,21 @@ player.ontimeupdate = () => {
 
 但是，有一些边缘情况。例如，你可能有一个会议的音频录制，该录音引用了附带的资源，如电子表格或图表。在这种情况下，应确保资源与音频和脚本一起提供，并在成绩单中提及它们的位置专门链接到这些资源。这当然会帮助所有用户，而不仅仅是聋人。
 
-> **备注：** 音频脚本通常有助于多个用户组。除了让聋人用户访问音频中包含的信息外，还考虑一个带宽连接较低的用户，他们会发现下载音频不方便。还要考虑在嘈杂的环境中 (如酒吧或酒吧) 中的用户，他们试图访问信息，但无法通过噪音听到信息。
+> [!NOTE]
+> 音频脚本通常有助于多个用户组。除了让聋人用户访问音频中包含的信息外，还考虑一个带宽连接较低的用户，他们会发现下载音频不方便。还要考虑在嘈杂的环境中 (如酒吧或酒吧) 中的用户，他们试图访问信息，但无法通过噪音听到信息。
 
 ## 视频文本轨道
 
 要使聋人、盲人甚至其他用户组 (如低带宽用户或不理解视频录制的语言的用户) 可以访问视频，你需要在视频内容中包括文本轨道。
 
-> **备注：** 文本轨道对于潜在的任何用户也很有用，而不仅仅是那些残障用户。例如，有些用户可能无法听到音频，因为他们处于嘈杂的环境中 (如显示体育游戏时的拥挤的酒吧),或者如果其他人在安静的地方 (如图书馆),则可能不想打扰其他人。
+> [!NOTE]
+> 文本轨道对于潜在的任何用户也很有用，而不仅仅是那些残障用户。例如，有些用户可能无法听到音频，因为他们处于嘈杂的环境中 (如显示体育游戏时的拥挤的酒吧),或者如果其他人在安静的地方 (如图书馆),则可能不想打扰其他人。
 
 这不是一个新概念 ––电视服务已经关闭了字幕相当长的时间了：
 
 ![Frame from an old-timey cartoon with closed captioning "Good work, Goldie. Keep it up!"](closed-captions.png)
 
-许多国家/地区提供以英语为母语的字幕的英语电影,例如,DVD 上通常提供不同的语言字幕
+许多国家/地区提供以英语为母语的字幕的英语电影，例如，DVD 上通常提供不同的语言字幕
 
 ![An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"](subtitles_german.png)
 
@@ -286,7 +288,7 @@ player.ontimeupdate = () => {
 
 典型的 WebVTT 文件如下所示：
 
-```
+```plain
 WEBVTT
 
 1
@@ -321,7 +323,8 @@ This is the second.
 
 有关详细信息，请阅读[Adding captions and subtitles to HTML5 video](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。你可以找到与本文一起使用本文的[the example](http://iandevlin.github.io/mdn/video-player-with-captions/),本文由 Ian Devlin 编写 (请参阅[source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions))。此示例使用一些 JavaScript 允许用户在不同的字幕之间进行选择。请注意，要打开字幕，你需要按"CC"按钮并选择一个选项 - 英语、德语或西班牙语。
 
-> **备注：** 文本轨道和转录也可以帮助你使用{{glossary("SEO")}},因为搜索引擎在文本上尤其繁荣。文本轨道甚至允许搜索引擎通过视频直接链接到一个点部分。
+> [!NOTE]
+> 文本轨道和转录也可以帮助你使用{{glossary("SEO")}},因为搜索引擎在文本上尤其繁荣。文本轨道甚至允许搜索引擎通过视频直接链接到一个点部分。
 
 ## 其他多媒体内容
 

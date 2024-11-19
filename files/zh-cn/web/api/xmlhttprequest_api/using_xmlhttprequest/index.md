@@ -3,7 +3,7 @@ title: 使用 XMLHttpRequest
 slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{DefaultAPISidebar("XMLHttpRequest API")}}
 
 在该教程中，我们将使用{{domxref("XMLHttpRequest")}} 来发送 [HTTP](/zh-CN/docs/Web/HTTP) 请求以实现网站和服务器之间的数据交换。`XMLHttpRequest`常见和晦涩的使用情况都将包含在例子中。
 
@@ -24,7 +24,8 @@ oReq.send();
 
 通过 `XMLHttpRequest` 生成的请求可以有两种方式来获取数据，异步模式或同步模式。请求的类型是由这个 `XMLHttpRequest` 对象的 [open()](/zh-CN/docs/Web/API/XMLHttpRequest/open) 方法的第三个参数`async`的值决定的。如果该参数的值为 `false`，则该 `XMLHttpRequest`请求以同步模式进行，否则该过程将以异步模式完成。这两种类型请求的详细讨论和指南可以在[同步和异步请求](/zh-CN/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests)页找到。
 
-> **备注：** 由于对用户体验的负面影响，从 Gecko 30.0 版本开始，在主线程上的同步请求已经被弃用。
+> [!NOTE]
+> 由于对用户体验的负面影响，从 Gecko 30.0 版本开始，在主线程上的同步请求已经被弃用。
 
 > **备注：** `XMLHttpRequest` 构造函数并不仅限于 XML 文档。它之所以使用“XML”开头是因为在它诞生之时，原先用于异步数据交换的主要格式便是 XML。
 
@@ -37,11 +38,12 @@ W3C 规范定义了 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()
 如果你使用 `XMLHttpRequest` 来获得一个远程的 XML 文档的内容，{{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性将会是一个由 XML 文档解析而来的 DOM 对象，这很难被操作和分析。这里有五种主要的分析 XML 文档的方式：
 
 1. 使用 [XPath](/zh-CN/docs/Web/XPath) 定位到文档的指定部分。
-2. 手动 [解析和序列化 XML](/zh-CN/docs/Web/Guide/Parsing_and_serializing_XML) 为字符串或对象。
-3. 使用 [XMLSerializer](/zh-CN/docs/XMLSerializer) 把 DOM 树序列化成字符串或文件。
+2. 手动[解析和序列化 XML](/zh-CN/docs/Web/XML/Parsing_and_serializing_XML) 为字符串或对象。
+3. 使用 [XMLSerializer](/zh-CN/docs/Web/API/XMLSerializer) 把 DOM 树序列化成字符串或文件。
 4. 如果你预先知道 XML 文档的内容，你可以使用 [RegExp](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。如果你用 `RegExp` 扫描时受到换行符的影响，你也许想要删除所有的换行符。然而，这种方法是"最后手段"，因为如果 XML 代码发生轻微变化，该方法将可能失败。
 
-> **备注：** 在 W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) 规范中允许 HTML 通过 XMLHttpRequest.responseXML 属性进行解析。更多详细内容请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 。本条注意已在英文原文中更新。
+> [!NOTE]
+> 在 W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) 规范中允许 HTML 通过 XMLHttpRequest.responseXML 属性进行解析。更多详细内容请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 。本条注意已在英文原文中更新。
 
 > **备注：** `XMLHttpRequest` 现在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性解释 HTML。请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 这篇文章了解相关用法。
 
@@ -131,7 +133,8 @@ function transferCanceled(evt) {
 
 第 3-6 行为多种事件添加了事件监听，这些事件在使用 `XMLHttpRequest` 执行数据传输时被发出。
 
-> **备注：** 你需要在请求调用 `open()` 之前添加事件监听。否则 `progress` 事件将不会被触发。
+> [!NOTE]
+> 你需要在请求调用 `open()` 之前添加事件监听。否则 `progress` 事件将不会被触发。
 
 在上一个例子中，progress 事件被指定由 `updateProgress()` 函数处理，并接收到传输的总字节数和已经传输的字节数，它们分别在事件对象的 `total` 和 `loaded` 属性里。但是如果 `lengthComputable` 属性的值是 false，那么意味着总字节数是未知并且 total 的值为零。
 
@@ -148,11 +151,14 @@ oReq.upload.addEventListener("abort", transferCanceled);
 oReq.open();
 ```
 
-> **备注：** progress 事件在使用 `file:` 协议的情况下是无效的。
+> [!NOTE]
+> progress 事件在使用 `file:` 协议的情况下是无效的。
 
-> **备注：** 从 Gecko 9.0 开始，进度事件现在可以依托于每一个传入的数据块，包括进度事件被触发前在已经接受了最后一个数据包且连接已经被关闭的情况下接收到的最后一个块。这种情况下，当该数据包的 load 事件发生时 progress 事件会被自动触发。这使你可以只关注 progress 事件就可以可靠的监测进度。
+> [!NOTE]
+> 从 Gecko 9.0 开始，进度事件现在可以依托于每一个传入的数据块，包括进度事件被触发前在已经接受了最后一个数据包且连接已经被关闭的情况下接收到的最后一个块。这种情况下，当该数据包的 load 事件发生时 progress 事件会被自动触发。这使你可以只关注 progress 事件就可以可靠的监测进度。
 
-> **备注：** 在 Gecko 12.0 中，当 `responseType` 为 "moz-blob" 时，如果你的 progress 事件被触发，则响应的值是一个包含了接收到的数据的 {{domxref("Blob")}} 。
+> [!NOTE]
+> 在 Gecko 12.0 中，当 `responseType` 为 "moz-blob" 时，如果你的 progress 事件被触发，则响应的值是一个包含了接收到的数据的 {{domxref("Blob")}} 。
 
 使用 `loadend` 事件可以侦测到所有的三种加载结束条件（`abort`、`load`，或 `error`）：
 
@@ -211,7 +217,7 @@ foo=bar&baz=The+first+line.%0D%0AThe+second+line.%0D%0A
   The second line.
   ```
 
-- 方法：`POST`；编码类型：[`multipart/form-data`](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)：
+- 方法：`POST`；编码类型：[`multipart/form-data`](/zh-CN/docs/Web/HTTP/MIME_types#multipartform-data)：
 
   ```plain
   Content-Type: multipart/form-data; boundary=---------------------------314911788813839
@@ -375,8 +381,8 @@ foo=bar&baz=The+first+line.%0D%0AThe+second+line.%0D%0A
             ? this.contentType === "multipart\/form-data"
               ? 3
               : this.contentType === "text\/plain"
-              ? 2
-              : 1
+                ? 2
+                : 1
             : 0;
           this.receiver = oTarget.action;
           this.status = 0;
@@ -602,15 +608,18 @@ print_r($_FILES);
 
 激活这些代码的语法很简单：
 
-```
+```js
 AJAXSubmit(myForm);
 ```
 
-> **备注：** 该框架使用 {{domxref("FileReader")}} API 进行文件的上传。这是一个较新的 API 并且还未在 IE9 及以下版本的浏览器中实现。因此，使用 AJAX 上传仍是一项**实验性的技术**。如果你不需要上传 二进制文件，该框架在大多数浏览器中运行良好。
+> [!NOTE]
+> 该框架使用 {{domxref("FileReader")}} API 进行文件的上传。这是一个较新的 API 并且还未在 IE9 及以下版本的浏览器中实现。因此，使用 AJAX 上传仍是一项**实验性的技术**。如果你不需要上传 二进制文件，该框架在大多数浏览器中运行良好。
 
-> **备注：** 发送二进制内容的最佳途径是通过 {{jsxref("ArrayBuffer", "ArrayBuffers")}} 或 {{domxref("Blob", "Blobs")}} 结合 {{domxref("XMLHttpRequest.send()", "send()")}} 方法甚至 `FileReader` API 的 {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} 方法。但是，自从该脚本的目的变成处理 [可字符串化](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 的原始数据以来，我们使用 {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} 方法结合 `FileReader` API 的 {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} 方法。同样地，上述脚本仅当你处理小文件时行之有效。如果不打算上传二进制内容，就考虑使用 `FormData` API 来替代。
+> [!NOTE]
+> 发送二进制内容的最佳途径是通过 {{jsxref("ArrayBuffer", "ArrayBuffers")}} 或 {{domxref("Blob", "Blobs")}} 结合 {{domxref("XMLHttpRequest.send()", "send()")}} 方法甚至 `FileReader` API 的 {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} 方法。但是，自从该脚本的目的变成处理 [可字符串化](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 的原始数据以来，我们使用 {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} 方法结合 `FileReader` API 的 {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} 方法。同样地，上述脚本仅当你处理小文件时行之有效。如果不打算上传二进制内容，就考虑使用 `FormData` API 来替代。
 
-> **备注：** 非标准的 `sendAsBinary` 方法从 Gecko 31 开始将会废弃并且会很快被移除。标准方法 `send(Blob data)` 将会取而代之。
+> [!NOTE]
+> 非标准的 `sendAsBinary` 方法从 Gecko 31 开始将会废弃并且会很快被移除。标准方法 `send(Blob data)` 将会取而代之。
 
 ### 使用 FormData 对象
 
@@ -782,7 +791,8 @@ AJAXSubmit(myForm);
 </html>
 ```
 
-> **备注：** 如之前所述，{{domxref("FormData")}} 对象并不是 [可字符串化 (stringifiable)](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 的对象。如果你想要字符串化一个提交数据，请使用这个 [早期的纯 AJAX 例子](#A_little_vanilla_framework). 同时也要注意，尽管这个例子中有一些 `file` {{ HTMLElement("input") }} 字段，**但当你通过** `FormData` API 提交一个表格时，也无须使用 {{domxref("FileReader")}} API: 文件被自动加载并上传。
+> [!NOTE]
+> 如之前所述，{{domxref("FormData")}} 对象并不是 [可字符串化 (stringifiable)](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 的对象。如果你想要字符串化一个提交数据，请使用这个 [早期的纯 AJAX 例子](#A_little_vanilla_framework). 同时也要注意，尽管这个例子中有一些 `file` {{ HTMLElement("input") }} 字段，**但当你通过** `FormData` API 提交一个表格时，也无须使用 {{domxref("FileReader")}} API: 文件被自动加载并上传。
 
 ## 获取最后修改日期
 
@@ -845,30 +855,19 @@ ifHasChanged("yourpage.html", function (nModif, nVisit) {
 });
 ```
 
-如果你想要了解 **_当前页面是否发生了改变，_**请阅读这篇文章：{{domxref("document.lastModified")}}.
+如果你想要了解当前页面是否发生了改变，请阅读这篇文章：{{domxref("document.lastModified")}}。
 
 ## 跨站的 XMLHttpRequest
 
-现代浏览器可以通过执行 WebApps 工作小组通过的 [Access Control for Cross-Site Requests](/zh-CN/docs/Web/HTTP/Access_control_CORS) 标注来支持跨站请求。只要服务器端的配置允许你从你的 Web 应用发送请求，就可以使用 `XMLHttpRequest` 。否则，会抛出一个 `INVALID_ACCESS_ERR` 异常
+现代浏览器通过实现[跨源资源共享](/zh-CN/docs/Web/HTTP/CORS)（CORS）标准来支持跨站请求。只要服务器端的配置允许你从你的 Web 应用发送请求，就可以使用 `XMLHttpRequest`。否则，会抛出一个 `INVALID_ACCESS_ERR` 异常
 
 ## 绕过缓存
 
-一般地，如果缓存中有相应内容， `XMLHttpRequest` 会试图从缓存中读取内容。绕过缓存的方法见下述代码：
-
-```js
-var req = new XMLHttpRequest();
-req.open("GET", url, false);
-req.channel.loadFlags |= Components.interfaces.nsIRequest.LOAD_BYPASS_CACHE;
-req.send(null);
-```
-
-> **备注：** 这个方法只工作于基于 Gecko 内核的软件，也就是通道属性是 Gecko-specific.
-
-还有一个跨浏览器兼容的方法，就是给 URL 添加时间戳。请确保你酌情地添加了 "?" or "&" 。例如，将：
+有一个跨浏览器兼容的方法，就是给 URL 添加时间戳。请确保你酌情地添加了 "?" or "&" 。例如，将：
 
 ```plain
-http://foo.com/bar.html -> http://foo.com/bar.html?12345
-http://foo.com/bar.html?foobar=baz -> http://foo.com/bar.html?foobar=baz&12345
+http://example.com/bar.html -> http://example.com/bar.html?12345
+http://example.com/bar.html?foobar=baz -> http://example.com/bar.html?foobar=baz&12345
 ```
 
 因为本地缓存都是以 URL 作为索引的，这样就可以使每个请求都是唯一的，也就可以这样来绕开缓存。
@@ -876,23 +875,19 @@ http://foo.com/bar.html?foobar=baz -> http://foo.com/bar.html?foobar=baz&12345
 你也可以用下面的方法自动更改缓存：
 
 ```js
-var oReq = new XMLHttpRequest();
+const req = new XMLHttpRequest();
 
-oReq.open("GET", url + (/\?/.test(url) ? "&" : "?") + new Date().getTime());
-oReq.send(null);
+req.open("GET", url + (/\?/.test(url) ? "&" : "?") + new Date().getTime());
+req.send(null);
 ```
 
 ## 安全性
 
-要启用跨站脚本，推荐的做法是对 XMLHttpRequest 的响应使用 `Access-Control-Allow-Origin` 的 HTTP 头。
+要启用跨站脚本，推荐的做法是对 XMLHttpRequest 的响应使用 `Access-Control-Allow-Origin` 的 HTTP 标头。
 
 ### XMLHttpRequests 被停止
 
-如果你的 XMLHttpRequest 收到 `status=0` 和 `statusText=null` 的返回，这意味着请求无法执行。就是[无法发送](http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent). 一个可能导致的原因是当 [`XMLHttpRequest` origin](http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin) (创建的 XMLHttpRequest) 改变时，XMLHttpRequest 执行 `open()`.。这种情况是可能发生的，举个例子，我们在一个窗口的`onunload`事件中关闭 XMLHttpRequest，但实际上在即将关闭窗口时，之前创建的 XMLHttpRequest 仍然在那里，最后当这个窗口失去焦点、另一个窗口获得焦点时，它还是发送了请求（也就是`open()`）。最有效的避免这个问题的方法是为新窗口的 {{domxref("Element/DOMActivate_event", "DOMActivate")}} 事件设置一个监听器，一旦窗口关闭，它的[`unload`](/zh-CN/docs/Web/API/Window/unload_event)事件便触发。
-
-## Worker
-
-设置 `overrideMimeType` 后在 {{domxref("Worker")}} 中无法正常工作，详见 [Firefox bug 678057](https://bugzil.la/678057)。其他浏览器也许会以不同的手段处理。
+如果你的 XMLHttpRequest 收到 `status=0` 和 `statusText=null` 的返回，这意味着请求无法执行。就是未被发送的（[`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent)）。一个可能导致的原因是在 XMLHttpRequest 在执行 `open()` 时，[`XMLHttpRequest` 的来源](https://www.w3.org/TR/2010/CR-XMLHttpRequest-20100803/#xmlhttprequest-origin)发生了改变。这种情况是可能发生的，例如，我们在一个窗口的 onunload 事件触发时在进行一个 XMLHttpRequest，之前创建的 XMLHttpRequest 仍然在那里，最后当这个窗口失去焦点、另一个窗口获得焦点时，它还是发送了请求（也就是 `open()`）。最有效的避免这个问题的方法是在关闭的窗口触发 {{domxref("Window/unload_event", "unload")}} 事件时为新窗口的 {{domxref("Element/DOMActivate_event", "DOMActivate")}} 事件设置一个监听器。
 
 ## 规范
 

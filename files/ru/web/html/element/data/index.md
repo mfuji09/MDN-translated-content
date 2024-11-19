@@ -12,7 +12,7 @@ slug: Web/HTML/Element/data
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content), явный контент. |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Разрешённое содержимое                                           | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                                                   |
-| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                |
+| Пропуск тегов                                                    | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                   |
 | Разрешённые родители                                             | Любой элемент который принимает [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                   |
 | DOM-интерфейс                                                    | {{domxref("HTMLDataElement")}}                                                                                                                                                     |
 
@@ -20,7 +20,7 @@ slug: Web/HTML/Element/data
 
 Этот элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-- {{htmlattrdef("value")}}
+- `value`
   - : Этот атрибут определяет машиночитаемый перевод содержимого элемента.
 
 ## Пример
@@ -40,7 +40,7 @@ slug: Web/HTML/Element/data
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

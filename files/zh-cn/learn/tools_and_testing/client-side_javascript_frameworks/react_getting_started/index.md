@@ -39,7 +39,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_st
 
 ## 你好 React
 
-如其官方口号所示，[React](https://reactjs.org/) 是一个用于构建用户界面的库。React 不是一个框架 —— 它的应用甚至不局限于 Web 开发，它可以与其他库一起使用以渲染到特定环境。例如，[React Native](https://reactnative.dev/) 可用于构建移动应用程序；[React 360](https://facebook.github.io/react-360/) 可用于构建虚拟现实应用程序……
+如其官方口号所示，[React](https://reactjs.org/) 是一个用于构建用户界面的库。React 不是一个框架——它的应用甚至不局限于 Web 开发，它可以与其他库一起使用以渲染到特定环境。例如，[React Native](https://reactnative.dev/) 可用于构建移动应用程序；[React 360](https://facebook.github.io/react-360/) 可用于构建虚拟现实应用程序……
 
 为了构建 Web 应用，开发人员将 React 与 [ReactDOM 结合使用](https://reactjs.org/docs/react-dom.html)。React 和 ReactDOM 通常被与其他真正的 Web 开发框架相提并论，并用于解决相同的问题。当我们将 React 称为“框架”时，就是在进行口语化的理解。
 
@@ -49,7 +49,7 @@ React 的主要目标是最大程度地减少开发人员构建 UI 时发生的�
 
 与本模块中涵盖的其他框架不同，React 不会对代码约定或文件组织实施严格的规则。这使团队可以设置最适合自己的约定，并以他们希望的任何方式采用 React。React 可以处理一个按钮，一个界面的几个部分或应用程序的整个用户界面。
 
-尽管 React 可以用于[界面的小片段](https://reactjs.org/docs/add-react-to-a-website.html)中，但要和 jQuery 这样的库，甚至是像 Vue 这样的框架那样“引入”应用程序并不容易 —— 当你使用 React 构建整个应用程序时更容易上手。
+尽管 React 可以用于[界面的小片段](https://reactjs.org/docs/add-react-to-a-website.html)中，但要和 jQuery 这样的库，甚至是像 Vue 这样的框架那样“引入”应用程序并不容易——当你使用 React 构建整个应用程序时更容易上手。
 
 另外，许多开发人员的经验对于 React 应用程序也是有用处的，例如使用 JSX 编写界面是需要编译过程的。在网站上添加类似于 Babel 的编译器会让网站上代码的运行速度变慢，因此开发人员通常会在构建项目的时候设置这样的工具。React 对于工具的要求可以说是很高的，但这是能够学习解决的。
 
@@ -75,14 +75,13 @@ const header = (
 );
 ```
 
-> **备注：** 上一个代码段中的括号并非 JSX 的一部分，它对你的应用程序没有任何影响，括号只是用来向你（和你的计算机）表明其中的多行代码属于同一个表达式 (译者注：原文表述实在有点啰嗦)。因此上面的代码等同于：
+> [!NOTE]
+> 上一个代码段中的括号并非 JSX 的一部分，它对你的应用程序没有任何影响，括号只是用来向你（和你的计算机）表明其中的多行代码属于同一个表达式 (译者注：原文表述实在有点啰嗦)。因此上面的代码等同于：
 >
-> ```js
-> const header = (
->   <header>
->     <h1>Mozilla Developer Network</h1>
->   </header>
-> );
+> ```jsx-nolint
+> const header = <header>
+>   <h1>Mozilla Developer Network</h1>
+> </header>;
 > ```
 >
 > 这看起来多少有点不适感，因为表达式前面的 [`<header>`](/zh-CN/docs/Web/HTML/Element/header) 标记没有缩进与其对应的结束标记相同的位置。
@@ -117,7 +116,7 @@ const header = React.createElement(
 
 如果你使用的是 Windows，则需要安装一些软件以与 Unix/macOS 终端保持同等地位，才能使用本教程中提到的终端命令。**Gitbash**（作为 [git Windows 工具集](https://gitforwindows.org/)的一部分提供）或**[适用于 Linux 的 Windows 子系统](https://docs.microsoft.com/en-us/windows/wsl/about)**（**WSL**）均适用。有关这些以及一般终端命令的更多信息，请参见[命令行速成课程](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)。
 
-还请记住，React 和 ReactDOM 生成的应用程序只能在相当现代的一组浏览器上运行 —— 通过某些 polyfill 可以使用 IE9+。在阅读这些教程时，建议你使用 Firefox，Safari 或 Chrome 等现代浏览器。
+还请记住，React 和 ReactDOM 生成的应用程序只能在相当现代的一组浏览器上运行——通过某些 polyfill 可以使用 IE9+。在阅读这些教程时，建议你使用 Firefox，Safari 或 Chrome 等现代浏览器。
 
 另外，有关更多信息，请参见以下内容：
 
@@ -140,7 +139,8 @@ npx create-react-app moz-todo-react
 - 创建一系列结构化的子文件夹和文件，奠定应用程序的基础架构；
 - 如果你的电脑上安装了 git 的话，顺便帮你把 git 仓库也建好。
 
-> **备注：** 如果你的电脑上安装了 yarn 的话，create-react-app 会默认使用 yarn 而非 npm。如果你同时安装了 yarn 和 npm，但你希望使用 npm 的话，在 create-react-app 的时候需要输入 `--use-npm` **:**
+> [!NOTE]
+> 如果你的电脑上安装了 yarn 的话，create-react-app 会默认使用 yarn 而非 npm。如果你同时安装了 yarn 和 npm，但你希望使用 npm 的话，在 create-react-app 的时候需要输入 `--use-npm` **:**
 >
 > ```bash
 > npx create-react-app moz-todo-react --use-npm
@@ -156,7 +156,7 @@ npx create-react-app moz-todo-react
 
 create-react-app 提供了开发 React 应用所需的工具。它的初始文件结构如下：
 
-```
+```plain
 moz-todo-react
 ├── README.md
 ├── node_modules
@@ -234,11 +234,13 @@ import "./App.css";
 
 第二句代码引入了 `'./logo.svg'`。注意文件路径以 `./` 开头、由 `.svg` 尾——表明这是一个本地文件，并且它不是 JavaScript 文件。
 
-> **备注：** 我们没有指定 React 模块的路径——表明它并非来自本地文件，而是在 `package.json` 文件中列为依赖项。在整个学习过程中，请务必留心这两种引入方式的不同之处。
+> [!NOTE]
+> 我们没有指定 React 模块的路径——表明它并非来自本地文件，而是在 `package.json` 文件中列为依赖项。在整个学习过程中，请务必留心这两种引入方式的不同之处。
 
-第三行引入了我们的组件所需的 CSS 文件。与上面两句不同，这里没有将引入的内容赋给任何变量、也没有用到 `from` 指令。请注意这种特殊的语法并非原生 JS 的语法 —— 它源自前端资源打包工具 webpack，而 create-react-app 正是基于 webpack 配置而来的。
+第三行引入了我们的组件所需的 CSS 文件。与上面两句不同，这里没有将引入的内容赋给任何变量、也没有用到 `from` 指令。请注意这种特殊的语法并非原生 JS 的语法——它源自前端资源打包工具 webpack，而 create-react-app 正是基于 webpack 配置而来的。
 
-> **备注：** 译者补充：webpack 可用于打包 JS 和非 JS 的内容 (当然，非 JS 的内容需要一些插件或加载器来处理)，但是 JavaScript 标准只有关于 JS 的内容，所以 webpack 社区使用这种特殊的 `import` 语句来声明对非 JS 内容的引用。
+> [!NOTE]
+> 译者补充：webpack 可用于打包 JS 和非 JS 的内容 (当然，非 JS 的内容需要一些插件或加载器来处理)，但是 JavaScript 标准只有关于 JS 的内容，所以 webpack 社区使用这种特殊的 `import` 语句来声明对非 JS 内容的引用。
 >
 > 详情参见 webpack 官方和社区，截止目前 (2020 年下旬)，webpack 仍是现代前端工作中必不可少的技能之一。
 
@@ -323,7 +325,8 @@ serviceWorker.unregister();
 
 上述所有都告诉 React 我们想把 `App` 组件作为 root 或者第一个组件来渲染我们的 React App。
 
-> **备注：** 在 JSX 中，React 组件和 HTML 元素必须有关闭斜杠（`/`），如 `<App />`，如果我们写 `<App>` 或者 `<img>` 将会报错。
+> [!NOTE]
+> 在 JSX 中，React 组件和 HTML 元素必须有关闭斜杠（`/`），如 `<App />`，如果我们写 `<App>` 或者 `<img>` 将会报错。
 
 [Service workers](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers) 能让我们的 App 离线运行，但它不在本篇文章的范围中，你可以删除第 5 行和第 9 到 12 行。
 

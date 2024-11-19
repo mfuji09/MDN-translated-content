@@ -5,13 +5,13 @@ slug: Web/JavaScript
 
 {{JsSidebar}}
 
-**JavaScript** (簡稱 **JS**) 是具有一級函數 ({{Glossary("First-class Function", "First-class functions")}}) 的輕量級、直譯式或即時編譯（JIT-compiled）的程式語言。它因為用作網頁的腳本語言而大為知名，但也用於[許多非瀏覽器的環境](http://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages)，像是 [node.js](https://nodejs.org/)、[Apache CouchDB](https://couchdb.apache.org)。JavaScript 是一個基於原型的 ({{Glossary("Prototype-based programming", "Prototype-based")}})、多範型的、動態語言，支援物件導向、指令式以及宣告式 (如函數式程式設計) 風格。
+**JavaScript**（簡稱 **JS**）是具有一級函數 ({{Glossary("First-class Function", "First-class functions")}}) 的輕量級、直譯式或即時編譯（JIT-compiled）的程式語言。它因為用作網頁的腳本語言而大為知名，但也用於[許多非瀏覽器的環境](https://zh.wikipedia.org/wiki/JavaScript#运行时环境)，像是 {{Glossary("Node.js")}}、[Apache CouchDB](https://couchdb.apache.org/)。JavaScript 是一個的[基於原型](/zh-TW/docs/Glossary/Prototype-based_programming)的、多範型的、動態語言，支援物件導向、指令式以及宣告式（如函數式程式設計）風格。
 
 本章節主要說明 JavaScript，不涉及網頁特有項目或主機環境。有關網頁特有的 {{Glossary("API","APIs")}} ，請參考 [Web API](/zh-TW/docs/Web/API) 和 [DOM](/zh-TW/docs/Glossary/DOM)。
 
-JavaScript 所採用的標準是 [ECMAScript Language Specification](https://tc39.es/ecma262/)（ECMA-262），自 2012 年起，所有[現代的瀏覽器](http://kangax.github.io/compat-table/es5/)均已全面支援 ECMAScript 5.1。較老舊的瀏覽器最少也會支援 ECMAScript 3。[ECMA International](https://www.ecma-international.org/) 於 2015 年 6 月 17 日發布第六版的 ECMAScript，其正式名稱是 ECMAScript 2015，原先被稱作 ECMAScript 6 或 ES6。從那時起， ECMAScript 標準的發布週期是一年，本文件參考了最新的草稿版本，也就是目前的 [ECMAScript 2017](http://tc39.github.io/ecma262/)。
+JavaScript 所採用的標準是 [ECMAScript Language Specification](https://tc39.es/ecma262/)（ECMA-262），自 2012 年起，所有[現代的瀏覽器](http://kangax.github.io/compat-table/es5/)均已全面支援 ECMAScript 5.1。較老舊的瀏覽器最少也會支援 ECMAScript 3。[ECMA International](https://ecma-international.org/) 於 2015 年 6 月 17 日發布第六版的 ECMAScript，其正式名稱是 ECMAScript 2015，原先被稱作 ECMAScript 6 或 ES6。從那時起， ECMAScript 標準的發布週期是一年，本文件參考了最新的草稿版本，也就是目前的 [ECMAScript 2017](https://tc39.es/ecma262/)。
 
-別搞混了 JavaScript 和 [Java 程式語言](<https://en.wikipedia.org/wiki/Java_(programming_language)>)。雖然 "Java" 和 "JavaScript" 都是 Oracle 公司在美國和其他國家的商標或註冊商標，但兩個語言有著非常不同的語法、語意和用途。
+別搞混了 JavaScript 和 [Java 程式語言](https://zh.wikipedia.org/wiki/Java)。雖然「Java」和「JavaScript」都是 Oracle 公司在美國和其他國家的商標或註冊商標，但兩個語言有著非常不同的語法、語意和用途。
 
 ## 教學
 
@@ -36,7 +36,7 @@ JavaScript 所採用的標準是 [ECMAScript Language Specification](https://tc3
 ### 中階
 
 - [客戶端 web APIs](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs)
-  - : 在為網站或應用程序編寫客戶端 JavaScript 時，您將很快遇到應用程式介面（API）。 API 是應用程式介面，用於操作運行站點的瀏覽器和操作系統的不同方面，或操縱來自其他網站或服務的資料。 在本單元中，我們將探討 API 是什麼，以及如何使用您在開發工作中經常遇到的一些最常見的 API。
+  - : 在為網站或應用程序編寫客戶端 JavaScript 時，你將很快遇到應用程式介面（API）。 API 是應用程式介面，用於操作運行站點的瀏覽器和操作系統的不同方面，或操縱來自其他網站或服務的資料。 在本單元中，我們將探討 API 是什麼，以及如何使用你在開發工作中經常遇到的一些最常見的 API。
 - [重新介紹 JavaScript](/zh-TW/docs/Web/JavaScript/Language_overview)
   - : 為了那些*以為*他們懂 JavaScript 的人寫的簡介。
 - [JavaScript 資料結構](/zh-TW/docs/Web/JavaScript/Data_structures)
@@ -51,7 +51,7 @@ JavaScript 所採用的標準是 [ECMAScript Language Specification](https://tc3
 - [繼承與原型鍊](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
   - : 對於原型繼承的常見的迷思和誤解。
 - [嚴謹模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)
-  - : 嚴謹模式會禁止您使用未初始化過的變數。這樣的限制源自於 ECMAScript 5 的規範，為了提高效率和簡化偵錯。
+  - : 嚴謹模式會禁止你使用未初始化過的變數。這樣的限制源自於 ECMAScript 5 的規範，為了提高效率和簡化偵錯。
 - [JavaScript 型別陣列](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)
   - : JavaScript 類型陣列提供一個存取二進制資料的機制。
 - [記憶體管理](/zh-TW/docs/Web/JavaScript/Memory_management)
