@@ -2,7 +2,7 @@
 title: font-family
 slug: Web/CSS/@font-palette-values/font-family
 l10n:
-  sourceCommit: 81cab7a9c34e7bb3867f5d6d7e70fc73d0308087
+  sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
 {{CSSRef}}
