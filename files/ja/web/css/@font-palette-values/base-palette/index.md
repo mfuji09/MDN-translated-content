@@ -2,7 +2,7 @@
 title: base-palette
 slug: Web/CSS/@font-palette-values/base-palette
 l10n:
-  sourceCommit: 81cab7a9c34e7bb3867f5d6d7e70fc73d0308087
+  sourceCommit: 7eff4df25ad857f65577930903797127ebabf991
 ---
 
 {{CSSRef}}
