@@ -2,7 +2,7 @@
 title: <absolute-size>
 slug: Web/CSS/absolute-size
 l10n:
-  sourceCommit: 7ab2f95b22919d8b897754e8a66981d0b9a4e2c4
+  sourceCommit: 2077d0702d038c9ccc743a53d8ad1c0c21fef5be
 ---
 
 {{CSSRef}}
