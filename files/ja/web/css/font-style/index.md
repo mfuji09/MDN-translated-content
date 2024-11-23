@@ -2,7 +2,7 @@
 title: font-style
 slug: Web/CSS/font-style
 l10n:
-  sourceCommit: 6de7472d2f9ff0a78a0098721df1d5473d51b953
+  sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
 ---
 
 {{CSSRef}}
