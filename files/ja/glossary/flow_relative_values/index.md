@@ -2,7 +2,7 @@
 title: Flow relative values (フロー関連値)
 slug: Glossary/Flow_relative_values
 l10n:
-  sourceCommit: 1f12a4156d4aec63d8466c49a39b1ac76d8a5735
+  sourceCommit: 63249f6b1e89f42e172878c54a2f9674bee50904
 ---
 
 {{GlossarySidebar}}
