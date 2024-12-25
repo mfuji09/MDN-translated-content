@@ -1,5 +1,5 @@
 ---
-title: "課題: 惑星データの構造化"
+title: "課題: 惑星データ表の構造化"
 slug: Learn_web_development/Core/Structuring_content/Planet_data_table
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
@@ -9,7 +9,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content")}}
 
-テーブルの評価では、太陽系の惑星に関するいくつかのデータを提供し、それを HTML テーブルに構造化しましょう。
+この課題では、太陽系の惑星に関するいくつかのデータを提供し、それを HTML テーブルに構造化しましょう。
 
 ## 出発点
 
