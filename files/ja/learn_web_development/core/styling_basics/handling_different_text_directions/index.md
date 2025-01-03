@@ -296,7 +296,7 @@ h2 {
 
 この例の書字方向を `vertical-rl` に変更して、画像がどうなるかを確認します。 `inline-start` を `inline-end` に変更して、浮動を変更します。
 
-```html live-sample___float
+```html-nolint live-sample___float
 <div class="wrapper">
   <div class="box logical">
     <img

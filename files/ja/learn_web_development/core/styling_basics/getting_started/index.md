@@ -14,7 +14,7 @@ l10n:
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提知識:</th>
+      <th scope="row">前提条件:</th>
       <td>
         <a
           href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
@@ -133,11 +133,11 @@ HTML ファイルと CSS ファイルを保存し、ブラウザーでこのペ�
 HTML 文書内の `<head>` および `</head>` タグの間に、次のスニペットを追加してください。
 
 ```html
-    <style>
-      p {
+<style>
+  p {
     color: purple;
-      }
-    </style>
+  }
+</style>
 ```
 
 保存して再読み込みすると、すべての段落が紫色に変わります。
@@ -360,6 +360,7 @@ a:hover {
 {{EmbedLiveSample("started-states", "", "240px")}}
 
 私たちは、リンクの上にカーソルを置いた際に表示される下線を除去しました。リンクのすべての状態から下線を除去することができます。ただし、実際のサイトでは、リンクがリンクであることを訪問者に確実に認識させることが重要であることを覚えておく価値があります。下線を付けたままにしておくことは、段落内のテキストがクリックできることを認識する上で、人々にとって重要な手がかりとなる可能性があります。これは、人々が使用することに慣れている動作です。 CSS のすべてにおいて、変更することで文書内のアクセシビリティが低下する可能性があるため、注意すべき場所で都度強調するようにしたいと思います。
+
 > [!NOTE]
 > MDN の記事で、[アクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility)についての注意をたびたび目にするでしょう。アクセシビリティについて語る際、私たちは、マウスやトラックパッド付きのコンピューター、タッチスクリーン付きの携帯電話、キーボードのみを使用して操作する人、あるいは文書内のコンテンツを読み上げるスクリーンリーダーを操作する人など、誰もが理解でき、利用できるウェブページの必要性を意味しています。
 
@@ -405,7 +406,7 @@ h1 + p .special {
 
 この例には、 CSS 内で簡単な計算を実行できる `calc()` 関数があります。
 
-```html live-sample___the_calc_function
+```html-nolint live-sample___the_calc_function
 <div class="outer"><div class="box">内部のボックスは 90% - 30px です。</div></div>
 ```
 

@@ -134,39 +134,39 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
         </p>
 
         <section>
-        <h3>Subsection</h3>
+          <h3>Subsection</h3>
 
-        <p>
+          <p>
             Donec ut librero sed accu vehicula ultricies a non tortor. Lorem
             ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut
             gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id
             dolor.
-        </p>
+          </p>
 
-        <p>
-          Pelientesque auctor nisi id magna consequat sagittis. Curabitur
+          <p>
+            Pelientesque auctor nisi id magna consequat sagittis. Curabitur
             dapibus, enim sit amet elit pharetra tincidunt feugiat nist
             imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed
             odio eros.
-        </p>
+          </p>
         </section>
 
         <section>
-        <h3>Another subsection</h3>
+          <h3>Another subsection</h3>
 
-        <p>
-          Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
-          soclis natoque penatibus et manis dis parturient montes, nascetur
+          <p>
+            Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
+            soclis natoque penatibus et manis dis parturient montes, nascetur
             ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at
             sem facilisis semper ac in est.
-        </p>
+          </p>
 
-        <p>
-          Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
-          tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
+          <p>
+            Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
+            tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
             ultricied. Curabitur ornare, ligula semper consectetur sagittis,
             nisi diam iaculis velit, is fringille sem nunc vet mi.
-        </p>
+          </p>
         </section>
       </article>
 

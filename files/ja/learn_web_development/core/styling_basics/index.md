@@ -75,7 +75,7 @@ CSS （カスケーディングスタイルシート）は、ウェブページ�
 ## 関連情報
 
 - [Learn HTML and CSS](https://v2.scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>_MDN カリキュラムパートナー_</sup>
-  - : [Scrimba](https://scrimba.com?via=mdn) の　_Learn HTML and CSS_ コースでは、知識豊富な講師陣による楽しい対話形式のレッスンと課題を通じて、 5 つの素晴らしいプロジェクトを構築し展開しながら、HTML と CSS を学んでいきます。
+  - : [Scrimba](https://scrimba.com?via=mdn) の _Learn HTML and CSS_ コースでは、知識豊富な講師陣による楽しい対話形式のレッスンと課題を通じて、 5 つの素晴らしいプロジェクトを構築し展開しながら、HTML と CSS を学んでいきます。
 - [Write your first lines of CSS!](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~015?via=mdn), Scrimba <sup>_MDN カリキュラムパートナー_</sup>
   - : この対話型のレッスンでは、 CSS 構文の有益な入門編を提供して指定されています。
 
