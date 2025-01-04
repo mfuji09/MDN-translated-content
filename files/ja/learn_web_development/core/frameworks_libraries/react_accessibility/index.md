@@ -123,7 +123,7 @@ console.log(editButtonRef.current);
 
 ### `useEffect()` の実装
 
-[`useEffect()`](https://react.dev/reference/react/useEffect) は、レンダリング処理に追加したいがメイン関数本体では実行できない副作用を実行するため、このような名前が付けられています。 `useEffect()` はコンポーネントがレンダリングされた直後に実行されるため、前回参照した DOM 要素を使用することができます。
+[`useEffect()`](https://ja.react.dev/reference/react/useEffect) は、レンダリング処理に追加したいがメイン関数本体では実行できない副作用を実行するため、このような名前が付けられています。 `useEffect()` はコンポーネントがレンダリングされた直後に実行されるため、前回参照した DOM 要素を使用することができます。
 
 `Todo.jsx` のインポート文を再び変更して、 `useEffect` を追加します。
 
