@@ -115,7 +115,7 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 > もし、コードとサンプルのバージョンとを確認する必要があれば、 [mdn-svelte-tutorial](https://github.com/opensas/mdn-svelte-tutorial) リポジトリーで最新版を見ることができます。実行中のライブバージョンについては <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2> から確認ができます。
 
 - [Svelte を始める](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started)
-  - : この記事では、 [Svelte フレームワーク](https://svelte.dev/)の簡単な紹介をします。 Svelte がどのように動作するのか、そしてこれまで見てきた他のフレームワークやツールと何が違うのかを見ていきます。その後、開発環境を構築し、サンプルアプリを作成し、プロジェクトの構造を理解し、ローカルで実行し、本番用にビルドする方法を学びます。
+  - : この記事では、 [Svelte フレームワーク](https://svelte.jp/)の簡単な紹介をします。 Svelte がどのように動作するのか、そしてこれまで見てきた他のフレームワークやツールと何が違うのかを見ていきます。その後、開発環境を構築し、サンプルアプリを作成し、プロジェクトの構造を理解し、ローカルで実行し、本番用にビルドする方法を学びます。
 - [Svelte Todo リストアプリを始める](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning)
   - : さて、 Svelte でこれらがどのように動作するのか基本的な理解ができたところで、例のアプリであるTodoリストの作成を始めてみましょう。この記事では、まずアプリに求められる機能を見ていきます。次に `Todos.svelte` コンポーネントを作成し、静的なマークアップとスタイルを所有し、 ToDo リストアプリの機能を開発し始めるための準備をすべて整えます（この後の記事で詳しく説明します）。
 - [Svelte の動的な動作: 変数とプロップを一緒に作業する](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props)
