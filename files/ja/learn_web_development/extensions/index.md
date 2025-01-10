@@ -33,7 +33,7 @@ l10n:
   - : ウェブサイトを構築するには、HTML、CSS、JavaScript が必要です。人々が使いたいと思うウェブサイトやアプリケーションを構築し、ユーザーを惹きつけ、維持するためには、優れたユーザーエクスペリエンスを生み出す必要があります。使い勝手を良くするためには、コンテンツが素早く読み込まれ、ユーザーの操作に反応することを保証することです。これは**ウェブパフォーマンス**として知られており、このモジュールではパフォーマンスの高いウェブサイトを作成する方法の基礎に焦点を当てます。
 - [テスト](/ja/docs/Learn_web_development/Extensions/Testing)
   - : どのコードベースも、複雑さが一定レベルを超えると、それに関連するテストシステムが必要になります。これは、新しいコードが追加されても、コードベースが正しく機能し続け、ユーザのニーズを満たし続けられるようにするためです。このモジュールでは、まず始めるべき基本的なことを説明します。
-- [Transform and animate CSS](/ja/docs/Learn_web_development/Extensions/Transform_animate)
-  - : Animations are a vital part of a good user experience. Subtle usage can make page designs more interesting and appealing, and also enhance usability and perceived performance.
-- [Security and privacy](/ja/docs/Learn_web_development/Extensions/Security_privacy)
-  - : It is vital to have an understanding of how you can and should protect your data and your user's data from would-be attackers who may try to steal it. This module covers both hardening websites to make it more difficult to steal data, and collecting user data in a respectful way that avoids tracking them or sharing it with unsuitable third parties.
+- [CSS の座標変換とアニメーション](/ja/docs/Learn_web_development/Extensions/Transform_animate)
+  - : アニメーションは、使い勝手を良くするためには欠かせない要素です。 アニメーションをうまく使うことで、ページデザインをより興味深く魅力的なものにすることができます。また、ユーザビリティと知覚的パフォーマンスも向上します。
+- [セキュリティとプライバシー](/ja/docs/Learn_web_development/Extensions/Security_privacy)
+  - : データを盗もうとする攻撃者から、自分自身やユーザーのデータを保護する方法と、その方法を理解しておくことが重要です。このモジュールでは、データを盗むことをより困難にするウェブサイトの強化と、ユーザーを追跡したり、不適切なサードパーティーと共有したりすることを避けるためのユーザーデータの集合方法、どちらにも応じた内容となっています。
