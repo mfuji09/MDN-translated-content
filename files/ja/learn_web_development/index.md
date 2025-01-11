@@ -29,7 +29,7 @@ MDN の**ウェブ開発の学習**（または**学習**）へようこそ。�
 - 基本をマスターしたい方
   - : [コアモジュール](/ja/docs/Learn_web_development/Core)では、成功するフロントエンド開発者になるために必要なスキルと実践を教えるチュートリアルの構造化されたセットを提供しています。
 - 基本を終えた方
-  - : [応用モジュール](/ja/docs/Learn_web_development/Extensions)は、知識を広げ、専門分野を開発し始めるには有益な追加スキルを扱っています。コアモジュールを完了したら、こちらに進んでください。
+  - : [発展モジュール](/ja/docs/Learn_web_development/Extensions)は、知識を広げ、専門分野を開発し始めるには有益な追加スキルを扱っています。コアモジュールを完了したら、こちらに進んでください。
 - 学校で働いている方
   - : 私たちのモジュールを指導のガイドとして使い、さらにアイディアをお探しの方は[教育者ページ](/ja/docs/Learn_web_development/Educators)を参照するか、または Scrimba の [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN カリキュラムパートナー_</sup> に生徒を登録してください。
 
