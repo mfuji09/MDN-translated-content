@@ -2,7 +2,7 @@
 title: hyphenate-limit-chars
 slug: Web/CSS/hyphenate-limit-chars
 l10n:
-  sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
