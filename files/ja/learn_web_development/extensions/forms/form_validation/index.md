@@ -69,7 +69,7 @@ l10n:
 - **組み込みフォーム検証**
   HTML のフォーム属性で、どのフォームコントロールが必須であるか、また、ユーザー入力データが有効であるためにはどのような形式で入力されなければならないかを定義することができます。
 - **JavaScript フォーム検証**
-JavaScript は一般的に、 HTML フォーム検証の強化やカスタマイズのために利用します。
+  JavaScript は一般的に、 HTML フォーム検証の強化やカスタマイズのために利用します。
 
 クライアント側検証は、 JavaScript をほとんど、あるいはまったく使用せずに実行することができます。 HTML 検証は JavaScript よりも高速ですが、 JavaScript 検証よりもカスタマイズ性が低くなります。一般的に、フォームは堅牢な HTML 機能を使用して作成し、必要に応じて JavaScript で使い勝手を向上させることが推奨されます。
 
@@ -125,7 +125,7 @@ input:valid {
 
 {{EmbedLiveSample("Simple_start_file", "100%", 80)}}
 
-始めるにあたって、ハードディスク内の新しいディレクトリーに [GitHub にある　`fruit-start.html` ファイル](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html)のコピーを作成してください。
+始めるにあたって、ハードディスク内の新しいディレクトリーに [GitHub にある `fruit-start.html` ファイル](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html)のコピーを作成してください。
 
 ### required 属性
 
