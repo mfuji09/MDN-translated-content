@@ -2,7 +2,7 @@
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
 l10n:
-  sourceCommit: ed041385cf874deec203e820fd415bdcd6f98a19
+  sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---
 
 {{HTTPSidebar}}
