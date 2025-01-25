@@ -1,5 +1,5 @@
 ---
-title: CSS リスト
+title: CSS リストとカウンター
 slug: Web/CSS/CSS_lists
 l10n:
   sourceCommit: c642cf3df8c5bf401d9b69f9e7182a874b1e010b
@@ -57,7 +57,7 @@ l10n:
 
   - {{cssxref("@counter-style")}} アットルール
   - [`<counter-style-name>`](/ja/docs/Web/CSS/@counter-style#counter-style-name) データ型
-  - [`<symbol>`](/ja/docs/Web/CSS/@counter-style/symbols#values) データ型
+  - [`<symbol>`](/ja/docs/Web/CSS/@counter-style/symbols#値) データ型
   - {{cssxref("symbols", "symbols()")}} 関数
 
 - {{HTMLElement("ol")}} の `start`、`reversed`、`type` 属性
