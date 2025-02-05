@@ -23381,13 +23381,6 @@
       "Taken"
     ]
   },
-  "Web/CSS/-webkit-line-clamp": {
-    "modified": "2020-11-22T08:36:33.464Z",
-    "contributors": [
-      "mixplace",
-      "8845musign"
-    ]
-  },
   "Web/CSS/-webkit-tap-highlight-color": {
     "modified": "2019-04-25T10:41:36.517Z",
     "contributors": [
@@ -27863,6 +27856,13 @@
       "mfuji09",
       "Uemmra3",
       "rigani"
+    ]
+  },
+  "Web/CSS/line-clamp": {
+    "modified": "2020-11-22T08:36:33.464Z",
+    "contributors": [
+      "mixplace",
+      "8845musign"
     ]
   },
   "Web/CSS/line-height": {
