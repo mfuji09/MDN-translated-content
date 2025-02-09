@@ -1,24 +1,27 @@
 ---
-title: WebSocket.readyState
+title: "WebSocket: readyState プロパティ"
+short-title: readyState
 slug: Web/API/WebSocket/readyState
 l10n:
-  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef("Web Sockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 **`WebSocket.readyState`** は読み取り専用のプロパティで、 {{domxref("WebSocket")}} の「現在」の接続状態を返します。
 
 ## 値
 
-以下のいずれかの `unsigned short` 値です。
+数値であり、 {{domxref("WebSocket")}} インターフェイスで定義されている 4 つの定数のいずれかです。
 
-| 値 | 状態        | 説明                                              |
-| ----- | ------------ | -------------------------------------------------------- |
-| `0`   | `CONNECTING` | ソケットの作成が完了した。コネクションは開かれていない。 |
-| `1`   | `OPEN`       | コネクションが開かれ、通信の準備ができている。           |
-| `2`   | `CLOSING`    | コネクションが閉じる過程にある。                         |
-| `3`   | `CLOSED`     | コネクションが閉じられたか、開くことができなかった。     |
+- `WebSocket.CONNECTING` (0)
+  - : ソケットの作成が完了した。接続は開かれていない。
+- `WebSocket.OPEN` (1)
+  - : 接続が開かれ、通信の準備ができている。
+- `WebSocket.CLOSING` (2)
+  - : 接続がが閉じる過程にある。
+- `WebSocket.CLOSED` (3)
+  - : 接続が閉じられたか、開くことができなかった。
 
 ## 仕様書
 
