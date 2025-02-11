@@ -55,7 +55,7 @@ line-clamp: unset;
 
 #### HTML
 
-```html live-sample___truncating_a_paragraph
+```html-nolint live-sample___truncating_a_paragraph
 <p>
   この例では、 <code>-webkit-line-clamp</code> プロパティを 3 に設定すると、テキストは 3 行目の後で切られます。テキストが切られた点には省略記号が表示されます。
 </p>
