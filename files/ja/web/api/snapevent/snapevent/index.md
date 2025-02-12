@@ -19,8 +19,7 @@ new SnapEvent(type, init)
 ### 引数
 
 - `type`
-  - : イベントの型を表す文字列。 {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} イベントの場合は、これ
-は `scrollsnapchanging` です。 {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} イベントの場合は、これは `scrollsnapchange` です。
+  - : イベントの型を表す文字列。 {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} イベントの場合は、これは `scrollsnapchanging` です。 {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} イベントの場合は、これは `scrollsnapchange` です。
 - `init`
   - : 以下のプロパティを持つオブジェクトです。
     - `snapTargetBlock` {{optional_inline}}
