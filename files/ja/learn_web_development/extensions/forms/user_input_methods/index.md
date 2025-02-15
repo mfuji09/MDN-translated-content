@@ -83,7 +83,7 @@ element.addEventListener("touchmove", handleMove, false);
 
 画面方向がフォームにとって影響がある場合、[画面方向 API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) を通して画面方向の状態を読み取ったり、この状態が変更された際に通知を受け取ったり、画面方向を特定の状態（通常は縦長または横長）に固定したりすることができます。
 
-- 方向のデータは、 {{domxref("screenOrientation.type")}} を通じて、または CSS で [`orientation`](/ja/docs/Web/CSS/@media/orientation) メディア特性を通じて取得できます。
+- 方向のデータは、 {{domxref("ScreenOrientation.type")}} を通じて、または CSS で [`orientation`](/ja/docs/Web/CSS/@media/orientation) メディア特性を通じて取得できます。
 - 画面の方向が変更されると、 {{domxref("ScreenOrientation.change_event", "change")}} イベントが画面オブジェクトに発行されます。
 - 画面の方向を固定することは、 {{domxref("ScreenOrientation.lock()")}} メソッドを呼び出すことで可能です。
 - {{domxref("ScreenOrientation.unlock()")}} メソッドは、過去に設定されていた画面ロックがすべて除去されます。
