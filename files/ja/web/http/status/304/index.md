@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`304 Not Modified`** [リダイレクトレスポンス](/ja/docs/Web/HTTP/Status#リダイレクトメッセージ)ステータスコードは、リクエストされたリソースを再送する必要がないことを示します。
+HTTP の **`304 Not Modified`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Status#リダイレクトメッセージ)ステータスコードで、リクエストされたリソースを再送する必要がないことを示します。
 
 このレスポンスコードは、リクエストが[条件付き](/ja/docs/Web/HTTP/Conditional_requests)の {{HTTPMethod("GET")}} や {{HTTPMethod("HEAD")}} リクエストに {{HTTPHeader("If-None-Match")}} もしくは {{HTTPHeader("If-Modified-Since")}} ヘッダーが付いており、条件が 'false' と評価された時に送信されます。
 これは、クライアントがキャッシュしたリソースがまだ有効であり、条件が 'true' と評価された場合、サーバーはリソースとともに {{HTTPStatus("200", "200 OK")}} レスポンスを送信したであろうことを確認します。
