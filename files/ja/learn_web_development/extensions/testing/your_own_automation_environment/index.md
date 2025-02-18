@@ -18,7 +18,7 @@ l10n:
         <a
           href="/ja/docs/Learn_web_development/Extensions/Testing/Introduction"
           >ブラウザー横断テストの基本</a
-        >および<a href="/en-US/docs/Learn_web_development/Extensions/Testing/Automated_testing"
+        >および<a href="/ja/docs/Learn_web_development/Extensions/Testing/Automated_testing"
         >自動化テスト</a
         >について高水準の考えを持っていること。
       </td>
@@ -85,7 +85,7 @@ macOS システムとほとんどの Linux システムで `PATH` 変数を設�
    echo $PATH
    ```
 
-  端末に表示されるはずです。
+   端末に表示されるはずです。
 
 > [!NOTE]
 > Windows で `PATH` 変数を設定するには、[How can I add a new folder to my system path?](https://www.itprotoday.com/) の指示に従ってください。

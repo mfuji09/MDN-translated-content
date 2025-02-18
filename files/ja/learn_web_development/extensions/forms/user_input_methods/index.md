@@ -142,7 +142,7 @@ div {
 }
 ```
 
-```html
+```html-nolint
 <div contenteditable="true">このテキストはユーザーが編集することができます。</div>
 ```
 
