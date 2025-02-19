@@ -8,7 +8,7 @@ l10n:
 {{HTTPSidebar}}
 
 HTTP の **`421 Misdirected Request`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)のステータスコードで、リクエストがレスポンスを生成できないサーバーに送られたことを示します。
-これは、リクエスト URI に含まれない[スキーム](/ja/docs/Web/URI/Schemes)と[権限](/ja/docs/Web/URI/Authority)の組み合わせに対するレスポンスを生成するように構成されていないサーバーから送信される可能性があります。
+これは、リクエスト URI に含まれない[スキーム](/ja/docs/Web/URI/Reference/Schemes)と[オーソリティ](/ja/docs/Web/URI/Reference/Authority)の組み合わせに対するレスポンスを生成するように構成されていないサーバーから送信される可能性があります。
 
 クライアントは、別な接続でリクエストを再試行することができます。
 
