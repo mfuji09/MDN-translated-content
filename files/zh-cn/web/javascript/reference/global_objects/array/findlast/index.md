@@ -15,7 +15,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 - 该数组中是否*存在*一个值，使用 {{jsxref("Array/includes()", "includes()")}}。同样地，它检查每个元素是否和值相等，而不是使用一个测试函数。
 - 是否有任意一个元素满足提供的测试函数，使用 {{jsxref("Array/some()", "some()")}}。
 
-{{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.findLast()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 50, 130, 44];
+
+const found = array1.findLast((element) => element > 45);
+
+console.log(found);
+// Expected output: 130
+```
 
 ## 语法
 
@@ -187,7 +196,7 @@ console.log(
 ## 参见
 
 - [`core-js` 中 `Array.prototype.findLast` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.findIndex()")}}
