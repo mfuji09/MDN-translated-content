@@ -5,13 +5,12 @@ l10n:
   sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
+{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `description` はマニフェストのメンバーで、このウェブアプリケーションの主な特性や機能を説明するために使用します。
 このテキストは、アプリストアでアプリを表示した際に、ユーザーがアプリの目的を理解する手助けとなります。
 
-> [!NOTE]
-> `description` メンバーはオプションであり、アプリストアはアプリを紹介する際にこのテキストを使用しない場合があります。
+> **メモ:** `description` メンバーはオプションであり、アプリストアはアプリを紹介する際にこのテキストを使用しない場合があります。
 
 ## 構文
 
