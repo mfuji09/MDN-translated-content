@@ -7,7 +7,40 @@ slug: Web/CSS/outline-width
 
 CSS 属性 **`outline-width`** 用于设置一个元素的轮廓的厚度。元素轮廓是绘制于元素周围的一条线，位于 {{cssxref("border")}} 的外围。
 
-{{EmbedInteractiveExample("pages/css/outline-width.html")}}
+{{InteractiveExample("CSS Demo: outline-width")}}
+
+```css interactive-example-choice
+outline-width: 12px;
+```
+
+```css interactive-example-choice
+outline-width: thin;
+```
+
+```css interactive-example-choice
+outline-width: medium;
+```
+
+```css interactive-example-choice
+outline-width: thick;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 大多情况下用简写属性 {{cssxref("outline")}} 定义轮廓外观会更方便。
 
