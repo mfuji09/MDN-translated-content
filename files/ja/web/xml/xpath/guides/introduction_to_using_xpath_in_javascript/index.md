@@ -1,20 +1,16 @@
 ---
 title: JavaScript での XPath の利用の手引き
 slug: Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
-original_slug: Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
 l10n:
-  sourceCommit: b6f343538eac4a803943b4e99b0c0545b372645a
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{XsltSidebar}}
-
-この文書では、拡張機能やウェブサイトから JavaScript 内で [XPath](/ja/docs/Web/XPath) を使うためのインターフェイスについて解説します。 Mozilla は [DOM 3 XPath](https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/) のかなりの部分を実装しており、 HTML 文書と XML 文書のどちらに対しても XPath 式を実行することができます。
-
+この文書では、拡張機能やウェブサイトから JavaScript 内で [XPath](/ja/docs/Web/XML/XPath) を使うためのインターフェイスについて解説します。
 XPath を使用するための主となるインターフェイスは [document](/ja/docs/Web/API/Document) オブジェクトの [evaluate](/ja/docs/Web/API/Document/evaluate) 関数です。
 
 ## document.evaluate()
 
-このメソッドは [XPath](/ja/docs/Web/XPath) 式を [XML](/ja/docs/Glossary/XML) ベースの文書 ( HTML を含む) に対して評価し、 [`XPathResult`](/ja/docs/Web/API/XPathResult) オブジェクトを返します。これは単一のノード、もしくはノードの集合になります。このメソッドの既存のドキュメントは [document.evaluate](/ja/docs/Web/API/Document/evaluate) ですが、このメソッドの解説のためには内容が薄いため、以下でさらに詳しく説明します。
+このメソッドは [XPath](/ja/docs/Web/XML/XPath) 式を [XML](/ja/docs/Glossary/XML) ベースの文書 ( HTML を含む) に対して評価し、 [`XPathResult`](/ja/docs/Web/API/XPathResult) オブジェクトを返します。これは単一のノード、もしくはノードの集合になります。このメソッドの既存のドキュメントは [document.evaluate](/ja/docs/Web/API/Document/evaluate) ですが、このメソッドの解説のためには内容が薄いため、以下でさらに詳しく説明します。
 
 ```js
 const xpathResult = document.evaluate(
@@ -34,7 +30,7 @@ const xpathResult = document.evaluate(
 - `contextNode`: `xpathExpression` を評価する対象となる文書内のノードを指定します。指定されたノードの全ての子ノードに対しても評価が行われます。もっともよく使用される値は [document](/ja/docs/Web/API/Document) ノードです。
 - `namespaceResolver`: `xpathExpression` に含まれるあらゆる名前空間接頭辞を渡され、その接頭辞に対応する名前空間 URI を表す文字列を返す関数です。この関数により、 XPath 式で使われている接頭辞と文書内で使われている接頭辞が異なっていたとしてもそれを変換することが可能になります。この関数は次のいずれかです。
 
-  - [`XPathEvaluator`](http://www.xulplanet.com/references/objref/XPathEvaluator.html) オブジェクトの [`createNSResolver`](/ja/docs/Web/API/Document/createNSResolver) メソッドにより[作成された](#既定の名前空間リゾルバーの実装)もの。ほとんどの場合はこれを使うべきでしょう。
+  - {{domxref("Node")}} で、名前空間接頭辞を解決するための {{domxref("Node.lookupNamespaceURI")}} メソッドを提供しています。
   - HTML 文書の場合や、名前空間接頭辞が使われていない場合は `null`。 `xpathExpression` に名前空間接頭辞が含まれている場合は、 `DOMException` が `NAMESPACE_ERR` のコードで発生するので注意してください。
   - ユーザー定義のカスタム関数。詳しくは付録の[ユーザー定義名前空間リゾルバーの使用](#ユーザー定義の名前空間リゾルバーの実装)の節を参照してください。
 
@@ -47,34 +43,22 @@ const xpathResult = document.evaluate(
 
 ### 既定の名前空間リゾルバーの実装
 
-名前空間リゾルバーを作成するには、普通は [document](/ja/docs/Web/API/Document) オブジェクトの `createNSResolver` メソッドを使います。
+名前空間リゾルバーとして、 [`document`](/ja/docs/Web/API/Document) オブジェクトを使います。
 
 ```js
-const nsResolver = document.createNSResolver(
+const nsResolver =
   contextNode.ownerDocument === null
     ? contextNode.documentElement
-    : contextNode.ownerDocument.documentElement,
-);
-```
-
-または、 `XPathEvaluator` オブジェクトの `createNSResolver` メソッドを使います。
-
-```js
-const xpEvaluator = new XPathEvaluator();
-const nsResolver = xpEvaluator.createNSResolver(
-  contextNode.ownerDocument === null
-    ? contextNode.documentElement
-    : contextNode.ownerDocument.documentElement,
-);
+    : contextNode.ownerDocument.documentElement;
 ```
 
 それから 変数 `nsResolver` を引数 `namespaceResolver` として `document.evaluate` に渡します。
 
 メモ: XPath では接頭辞のない QName は名前空間が null の要素にのみ一致すると定義しています。 XPath には、通常の要素参照に適用される既定の名前空間を取得する手段はありません（例: `xmlns='http://www.w3.org/1999/xhtml'` に対する `p[@id='_myid']`）。名前空間が null ではない既定の要素に一致させるには、 `['namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_myid']` のような形を使用して特定の要素を参照するか（[このアプローチ](#xpath_関数を使用して既定の名前空間の要素を参照する)は名前空間が不明である可能性のある動的な XPath で有効です）、接頭辞つきの名前テストを使用し、その接頭辞を名前空間にマッピングする名前空間リゾルバーを作成する必要があります。詳しくは下記の[ユーザー定義の名前空間リゾルバーを作成する](#ユーザー定義の名前空間リゾルバーの実装)方法を参照して下さい。
 
-### メモ
+## 解説
 
-任意の DOM ノードを名前空間の解決に適応させると、 [XPath](/ja/docs/Web/XPath) 式が文書内に現れたノードのコンテキストに関連して簡単に評価できるようになります。このアダプターは、ノード上の DOM Level 3 メソッド `lookupNamespaceURI` と同様に動作し、 `lookupNamespaceURI` が呼び出された時点でノードの階層で利用可能な現在の情報を使用して、指定された接頭辞から `namespaceURI` を解決します。また、暗黙の `xml` 接頭辞も正しく解決します。
+任意の DOM ノードを名前空間の解決に適応させると、 [XPath](/ja/docs/Web/XML/XPath) 式が文書内に現れたノードのコンテキストに関連して簡単に評価できるようになります。このアダプターは、ノード上の DOM Level 3 メソッド `lookupNamespaceURI` と同様に動作し、呼び出された時点でノードの階層で利用可能な現在の情報を使用して、指定された接頭辞から `namespaceURI` を解決します。また、暗黙の `xml` 接頭辞も正しく解決します。
 
 ### 返値の型の指定
 
@@ -96,7 +80,7 @@ const nsResolver = xpEvaluator.createNSResolver(
 
 ##### 例
 
-下の例では XPath 式 [`count(//p)`](/ja/docs/Web/XPath/Functions/count) によって HTML 文書内の `<p>` 要素の数を取得しています。
+下の例では XPath 式 [`count(//p)`](/ja/docs/Web/XML/XPath/Reference/Functions/count) によって HTML 文書内の `<p>` 要素の数を取得しています。
 
 ```js
 const paragraphCount = document.evaluate(
@@ -267,53 +251,6 @@ while (thisHeading) {
 
 反復によってノードを得られたら、そのノードのすべての標準 DOM インターフェイスにアクセスできます。式によって返される `h2` 要素に対する反復処理が全て終了すると、それ以降は `iterateNext()` を何度呼び出しても `null` が返されます。
 
-### 拡張機能内の XML 文書に対して評価する
-
-例として XML 文書が `chrome://yourextension/content/peopleDB.xml` にあったとします。
-
-```xml
-<?xml version="1.0"?>
-<people xmlns:xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
-  <person>
-    <name first="george" last="bush" />
-    <address street="1600 pennsylvania avenue" city="washington" country="usa"/>
-    <phoneNumber>202-456-1111</phoneNumber>
-  </person>
-  <person>
-    <name first="tony" last="blair" />
-    <address street="10 downing street" city="london" country="uk"/>
-    <phoneNumber>020 7925 0918</phoneNumber>
-  </person>
-</people>
-```
-
-拡張機能内で XML 文書の内容を取得できるようにするため、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) オブジェクトを作成して文書を同期的に読み込みます。変数 `xmlDoc` には文書が [`XMLDocument`](/ja/docs/Web/API/XMLDocument) オブジェクトとして格納されるので、それに対して `evaluate` メソッドを使う事ができます。
-
-拡張機能の xul/js 文書で使用する JavaScript は以下の通りです。
-
-```js
-const req = new XMLHttpRequest();
-
-req.open("GET", "chrome://yourextension/content/peopleDB.xml", false);
-req.send(null);
-
-const xmlDoc = req.responseXML;
-
-const nsResolver = xmlDoc.createNSResolver(
-  xmlDoc.ownerDocument === null
-    ? xmlDoc.documentElement
-    : xmlDoc.ownerDocument.documentElement,
-);
-
-const personIterator = xmlDoc.evaluate(
-  "//person",
-  xmlDoc,
-  nsResolver,
-  XPathResult.ANY_TYPE,
-  null,
-);
-```
-
 ## 付録
 
 ### ユーザー定義の名前空間リゾルバーの実装
@@ -363,7 +300,7 @@ document.evaluate(
 </feed>
 ```
 
-`doc.evaluate('//entry', doc, nsResolver, XPathResult.ANY_TYPE, null)` は、`nsResolver` が `createNSResolver` によって返されたリゾルバーである場合、空集合を返します。リゾルバーとして `null` を渡しても同じです。
+`doc.evaluate('//entry', doc, nsResolver, XPathResult.ANY_TYPE, null)` は、`nsResolver` が任意の `Node` である場合、空集合を返します。リゾルバーとして `null` を渡しても同じです。
 
 正しい既定の名前空間 (この場合は Atom 名前空間) を返すカスタムリゾルバーを作成すれば、この問題を解決できます。この時、 XPath 式の中ではなんらかの名前空間接頭辞を使わなければならないことに注意してください。これはリゾルバー関数がその接頭辞を指定した名前空間に変換できるようにするためです。例えばこのようにします。
 
@@ -386,19 +323,19 @@ null ではない名前空間の既定の要素に一致させる (そして名�
 
 名前空間の要素や属性を見つける際に特定の接頭辞を必ずしも必要とせず、 (意図的に) 名前空間に柔軟性を持たせたい場合は、特別な手法を用いなければなりません。
 
-上の節のアプローチを応用して、選択された接頭辞に関係なく名前空間の要素をテストすることは ([`local-name()`](/ja/docs/Web/XPath/Functions/local-name) と [`namespace-uri()`](/ja/docs/Web/XPath/Functions/namespace-uri) を組み合わせて [`name()`](/ja/docs/Web/XPath/Functions/name) の代わりに使用すれば) 可能ですが、特定の名前空間属性を持つ要素を述語の中に取り込みたい場合には、より困難な状況が発生します (XPath 1.0 には実装に依存しない変数が存在しないため)。
+上の節のアプローチを応用して、選択された接頭辞に関係なく名前空間の要素をテストすることは ([`local-name()`](/ja/docs/Web/XML/XPath/Reference/Functions/local-name) と [`namespace-uri()`](/ja/docs/Web/XML/XPath/Reference/Functions/namespace-uri) を組み合わせて [`name()`](/ja/docs/Web/XML/XPath/Reference/Functions/name) の代わりに使用すれば) 可能ですが、特定の名前空間属性を持つ要素を述語の中に取り込みたい場合には、より困難な状況が発生します (XPath 1.0 には実装に依存しない変数が存在しないため)。
 
 たとえば、次のように namespaced 属性を持つ要素を取得しようとすると、 (間違って) `var xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];` となります。
 
-この方法では、ローカル名が "`href`" である属性が存在しても、その属性が (`[@href](/ja/docs/Web/XPath/Axes/attribute)` ではなく) 対象となる (XLink) 名前空間を持つ別の属性であった場合、誤って一部の要素を取得してしまう可能性があります。
+この方法では、ローカル名が "`href`" である属性が存在しても、その属性が (`[@href](/ja/docs/Web/XML/XPath/Axes/attribute)` ではなく) 対象となる (XLink) 名前空間を持つ別の属性であった場合、誤って一部の要素を取得してしまう可能性があります。
 
 XLink の `@href` 属性を持つ要素を (名前空間リゾルバーで定義済みの接頭辞にとらわれずに) 正確に把握するためには、次のようにして取得することができます。
 
 ```js
 const xpathEls =
   'someElements[@*[local-name() = "href" and namespace-uri() = "http://www.w3.org/1999/xlink"]]'; // Grabs elements with any single attribute that has both the local name 'href' and the XLink namespace
-const thislevel = xml.evaluate(xpathEls, xml, null, XPathResult.ANY_TYPE, null);
-let thisitemEl = thislevel.iterateNext();
+const thisLevel = xml.evaluate(xpathEls, xml, null, XPathResult.ANY_TYPE, null);
+let thisItemEl = thisLevel.iterateNext();
 ```
 
 ### XPathResult の定義済み定数
@@ -418,7 +355,7 @@ let thisitemEl = thislevel.iterateNext();
 
 ## 関連情報
 
-- [XPath](/ja/docs/Web/XPath)
+- [XPath](/ja/docs/Web/XML/XPath)
 - [XML Path Language](https://www.xml.com/pub/a/2000/08/holman/index.html?page=2#xpath-info) from _[What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/)_ by G. Ken Holman
 
 ## 原著情報

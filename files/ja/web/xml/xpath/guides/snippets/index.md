@@ -1,14 +1,11 @@
 ---
 title: XPath スニペット
 slug: Web/XML/XPath/Guides/Snippets
-original_slug: Web/XPath/Guides/Snippets
 l10n:
-  sourceCommit: b6f343538eac4a803943b4e99b0c0545b372645a
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{XsltSidebar}}
-
-この記事ではいくつか XPath コードスニペットを提供します。それは XPath 機能を JavaScript コードに公開する [DOM Level 3 XPath 仕様](https://www.w3.org/TR/DOM-Level-3-XPath/)の標準インタフェースに基づく簡単な**ユーティリティ関数**の簡単な例です。スニペットは実際に自身のコードの中で使用できる関数です。
+この記事ではいくつか XPath コードスニペットを提供します。それは XPath 機能を JavaScript コードに公開する [DOM Level 3 XPath 仕様](https://www.w3.org/TR/DOM-Level-3-XPath/)の標準インターフェイスに基づく簡単な**ユーティリティ関数**の簡単な例です。スニペットは実際に自身のコードの中で使用できる関数です。
 
 ### ノード指定の評価関数
 
@@ -23,11 +20,10 @@ l10n:
 // wanderingstan に感謝します。
 function evaluateXPath(aNode, aExpr) {
   const xpe = new XPathEvaluator();
-  const nsResolver = xpe.createNSResolver(
+  const nsResolver =
     aNode.ownerDocument === null
       ? aNode.documentElement
-      : aNode.ownerDocument.documentElement,
-  );
+      : aNode.ownerDocument.documentElement;
   const result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
   const found = [];
   let res;
@@ -36,13 +32,11 @@ function evaluateXPath(aNode, aExpr) {
 }
 ```
 
-ただし、`createNSResolver` は、XPath 式の名前空間接頭辞が問い合わせる文書の名前空間接頭辞と一致する（かつ既定の名前空間が使用されていない (回避策については [document.createNSResolver](/ja/docs/Web/API/Document/createNSResolver) を参照)）ことが確認されている場合にのみ使用する必要があります。それ以外の場合は、XPathNSResolver の独自の実装を提供する必要があります。
-
-[XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) を使用してローカルまたはリモートの XML ファイルを DOM ツリー（[XML の解釈とシリアライズ](/ja/docs/Web/XML/Parsing_and_serializing_XML)を参照）に読み込む場合、`evaluateXPath()`の最初の引数は`req.responseXML`である必要があります。
+ただし、`createNSResolver` は、XPath 式の名前空間接頭辞が問い合わせる文書の名前空間接頭辞と一致する（かつ既定の名前空間が使用されていない）ことが確認されている場合にのみ使用する必要があります。それ以外の場合は、XPathNSResolver の独自の実装を提供する必要があります。
 
 #### 使用例
 
-次の XML ドキュメント（[DOM ツリーの作成方法](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model)と[XML の解釈とシリアライズ](/ja/docs/Web/XML/Parsing_and_serializing_XML)も参照してください）があるとします。
+次の XML 文書があるとします（[XML の解釈とシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)も参照してください）。
 
 ##### 例: カスタム `evaluateXPath()` ユーティリティ関数と一緒に使用する XML 文書
 
@@ -124,17 +118,17 @@ function docEvaluateArray(expr, doc, context, resolver) {
 ```js
 function getXPathForElement(el, xml) {
   let xpath = "";
-  let pos, tempitem2;
+  let pos, tempItem2;
 
   while (el !== xml.documentElement) {
     pos = 0;
-    tempitem2 = el;
-    while (tempitem2) {
-      if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) {
+    tempItem2 = el;
+    while (tempItem2) {
+      if (tempItem2.nodeType === 1 && tempItem2.nodeName === el.nodeName) {
         // If it is ELEMENT_NODE of the same name
         pos += 1;
       }
-      tempitem2 = tempitem2.previousSibling;
+      tempItem2 = tempItem2.previousSibling;
     }
 
     xpath = `*[name()='${el.nodeName}' and namespace-uri()='${
@@ -153,9 +147,9 @@ function getXPathForElement(el, xml) {
 
 ### 資料
 
-- [XPath](/ja/docs/Web/XPath)
+- [XPath](/ja/docs/Web/XML/XPath)
 - [このトピックのフォーラムでの議論](https://forums.mozillazine.org/viewtopic.php?t=229106)
 
 ## 関連情報
 
-- [JavaScript での XPath の使用](/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
+- [JavaScript での XPath の使用](/ja/docs/Web/XML/Guides/Introduction_to_using_XPath_in_JavaScript)
