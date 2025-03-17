@@ -1,39 +1,60 @@
 ---
-title: windows.WindowState
-slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
+title: windows.onCreated
+slug: Mozilla/Add-ons/WebExtensions/API/windows/onCreated
 l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
 
-浏览器窗口的状态。
+当窗口创建时触发。
 
-## 类型
+## 语法
 
-该类型的取值是 `string`，可能取值包括：
+```js-nolint
+browser.windows.onCreated.addListener(listener)
+browser.windows.onCreated.removeListener(listener)
+browser.windows.onCreated.hasListener(listener)
+```
 
-- `"normal"`
-  - : 窗口处于默认大小或用户选择的大小。
-- `"minimized"`
-  - : 窗口只显示为任务栏中的图标。
-- `"maximized"`
-  - : 窗口充满显示它的屏幕（但不包括操作系统保留的任何屏幕区域）。
-- `"fullscreen"`
-  - : 窗口正在作为全屏应用程序运行，或者标签页中的内容正在使用[全屏 API](/zh-CN/docs/Web/API/Fullscreen_API)。
-- `"docked"`
-  - : 靠边窗口占据了相对于同一应用程序拥有的其他窗口的固定位置。
+事件有三个函数：
 
-macOS 兼容性：自 macOS 10.10 起，窗口的默认最大化行为已变为将应用程序作为全屏应用程序运行而非“缩放”窗口。`fullscreen` 既指浏览器作为全屏应用程序运行，也指标签中的内容使用了全屏 API。
+- `addListener(listener)`
+  - : 为此事件添加监听器。
+- `removeListener(listener)`
+  - : 停止监听此事件。`listener` 参数是要移除的监听器。
+- `hasListener(listener)`
+  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
+
+## addListener 语法
+
+### 参数
+
+- `listener`
+
+  - : 事件触发时调用的函数。该函数接收以下参数：
+
+    - `window`
+      - : 包含有关创建的窗口的详细信息的 {{WebExtAPIRef('windows.Window')}} 对象。
 
 ## 浏览器兼容性
 
 {{Compat}}
 
+## 示例
+
+记录创建的新窗口的 ID：
+
+```js
+browser.windows.onCreated.addListener((window) => {
+  console.log(`新窗口：${window.id}`);
+});
+```
+
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#type-WindowState) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#event-onCreated) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
