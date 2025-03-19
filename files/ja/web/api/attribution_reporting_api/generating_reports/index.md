@@ -11,7 +11,7 @@ l10n:
 
 ## 基本プロセス
 
-トリガーとソースが一致すると、ブラウザーはレポートを生成し、資格情報を含まない [`POST`](/ja/docs/Web/HTTP/Methods/POST) リクエストで、レポートオリジン上の特定のエンドポイントに送信します。
+トリガーとソースが一致すると、ブラウザーはレポートを生成し、資格情報を含まない [`POST`](/ja/docs/Web/HTTP/Reference/Methods/POST) リクエストで、レポートオリジン上の特定のエンドポイントに送信します。
 
 - イベントレベルのレポートの場合、これは `<reporting-origin>/.well-known/attribution-reporting/report-event-attribution` です。
 - 概要レポートの場合、これは `<reporting-origin>/.well-known/attribution-reporting/report-aggregate-attribution` です。
@@ -22,11 +22,11 @@ l10n:
 
 ## イベントレベルレポート
 
-Event-level reports are generated and scheduled to be sent at the end of their containing **report window**. The length of the report window is determined by the values set in the [`"event_report_window"`](/ja/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_window) or [`"event_report_windows"`](/ja/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_windows) field set in the source's {{httpheader("Attribution-Reporting-Register-Source")}} header.
+Event-level reports are generated and scheduled to be sent at the end of their containing **report window**. The length of the report window is determined by the values set in the [`"event_report_window"`](/ja/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#event_report_window) or [`"event_report_windows"`](/ja/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#event_report_windows) field set in the source's {{httpheader("Attribution-Reporting-Register-Source")}} header.
 
 If neither of these fields are specified, the report window falls back to the following defaults:
 
-- For [event-based sources](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources), the default report window ends at the source's expiry, which is set in the `Attribution-Reporting-Register-Source` [`"expiry"`](/ja/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#expiry) field. This defaults to 30 days after registration if not explicitly set.
+- For [event-based sources](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources), the default report window ends at the source's expiry, which is set in the `Attribution-Reporting-Register-Source` [`"expiry"`](/ja/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#expiry) field. This defaults to 30 days after registration if not explicitly set.
 - For [navigation-based sources](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources), the default report windows are 2 days, 7 days, and the source's `"expiry"`.
 
 See [Custom report windows](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows) for more details.
@@ -50,11 +50,11 @@ Once an event-level report is received at the appropriate endpoint, how the data
 The properties are as follows:
 
 - `"attribution_destination"`
-  - : A string, or an array of 2–3 strings, depending on whether the source was registered with multiple destinations or not. These strings represent the attribution [`"destination"`](/ja/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#destination) site(s) set in the source registration via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header.
+  - : A string, or an array of 2–3 strings, depending on whether the source was registered with multiple destinations or not. These strings represent the attribution [`"destination"`](/ja/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#destination) site(s) set in the source registration via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header.
 - `"source_event_id"`
-  - : A string representing the attribution source ID. This is equal to the [`"source_event_id"`](/ja/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#source_event_id) set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
+  - : A string representing the attribution source ID. This is equal to the [`"source_event_id"`](/ja/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#source_event_id) set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
 - `"trigger_data"`
-  - : A string representing data originating from the attribution trigger, set in the trigger registration (the [`"trigger_data"`](/ja/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger#trigger_data) set via the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} response header).
+  - : A string representing data originating from the attribution trigger, set in the trigger registration (the [`"trigger_data"`](/ja/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger#trigger_data) set via the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} response header).
 - `"report_id"`
   - : A string representing a [Universally Unique Identifier (UUID)](/ja/docs/Glossary/UUID) for this report, which can be used to prevent duplicate counting.
 - `"source_type"`
@@ -64,7 +64,7 @@ The properties are as follows:
 - `"scheduled_report_time"`
   - : A string representing the number of seconds from the Unix Epoch until the browser initially scheduled the report to be sent (to avoid inaccuracies as a result of offline devices reporting late).
 - `"source_debug_key"` {{optional_inline}}
-  - : A 64 bit unsigned integer representing the debugging key for the attribution source. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header's [`"debug_key"`](/ja/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#debug_key) field. See [Debug reports](#debug_reports) for more information.
+  - : A 64 bit unsigned integer representing the debugging key for the attribution source. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header's [`"debug_key"`](/ja/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#debug_key) field. See [Debug reports](#debug_reports) for more information.
 - `"trigger_debug_key"` {{optional_inline}}
   - : A 64 bit unsigned integer representing the debugging key for the attribution trigger. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} header's `"debug_key"` field. See [Debug reports](#debug_reports) for more information.
 
@@ -104,7 +104,7 @@ The properties are as follows:
     - `"api"`
       - : A enumerated value representing the API that triggered the report generation. Currently this will always be equal to `"attribution-reporting"`, but it may be extended with additional values to support other APIs in the future.
     - `"attribution_destination"`
-      - : A string representing the attribution [`"destination"`](/ja/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#destination) URL set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
+      - : A string representing the attribution [`"destination"`](/ja/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#destination) URL set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
     - `"report_id"`
       - : A string representing a [Universally Unique Identifier (UUID)](/ja/docs/Glossary/UUID) for this report, which can be used to prevent duplicate counting.
     - `"reporting_origin"`
@@ -141,7 +141,7 @@ The properties are as follows:
 - `"aggregation_coordinator_origin"`
   - : The deployment option for the aggregation service.
 - `"source_debug_key"` {{optional_inline}}
-  - : A 64 bit unsigned integer representing the debugging key for the attribution source. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header's [`"debug_key"`](/ja/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#debug_key) field. See [Debug reports](#debug_reports) for more information.
+  - : A 64 bit unsigned integer representing the debugging key for the attribution source. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header's [`"debug_key"`](/ja/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#debug_key) field. See [Debug reports](#debug_reports) for more information.
 - `"trigger_debug_key"` {{optional_inline}}
   - : A 64 bit unsigned integer representing the debugging key for the attribution trigger. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} header's `"debug_key"` field. See [Debug reports](#debug_reports) for more information.
 
@@ -153,7 +153,7 @@ THIS INFORMATION IS NOT COMPLETE; WE HAVE PARKED IT FOR NOW SO THAT WE CAN GET T
 In the case of event-level reports, this is done using a randomized response algorithm, which works like so:
 
 1. When an attribution source is stored, the browser generates a list of all possible sets of reports that could originate from the source's configuration (including the set consisting of no reports).
-2. In a small percentage of cases, the browser prevents the source from being attributed and instead picks a random member of that list to use as the source's reports. The probability of this happening is based on the size of that list, the browser's implementation-specific privacy parameters, and the source's chosen [`"event_level_epsilon"`](/ja/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_level_epsilon).
+2. In a small percentage of cases, the browser prevents the source from being attributed and instead picks a random member of that list to use as the source's reports. The probability of this happening is based on the size of that list, the browser's implementation-specific privacy parameters, and the source's chosen [`"event_level_epsilon"`](/ja/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#event_level_epsilon).
 
 Typical settings in the {{httpheader("Attribution-Reporting-Register-Source")}} header might look like so:
 
@@ -206,7 +206,7 @@ Different source types have different default limits:
 - [Event-based attribution sources](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources) have a one-report limit by default.
 
 > [!NOTE]
-> The report limit can be adjusted by setting a different number of `"end_times"` in the [`"event_report_windows"`](/ja/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_windows) fields of the associated `Attribution-Reporting-Register-Source` header.
+> The report limit can be adjusted by setting a different number of `"end_times"` in the [`"event_report_windows"`](/ja/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#event_report_windows) fields of the associated `Attribution-Reporting-Register-Source` header.
 
 When an attribution is triggered for a given source event, if the maximum number of attributions (three for clicks, one for images/scripts) has been reached for this source the browser will:
 
