@@ -197,4 +197,4 @@ motion イベントは 4 つのプロパティを持ちます。
 - [三次元座標変換での deviceorientation の使用](/ja/docs/Web/Events/Using_device_orientation_with_3D_transforms)
 - [Cyber Orb: 端末の向きを使用した 2D 迷路ゲーム](/ja/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation)
 
-<section id="Quick_links"><ul><li><a href="/ja/docs/Web/Events/Orientation_and_motion_data_explained">方向および動きとして示されるデータ</a></li><li>{{domxref("DeviceOrientationEvent")}}</li><li>{{domxref("DeviceMotionEvent")}}</li><li><a href="/ja/docs/Web/Events/Using_device_orientation_with_3D_transforms">三次元座標変換での deviceorientation の使用</a></li><li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベント入門</a></li></ul></section>
+<section id="Quick_links"><ul><li><a href="/ja/docs/Web/Events/Orientation_and_motion_data_explained">方向および動きとして示されるデータ</a></li><li>{{domxref("DeviceOrientationEvent")}}</li><li>{{domxref("DeviceMotionEvent")}}</li><li><a href="/ja/docs/Web/Events/Using_device_orientation_with_3D_transforms">三次元座標変換での deviceorientation の使用</a></li><li><a href="/ja/docs/Learn_web_development/Core/Scripting/Events">イベント入門</a></li></ul></section>

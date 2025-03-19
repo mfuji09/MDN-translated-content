@@ -67,4 +67,4 @@ y 軸を中心にした回転、すなわち端末を左右に傾けると、 **
 
 gamma 角は端末の左端および右端から地球の表面までの距離がどちらも同じであるときが 0 度であり、端末を右へ傾けるのに従って 90 度まで増加、左へ傾けるのに従って -90 度まで減少します。
 
-<section id="Quick_links"><ul><li><a href="/ja/docs/Web/Events/Detecting_device_orientation">端末の向きの検出</a></li><li>{{domxref("DeviceOrientationEvent")}}</li><li>{{domxref("DeviceMotionEvent")}}</li><li><a href="/ja/docs/Web/Events/Using_device_orientation_with_3D_transforms">3D 座標変換における deviceorientation の使用</a></li><li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベント入門</a></li></ul></section>
+<section id="Quick_links"><ul><li><a href="/ja/docs/Web/Events/Detecting_device_orientation">端末の向きの検出</a></li><li>{{domxref("DeviceOrientationEvent")}}</li><li>{{domxref("DeviceMotionEvent")}}</li><li><a href="/ja/docs/Web/Events/Using_device_orientation_with_3D_transforms">3D 座標変換における deviceorientation の使用</a></li><li><a href="/ja/docs/Learn_web_development/Core/Scripting/Events">イベント入門</a></li></ul></section>
