@@ -276,7 +276,7 @@ function sepia() {
 
 - {{glossary("interpolation")}} 用語項目
 
-- [`color-interpolation-filters`](/ja/docs/Web/SVG/Attribute/color-interpolation-filters) SVG プロパティ
+- [`color-interpolation-filters`](/ja/docs/Web/SVG/Reference/Attribute/color-interpolation-filters) SVG プロパティ
 
 ## 仕様書
 
