@@ -61,7 +61,7 @@ const FOO; // SyntaxError: Missing initializer in const declaration
 
 `const` 宣言は値への不変の参照を作成します。これはその値が不変であるという意味ではなく、変数の識別子が再割り当てできないという意味です。例えば、内容がオブジェクトの場合、これはオブジェクトの内容（例えばプロパティ）は変更できることを意味しています。 `const` 宣言は「アイデンティティが一定の変数を作成する」のであって、「値が一定の変数を作成する」のではありません。また、「不変の{{Glossary("binding", "バインド")}}」を作成するのであって、「不変の値」を作成するのではありません。
 
-多くのスタイルガイド（[MDN](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#変数の宣言) のものも含む）では、変数がそのスコープで再代入されない場合は、 `const` を {{jsxref("Statements/let", "let")}} の代わりに使用することを推奨しています。これにより、変数の型（プリミティブの場合は値）が変更されることはないという意図が明確になります。他にも、プリミティブ以外の変数が変更される場合は `let` を推奨する人もいます。
+多くのスタイルガイド（[MDN](/ja/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript#変数の宣言) のものも含む）では、変数がそのスコープで再代入されない場合は、 `const` を {{jsxref("Statements/let", "let")}} の代わりに使用することを推奨しています。これにより、変数の型（プリミティブの場合は値）が変更されることはないという意図が明確になります。他にも、プリミティブ以外の変数が変更される場合は `let` を推奨する人もいます。
 
 `const` キーワードに続くリストは{{Glossary("binding","バインディング")}}リストと呼ばれ、カンマで区切られます。カンマは[カンマ演算子](/ja/docs/Web/JavaScript/Reference/Operators/Comma_operator)ではなく、 `=` は[代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)ではありません。後の変数の初期化子は、リスト内の前の変数を参照することができます。
 

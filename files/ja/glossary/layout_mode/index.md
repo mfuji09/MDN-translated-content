@@ -1,7 +1,7 @@
 ---
 title: レイアウトモード
 slug: Glossary/Layout_mode
-original_slug: Web/CSS/Layout_mode
+original_slug: Glossary/Layout_mode
 ---
 
 {{CSSRef}}
@@ -28,7 +28,7 @@ original_slug: Web/CSS/Layout_mode
   - [詳細度](/ja/docs/Web/CSS/Specificity)
   - [継承](/ja/docs/Web/CSS/Inheritance)
   - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
     - [初期値](/ja/docs/Web/CSS/initial_value)

@@ -260,8 +260,8 @@ p {
 - [学習: CSS におけるアイテムのサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)
 - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール
-- [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
-- [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+- [レイアウトモード](/ja/docs/Glossary/Layout_mode)
+- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
 - [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)

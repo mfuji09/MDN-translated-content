@@ -46,7 +46,7 @@ l10n:
 
 既存のプロジェクトでチームと作業している場合、最初に確認することは、プロジェクトに CSS の既存のコーディング規約があるかどうかです。チームコーディング規約は常に自分の個人的な好みより優先する必要があります。多くの場合、何かを行うのに何が正しくて何が間違っているということはありませんが、一貫性が重要です。
 
-例えば、[MDN コードの例の CSS ガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)を見てみましょう。
+例えば、[MDN コードの例の CSS ガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/CSS)を見てみましょう。
 
 ### 一貫性を保つ
 

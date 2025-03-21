@@ -257,7 +257,7 @@ body {
 - [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+- [レイアウトモード](/ja/docs/Glossary/Layout_mode)
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [置換要素](/ja/docs/Web/CSS/Replaced_element)
 - {{DOMxRef("VisualViewport")}} インターフェイス

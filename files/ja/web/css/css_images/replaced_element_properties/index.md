@@ -58,8 +58,8 @@ CSS はマージンの計算時や一部の `auto` 値の時など場合によ�
   - [詳細度](/ja/docs/Web/CSS/Specificity)
   - [継承](/ja/docs/Web/CSS/Inheritance)
   - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
-  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
     - [初期値](/ja/docs/Web/CSS/initial_value)

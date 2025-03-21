@@ -134,11 +134,11 @@ div.menu-bar li:hover > ul {
 - [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [包含ブロック](/ja/docs/Web/CSS/Containing_block)
-- [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+- [レイアウトモード](/ja/docs/Glossary/Layout_mode)
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [置換要素](/ja/docs/Web/CSS/Replaced_element)
 - [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM
 

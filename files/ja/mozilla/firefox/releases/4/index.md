@@ -68,7 +68,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
   - : touch プロパティ群が追加されました。詳細と正式な記事名は後日追記予定です。
 - [CSS 背景として任意の要素を使用する](/ja/docs/Web/CSS/element)
   - : [`-moz-element`](/ja/docs/Web/CSS/element) CSS 関数と [`document.mozSetImageElement()`](/ja/docs/Web/API/Document/mozSetImageElement) DOM 関数を用いることで、任意の HTML 要素を背景として使用することができます。
-- [プライバシーと :visited セレクター](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)
+- [プライバシーと :visited セレクター](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
   - : CSS セレクターを用いた訪問済みリンクのスタイルについて取得できる情報が変更されました。これはいくつかのウェブアプリケーションに影響するかもしれません。
 
 #### 新しい CSS プロパティ

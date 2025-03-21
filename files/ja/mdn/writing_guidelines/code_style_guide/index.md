@@ -1,7 +1,7 @@
 ---
 title: サンプルコードのガイドライン
 slug: MDN/Writing_guidelines/Code_style_guide
-original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
+original_slug: MDN/Writing_guidelines/Code_style_guide
 l10n:
   sourceCommit: f7c186696980fee97e72261370d7b5a8c1cd9302
 ---
@@ -12,10 +12,10 @@ l10n:
 
 技術別のガイドラインについては、以下の記事を参照してください。
 
-- [HTML のガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML)
-- [CSS のガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)
-- [JavaScript のガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
-- [シェルプロンプトのガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell)
+- [HTML のガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/HTML)
+- [CSS のガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/CSS)
+- [JavaScript のガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript)
+- [シェルプロンプトのガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/Shell)
 
 ## 全般的な最善の慣習
 
