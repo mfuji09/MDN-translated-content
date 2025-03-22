@@ -122,10 +122,7 @@ SVG にはこれまで説明したもの以外にも、いくつかの長所が�
 SVG に対応していないブラウザー（IE 8 以前、Android 2.3 以前）では、 `src` 属性から PNG または JPG を参照し、 [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 属性（最近のブラウザーのみが認識する）を使用して SVG を参照するようにすることができます。 この場合、対応しているブラウザーのみが SVG を読み込みます。古いブラウザーは代わりに PNG を読み込みます。
 
 ```html
-<img
-  src="equilateral.png"
-  alt="辺が等しい三角形"
-  srcset="equilateral.svg" />
+<img src="equilateral.png" alt="辺が等しい三角形" srcset="equilateral.svg" />
 ```
 
 以下に示すように、 SVG を CSS の背景画像として使用することもできます。 以下のコードでは、古いブラウザーでは理解できる PNG を使用しますが、新しいブラウザーでは SVG を読み込みます。
@@ -138,7 +135,7 @@ background-size: contain;
 
 上記の `<img>` 方式と同様に、 CSS 背景画像を使用して SVG を挿入すると、 SVG を JavaScript で操作することができず、同じ CSS の制限が適用されます。
 
-SVG がまったく表示されない場合は、サーバーが正しく設定されていない可能性があります。それが問題なら、[この記事が正しい方向へ導いてくれます](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_Started#a_word_on_web_servers_for_.svgz_files)。
+SVG がまったく表示されない場合は、サーバーが正しく設定されていない可能性があります。それが問題なら、[この記事が正しい方向へ導いてくれます](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started#a_word_on_web_servers_for_.svgz_files)。
 
 ### HTML の中に SVG コードを組み込む方法
 
@@ -331,7 +328,7 @@ textarea.onkeyup = function () {
 
 ## 関連情報
 
-- MDN の [SVG チュートリアル](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_Started)
+- MDN の [SVG チュートリアル](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started)
 - [Sara Soueidan のレスポンシブ SVG 画像に関するチュートリアル](http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/) (英語)
 - [SVG のアクセシビリティ上の長所](https://www.w3.org/TR/SVG-access/) (英語)
 - [SVG を縮尺変更する方法](https://css-tricks.com/scale-svg/) (ラスターグラフィックほど簡単ではありません！) (英語)

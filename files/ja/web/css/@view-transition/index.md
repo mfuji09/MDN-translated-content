@@ -2,12 +2,12 @@
 title: "@view-transition"
 slug: Web/CSS/@view-transition
 l10n:
-  sourceCommit: 3a95c239db50c88fdde48daacb6c279006a422b9
+  sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
-**`@view-transition`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、文書間のナビゲーションの場合に、移動元及び移動先の文書で[ビュー遷移](/ja/docs/Web/API/View_Transition_API)を行うように指定するために使用します。
+**`@view-transition`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、文書間のナビゲーションの場合に、移動元及び移動先の文書で[ビュー遷移](/ja/docs/Web/API/View_Transition_API)を行うように指定するために使用します。
 
 文書間のビュー遷移を機能させるには、ナビゲーションの移動元と移動先の文書が同じオリジンにある必要があります。
 
@@ -25,7 +25,7 @@ l10n:
 
   - : このアットルールが文書内のビュー遷移の動作に与える効果を指定します。 可能な値は以下のとおりです。
 
-    - `auto`: この文書でビュー遷移が発生するのは、同一オリジン内のナビゲーションで、オリジン間リダイレクトがなく、{{domxref("NavigateEvent.navigationType", "navigationType")}} が `traverse`、`push`、`replace` のいずれかである場合です。`push` または `replace` の場合、ナビゲーションはブラウザーの UI 機能ではなく、ページコンテンツを操作するユーザーによって開始されたものでなければなりません。
+    - `auto`: この文書でビュー遷移が発生するのは、同一オリジン内のナビゲーションで、オリジン間リダイレクトがなく、{{domxref("NavigateEvent.navigationType", "navigationType")}} が`traverse`、`push`、`replace` のいずれかである場合です。`push` または `replace` の場合、ナビゲーションはブラウザーの UI 機能ではなく、ページコンテンツを操作するユーザーによって開始されたものでなければなりません。
 
     - `none`: この文書でビュー遷移は発生しません。
 
@@ -101,5 +101,5 @@ l10n:
 - {{cssxref("::view-transition-group", "::view-transition-group()")}}
 - {{cssxref("::view-transition-image-pair", "::view-transition-image-pair()")}}
 - [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
-- [CSS アットルール](/ja/docs/Web/CSS/At-rule)
-- [CSS アットルール関数](/ja/docs/Web/CSS/At-rule-functions)
+- [CSS アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+- [CSS アットルール関数](/ja/docs/Web/CSS/At-rule_functions)
