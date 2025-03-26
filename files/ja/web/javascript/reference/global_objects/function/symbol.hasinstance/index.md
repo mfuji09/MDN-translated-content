@@ -1,13 +1,14 @@
 ---
 title: Function.prototype[Symbol.hasInstance]()
 slug: Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance
+original_slug: Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance
 l10n:
-  sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
+  sourceCommit: 0891bd2199fabb1ec00dfe4765019d54f21d965c
 ---
 
 {{JSRef}}
 
-**`[Symbol.hasInstance]()`** は {{jsxref("Function")}} インスタンスのメソッドで、コンストラクター関数がオブジェクトをそのコンストラクターのインスタンスの一つであると認識するかどうかを決定するデフォルトの手続きを定義します。これは、[`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) 演算子から呼ばれます。
+{{jsxref("Function")}} インスタンスの **`[Symbol.hasInstance]()`** メソッドは、コンストラクター関数がオブジェクトをそのコンストラクターのインスタンスの一つであると認識するかどうかを決定するデフォルトの手続きを定義します。これは、[`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) 演算子から呼ばれます。
 
 ## 構文
 
