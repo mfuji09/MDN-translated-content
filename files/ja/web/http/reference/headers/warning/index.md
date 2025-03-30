@@ -62,7 +62,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 | 112    | Disconnected Operation           | キャッシュがネットワークの他の部分から切断された。                                                 |
 | 113    | Heuristic Expiration             | キャッシュが 24 時間より長い保持時間を選択しており、かつレスポンスの時間が 24 時間よりも長い場合。 |
 | 199    | Miscellaneous Warning            | 任意で特定されていない警告                                                                         |
-| 214    | Transformation Applied           | コンテンツのエンコーディング、メディア種別など、表現方法の変換を行った場合にプロキシが追加します。 |
+| 214    | Transformation Applied           | コンテンツのエンコーディング、メディア種別など、表現方法の変換を行った場合にプロキシーが追加します。 |
 | 299    | Miscellaneous Persistent Warning | 199 と同様だが、永続的な警告を含む場合                                                             |
 
 ## 例
