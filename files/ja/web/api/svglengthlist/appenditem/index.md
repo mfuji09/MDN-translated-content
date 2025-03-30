@@ -19,11 +19,11 @@ appendItem(newItem)
 ### 引数
 
 - `newItem`
-  - : リストに追加する {{domxref("SVGLengthList")}} です。
+  - : リストに追加する {{domxref("SVGLength")}} です。
 
 ### 返値
 
-リストに追加された {{domxref("SVGLengthList")}} です。
+リストに追加された {{domxref("SVGLength")}} です。
 
 ### 例外
 

@@ -23,7 +23,7 @@ getItem(index)
 
 ### 返値
 
-リスト内の指定された位置にある {{domxref("SVGLengthList")}} です。
+リスト内の指定された位置にある {{domxref("SVGLength")}} です。
 
 ### 例外
 
