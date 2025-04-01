@@ -25,7 +25,7 @@ replaceItem(newItem, index)
 
 ### 返値
 
-リストに追加された {{domxref("SVGLength")}} です。
+リストに追加された {{domxref("SVGNumber")}} です。
 
 ### 例外
 
