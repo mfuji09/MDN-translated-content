@@ -34,7 +34,7 @@ convertToSpecifiedUnits(unitType)
 
 なし ({{jsxref('undefined')}})。
 
-## 値
+## 例
 
 ### 角度を度に変換
 
