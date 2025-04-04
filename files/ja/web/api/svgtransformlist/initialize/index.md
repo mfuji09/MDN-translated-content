@@ -42,7 +42,7 @@ initialize(newItem)
 </svg>
 ```
 
-```js
+```js-nolint
 const svgElement = document.querySelector("svg");
 const rectElement = svgElement.querySelector("rect");
 
