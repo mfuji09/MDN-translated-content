@@ -54,7 +54,7 @@ l10n:
   <thead>
     <tr>
       <th>名前</th>
-      <th>Type</th>
+      <th>型</th>
       <th>解説</th>
     </tr>
   </thead>
