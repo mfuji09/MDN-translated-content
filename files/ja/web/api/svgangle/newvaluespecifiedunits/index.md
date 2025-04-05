@@ -44,7 +44,7 @@ newValueSpecifiedUnits(unitType, valueInSpecifiedUnits)
 - `NoModificationAllowedError` {{domxref("DOMException")}}
   - : {{domxref("SVGAngle")}} が読み取り専用の属性に関連付けられている場合、またはオブジェクト自体が読み取り専用である場合に発生します。
 
-## 値
+## 例
 
 ### 角度を度で設定
 
