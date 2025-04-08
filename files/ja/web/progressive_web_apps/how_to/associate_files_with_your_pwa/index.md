@@ -1,33 +1,34 @@
 ---
-title: Associate files with your PWA
+title: PWA にファイルを関連付ける
 slug: Web/Progressive_web_apps/How_to/Associate_files_with_your_PWA
-page-type: how-to
+l10n:
+  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
 {{PWASidebar}}
 
-On a device, files are usually associated with apps, so when the user opens the file, the operating system launches the appropriate app and passes the file to it. For example, HTML files are often opened in a web browser, text files in a text editor, and videos in a video player.
+端末では、ファイルは通常アプリに関連付けられているため、ユーザーがファイルを開くと、オペレーティングシステムが適切なアプリを起動し、ファイルを渡します。例えば、 HTML ファイルはウェブブラウザーで、テキストファイルはテキストエディターで、動画は動画プレーヤーで開くことが多いです。
 
-Progressive Web Apps can participate in this feature, so when the user clicks on files of specific types, the PWA may be launched to handle it.
+プログレッシブウェブアプリは、この機能に連携することができます。そのため、ユーザーが特定のファイル形式をクリックすると、 PWA が起動して処理することができます。
 
-There are two parts to adding support for file handling:
+ファイル処理に対応する機能を追加するには、 2 つの部分があります。
 
-- Declare support for certain file types using the [`file_handlers`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers) web app manifest member.
-- Handling files using the {{domxref("LaunchQueue")}} interface.
+- ウェブアプリマニフェストメンバーの [`file_handlers`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers) を使用して、特定のファイル形式に対応していることを宣言します。
+- {{domxref("LaunchQueue")}} インターフェイスを使用してファイルを処理します。
 
 > [!NOTE]
-> At present this feature is only available on Chromium-based browsers, and only on desktop operating systems.
+> 現在、この機能は Chromium ベースのブラウザーだけで利用でき、デスクトップ OS のみで利用できます。
 
-## Declaring support for file types
+## ファイル型の対応の宣言
 
-To declare support for particular file types, include the [`file_handlers`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers) member in your [manifest file](/en-US/docs/Web/Progressive_web_apps/Manifest).
+具体的なファイル形式に対応していることを宣言するには、 [`file_handlers`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers) メンバーが[マニフェストファイル](/ja/docs/Web/Progressive_web_apps/Manifest)に記述します。
 
-The `file_handlers` member is an array of file handler objects. Each file handler object has two mandatory properties, `action` and `accept`.
+`file_handlers` メンバーは、ファイルハンドラーオブジェクトの配列です。各ファイルハンドラーオブジェクトには、 `action` と `accept` という 2 つの必須プロパティが存在します。
 
-- The `accept` property contains {{Glossary("MIME_Type", "MIME types")}} and associated file extensions for files that the handler knows how to handle.
-- The `action` property is a URL to which the PWA will navigate when the user opens the file. This page must be in the PWA's scope.
+- `accept` プロパティには {{Glossary("MIME_Type", "MIME タイプ")}}と関連付けるファイル拡張子を設定して、ハンドラーに扱い方を知らせます。
+- `action` プロパティは、ユーザーがファイルを開くためのナビゲーション先となる URL です。このページは PWA のスコープ内に存在する必要があります。
 
-The manifest file below includes a `file_handlers` member with a single handler, which can handle {{Glossary("JPEG")}} and {{Glossary("PNG")}} files, and will navigate to the PWA's root page when the user clicks one of these files.
+下記のマニフェストファイルには、 {{Glossary("JPEG")}} と {{Glossary("PNG")}} ファイルを処理する単一のハンドラーを含む `file_handlers` メンバーが記載されており、ユーザーがこれらのファイルのいずれかをクリックすると、 PWA のルートページに移動します。
 
 ```json
 {
@@ -53,29 +54,29 @@ The manifest file below includes a `file_handlers` member with a single handler,
 }
 ```
 
-With this manifest, once the PWA is installed, it may be opened when the user opens files of these types.
+このマニフェストにより、 PWA がインストールされると、ユーザーがこれらのファイル形式のファイルを開く際に開くことができます。
 
-More than one app can usually open files of any given type, so the operating system usually provides a feature enabling the user to choose which app to use to open a file, and to set a default handler. For example, on macOS, the user can right-click a file, select "Get Info", and configure the default handler in the resulting dialog:
+通常、複数のアプリケーションが指定された形式のファイルを開くことができます。そのため、オペレーティングシステムには、ユーザーがファイルを開く際に使用するアプリケーションを選択したり、既定のハンドラーを設定したりできる機能が用意されています。例えば、 macOS では、ユーザーはファイルを右クリックして「情報を見る」を選択し、表示されるダイアログで既定のハンドラーを構成することができます。
 
-![Selecting the default handler on macOS](macos-get-info-dialog.png)
+![macOS で既定のハンドラーを選択](macos-get-info-dialog.png)
 
-## Asking permission
+## 権限を尋ねる
 
-The first time the browser is about to launch your PWA to handle one or more files that the user opened, it will ask the user to confirm that they want to use your PWA to open it. For example, the Chrome dialog looks like this:
+ブラウザーがユーザーが開いた1つ以上のファイルを処理するために PWA を起動しようとする最初の時点では、ユーザーに PWA を使用してファイルを開くことを承認するよう依頼するダイアログが表示されます。例えば、 Chrome のダイアログは次のようになります。
 
-![Chrome warning dialog for launching PWA to handle a file](macos-chrome-launch-warning.png)
+![ファイルを処理するために PWA を起動する際の Chrome の警告ダイアログ](macos-chrome-launch-warning.png)
 
-## Handling the files
+## ファイルの処理
 
-When the browser launches your PWA and navigates to the page you specified in the `action` property of the `file_handlers` manifest member, you'll need to run some code to handle the file. This code will run in the page that was specified in the `action` property.
+ブラウザーが PWA を起動し、 `file_handlers` マニフェストメンバーの `action` プロパティで指定したページに移動したら、ファイルを処理するためにコードを実行する必要があります。 このコードは、 `action` プロパティで指定したページで実行されます。
 
-The key interface here is {{domxref("LaunchQueue")}}, which is available as a property of the global {{domxref("Window")}} object.
+ここで重要なインターフェイスは {{domxref("LaunchQueue")}} で、グローバルな {{domxref("Window")}} オブジェクトのプロパティとして利用できます。
 
-The `LaunchQueue` interface has a single method, {{domxref("LaunchQueue/setConsumer", "setConsumer()")}}, which takes as an argument a callback function which will be called when the browser has launched the PWA with one or more files to handle.
+`LaunchQueue` インターフェイスには、単一のメソッドである {{domxref("LaunchQueue/setConsumer", "setConsumer()")}} があり、引数として、ブラウザーが処理する 1 つ以上のファイルを持つ PWA を起動したときに呼び出されるコールバック関数を取ります。
 
-The callback is passed a {{domxref("LaunchParams")}} object, which includes a {{domxref("LaunchParams/files", "files")}} property containing an array of {{domxref("FileSystemHandle")}} objects, each of which represents one of the files that the user opened.
+コールバックに {{domxref("LaunchParams")}} オブジェクトを渡すと、そのオブジェクトには、ユーザーが開いたファイルの 1 つを表す {{domxref("FileSystemHandle")}} オブジェクトの配列が含まれている {{domxref("LaunchParams/files", "files")}} プロパティが含まれています。
 
-For example, the code below reads the files and assigns their contents to {{HTMLElement("img")}} elements, which it adds to the page:
+例えば、次のサンプルコードでは、ファイルを読み込んでそのコンテンツを {{HTMLElement("img")}} 要素に割り当て、ページに追加しています。
 
 ```js
 const imageContainer = document.querySelector("#container");
@@ -91,13 +92,13 @@ if ("launchQueue" in window) {
 }
 ```
 
-Note that the code checks that `launchQueue` exists before using it, to ensure the app behaves gracefully in browsers that don't support the API.
+API に対応していないブラウザーでもアプリが確実に動作するように、 `launchQueue` を使用する前に、存在しているかどうかをコードが調べることに注意してください。
 
-## See also
+## 関連情報
 
-- [`file_handlers`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers) manifest member
-- {{domxref("LaunchQueue")}} interface
-- [File System API](/en-US/docs/Web/API/File_System_API)
-- [File API](/en-US/docs/Web/API/File_API)
-- [Let installed web applications be file handlers](https://developer.chrome.com/docs/capabilities/web-apis/file-handling) on developer.chrome.com (2022)
-- [Handle files in Progressive Web Apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/handle-files) on learn.microsoft.com (2023)
+- [`file_handlers`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers) マニフェストメンバー
+- {{domxref("LaunchQueue")}} インターフェイス
+- [ファイルシステム API](/ja/docs/Web/API/File_System_API)
+- [ファイル API](/ja/docs/Web/API/File_API)
+- [Let installed web applications be file handlers](https://developer.chrome.com/docs/capabilities/web-apis/file-handling) (developer.chrome.com, 2022)
+- [Handle files in Progressive Web Apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/handle-files) (learn.microsoft.com, 2023)
