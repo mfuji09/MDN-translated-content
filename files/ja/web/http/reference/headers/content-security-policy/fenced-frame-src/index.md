@@ -1,74 +1,78 @@
 ---
 title: "CSP: fenced-frame-src"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/fenced-frame-src
-l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+page-type: http-csp-directive
+status:
+  - experimental
+browser-compat: http.headers.Content-Security-Policy.fenced-frame-src
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`fenced-frame-src`** ディレクティブは、ディレクティブは、 {{HTMLElement("fencedframe")}} 要素に読み込まれた、埋め込まれた閲覧コンテキストの有効なソースを指定します。
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
+**`fenced-frame-src`** directive specifies valid sources for nested browsing contexts loaded into {{HTMLElement("fencedframe")}} elements.
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">CSP バージョン</th>
+      <th scope="row">CSP version</th>
       <td>1</td>
     </tr>
     <tr>
-      <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
+      <th scope="row">Directive type</th>
+      <td>{{Glossary("Fetch directive")}}</td>
     </tr>
     <tr>
-      <th scope="row">代替</th>
+      <th scope="row">Fallback</th>
       <td>
-        このディレクティブがない場合、ユーザーエージェントは {{CSP("frame-src")}} ディレクティブを参照します（これは
-        {{CSP("child-src")}} ディレクティブが代替となります）。
+        If this directive is absent, the user agent will look for the
+        {{CSP("frame-src")}} directive (which falls back to the
+        {{CSP("child-src")}} directive).
       </td>
     </tr>
   </tbody>
 </table>
 
-## 構文
+## Syntax
 
-`fenced-frame-src` ポリシーには、 1 つ以上のソースが指定できます。
+One or more sources can be allowed for the `fenced-frame-src` policy:
 
 ```http
 Content-Security-Policy: fenced-frame-src <source>;
 Content-Security-Policy: fenced-frame-src <source> <source>;
 ```
 
-ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、以下のソース表現の値が適用できます。
+A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
 
-- [`<host-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source) の値 `"https:"`
-- [`<scheme-source>`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source) の値 `"https:"`
-- 文字列 `"*"`
+- The [`<host-source>`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source) value `"https:"`
+- The [`<scheme-source>`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source) value `"https:"`
+- The string `"*"`
 
-## 例
+## Examples
 
-### 違反の場合
+### Violation cases
 
-以下の CSP ヘッダーを指定した場合、
+Given this CSP header:
 
 ```http
 Content-Security-Policy: fenced-frame-src https://example.com/
 ```
 
-以下のソースはフェンスフレームに読み込まれません。
+The following sources will not load in a fenced frame:
 
-- `https://not-example.com/` （ドメインが一致しない）
-- `https://example.org/` （TLD が一致しない）
+- `https://not-example.com/` (domain doesn't match)
+- `https://example.org/` (TLD doesn't match)
 
-## 仕様書
+## Specifications
 
 {{Specifications}}
 
-## ブラウザーの互換性
+## Browser compatibility
 
 {{Compat}}
 
-## 関連情報
+## See also
 
-- [フェンスフレーム API](/ja/docs/Web/API/Fenced_frame_API)
+- [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API)
 - {{HTMLElement("fencedframe")}}
 - {{HTTPHeader("Content-Security-Policy")}}
