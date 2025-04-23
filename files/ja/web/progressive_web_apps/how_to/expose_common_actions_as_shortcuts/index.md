@@ -1,30 +1,31 @@
 ---
-title: Expose common app actions as shortcuts
+title: よくあるアプリ操作をショートカットとして表示する
 slug: Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts
-page-type: how-to
+l10n:
+  sourceCommit: e03b13c7e157ec7b7bb02a6c7c4854b862195905
 ---
 
 {{PWASidebar}}
 
-Many operating systems support showing shortcut menus, or jump-list, when the user right-clicks or long-presses an app icon. For example, on Windows, right-clicking on any pinned program in the taskbar shows a list of program-specific actions and recently opened files:
+多くのオペレーティングシステムには、ユーザーがアプリアイコンを右クリックまたは長押しした際に、ショートカットメニュー（またはジャンプリスト）を表示する機能があります。例えば Windows では、タスクバーにピン留めされたプログラムを右クリックすると、そのプログラム固有のアクションと最近開いたファイルのリストが表示されます。
 
-![The task bar in Windows, showing several pinned apps. The Firefox app icon was right-clicked, and the jump list is displayed, showing frequent tabs and common tasks](./jump-list.png)
+![Windows のタスクバーに、ピン留めされた複数のアプリが表示されています。 Firefox のアプリアイコンを右クリックすると、ジャンプリストが表示され、よく使用するタブと一般的なタスクが表示されます。](./jump-list.png)
 
-On Android, long-pressing an app icon also shows a list of common app actions:
+Androidでは、アプリアイコンを長押しすると、そのアプリでよく使用されるアクションのリストが表示されます。
 
-![The Android app launcher, showing an app icon that's been long-pressed. The shortcut menu is displayed, showing common actions](./android-shortcuts.png)
+![Android のアプリランチャーで、長押しされたアプリアイコンが表示されています。ショートカットメニューが表示され、一般的な操作が表示されています。](./android-shortcuts.png)
 
-[Progressive Web Apps (PWAs)](/en-US/docs/Web/Progressive_web_apps) can be installed on devices just like platform-native apps and, like their native counterparts, they can also define app shortcut menus to let users access common actions.
+[プログレッシブウェブアプリ (PWA)](/ja/docs/Web/Progressive_web_apps) は、プラットフォームのネイティブアプリと同様に端末にインストールでき、ネイティブアプリと同様に、ユーザーが共通のアクションにアクセスできるようにアプリのショートカットメニューを定義することもできます。
 
-Shortcuts are only displayed by right-clicking or long-pressing the app icon, meaning they're only available once the PWA is installed on the user's device. To learn how to make your PWA installable, see [making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable).
+ショートカットは、アプリアイコンを右クリックまたは長押しした際にのみ表示されます。つまり、 PWA がユーザーのデバイスにインストールされている場合のみ利用可能です。 PWA をインストール可能にする方法については、「[PWA をインストール可能にする](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)」を参照してください。
 
-## Why use shortcuts?
+## なぜショートカットを使うのか
 
-Defining shortcuts for your PWA can make users more productive by letting them access your app's main actions directly from their home screen. Additionally, defining shortcuts can help make your PWA feel more platform-native and therefore more familiar to your users.
+PWA のショートカットを定義することで、ユーザーはホーム画面からアプリの主要なアクションに直接アクセスできるようになり、生産性が向上します。さらに、ショートカットを定義することで、 PWA がプラットフォームにネイティブに統合されたような感覚を与え、ユーザーにとってより親しみやすいものになります。
 
-## Define shortcuts in the web app manifest
+## ウェブアプリのマニフェストでショートカットを定義する
 
-To define shortcuts for your PWA, use the [`shortcuts`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/shortcuts) member of the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest). This member is an array of objects defining each shortcut's name and URL, as well as the optional short name, description, and icons. For example, here's the web app manifest of a calendar app that defines two shortcuts:
+PWA のショートカットを定義するには、 [`shortcuts`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/shortcuts) メンバーを[ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)で使用します。このメンバーは、それぞれのショートカットの名前と URL、およびオプションで短縮名、説明、アイコンを定義するオブジェクトの配列です。例えば、以下のカレンダーアプリのウェブアプリマニフェストでは、 2 つのショートカットが定義されています。
 
 ```json
 {
@@ -51,24 +52,24 @@ To define shortcuts for your PWA, use the [`shortcuts`](/en-US/docs/Web/Progress
 }
 ```
 
-The most important properties of each shortcut object are:
+それぞれのショートカットオブジェクトの最も重要なプロパティは次のとおりです。
 
 - `name`
-  - : The name of the shortcut, which is displayed in the shortcut menu. Make sure to keep it short but also descriptive enough to let users know what the shortcut does.
+  - : ショートカットメニューに表示されるショートカットの名前です。ユーザーがショートカットの機能を理解できるように、短く簡潔ながら十分な説明を入れるようにしてください。
 - `url`
-  - : The URL to launch the PWA with when the user selects the shortcut. This URL can be absolute, in which case it should exist within the [scope](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/scope) of the web app manifest. The URL can also be relative, in which case it's resolved relative to the PWA's [start URL](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/start_url).
+  - : ユーザーがショートカットを選択した際に PWA を起動するための URL です。この URL は絶対パスである場合、ウェブアプリマニフェストの[スコープ](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/scope)内に存在する必要があります。 URL は相対パスとしても指定可能で、その場合は PWA の[開始 URL](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/start_url) を基準に解決されます。
 
-All other shortcut object properties are optional, but you should consider providing them to make the shortcut more useful to users:
+それ以外のショートカットオブジェクトのプロパティはすべてオプションですが、ショートカットをより有益なものにするために、これらのプロパティも指定することを検討してください。
 
 - `short_name`
-  - : A short name for the shortcut, which is displayed when there's not enough space to display the full name.
+  - : ショートカットの短縮名。フルネームを表示するスペースがない場合に表示されます。
 - `description`
-  - : A description of the shortcut. This string can be accessed by assistive technologies, such as screen readers, to help users understand what the shortcut does.
+  - : ショートカットの説明。この文字列は、スクリーンリーダーなどの支援技術によってアクセスでき、ユーザーがショートカットの機能を理解するのに役立ちます。
 - `icons`
-  - : An array of image objects to display in the shortcut menu. Each image object is processed just like the [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) member of the web app manifest, and can be used to provide different-sized icons for different device requirements.
+  - : ショートカットメニューに表示する、画像オブジェクトの配列です。それぞれの画像オブジェクトは、ウェブアプリマニフェストの [`icons`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/icons) メンバーと同じように処理され、さまざまな端末の要件に合わせて異なるサイズのアイコンを提供するために使用することができます。
 
-## See also
+## 関連情報
 
-- [`shortcuts` manifest member](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/shortcuts)
-- [Get things done quickly with app shortcuts](https://web.dev/articles/app-shortcuts) on web.dev (2022)
-- [Define app shortcuts](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/shortcuts) on learn.microsoft.com (2023)
+- [`shortcuts` マニフェストメンバー](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/shortcuts)
+- [Get things done quickly with app shortcuts](https://web.dev/articles/app-shortcuts) (web.dev, 2022)
+- [アプリのショートカットを定義する](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps-chromium/how-to/shortcuts) (learn.microsoft.com, 2023)
