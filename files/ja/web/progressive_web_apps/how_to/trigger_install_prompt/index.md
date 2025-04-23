@@ -1,36 +1,37 @@
 ---
-title: Trigger installation from your PWA
+title: PWA からインストールを起動する
 slug: Web/Progressive_web_apps/How_to/Trigger_install_prompt
-page-type: how-to
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{PWASidebar}}
 
 > [!WARNING]
-> The technique described here depends on the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event, which is non-standard and currently only implemented in Chromium-based browsers.
+> ここで説明する手法は {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} イベントに依存していますが、これは標準外であり、現在 Chromium ベースのブラウザーでのみ実装されています。
 
-By default, if the user visits your website, and the browser determines that the site is [installable as a PWA](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability), then the browser will display some built-in UI — an icon in the URL bar, for example — to install the site. If the user clicks the icon, then the browser shows an install prompt containing, at a minimum, the app's [name](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/name) and [icon](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons). If the user agrees to install the app, then it will be installed.
+既定では、ユーザーがウェブサイトにアクセスし、ブラウザーがサイトを [PWA としてインストール可能](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability)であると判断した場合、ブラウザーは、サイトインストール用の組み込み UI（例えば、URL バーにアイコン）を表示します。ユーザーがアイコンをクリックすると、ブラウザーは、少なくともアプリの[名前](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/name)と[アイコン](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/icons)を含むインストールプロンプトを表示します。ユーザーがアプリのインストールに同意すると、アプリがインストールされます。
 
-However, you can implement your own in-app UI to ask the user if they want to install the app, which will trigger the install prompt. The benefits of this are:
+ただし、アプリ内に独自の UI を実装して、ユーザーにアプリのインストールを確認するメッセージを表示し、インストールプロンプトを開始することができます。これの利点は次のとおりです。
 
-- You can provide more context about the app, explaining to the user why they might want to install it as a PWA.
-- An in-app install UI is likely to be easier for users to discover and understand than the browser's default UI.
+- アプリに関するより詳しい情報を提供し、PWA としてインストールするメリットをユーザーに説明することができます。
+- アプリ内インストール UI は、ブラウザーの既定の UI よりもユーザーにとって見つけやすく、理解しやすいでしょう。
 
-## Adding an in-app install UI
+## アプリ内のインストール UI の追加
 
-First, add some UI to the app indicating that the user can install it. For example:
+まず、ユーザーがインストールできることを示す UI をアプリに追加します。例えば、次のようにします。
 
 ```html
 <button id="install" hidden>Install</button>
 ```
 
-We're setting the button's [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute, because if the user visits the app with a browser that can't install it, we don't want the install UI to be visible. Next, we'll see how to make the button visible only on browsers that support installing PWAs locally.
+ユーザーがインストールできないブラウザーでアプリにアクセスした場合、インストール UI が表示されないように、ボタンの [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性を設定します。次に、PWA のローカルインストールに対応しているブラウザーでのみボタンを表示する方法を見てみましょう。
 
-## Listening for beforeinstallprompt
+## beforeinstallprompt の待ち受け
 
-As soon as the browser has determined that it can install the app, it fires the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event in the global {{domxref("Window")}} scope.
+ブラウザーがアプリのインストールが可能であると判断すると、グローバルの {{domxref("Window")}} スコープで {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} イベントが発行されます。
 
-In our main app code, we will listen for this event:
+メインアプリのコードでは、このイベントを待ち受けします。
 
 ```js
 // main.js
@@ -45,15 +46,15 @@ window.addEventListener("beforeinstallprompt", (event) => {
 });
 ```
 
-The event handler here does three things:
+このイベントハンドラーは 3 つのことを行います。
 
-- Call {{domxref("Event.preventDefault()","preventDefault()")}} on the event. This prevents the browser from displaying its own install UI.
-- Take a reference to the event object that's passed into the handler. This is an instance of {{domxref("BeforeInstallPromptEvent")}}, and is what will enable us to prompt the user to install the app.
-- Reveal our in-app install UI by removing the `hidden` attribute on the button.
+- このイベントの {{domxref("Event.preventDefault()","preventDefault()")}} を呼び出します。これで、ブラウザーが自身のインストール UI を表示するのを防ぎます。
+- ハンドラーに渡されたイベントオブジェクトを参照します。これは {{domxref("BeforeInstallPromptEvent")}} のインスタンスであり、ユーザーにアプリのインストールを促すために使用されます。
+- ボタンから `hidden` 属性を除去することで、アプリ内のインストール UI を表示します。
 
-## Triggering the install prompt
+## インストールプロンプトの起動
 
-Next, we need to add a click handler to our in-app install button:
+次に、アプリ内のインストールボタンに click ハンドラーを追加する必要があります。
 
 ```js
 // main.js
@@ -73,17 +74,17 @@ function disableInAppInstallPrompt() {
 }
 ```
 
-The `installPrompt` variable was initialized with the `BeforeInstallPromptEvent` object in our `beforeinstallprompt` event handler. If `installPrompt` hasn't been initialized, for any reason, we do nothing.
+変数 `installPrompt` は、 `beforeinstallprompt` イベントハンドラー内で `BeforeInstallPromptEvent` オブジェクトに初期化されています。何らかの理由で `installPrompt` が初期化されていない場合は、何もしません。
 
-Otherwise we call its {{domxref("BeforeInstallPromptEvent.prompt()", "prompt()")}} method. This shows the install prompt, and returns a {{jsxref("Promise")}} which resolves with an object indicating whether the app was installed or not. In particular, its `outcome` property is `"accepted"` if the user chose to install the app, or `"dismissed"` if they dismissed the prompt.
+それ以外の場合は、その {{domxref("BeforeInstallPromptEvent.prompt()", "prompt()")}} メソッドを呼び出します。これにより、インストールプロンプトが表示され、アプリがインストールされたかどうかを示すオブジェクトで解決されるプロミス ({{jsxref("Promise")}}) が返されます。具体的には、ユーザーがアプリのインストールを選択した場合は `outcome` プロパティが `"accepted"`、プロンプトを閉じた場合は `"dismissed"` になります。
 
-Either way, we must reset our state after calling `prompt()`, because we can only call it once for each `BeforeInstallPromptEvent` instance. So we reset our `installPrompt` variable and hide the install button again.
+いずれの場合も、 `prompt()` を呼び出した後は、その状態をリセットする必要があります。これは、 `BeforeInstallPromptEvent` インスタンスごとに 1 回しか呼び出せないためです。そこで、 `installPrompt` 変数をリセットし、インストールボタンを再び非表示にします。
 
-## Responding to app install
+## アプリのインストールへの応答
 
-Depending on the browser and platform, the browser may still offer its own UI to install the app. This means that the app may still be installed without going through our in-app install UI. If this happens, we want to disable the in-app install UI, or we will show it in an app that's already been installed.
+ブラウザーやプラットフォームによっては、ブラウザーがアプリをインストールするために自分自身の UI を表示する場合があります。すなわち、アプリがアプリ内のインストール UI を経由せずにインストールされる可能性があります。この場合、アプリ内のインストール UI を無効にするか、すでにインストールされているアプリに UI を表示させる必要があります。
 
-To do this we can listen to the {{domxref("Window.appinstalled_event", "appinstalled")}} event, which fires in the global {{domxref("Window")}} scope when the app has been installed:
+これを行うには、アプリがインストールされたときにグローバル {{domxref("Window")}} スコープで発行される {{domxref("Window.appinstalled_event", "appinstalled")}} イベントを待ち受けします。
 
 ```js
 // main.js
@@ -98,43 +99,43 @@ function disableInAppInstallPrompt() {
 }
 ```
 
-## Responding to platform-specific apps being installed
+## プラットフォーム固有のアプリがインストールされた場合への応答
 
-One case not covered by the above examples is where you have a platform-specific version of the app as well as a web app, and you want to personalize the web app experience depending on whether the platform-specific app is already installed. You might not want to invite users to install the PWA if they already have the platform-specific app installed, and/or you might want to invite them to head over to the platform-specific app to view content.
+上記の例では、プラットフォーム固有のバージョンのアプリとウェブアプリの両方があり、プラットフォーム固有のアプリがすでにインストールされているかどうかによって、ウェブアプリの動きを変更したい場合に対応できません。プラットフォーム固有のアプリがすでにインストールされているユーザーには、 PWA のインストールを勧めないようにしたり、あるいはコンテンツを表示する際にプラットフォーム固有のアプリに移動するよう促した利したい場合などです。
 
-This can be handled with the {{domxref("Navigator.getInstalledRelatedApps()")}} method, which allows you to detect installed related platform-specific apps (or PWAs) and respond appropriately.
+これは、 {{domxref("Navigator.getInstalledRelatedApps()")}} メソッドを使用して処理できます。このメソッドを使用すると、インストールされている関連プラットフォーム専用のアプリ（または PWA）を検出し、適切に対応することができます。
 
-For example:
+例を示します。
 
 ```js
 const relatedApps = await navigator.getInstalledRelatedApps();
 
-// Search for a specific installed platform-specific app
+// 特定のプラットフォーム固有アプリを探す
 const psApp = relatedApps.find((app) => app.id === "com.example.myapp");
 
 if (psApp) {
-  // Update UI as appropriate
+  // 適切に UI を更新
 }
 ```
 
-This method could also be combined with `beforeinstallprompt` to suppress the browser's install UI based on the availability of a platform-specific app:
+この方法は、プラットフォーム専用のアプリの可用性に応じてブラウザーのインストール UI を抑制する `beforeinstallprompt` と組み合わせることもできます。
 
 ```js
 window.addEventListener("beforeinstallprompt", async (event) => {
   const relatedApps = await navigator.getInstalledRelatedApps();
 
-  // Search for a specific installed platform-specific app
+  // 特定のプラットフォーム固有アプリを探す
   const psApp = relatedApps.find((app) => app.id === "com.example.myapp");
 
   if (psApp) {
     event.preventDefault();
-    // Update UI as appropriate
+    // 適切に UI を更新
   }
 });
 ```
 
-## See also
+## 関連情報
 
-- [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
-- {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event
-- [How to provide your own in-app install experience](https://web.dev/articles/customize-install) on web.dev (2021)
+- [PWA をインストール可能にする](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
+- {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} イベント
+- [How to provide your own in-app install experience](https://web.dev/articles/customize-install) (web.dev, 2021)
