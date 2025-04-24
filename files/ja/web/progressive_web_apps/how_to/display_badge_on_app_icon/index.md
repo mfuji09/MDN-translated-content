@@ -1,59 +1,60 @@
 ---
-title: Display a badge on the app icon
+title: アプリアイコン上にバッジを表示する
 slug: Web/Progressive_web_apps/How_to/Display_badge_on_app_icon
-page-type: how-to
+l10n:
+  sourceCommit: e03b13c7e157ec7b7bb02a6c7c4854b862195905
 ---
 
 {{PWASidebar}}
 
-Applications native to mobile and desktop operating systems can display badges on top of their app icons to inform users that new content is available. For example, an email client application can display the total number of unread messages in a badge and update this number even if the app is not running.
+モバイルおよびデスクトップのオペレーティングシステムのネイティブアプリケーションは、アプリアイコンの上部にバッジを表示し、ユーザーに新しいコンテンツが利用可能であることを通知できます。例えば、メールクライアントアプリケーションは、未読メッセージの総数をバッジに表示し、アプリケーションが実行中でない場合でもこの数を更新することができます。
 
-Here is an example showing the Mail application on an iOS device with a badge in its top right corner:
+次の例では、 iOS 端末上でメールアプリケーションが表示され、その右上隅にバッジが表示されています。
 
-![The dock area on an iPhone home screen, showing a badge on the Mail app icon](./mail-badge-ios.png)
+![iPhone のホーム画面のドック領域に、メールアプリのアイコンにバッジが表示されている状態。](./mail-badge-ios.png)
 
-[Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) can display and update badges on their app icons too.
+[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps) (PWA) は、アプリアイコンにバッジを表示したり更新したりすることもできます。
 
-Displaying and updating a badge is done by using the [Badging API](/en-US/docs/Web/API/Badging_API). You can call this API from the app's [service worker](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers), to display or update the badge even when the app is not running.
+バッジの表示と更新は、[バッジ API](/ja/docs/Web/API/Badging_API) を使用して行います。この API はアプリの[サービスワーカー](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)から呼び出すことで、アプリが実行されていない状態でもバッジを表示または更新することができます。
 
-## Support for badges
+## バッジの対応
 
-App badges are only supported when a PWA is installed on its host operating system. Badges appear on the app icon which only exists after the app has been installed.
+アプリバッジは、 PWA がホストオペレーティングシステムにインストールされている場合のみ対応します。バッジは、アプリがインストールされた後に表示されるアプリアイコンにのみ表示されます。
 
 > [!NOTE]
-> This article focuses on the {{domxref("Navigator.setAppBadge()")}} and {{domxref("Navigator.clearAppBadge()")}} methods from the Badging API and ignores the `Navigator.setClientBadge` and `Navigator.clearClientBadge`. Although these methods are defined in the [Badging API specification](https://w3c.github.io/badging/) too, they are for displaying badges on documents, not on application icons.
+> この記事は、バッジ API の {{domxref("Navigator.setAppBadge()")}} および {{domxref("Navigator.clearAppBadge()")}} メソッドに焦点を当てており、 `Navigator.setClientBadge` および `Navigator.clearClientBadge` は無視します。これらのメソッドは[バッジ API 仕様書](https://w3c.github.io/badging/)（英語）にも定義されていますが、アプリケーションのアイコンではなく、文書にバッジを表示するために使用されるためです。
 
-### Desktop support
+### デスクトップの対応
 
-On desktop operating systems, badges are only supported on Windows and macOS, and only when the PWA is installed from Chrome or Edge. While the Badging API is supported on Chromium-based browsers on Linux, badges are not displayed on this operating system.
+デスクトップオペレーティングシステムでは、バッジは Windows と macOS でのみ対応しており、 PWA が Chrome または Edge からインストールされた場合のみ表示されます。 Linux 版の Chromium ベースのブラウザーでもバッジ API には対応していますが、このオペレーティングシステムではバッジは表示されません。
 
-Safari and Firefox on desktop do not support the Badging API and do not support installing PWAs.
+デスクトップ版の Safari と Firefox はバッジ API に対応しておらず、 PWA のインストールにも対応していません。
 
-### Mobile support
+### モバイルの対応
 
-Badges are supported in Safari on iOS and iPadOS, starting with iPadOS 16.4. The badging API is not supported on Chromium-based browsers running on Android. Instead, Android automatically shows a badge on the PWA's app icon when there is an unread notification, just as it does for Android apps.
+バッジは、 iOS および iPadOS の Safari で iPadOS 16.4 以降から対応しています。バッジ API は、 Android 上で動作する Chromium ベースのブラウザーでは対応していません。 Android では代わりに、未読の通知がある場合には、 PWA のアプリアイコンに Android アプリと同様にバッジを自動表示します。
 
-## Badge best practices
+## バッジのベストプラクティス
 
-Before learning how to use badges, consider these best practices to ensure your app uses badges in the most effective and useful way for your users.
+バッジの使用方法を学ぶ前に、ユーザーにとって最も効果的で役立つ方法でバッジを活用できるよう、以下のベストプラクティスを考慮してください。
 
-### Check for support
+### 対応状況のチェック
 
-To ensure the Badging API is [supported](#support_for_badges) in the user's browser and operating system, to prevent throwing a JavaScript error, check for support before using the API:
+バッジ API がユーザーのブラウザーとオペレーティングシステムで[対応](#バッジの対応)していても、 JavaScript エラーが発生しないように、 API を使用する前に対応状況を確認してください。
 
 ```js
 if (navigator.setAppBadge) {
-  // The API is supported, use it.
+  // API に対応しており、使用できます。
 } else {
-  // The API is not supported, don't use it.
+  // API に対応しておらず、使用してはいけません。
 }
 ```
 
-Do not rely solely on badges to inform users about the availability of new content. Browsers that support the Badging API may be installed on operating systems that do not support displaying a badge. For example, while Chrome supports the Badging API, badges will not appear on installed application icons on Linux.
+新しいコンテンツが利用できることをユーザーに通知する際は、バッジにのみ依存しないでください。バッジ API に対応しているブラウザーが、バッジを表示できないオペレーティングシステムにインストールされている可能性があります。例えば、 Chrome はバッジ API に対応していますが、 Linux ではインストールされたアプリケーションのアイコンにバッジが表示されません。
 
-### Request notification permissions for iOS and/or iPadOS
+### iOS や iPadOS での通知権限のリクエスト
 
-While notification badges are supported on iOS and iPadOS, badges will not appear until the application is granted notification permissions. To request notification permissions, call the [`Notification.requestPermission()`](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#getting_permission) method:
+iOS および iPadOS は、通知バッジに対応していますが、通知権限が与えられるまでバッジは表示されません。通知権限をリクエストするには、 [`Notification.requestPermission()`](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API#許可の要求) メソッドを呼び出してください。
 
 ```js
 Notification.requestPermission().then((result) => {
@@ -61,82 +62,82 @@ Notification.requestPermission().then((result) => {
 });
 ```
 
-Optionally, you can check if a user has previously granted notification permissions using the [Permissions API](/en-US/docs/Web/API/Permissions_API).
+なお、ユーザーが以前に通知権限を付与しているかどうかは、[権限 API](/ja/docs/Web/API/Permissions_API) を使用して確認できます。
 
-### Use badges sparingly
+### バッジの使用は適度に
 
-Like notifications, badges can be a very effective way to re-engage users with your app when used sparingly. Make sure to use badges to only signal new content that's important for your users to know about.
+通知と同様に、バッジは適度に使用することで、ユーザーをアプリに再エンゲージさせるとても効果的な手段となりえます。バッジは、ユーザーが知っておくべき重要な新しいコンテンツを通知する目的でのみ使用するようにしてください。
 
-### Update badges in real-time
+### リアルタイムでバッジを更新
 
-Make sure to update your application badge in real-time. This means updating the badge count to reflect how many new items are actually left for the user to consume, and clearing the app badge when there are no new items.
+アプリケーションのバッジをリアルタイムで更新してください。これは、ユーザーが消費可能な新しいアイテムの数を反映するようにバッジの数を更新し、新しいアイテムがなくなった場合にアプリバッジをクリアすることを意味します。
 
-For example, if an email client app receives new messages in the background, it should update its badge to display the right number of unread messages in the inbox, potentially filtering out messages from other folders such as a spam folder. It's possible to [update badges in the background](#updating_the_badge_in_the_background) by using the `navigator.setAppBadge()` method from a service worker.
+例えば、メールクライアントアプリがバックグラウンドで新しいメッセージを受信した場合、インボックスに未読メッセージの正しい数を表示するためにバッジを更新する必要があります。この際、スパムフォルダーなどの他のフォルダーからのメッセージをフィルタリングする可能性があります。サービスワーカーから `navigator.setAppBadge()` メソッドを使用することで、[バックグラウンドでバッジを更新](#バックグラウンドでバッジを更新)することが可能です。
 
-Once the user launches the app and starts reading messages, the email client app should update its badge accordingly by calling `navigator.setAppBadge()` with the new unread messages count, or by calling `navigator.clearAppBadge()` when there are no unread messages.
+ユーザーがアプリを起動し、メッセージの読み込みを開始すると、メールクライアントアプリは、未読メッセージの数を指定して `navigator.setAppBadge()` を呼び出すか、未読メッセージがない場合は `navigator.clearAppBadge()` を呼び出して、バッジを適切に更新する必要があります。
 
-### Highlight new content in the app
+### 新しいコンテンツをアプリ内で強調表示
 
-When your app receives new content and adds a badge on the app icon, make sure to highlight that new content for users when they launch the app.
+アプリが新しいコンテンツを受信し、アプリアイコンにバッジを追加した場合は、ユーザーがアプリを起動した際にその新しいコンテンツを強調表示するようにしてください。
 
-For example, if an email client app displays the unread messages count on the app icon badge, then those messages should be bolded or highlighted in some way when the app is opened.
+例えば、メールクライアントアプリがアプリアイコンのバッジに未読メッセージの数を表示する場合、そのアプリを開いた際に、それらのメッセージは太字で表示するなど、何らかの方法で強調表示すべきです。
 
-## Displaying and updating the badge
+## バッジの表示と更新
 
-To display a badge on your PWA's app icon that shows a number of unread messages, use the {{domxref("Navigator.setAppBadge()")}} method:
+PWA のアプリアイコンに未読メッセージの数を表示するバッジを表示するには、 {{domxref("Navigator.setAppBadge()")}} メソッドを使用します。
 
 ```js
-// Check for support first.
+// まず対応しているかどうかをチェック
 if (navigator.setAppBadge) {
-  // Display the number of unread messages.
+  // 未読メッセージの数を表示
   navigator.setAppBadge(numberOfUnreadMessages);
 }
 ```
 
-You can also display an empty badge using the same method by omitting the count parameter, or setting it to `0`:
+同じメソッドを使用して、 count 引数を省略するか、 `0` に設定することで、空のバッジを表示することもできます。
 
 ```js
-// Check for support first.
+// まず対応しているかどうかをチェック
 if (navigator.setAppBadge) {
-  // Just display the badge, with no number in it.
+  // バッジのみを表示し、中に数値は表示しない
   navigator.setAppBadge();
 }
 ```
 
-To remove the badge on the app icon, use the {{domxref("Navigator.clearAppBadge()")}} method:
+アプリアイコンのバッジを削除するには、 {{domxref("Navigator.clearAppBadge()")}} メソッドを使用します。
 
 ```js
-// Check for support first.
+// まず対応しているかどうかをチェック
 if (navigator.clearAppBadge) {
-  // Remove the badge on the app icon.
+  // アプリアイコン上のバッジを除去
   navigator.clearAppBadge();
 }
 ```
 
-## Updating the badge in the background
+## バックグラウンドでバッジを更新
 
-Badges can be useful to re-engage users with your app when they're not already using the app. This means that your app must be able to update its badge even when it's not running.
+バッジは、ユーザーがアプリを使用していない際に、アプリへの再エンゲージメントを促進する有効な手段です。つまり、アプリは実行中でない場合でもバッジを更新できる必要があります。
 
-PWAs can use the following mechanisms to update in the background and display, update, or hide their badges:
+PWA は、以下の仕組みを使用してバックグラウンドで更新し、バッジを表示、更新、非表示にできます。
 
-- [Push API](/en-US/docs/Web/API/Push_API)
-  - : PWAs can use this API to receive messages from a server even when the app is not running. Most browsers require a notification to be displayed whenever a push message is received. This is fine for some use cases (for example, showing a notification when updating the badge), but makes it impossible to subtly update the badge without displaying a notification. In addition, users must grant your site notification permission in order to receive push messages.
-    For more information, see the [ServiceWorkerRegistration: showNotification() method](/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification).
-- [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API)
-  - : PWAs can use this API to run code in the background when a stable network connection is detected.
-- [Web Periodic Background Synchronization API](/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API)
-  - : PWAs can use this API to run code in the background at periodic intervals of time.
+- [プッシュ API](/ja/docs/Web/API/Push_API)
+  - : PWA は、アプリが実行されていない状態でもサーバーからメッセージを受信するためにこの API を使用できます。ほとんどのブラウザーでは、プッシュメッセージを受信した際に通知を表示する必要があります。これは一部のユースケース（例：バッジを更新した際に通知を表示する）には問題ありませんが、通知を表示せずにバッジをさりげなく更新することはできません。さらに、ユーザーはプッシュメッセージを受信するために、サイトに通知の権限を付与する必要があります。
+    詳しくは、 [ServiceWorkerRegistration: showNotification() メソッド](/ja/docs/Web/API/ServiceWorkerRegistration/showNotification)を参照してください。
+- [バックグラウンド同期 API](/ja/docs/Web/API/Background_Synchronization_API)
+  - : PWA はこの API を使用して、安定したネットワーク接続が検出された際にバックグラウンドでコードを実行することができます。
+- [ウェブ定期バックグラウンド同期 API](/ja/docs/Web/API/Web_Periodic_Background_Synchronization_API)
+  - : PWA は、この API を使用して、一定の間隔でバックグラウンドでコードを実行できます。
 
-Here is a service worker code example showing how to listen to a server's Push messages and update the app badge to reflect an unread messages count:
+以下は、サーバーのプッシュ通知を監視し、未読メッセージの数をアプリバッジに反映させるサービスワーカーのコード例です。
 
 ```js
-// Listen to "push" events in the service worker.
+// サービスワーカーで "push" イベントを待ち受けする
 self.addEventListener("push", (event) => {
-  // Extract the unread count from the push message data.
+  // プッシュメッセージデータから未読数を抽出する
   const message = event.data.json();
   const unreadCount = message.unreadCount;
 
-  // Set or clear the badge.
+  // バッジを設定またはクリアする
   if (navigator.setAppBadge) {
     if (unreadCount && unreadCount > 0) {
       navigator.setAppBadge(unreadCount);
@@ -144,14 +145,14 @@ self.addEventListener("push", (event) => {
       navigator.clearAppBadge();
     }
   }
-  // It's obligatory to show the notification to the user.
-  self.registration.showNotification(`${unreadCount} unread messages`);
+  // ユーザーに通知を表示することは必須
+  self.registration.showNotification(`${unreadCount} 件の未読メッセージ`);
 });
 ```
 
-## See also
+## 関連情報
 
 - [How to create an app badge](https://web.dev/patterns/web-apps/badges/)
 - [Badging for app icons](https://developer.chrome.com/docs/capabilities/web-apis/badging-api)
-- [Re-engage users with badges, notifications, and push messages](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/notifications-badges)
+- [バッジと通知を使用してユーザーを再エンゲージメントする](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps-chromium/how-to/notifications-badges)
 - [Codelab: Build a push notification server](https://web.dev/articles/push-notifications-server-codelab)
