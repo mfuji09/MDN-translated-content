@@ -1,34 +1,35 @@
 ---
-title: Share data between apps
+title: アプリ間でデータを共有する
 slug: Web/Progressive_web_apps/How_to/Share_data_between_apps
-page-type: how-to
+l10n:
+  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
 {{PWASidebar}}
 
-Application sharing is the ability of one application to pass information or data to another application on the same device. This feature is useful for users as it allows them to share information between two applications without the need for these applications to have prior knowledge of each other.
+アプリケーションの共有とは、あるアプリケーションが、同じ端末上の別のアプリケーションに情報やデータを渡す機能です。この機能により、ユーザーは、アプリケーションが相互に認識していなくても、 2 つのアプリケーション間で情報を共有することができるため、とても便利です。
 
-For example, on your mobile device, you can share photos or videos from your photo app with another application that accepts images, such as an email application. This sharing pattern is orchestrated by the operating system (OS) where the two applications are installed:
+例えば、モバイル端末では、写真アプリから、画像を受け入れる別のアプリケーション（メールアプリケーションなど）に写真や動画を共有することができます。この共有パターンは、 2 つのアプリケーションがインストールされているオペレーティングシステム (OS) によって調整されています。
 
-1. When the photo sharing is initiated by the user, the photo application prepares the data for the selected image, and hands it over to the operating system.
-2. The operating system selects the list of applications that are able to handle the shared image data and displays them to the user.
-3. Once the user selects one of the target applications, the operating system launches it with the shared image.
+1. ユーザーが写真の共有を開始すると、写真アプリケーションは、選択した画像のデータ準備を行い、それをオペレーティングシステムに渡します。
+2. オペレーティングシステムは、共有画像データを処理できるアプリケーションのリストを選択し、ユーザーに表示します。
+3. ユーザーが対象アプリケーションのいずれかを選択すると、オペレーティングシステムは共有画像を使用してそのアプリケーションを起動します。
 
-[Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) also have the ability to share information using the same OS-orchestrated pattern. PWAs can both share data and accept shared data.
+[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps) (PWA) も、同じ OS オーケストレーションパターンを使用して情報を共有する機能を備えています。PWA は、データの共有と共有データの受け入れの両方を行うことができます。
 
-When building a PWA, accepting shared data can make your PWA feel more familiar and naturally integrated into your user's devices.
+PWA を構築する場合、共有データを受け入れることで、 PWA がより親しみやすく、ユーザーの端末に自然に統合されたものになります。
 
-## Sharing data with other apps
+## 他のアプリとのデータ共有
 
-To make it possible for users to share data with other apps from your PWA, use the [Web Share API](/en-US/docs/Web/API/Web_Share_API). The Web Share API allows your app to share text, links, or files with other apps via the underlying operating system share mechanism.
+ユーザーが PWA から他のアプリとデータを共有できるようにするには、[ウェブ共有 API](/ja/docs/Web/API/Web_Share_API) を使用します。ウェブ共有 API を使用すると、アプリは基盤となるオペレーティングシステムの共有メカニズムを介して、テキスト、リンク、またはファイルを他のアプリと共有できます。
 
-To share data, use the {{domxref("navigator.share()")}} method in response to a user action, such as a button click.
+データを共有するには、ボタンクリックなどのユーザー操作に応じて、 {{domxref("navigator.share()")}} メソッドを使用します。
 
-### Checking for support
+### 対応の確認
 
-Before displaying content-sharing UI in your application, check to ensure the Web Share API feature is supported. Even the browsers that support the Web Share API don't all support sharing all types of data. Therefore, it's a good practice to use the {{domxref("navigator.canShare()")}} method first to validate whether the data you intend to share is, indeed, shareable from the browser that's running your app.
+アプリケーションにコンテンツ共有 UI を表示する前に、ウェブ共有 API 機能に対応していることを確認してください。ウェブ共有 API に対応しているブラウザーでも、すべての種類のデータを共有できるわけではありません。したがって、最初に {{domxref("navigator.canShare()")}} メソッドを使用して、共有しようとしているデータが、アプリケーションを実行しているブラウザーから実際に共有できるかどうかを検証することをお勧めします。
 
-This example shows how to check if the Web Share API is supported and if the data can be shared:
+この例では、ウェブ共有 API が対応しているかどうか、およびデータを共有できるかどうかを調べる方法を示します。
 
 ```js
 function canBrowserShareData(data) {
@@ -46,62 +47,62 @@ const sharedDataSample = {
 };
 
 if (canBrowserShareData(sharedDataSample)) {
-  // Enable the share button in the UI.
+  // UI の共有ボタンを有効にする
   renderAppSharingUI();
 } else {
-  // We can't share on this browser/operating system.
+  // このブラウザー/オペレーティングシステムでは共有が使えない
 }
 ```
 
-### Handling exceptions
+### 例外の処理
 
-The {{domxref("navigator.share()")}} method returns a {{jsxref("Promise")}} that may be rejected in cases such as when the shared data is incorrect, when the user aborts the share operation, or when the data transmission failed.
+{{domxref("navigator.share()")}} メソッドはプロミス ({{jsxref("Promise")}}) を返しますが、共有データが正しくない場合、ユーザーが共有操作を中止した場合、またはデータ送信に失敗した場合などに拒否される可能性があります。
 
-It's therefore important to catch the promise rejection in order to avoid errors in your app's JavaScript code.
+したがって、アプリの JavaScript コードでエラーを避けるためには、プロミスが拒否されたことを捕捉することが重要です。
 
 ```js
 async function shareData(data) {
   try {
     await navigator.share(data);
-    // The data was shared successfully.
+    // データの共有に成功した
   } catch (e) {
-    // The data could not be shared.
-    console.error(`Error: ${e}`);
+    // データが共有できなかった
+    console.error(`エラー: ${e}`);
   }
 }
 ```
 
-### Sharing text data
+### テキストデータの共有
 
-The following example demonstrates how to share a link and some text when a button in the app is clicked. The `canBrowserShareData` function used in the example is described in [Checking for support](#checking_for_support) and not repeated here.
+次の例は、アプリ内のボタンがクリックされたときにリンクとテキストを共有する方法を示しています。この例で使用されている `canBrowserShareData` 関数は、「[対応の確認](#対応の確認)」で説明されていますので、ここでは繰り返しません。
 
 ```js
-// Retrieve the button from the DOM. The button is hidden for now.
+// DOM からボタンを取得します。ボタンはこれで非表示になります。
 const button = document.querySelector("#share");
 
 if (canBrowserShareData({ text: "text", url: "https://example.com" })) {
-  // Show the button.
+  // ボタンを表示
   button.style.display = "inline";
 
-  // Listen for click events on the button to share data.
+  // ボタンをクリックしたイベントを待ち受けして、データを共有します。
   button.addEventListener("click", async () => {
     try {
       await navigator.share({
-        text: "An MDN article to learn how to share data between apps",
+        text: "アプリ間でデータを共有する方法を学ぶための MDN 記事",
         url: "https://developer.mozilla.org/docs/Web/Progressive_web_apps/How_to/Share_data_between_apps",
       });
 
-      console.log("The URL was successfully shared");
+      console.log("URL の共有に成功しました。");
     } catch (err) {
-      console.error(`The URL could not be shared: ${err}`);
+      console.error(`URL が共有できませんでした: ${err}`);
     }
   });
 }
 ```
 
-### Sharing files
+### ファイルの共有
 
-The following code example demonstrates how to share a file when a button in the app is clicked. The `canBrowserShareFiles` function is used to display the share button only if the browser supports sharing files.
+次のサンプルコードは、アプリ内のボタンがクリックされたときにファイルを共有する方法を示しています。 `canBrowserShareFiles` 関数は、ブラウザーがファイル共有に対応している場合にのみ共有ボタンを表示するために使用されます。
 
 ```js
 function canBrowserShareFiles() {
@@ -109,27 +110,26 @@ function canBrowserShareFiles() {
     return false;
   }
 
-  // Create some test data with a file, to check if the browser supports
-  // sharing it.
+  // ファイルで検査用のデータを作成し、ブラウザーが共有に対応しているかどうかを調べます。
   const testFile = new File(["foo"], "foo.txt", { type: "text/plain" });
   const data = { files: [testFile] };
 
   return navigator.canShare(data);
 }
 
-// Retrieve the button from the DOM. The button is hidden for now.
+// DOM からボタンを取得します。ボタンはこれで非表示になります。
 const button = document.querySelector("#share");
 
 if (canBrowserShareFiles()) {
-  // The browser supports sharing files. Show the button.
+  // このブラウザーはファイルの共有に対応しています。ボタンを表示します
   button.style.display = "inline";
 
-  // Listen for clicks on the button and share a file.
+  // ボタンがクリックされるのを待ち受けし、ファイルを共有します。
   button.addEventListener("click", async () => {
     try {
-      // Get the file to be shared. This function should return a File
-      // object, perhaps by creating it dynamically, or retrieving it
-      // from IndexedDB.
+      // 共有するファイルを取得します。
+      // この関数は、File オブジェクトを返す必要があります。
+      // これはおそらく動的に作成するか、 IndexedDB から取得します。
       const file = await getTheFileToShare();
 
       await navigator.share({
@@ -137,27 +137,27 @@ if (canBrowserShareFiles()) {
         files: [file],
       });
 
-      console.log("The file was successfully shared");
+      console.log("ファイルの共有に成功しました。");
     } catch (err) {
-      console.error(`The file could not be shared: ${err}`);
+      console.error(`ファイルの共有ができませんでした: ${err}`);
     }
   });
 }
 ```
 
-For more information, see the [sharing files example](/en-US/docs/Web/API/Navigator/share#sharing_files) on the `navigator.share()` method page.
+詳しくは、[ファイル共有の例](/ja/docs/Web/API/Navigator/share#sharing_files)を `navigator.share()` メソッドのページで参照してください。
 
-## Handling shared data from other apps
+## 他のアプリから来た共有データの処理
 
-To register your PWA as a target of other apps' shared data, use the [Web Share Target API](https://developer.chrome.com/docs/capabilities/web-apis/web-share-target) and, in particular, the [`share_target`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/share_target) web app manifest member.
+PWA を他のアプリの共有データのターゲットとして登録するには、[ウェブ共有ターゲット API](https://developer.chrome.com/docs/capabilities/web-apis/web-share-target)、具体的には [`share_target`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/share_target) ウェブアプリマニフェストメンバーを使用します。
 
-The `share_target` manifest member allows an installed PWA to be registered, at the operating system level, as a potential target for content shared by other apps. This means that when a user shares some data that's compatible with your PWA, from another app, the operating system will list your PWA alongside other typical share targets like email or messaging apps. Note that the PWA must be installed to be displayed as a potential target for receiving shared data.
+`share_target` マニフェストメンバーを使用すると、インストールされた PWA を、他のアプリが共有するコンテンツの潜在的なターゲットとして、オペレーティングシステムレベルに登録することができます。これは、ユーザーが別のアプリから PWA と互換性のあるデータを共有すると、オペレーティングシステムが、メールやメッセージングアプリなどの他の一般的な共有ターゲットの横に PWA を一覧表示することを意味します。共有データを受信する潜在的なターゲットとして表示するには、PWA がインストールされている必要があることにご注意ください。
 
-The information you provide with the `share_target` member, in your manifest file, defines which data your app can be a target for, and how the operating system should launch your app when the user selects it as the target.
+マニフェストファイルで `share_target` メンバーで指定した情報は、アプリがターゲットとなるデータ、およびユーザーがアプリをターゲットとして選択した場合にオペレーティングシステムがアプリを起動する方法を定義します。
 
-### Handling text data
+### テキストデータの処理
 
-Here is a web app manifest example using the `share_target` member:
+これは、`share_target` メンバーを使用したウェブアプリマニフェストの例です。
 
 ```json
 {
@@ -182,13 +182,13 @@ Here is a web app manifest example using the `share_target` member:
 }
 ```
 
-When your app is selected by the user to handle another apps' shared content, your app is launched and the shared content is passed to it in a similar way to that in which {{htmlelement("form")}} elements are submitted.
+ユーザーが別のアプリの共有コンテンツを処理するためにアプリを選択すると、アプリが起動し、 {{htmlelement("form")}} 要素が送信されるのと同様の方法で、共有コンテンツがアプリに渡されます。
 
-In the previous web app manifest code example, when the ChattyBox app is selected as a target, it is launched by making an HTTP [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request at the `/share-handler` URL, with the shared data passed as request parameters named `description` and `link`.
+先のウェブアプリマニフェストのサンプルコードでは、 ChattyBox アプリがターゲットとして選択されると、 HTTP の [`GET`](/ja/docs/Web/HTTP/Reference/Methods/GET) リクエストが `/share-handler` の URL で発行されてアプリが起動し、共有データが `description` および `link` という名前付きリクエスト引数として渡されます。
 
-The `GET` request will look like this: `/shared-handler?description=...&link=...`.
+`GET` リクエストは、 `/shared-handler?description=...&link=...` のようになります。
 
-Your app's main JavaScript code can then retrieve the shared data by using the [URLSearchParams](/en-US/docs/Web/API/URLSearchParams) interface:
+アプリのメインの JavaScript コードは、 [URLSearchParams](/ja/docs/Web/API/URLSearchParams) インターフェイスを使用して、共有データを取得することができます。
 
 ```js
 const url = new URL(document.location);
@@ -196,13 +196,13 @@ const sharedDescription = url.searchParams.get("description");
 const sharedLink = url.searchParams.get("link");
 ```
 
-For more information, see the example [Receive share data using GET](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/share_target#receiving_share_data_using_get) on the `share_target` web app manifest member page.
+詳細については、 `share_target` ウェブアプリマニフェストメンバーのページにある「[GET を使用して共有データを受信する](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/share_target#共有されたデータを_get_で受け取る)」の例をご覧ください。
 
-### Handling shared files
+### 共有されたファイルの処理
 
-In the previous example, text data was handled as a `GET` request. However, handling files requires the use of a [`POST`](/en-US/docs/Web/HTTP/Methods/POST) request with a `multipart/form-data` [encoding type](/en-US/docs/Web/API/HTMLFormElement/enctype).
+前の例では、テキストデータは `GET` リクエストとして処理されました。しかし、ファイルを処理するには、 [`POST`](/ja/docs/Web/HTTP/Reference/Methods/POST) リクエストを `multipart/form-data` [エンコード方式](/ja/docs/Web/API/HTMLFormElement/enctype)を使用する必要があります。
 
-The following code snippet shows how a PWA can be configured to accept different types of shared files:
+次のコードスニペットは、 PWA がさまざまな種類の共有ファイルを受け入れるように構成する方法を示しています。
 
 ```json
 {
@@ -240,17 +240,17 @@ The following code snippet shows how a PWA can be configured to accept different
 }
 ```
 
-As this example shows, each file object in the `files` property must have a `name` property and an `accept` property. The `accept` property must specify the accepted [MIME types](/en-US/docs/Web/HTTP/MIME_types) or file extensions.
+この例に示すように、 `files` プロパティの各ファイルオブジェクトは、 `name` プロパティと `accept` プロパティを保有している必要があります。 `accept` プロパティは、受け入れられる [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)またはファイル拡張子を指定する必要があります。
 
-When the app is selected by the user to handle a shared file (or files), the app is launched with a `POST` request at the `/share-file-handler` URL, with encoded form data.
+ユーザーが共有ファイル（または複数のファイル）を処理するためにアプリを選択すると、エンコードされたフォームデータとともに、 `POST` リクエストが `/share-file-handler` URL でアプリに送信され、アプリが起動します。
 
-Because this is a `POST` request, your app's main JavaScript code can't access the form data directly. You can handle the submitted files in your server-side code, by receiving them at the `/share-file-handler` URL end point. However, for a better user experience that works offline, you can handle the files in your service worker code with a [`fetch` event handler](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event), as shown here:
+これは `POST` リクエストであるため、アプリのメイン JavaScript コードはフォームデータに直接アクセスできません。送信されたファイルは、 `/share-file-handler` の URL エンドポイントで受信して、サーバー側のコードで処理できます。ただし、オフラインでも動作するより優れた使い勝手を実現するには、次のように、 [`fetch` イベントハンドラー](/ja/docs/Web/API/ServiceWorkerGlobalScope/fetch_event)を使用してサービスワーカーコードでファイルを処理します。
 
 ```js
 // service-worker.js
 
 self.addEventListener("fetch", (event) => {
-  // Only use this event listener for POST requests sent to /share-file-handler.
+  // このイベントリスナーは、 POST リクエストが /share-file-handler に送信された時だけ使用します。
   const url = new URL(event.request.url);
   if (
     event.request.method !== "POST" ||
@@ -261,32 +261,32 @@ self.addEventListener("fetch", (event) => {
 
   event.respondWith(
     (async () => {
-      // Get the data from the submitted form.
+      // 送信されたフォームからデータを取得します。
       const formData = await event.request.formData();
 
-      // Get the submitted files.
+      // 送信されたファイルを取得します。
       const textFiles = formData.getAll("textFiles");
       const htmlFiles = formData.getAll("htmlFiles");
       const imageFiles = formData.getAll("images");
 
-      // Send the files to the frontend app.
+      // ファイルをフロントエンドアプリに送信してください。
       sendFilesToFrontend(textFiles, htmlFiles, imageFiles);
 
-      // Redirect the user to a URL that shows the imported files.
+      // インポートされたファイルを表示する URL にユーザーをリダイレクトします。
       return Response.redirect("/display-new-files", 303);
     })(),
   );
 });
 ```
 
-In this code example, the shared files are extracted from the form data and the user is redirected to a different page. It's up to you, using the code in your service worker, to handle the extracted files as you want. For example, you can send them to your app's main JavaScript code using the {{domxref("Worker.postMessage()")}} method or store them in an [Indexed DB](/en-US/docs/Web/API/IndexedDB_API) database which can be accessed both by your service worker and app's main JavaScript code.
+このサンプルコードでは、共有ファイルがフォームデータから抽出され、ユーザーは別のページにリダイレクトされます。抽出されたファイルの処理方法は、サービスワーカーのコードを使用して、ご自由に決定してください。たとえば、 {{domxref("Worker.postMessage()")}} メソッドを使用してアプリのメイン JavaScript コードに送信したり、サービスワーカーとアプリのメイン JavaScript コードの両方からアクセスできる [Indexed DB](/ja/docs/Web/API/IndexedDB_API) データベースに保存したりすることができます。
 
-For more information, see the [receiving shared files](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/share_target#receiving_shared_files) example on the `share_target` web app manifest member page.
+詳細については、 `share_target` ウェブアプリのマニフェストメンバーページにある、[共有ファイルの受信](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/share_target#receiving_shared_files)の例をご覧ください。
 
-## See also
+## 関連情報
 
-- [Web Share API](/en-US/docs/Web/API/Web_Share_API)
-- [`share_target` manifest member](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/share_target)
-- [Integrate with the OS sharing UI with the Web Share API](https://web.dev/articles/web-share) on web.dev
-- [Receiving shared data with the Web Share Target API](https://developer.chrome.com/docs/capabilities/web-apis/web-share-target) on developer.chrome.com
-- [Share content with other apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/share) on microsoft.com
+- [ウェブ共有 API](/ja/docs/Web/API/Web_Share_API)
+- [`share_target` マニフェストメンバー](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/share_target)
+- [Integrate with the OS sharing UI with the Web Share API](https://web.dev/articles/web-share) (web.dev)
+- [Web Share Target API を使用して共有データを受信する](https://developer.chrome.com/docs/capabilities/web-apis/web-share-target) (developer.chrome.com)
+- [他のアプリとコンテンツを共有する](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps-chromium/how-to/share) (microsoft.com)
