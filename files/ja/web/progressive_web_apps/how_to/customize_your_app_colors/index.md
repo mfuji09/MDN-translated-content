@@ -1,24 +1,25 @@
 ---
-title: Customize your app's theme and background colors
+title: アプリのテーマと背景色をカスタマイズする
 slug: Web/Progressive_web_apps/How_to/Customize_your_app_colors
-page-type: how-to
+l10n:
+  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
 {{PWASidebar}}
 
-When building [Progressive Web Apps (PWAs)](/en-US/docs/Web/Progressive_web_apps), it's important to not only consider the appearance of your app's content, but also the way the app appears on the user's device once the app is installed.
+[プログレッシブウェブアプリ (PWA)](/ja/docs/Web/Progressive_web_apps) を構築する際には、アプリのコンテンツの外観だけでなく、アプリがインストールされた後のユーザーの端末上でのアプリの表示方法も考慮することが重要です。
 
-One way to customize the window in which your app appears is by using the [`theme_color`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/theme_color) and [`background_color`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/background_color) [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) members.
+アプリが表示されるウィンドウをカスタマイズするには、 [`theme_color`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/theme_color) と [`background_color`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/background_color) という[ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)のメンバーを使用します。
 
-By defining the `theme_color` and `background_color` members in your PWA manifest, you can create a more polished experience for your users. These small details can help make your PWA feel more like an OS-native app, and more familiar to your users.
+PWA マニフェストで `theme_color` と `background_color` メンバーを定義することで、ユーザーにより洗練された体験を提供できます。これらの小さな詳細が、 PWA を OS ネイティブアプリのような感覚に近づけ、ユーザーにとってより親しみやすいものにするのに役立ちます。
 
-## Customize the app window background color
+## アプリウィンドウの背景色のカスタマイズ
 
-The [`background_color`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/background_color) manifest member defines the color that appears in the application window before your app's stylesheets have loaded.
+[`background_color`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/background_color) マニフェストメンバーは、アプリのスタイルシートが読み込まれる前にアプリケーションウィンドウに表示される色を定義します。
 
-Because this color appears before your stylesheets have loaded, set its value to the same color value as the `background-color` CSS property in your application's stylesheet. This will ensure a smooth visual transition between launching the web application and loading its content.
+この色はスタイルシートが読み込まれる前に表示されるため、その値をアプリケーションのスタイルシート内の `background-color` プロパティと同じ色値に設定してください。これにより、ウェブアプリケーションの起動とコンテンツの読み込みの間でスムーズな視覚的な移行が確保されます。
 
-The value can be any valid CSS [`<color>`](/en-US/docs/Web/CSS/color_value). In this web app manifest file example, the application's background color is set to the [named color](/en-US/docs/Web/CSS/named-color) `peachpuff`. :
+値は有効な CSS の [`<color>`](/ja/docs/Web/CSS/color_value) です。このウェブアプリのマニフェストファイルの例では、アプリケーションの背景色は[名前付き色](/ja/docs/Web/CSS/named-color)である `peachpuff` に設定されています。
 
 ```json
 {
@@ -36,7 +37,7 @@ The value can be any valid CSS [`<color>`](/en-US/docs/Web/CSS/color_value). In 
 }
 ```
 
-The application also loads a stylesheet that applies the same color to the background of the body element:
+このアプリケーションは、 body 要素の背景色に同じ色を適用するスタイルシートも読み込みます。
 
 ```css
 body {
@@ -44,22 +45,22 @@ body {
 }
 ```
 
-The following screenshot shows the above code in action. The PWA that uses this code is installed on Windows, and the screenshot shows what the application window looks like before the content of the app has loaded:
+次のスクリーンショットは、上記のコードが動作している様子を示しています。このコードを使用する PWA は Windows にインストールされており、スクリーンショットはアプリの内容が読み込まれる前のアプリケーションウィンドウの表示状態を示しています。
 
-![The app window, on Windows, showing the peachpuff background color](./background-color-windows.png)
+![Windows 上のアプリウィンドウに、 peachpuff の背景色が表示されています。](./background-color-windows.png)
 
-## Define a theme color
+## テーマ色の定義
 
-The [`theme_color`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/theme_color) member in your PWA manifest defines the default color of operating system and browser UI elements used in the application.
+PWA マニフェスト内の [`theme_color`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/theme_color) メンバーは、アプリケーション内で使用されるオペレーティングシステムとブラウザーの UI 要素の既定の色を定義します。
 
-Different devices, operating systems, and browsers apply the `theme_color` member differently. For example:
+端末、オペレーティングシステム、ブラウザーが異なると、`theme_color` メンバーが適用される方法も代わります。
 
-- On mobile devices, the theme color is applied to the status bar.
-- On desktop operating systems, the theme color is used to customize the title bar of your [standalone app window](/en-US/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app).
+- モバイル端末では、テーマカラーがステータスバーに適用されます。
+- デスクトップオペレーティングシステムでは、テーマカラーは[スタンドアロンアプリウィンドウ](/ja/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app)のタイトルバーをカスタマイズするために使用されます。
 
-Choose a `theme_color` that complements the overall design and branding of your PWA and works well across a variety of devices and platforms to ensure a consistent user experience.
+`theme_color` は、 PWA の全体的なデザインとブランドイメージに調和し、さまざまな端末やプラットフォームで一貫したユーザー体験を提供できるように、適切に選択してください。
 
-As with `background_color`, any [`<color>`](/en-US/docs/Web/CSS/color_value) value is valid. In this web app manifest file example, the `theme_color` is set to the `rgb(255 218 185)`, the [RGB](/en-US/docs/Web/CSS/color_value/rgb) equivalent of `peachpuff`:
+`background_color` と同様に、任意の [`<color>`](/ja/docs/Web/CSS/color_value) 値が有効です。このウェブアプリマニフェストファイルの例では、 `theme_color` は `rgb(255 218 185)` に設定されており、これは `peachpuff` の [RGB](/ja/docs/Web/CSS/color_value/rgb) 相当値です。
 
 ```json
 {
@@ -78,20 +79,20 @@ As with `background_color`, any [`<color>`](/en-US/docs/Web/CSS/color_value) val
 }
 ```
 
-The following screenshot shows the above code in action when the app is installed on Windows, where the `theme_color` manifest member is used as the color of the title bar:
+次のスクリーンショットは、アプリが Windows にインストールされた際に上記のコードが動作する様子です。この際、 `theme_color` マニフェストメンバーがタイトルバーの色として使用されています。
 
-![The app window, on Windows, showing the theme color in the title bar](./background-theme-colors-windows.png)
+![Windows でのアプリウィンドウのタイトルバーにテーマカラーが表示されています。](./background-theme-colors-windows.png)
 
-### Relationship with the `theme-color` meta element value
+### `theme-color` のメタ要素の値との関係
 
-The [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name/theme-color) value for the [`name`](/en-US/docs/Web/HTML/Element/meta/name) attribute of the {{htmlelement("meta")}} HTML element can be used to define a theme color per webpage. This is different from the `theme_color` manifest member which you define only once, globally, for your app.
+[`theme-color`](/ja/docs/Web/HTML/Reference/Elements/meta/name/theme-color) 属性値は、 [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性を持つ {{htmlelement("meta")}} 要素を使用して、各ウェブページごとのテーマカラーを定義できます。これは、アプリ全体で一度だけグローバルに定義する`theme_color` マニフェストメンバーとは異なります。
 
-If both are set, the `theme-color` meta element value overrides the `theme_color` manifest member. This lets you define a global color for your app and override it on specific pages.
+両方が設定されている場合、`theme-color` メタ要素の値が `theme_color` マニフェストメンバーの値を上書きします。これにより、アプリ全体でグローバルな色を定義し、特定のページで上書きすることが可能です。
 
-Note that on some browsers, like Safari on macOS and Chrome on Android, the `theme-color` meta element value is used to style the browser UI too.
+一部のブラウザー、たとえば macOS の Safari や Android の Chrome などでは、 `theme-color` メタ要素の値がブラウザーの UI のスタイル設定にも使用されます。
 
-## See also
+## 関連情報
 
-- [Web App Manifests](/en-US/docs/Web/Progressive_web_apps/Manifest).
+- [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)
 - [Meta Theme Color and Trickery on css-tricks.com](https://css-tricks.com/meta-theme-color-and-trickery/) (2021)
 - [Recommended fields on web.dev](https://web.dev/learn/pwa/web-app-manifest#recommended_fields)
