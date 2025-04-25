@@ -1,20 +1,21 @@
 ---
-title: Create a standalone app
+title: スタンドアロンアプリを作成する
 slug: Web/Progressive_web_apps/How_to/Create_a_standalone_app
-page-type: how-to
+l10n:
+  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
 {{PWASidebar}}
 
-[Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) that are installed on a user's device can define how they appear when the user launches them. They can choose to be displayed in a web browser, just like websites, or have their own dedicated windows similar to how OS-native applications work.
+[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps) (PWA) は、ユーザーの端末にインストールするされ、ユーザーが起動するときの表示方法を定義することができます。ウェブサイトと同じようにウェブブラウザーで表示するか、 OS ネイティブのアプリケーションと同じように専用のウィンドウを表示するかを選択できます。
 
-Users tend to have specific expectations of how installed applications behave on their devices. One of these expectations is that applications have their own dedicated windows.
+ユーザーは、インストールされたアプリケーションが端末上でどのように動作するかについて、特定の期待を持っている傾向があります。そのひとつが、アプリケーションに専用のウィンドウが用意されていることです。
 
-By using the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest)'s [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) member, you can define whether the installed PWA is displayed in a browser or has its own dedicated window when the PWA is launched from the user's device.
+[ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)の [`display`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/display) メンバーを使用することで、インストールされた PWA がユーザーの端末で起動されたときに、ブラウザーで表示されるか、独自の専用のウインドウで表示されるかを定義することができます。
 
-## Use the standalone display mode
+## standalone 画面モード
 
-To use a standalone display mode and give your PWA its own dedicated window, add the [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) member to your [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) and set its value to `standalone`:
+standalone 画面モードを使用して、 PWA を独自の専用のウィンドウを与えるには、 [`display`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/display) メンバーを[ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)に設定し、値を `standalone` に設定します。
 
 ```json
 {
@@ -31,23 +32,23 @@ To use a standalone display mode and give your PWA its own dedicated window, add
 }
 ```
 
-Note that there are other display modes available, such as `browser`, `minimal-ui`, and `fullscreen`. The display mode you choose changes how much of the browser user interface is shown to the user, from showing all of it, to having your own dedicated window. To learn more about all the available display mode and about how they fallback when one is not supported, see the documentation about the [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) member.
+なお、表示モードは他にも `browser`, `minimal-ui`, `fullscreen` などがあります。選択した表示モードによって、ブラウザーのユーザーインターフェイスがユーザーに表示される範囲が変わります。利用可能なすべての表示モードと、対応していない場合にどのように代替されるかについては、 [`display`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/display) メンバーに関するドキュメントを参照してください。
 
-## Best practices
+## ベストプラクティス
 
-### Handle multi-page navigation
+### 複数ページナビゲーションの扱い
 
-If your application is built using several navigable HTML pages, make sure to include UI elements for controlling navigation within your application.
+ナビゲーション可能な複数の HTML ページを使用してアプリケーションを構築する場合は、アプリケーション内のナビゲーションを制御するための UI 要素を含めるようにしてください。
 
-If you don't have your own navigation elements, use the `minimal-ui` display mode to make sure users can still go between pages using previous and next buttons rendered by the browser in your app's title bar.
+独自のナビゲーション要素を持っていない場合は、 `minimal-ui` 表示モードを使用して、ユーザーがアプリのタイトルバーにあるブラウザーによってレンダリングされた「前へ」と「次へ」のボタンを使ってページ間を移動できるようにしてください。
 
-## Customize your app depending on the display mode
+## 表示モードに応じてアプリをカスタマイズ
 
-When you define a display mode other than `browser` in your web app manifest, it only applies when the application is installed. Like any other webpage, a manifest's `display` member has no effect when the PWA is not installed. You can check the display mode at runtime to detect if the app is installed or not.
+ウェブアプリのマニフェストで `browser` 以外の表示モードを定義した場合、それはアプリケーションがインストールされているときにのみ適用されます。他のウェブページと同様に、マニフェストの `display` メンバーは、 PWA がインストールされていないときには何の効果もありません。アプリがインストールされているかどうかを検出するために、実行時に表示モードをチェックすることができます。
 
-Using the CSS {{cssxref("@media/display-mode", "display-mode")}} media feature or the {{domxref("Window.matchMedia()")}} JavaScript feature, you can selectively apply CSS styles or run JavaScript code in your app based on its display mode.
+CSS の {{cssxref("@media/display-mode", "display-mode")}} メディア機能または JavaScript の {{domxref("Window.matchMedia()")}} 機能を使用すると、表示モードに基づいて選択的に CSS スタイルを適用したり、アプリで JavaScript コードを実行したりできます。
 
-Here is an example showing how to use the {{cssxref("@media")}} CSS at-rule to only reveal an element on a webpage when the `standalone` display mode is enabled:
+以下は、 CSS の {{cssxref("@media")}} アットルールを使用して、 `standalone` 表示モードが有効な場合にのみウェブページ上の要素を表示する方法を示す例です。
 
 ```css
 .app-button {
@@ -61,9 +62,9 @@ Here is an example showing how to use the {{cssxref("@media")}} CSS at-rule to o
 }
 ```
 
-In this example, the `.app-button` element will be hidden by default unless the display mode is set to `standalone`, which happens if the `display` manifest member was set to `standalone` and the app is installed on the user's device.
+この例では、`.app-button` 要素は、表示モードが `standalone` に設定されない限り、既定で非表示になります。これは、 `display` マニフェストメンバーが `standalone` に設定され、アプリがユーザーの端末にインストールされている場合に発生します。
 
-Here is another example showing how to use the {{domxref("window.matchMedia()")}} method to detect if the `standalone` display mode is enabled:
+次の例は、 {{domxref("window.matchMedia()")}} メソッドを使って、 `standalone` 表示モードが有効かどうかを検出する方法を示す別の例です。
 
 ```js
 function isStandaloneApp() {
@@ -71,8 +72,8 @@ function isStandaloneApp() {
 }
 ```
 
-## See also
+## 関連情報
 
-- [Web App Manifests](/en-US/docs/Web/Progressive_web_apps/Manifest).
+- [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest).
 - [Display modes](https://web.dev/learn/pwa/app-design/#display_modes).
-- Customize your app's title bar on desktop operating systems by using the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API).
+- [ウィンドウコントロールオーバーレイ API](/ja/docs/Web/API/Window_Controls_Overlay_API) を使用して、デスクトップ OS 上のアプリのタイトルバーをカスタマイズできます。

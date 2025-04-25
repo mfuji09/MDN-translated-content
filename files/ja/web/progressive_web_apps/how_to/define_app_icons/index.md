@@ -1,48 +1,49 @@
 ---
-title: Define your app icons
+title: アプリのアイコンを定義する
 slug: Web/Progressive_web_apps/How_to/Define_app_icons
-page-type: how-to
+l10n:
+  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
 {{PWASidebar}}
 
-[Progressive Web Apps (PWAs)](/en-US/docs/Web/Progressive_web_apps) can be installed on devices just like other apps. Once a PWA is installed, its app icon appears on the device's home screen, dock, taskbar, or any other place where operating system native apps normally appear.
+[プログレッシブウェブアプリ (PWA)](/ja/docs/Web/Progressive_web_apps) は、他のアプリと同じように端末にインストールできます。PWA をインストールすると、そのアプリアイコンが端末のホーム画面、ドック、タスクバー、またはオペレーティングシステムのネイティブアプリが通常表示される他の場所に表示されます。
 
-For example, on Windows, the taskbar can contain icons for both native and PWA apps side by side:
+例えば、 Windows では、タスクバーにネイティブアプリと PWA アプリのアイコンを並べて表示できます。
 
-![The taskbar on Windows, showing the usual Windows icons, and then icons for Firefox and Word, which are native apps, but also icons for Spotify and PWAmp, which are PWAs](./windows-taskbar.png)
+![Windows のタスクバーには、通常の Windows アイコンが表示され、その下に Firefox と Word のアイコン（ネイティブアプリ）が表示されます。さらに、 PWA である Spotify と PWAmp のアイコンも表示されています。](./windows-taskbar.png)
 
-When creating a PWA, you can define your own set of icons to be used when the app is installed on a device. This article explains how to define your own app icons, which icon sizes to create, and how to make your icons support masking.
+PWA を作成する際、端末にアプリがインストールされた際に使用される独自のアイコンのセットを定義できます。この記事では、独自のアプリアイコンを定義する方法、作成するアイコンのサイズ、およびアイコンをマスク機能に対応させる方法について説明します。
 
 > [!NOTE]
-> The PWA app icon is not the same as the {{glossary("favicon")}} image, which is displayed in places like the browser's address bar. PWAs can have both a favicon and an app icon. To learn more about favicons, see [Adding custom icons to your site](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_custom_icons_to_your_site).
+> PWA のアプリアイコンは、ブラウザーのアドレスバーなどに表示される{{glossary("favicon", "ファビコン")}}画像とは異なります。 PWA は、ファビコンとアプリアイコンの両方を設定できます。ファビコンについて詳しくは、「[サイトに独自のアイコンを追加](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#サイトに自分の好きなアイコンを追加)」を参照してください。
 
-## Design your icon
+## アイコンをデザインする
 
-The first step in defining your app icon is to design it.
+アプリアイコンを定義する最初のステップは、そのデザインを作成することです。
 
-Most users recognize applications by their icons. Icons appear in many places through the operating system, including the home screen, taskbar, app launcher, or setting panels. Make sure your users can easily find your app by making its icon both visually appealing, and representative of your application.
+ほとんどのユーザーは、アプリケーションをアイコンで認識します。アイコンは、ホーム画面、タスクバー、アプリランチャー、設定パネルなど、オペレーティングシステム内のさまざまな場所に表示されます。ユーザーがアプリケーションを簡単に探せるように、アイコンを視覚的に魅力的で、かつアプリケーションを適切に表すものにするようにしてください。
 
-The image should have a transparent background so it can be displayed on a variety of backgrounds. It should be at least 1024x1024 pixels, or scalable to that size, as this is the largest size your icon may be displayed at. You may also want to create icon versions with fewer details, to be used in places where the icon is displayed at smaller sizes.
+画像の背景は透明にしましょう。これにより、さまざまな背景の上に表示することができます。サイズは 1024x1024 ピクセル以上、またはそのサイズに拡大可能なものにしましょう。これは、アイコンが最大で表示されるサイズです。また、アイコンが小さなサイズで表示される場合に使用するため、詳細を省いたバージョンを作成することをおすすめします。
 
-Designing your icon as an SVG file is a good idea, as this will allow it to be scaled to any size without loss of quality.
+アイコンを SVG ファイルでデザインするのもいいでしょう。そうすれば、品質を損なうことなく任意のサイズに拡大縮小することが可能です。
 
-## Reference your icons in the web app manifest
+## アイコンをウェブアプリマニフェストから参照する
 
-Use the [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) web app manifest member to define a set of icons for your PWA.
+PWA 用のアイコンセットを定義するには、ウェブアプリマニフェストの [`icons`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/icons) セクションを使用します。
 
-As described in [Create the necessary icon sizes](#create_the_necessary_icon_sizes), you should create multiple versions of your icon to ensure it appears correctly in all the places where it's used. This is why the `icons` member is an array of objects, each of which represents an icon, with its own size, type, and purpose. Each icon object has the following properties:
+「[必要なサイズのアイコンを作成する](#必要なサイズのアイコンを作成する)」で説明しますが、アイコンが使用されるすべての場所で正しく表示されるように、複数のバージョンのアイコンを作成する必要があります。このため、 `icons` メンバーは、それぞれ独自のサイズ、タイプ、目的を持つアイコンを表すオブジェクトの配列になっています。各アイコンオブジェクトには、次のプロパティがあります。
 
 - `src`
-  - : The URL of the icon image file.
+  - : アイコン画像ファイルの URL。
 - `sizes`
-  - : The sizes the icon can be used for.
+  - : このアイコンを使うサイズ。
 - `type`
-  - : The {{Glossary("MIME type")}} of the image file which the operating system can use to quickly ignore images it does not support.
+  - : 画像ファイルの {{Glossary("MIME type", "MIME タイプ")}}。これは、オペレーティングシステムが、対応していない画像を迅速に無視するために使用されます。
 - `purpose`
-  - : The OS-specific purpose of the image.
+  - : この画像の OS 固有の使用目的。
 
-For example, the following web app manifest defines five PNG icons, each with a different size:
+例えば、次のウェブアプリマニフェストでは、サイズが異なる 5 つの PNG アイコンが定義されています。
 
 ```json
 {
@@ -79,21 +80,21 @@ For example, the following web app manifest defines five PNG icons, each with a 
 }
 ```
 
-## Create the necessary icon sizes
+## 必要なサイズのアイコンを作成する
 
-Various operating systems use different icon sizes in different places and for different device capabilities. It's important to create multiple versions of your icon so it appears correctly in all the places where it's used.
+多くのオペレーティングシステムでは、場所や機器の能力が異なると、異なるサイズのアイコンを使用します。アイコンを正しく表示するため、使用されるすべての場所で適切に表示されるように、複数のバージョンを作成することが重要です。
 
-For example, Windows can display your app icon as a 44x44 pixels image in the taskbar, or as a 150x150 pixels image in the start menu. Use the links below for more information about the icon sizes used by different operating systems and tips for creating effective icons:
+例えば、 Windows では、タスクバーにアプリアイコンを 44x44 ピクセルの画像として表示したり、スタートメニューに 150x150 ピクセルの画像として表示したりできます。異なるオペレーティングシステムで利用されるアイコンのサイズに関する詳細情報や、効果的なアイコンの作成に関するヒントについては、以下のリンクを参照してください。
 
-- For Windows, see [Define icons and a theme color](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/icon-theme-color) on learn.microsoft.com.
-- For Android, see [Google Play icon design specifications](https://developer.android.com/distribute/google-play/resources/icon-design-specifications) on developer.android.com.
-- For iOS and macOS, see [App icons](https://developer.apple.com/design/human-interface-guidelines/app-icons#App-icon-sizes) on developer.apple.com.
+- Windows については、[アイコンとテーマの色を定義する](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps-chromium/how-to/icon-theme-color) (learn.microsoft.com) を参照してください。
+- Android の場合、 [Google Play アイコンのデザイン仕様](https://developer.android.com/distribute/google-play/resources/icon-design-specifications) (developer.android.com) を参照してください。
+- iOS や macOS については、 [App icons](https://developer.apple.com/design/human-interface-guidelines/app-icons#App-icon-sizes) (developer.apple.com) を参照してください。
 
-The sizes at which your icon is displayed depend on the operating system and may change over time. It's best to test your icon on all the devices and operating systems you want to support, and generate the sizes and image types that lead to the best results. You can also use a tool like [PWA Image Generator](https://www.pwabuilder.com/imageGenerator) to generate the necessary icon sizes for you from a single high-definition image.
+アイコンの表示サイズは、オペレーティングシステムによって異なり、時間経過とともに変更される場合があります。対応するすべての端末とオペレーティングシステムでアイコンをテストし、最適な結果を得るためのサイズと画像形式を生成することをおすすめします。また、 [PWA Image Generator](https://www.pwabuilder.com/imageGenerator) のようなツールを使用すると、単一の高解像度画像から必要なサイズのアイコンを生成できます。
 
-Note that some operating systems support [SVG](/en-US/docs/Web/SVG) icons which can help reduce the number of images you need to create since SVG can be scaled to any size automatically. If your SVG icon doesn't scale down to small sizes nicely, creating additional icons with fewer details and less complexity may be necessary. To support all OSs and small sizes, create PNG versions of your icon as well.
+一部のオペレーティングシステムでは、 [SVG](/ja/docs/Web/SVG) アイコンが対応しています。 SVG は自動的に任意のサイズに拡大縮小できるため、作成する必要のある画像の数を削減できます。ただし、 SVG アイコンが小さなサイズに適切に縮小されない場合は、細部を省略し、簡略化したアイコンを追加で作成する必要がある場合があります。すべてのオペレーティングシステムと小さなサイズに対応するため、アイコンの PNG バージョンも作成してください。
 
-The following web app manifest example uses a WebP image for the small icon, an ICO image for medium size icons, and a scalable SVG image for higher resolution icons:
+以下のウェブアプリ マニフェストの例では、小さなアイコンに WebP 画像、中サイズのアイコンに ICO 画像、高解像度アイコンに拡大縮小可能な SVG 画像を使用しています。
 
 ```json
 {
@@ -118,19 +119,19 @@ The following web app manifest example uses a WebP image for the small icon, an 
 }
 ```
 
-Learn more about how to reference the various icon sizes in [Reference your icons in the web app manifest](#reference_your_icons_in_the_web_app_manifest).
+ウェブアプリの[マニフェストでアイコンを参照する方法](#アイコンをウェブアプリマニフェストから参照する)について、詳細はこちらをご覧ください。
 
-## Support masking
+## マスクの対応
 
-Depending on the operating system and the device capabilities, a mask may be applied to your icon to match a particular shape. Maskable icons are adaptive icons that can be displayed in a variety of shapes that operating systems provide. For example, on Android, app icons can have a circular mask.
+オペレーティングシステムと端末の機能に応じて、アイコンにマスクが適用され、特定の形状に合わせることができます。マスク可能なアイコンは、オペレーティングシステムが提供するさまざまな形状で表示できるアダプティブアイコンです。例えば、 Android では、アプリアイコンに円形のマスクを適用できます。
 
-Your PWA app icon should specifically support masking to look well integrated with operating systems that apply masks. Icons that do not support masking may appear cropped or smaller than expected. On Android, non-maskable icons are centered within the circular mask and given a white background, which may not look good with your icon.
+PWA アプリのアイコンは、マスクに対応している必要があります。これにより、マスクを採用しているオペレーティングシステムでは、統合された見た目を実現できます。マスクに対応していないアイコンは、切り取られたり、予想より小さく表示されたりする可能性があります。 Android では、マスク非対応のアイコンが円形のマスクの中心に配置され、白い背景が適用されます。これにより、アイコンの見た目が不自然になる可能性があります。
 
-The following image illustrates the difference between a maskable and a non-maskable icon on Android:
+以下の画像は、 Android におけるマスク可能なアイコンとマスク不可能なアイコンの違いを説明しています。
 
-![A non-maskable icon on the left, as a small square within the app icon circle. A maskable icon on the right, filling in the entire app icon circle](./maskable-icon-comparison.png)
+![左側にマスク不可のアイコンを、アプリアイコンの円形領域内に小さな四角形として表示します。右側にマスク可能なアイコンを、アプリアイコンの円形領域全体を埋めるように表示します。](./maskable-icon-comparison.png)
 
-To start making your app icon maskable, use the `purpose` property in the icon objects of your web app manifest, and set its value to `maskable`. For example:
+アプリアイコンをマスク可能にするには、ウェブアプリマニフェストのアイコンオブジェクト内の `purpose` プロパティを使用し、その値を `maskable` に設定します。例えば、
 
 ```json
 {
@@ -145,22 +146,22 @@ To start making your app icon maskable, use the `purpose` property in the icon o
 }
 ```
 
-Using the `purpose` property is just the last step in making your icon maskable. You need to start by making sure your icon looks well integrated with the host operating system by ensuring the important parts of the icon appear well within the mask's _safe zone_.
+`purpose` プロパティを使用することは、アイコンをマスク可能にするための最後のステップです。まず最初に、アイコンがホストオペレーティングシステムとよく統合されていることを確認する必要があります。そのためには、アイコンの重要な部分がマスクの「安全領域」内に適切に表示されるようにする必要があります。
 
-The safe zone is the area that's guaranteed to always be visible when the mask is applied and is defined as a circle which diameter is 80% of the icon's minimum dimension.
+安全領域は、マスクを適用した際に常に表示されることが保証された領域であり、アイコンの最小寸法（最小幅または最小高さ）の 80% を直径とする円として定義されます。
 
-![Illustration of the safe area within a maskable icon](./maskable-icon-safe-area.png)
+![マスク可能なアイコンの中のセーフゾーンの説明](./maskable-icon-safe-area.png)
 
-For example, if your icon is a square, make sure that the square is entirely visible within the safe zone and that its corners are not cut off.
+例えば、アイコンが正方形の場合、その正方形が安全領域内に完全に表示され、角が切れないようにしてください。
 
-Finally, give your maskable icon an opaque background color to fill the entire icon area.
+最後に、マスク可能なアイコンに不透明な背景色を適用し、アイコン領域全体を塗りつぶします。
 
-You can also use tools like [Maskable.app](https://maskable.app/) to preview how your icon will look when masked on different operating systems.
+[Maskable.app](https://maskable.app/) のようなツールを使用すると、様々なオペレーティングシステムでマスクされた際のアイコンの表示を確認できます。
 
-## See also
+## 関連情報
 
-- [`icons` manifest member](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons)
-- [App design](https://web.dev/learn/pwa/app-design#the_icon) on web.dev
-- [Adaptive icon support in PWAs with maskable icons](https://web.dev/articles/maskable-icon) on web.dev
-- [Define icons and a theme color](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/icon-theme-color) on microsoft.com
-- [PWA Image Generator](https://www.pwabuilder.com/imageGenerator) on pwabuilder.com
+- [`icons` マニフェストメンバー](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/icons)
+- [App design](https://web.dev/learn/pwa/app-design#the_icon) (web.dev)
+- [Adaptive icon support in PWAs with maskable icons](https://web.dev/articles/maskable-icon) (web.dev)
+- [アイコンとテーマの色を定義する](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps-chromium/how-to/icon-theme-color) (microsoft.com)
+- [PWA Image Generator](https://www.pwabuilder.com/imageGenerator) (pwabuilder.com)
