@@ -22,19 +22,19 @@ SVG ソフトウェアが対応する必要がある画像形式は {{glossary("
 
 - {{SVGAttr("x")}}
   - : 原点から見た画像の水平位置です。
-    _値の型_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _既定値_: `0`; _アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("y")}}
   - : 原点から見た画像の垂直位置です。
-    _値の型_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _既定値_: `0`; _アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("width")}}
   - : 画像が描画される幅です。 HTML の `<img>` とは異なり、この属性は必須です。
-    _値の型_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _既定値_: `auto`; _アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); _既定値_: `auto`; _アニメーション_: **可**
 - {{SVGAttr("height")}}
   - : 画像が描画される高さです。 HTML の `<img>` とは異なり、この属性は必須です。
-    _値の型_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _既定値_: `auto`; _アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); _既定値_: `auto`; _アニメーション_: **可**
 - {{SVGAttr("href")}}
   - : 画像ファイルの URL を指します。
-    _値の型_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)**; _既定値_: _none_; _アニメーション_: **不可**
+    _値の型_: **[\<URL>](/ja/docs/Web/SVG/Guides/Content_type#url)**; _既定値_: _none_; _アニメーション_: **不可**
 - {{SVGAttr("preserveAspectRatio")}}
   - : 画像の拡大縮小方法を制御します。
     _値の型_: (`none` | `xMinYMin` | `xMidYMin` | `xMaxYMin` | `xMinYMid` | `xMidYMid` | `xMaxYMid` | `xMinYMax` | `xMidYMax` | `xMaxYMax`) (`meet` | `slice`)?; _既定値_: `xMidYMid meet`; _アニメーション_: **可**
@@ -46,7 +46,7 @@ SVG ソフトウェアが対応する必要がある画像形式は {{glossary("
     _値の型_: `async | sync | auto`; _既定値_: `auto`; _アニメーション_: **可**
 - {{SVGAttr("xlink:href")}}{{deprecated_inline}}
   - : 画像ファイルの URL を指定します。
-    _値の型_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)**; _既定値_: _none_; _アニメーション_: **不可**
+    _値の型_: **[\<URL>](/ja/docs/Web/SVG/Guides/Content_type#url)**; _既定値_: _none_; _アニメーション_: **不可**
 
 ## DOM インターフェイス
 
