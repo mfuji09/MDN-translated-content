@@ -67,10 +67,10 @@ l10n:
 
 ### データ型と演算子
 
-- [`<media-types>`](/ja/docs/Web/CSS/@media#media_types)
-- [`<media-features>`](/ja/docs/Web/CSS/@media#media_features)
+- [`<media-types>`](/ja/docs/Web/CSS/@media#メディア種別)
+- [`<media-features>`](/ja/docs/Web/CSS/@media#メディア特性)
 - [`<resolution>`](/ja/docs/Web/CSS/resolution)
-- [Logical operators](/ja/docs/Web/CSS/@media#logical_operators)
+- [論理演算子](/ja/docs/Web/CSS/@media#論理演算子)
 
 ### 用語集の用語
 
