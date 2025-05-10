@@ -2,7 +2,7 @@
 title: column-rule
 slug: Web/CSS/column-rule
 l10n:
-  sourceCommit: 9c402dca732167ee04196c5e1785eaacbf4bb5f6
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
