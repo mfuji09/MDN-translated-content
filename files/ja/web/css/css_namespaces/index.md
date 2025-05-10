@@ -29,7 +29,7 @@ CSS は HTML のスタイル設定だけのためにあるわけではありま�
 
 ## 関連概念
 
-- CSS [名前空間セパレーター (`|`)](/ja/docs/Web/CSS/Namespace_separator) 結合子
+- CSS [名前空間区切り文字 (`|`)](/ja/docs/Web/CSS/Namespace_separator) 結合子
 - CSS [型セレクター](/ja/docs/Web/CSS/Type_selectors)
 - CSS [全称セレクター](/ja/docs/Web/CSS/Universal_selectors)
 - {{DOMXRef("CSSNamespaceRule")}} インターフェイス
