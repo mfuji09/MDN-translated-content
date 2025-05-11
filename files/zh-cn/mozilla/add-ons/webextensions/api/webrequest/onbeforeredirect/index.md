@@ -1,29 +1,26 @@
 ---
-title: webRequest.onErrorOccurred
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
+title: webRequest.onBeforeRedirect
+slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRedirect
 l10n:
   sourceCommit: cc1fa2df9ceb4c58a4776451cd100a2109428691
 ---
 
 {{AddonSidebar}}
 
-当请求因错误（如网络连接中断）而无法处理时触发此事件。
+当服务器发起的重定向即将发生时触发。
 
-错误信息将通过 [`details`](#details) 对象的 `error` 属性传递给监听器。
-
-请注意，此事件不会因 HTTP 错误（4XX 或 5XX 响应）而触发：这类错误会正常经过请求处理流程，触发其他事件监听器，并通过设置 `details.statusCode` 来报告错误。
-
-此事件仅用于提供信息。
+请注意，你不能向此事件传递 `"blocking"`，因此你无法通过此事件修改或取消请求：它用于提供信息。
 
 ## 语法
 
 ```js-nolint
-browser.webRequest.onErrorOccurred.addListener(
+browser.webRequest.onBeforeRedirect.addListener(
   listener,             // 函数
-  filter                // 对象
+  filter,               // 对象
+  extraInfoSpec         // 可选的字符串数组
 )
-browser.webRequest.onErrorOccurred.removeListener(listener)
-browser.webRequest.onErrorOccurred.hasListener(listener)
+browser.webRequest.onBeforeRedirect.removeListener(listener)
+browser.webRequest.onBeforeRedirect.hasListener(listener)
 ```
 
 事件有三个函数：
@@ -47,18 +44,21 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
       - : `object`。有关请求的详细信息。参见 [details](#details) 部分。
 
 - `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}。限制发送到此监听器的事件类型的过滤器。
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}。用于限制发送到此监听器的事件的过滤器。
+- `extraInfoSpec` {{optional_inline}}
 
-## 附加对象
+  - : `string` 的数组（`array`）。事件的额外选项。你只可以传入一个值：
+
+    - `"responseHeaders"`：在传递给监听器的 `details` 对象中包含 `responseHeaders`。
+
+## 其他对象
 
 ### details
 
 - `cookieStoreId`
-  - : `string`。若请求来自上下文身份中打开的标签页，则为此上下文身份的 cookie 存储 ID。参见[使用上下文身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+  - : `string`。若请求来自场景身份中打开的标签页，则为此场景身份的 cookie 存储 ID。详细信息请参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 - `documentUrl`
-  - : `string`。资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
-- `error`
-  - : `string`。错误描述。此字符串是内部错误字符串，可能因浏览器而异，且不保证版本间的一致性。
+  - : `string`。将加载的资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
 - `frameId`
   - : `integer`。发生在主框架中的请求的该属性为 0；在子框架中的请求则为代表该子框架的 ID 的正数。对于（子）框架的文档加载请求（`type` 为 `main_frame` 或 `sub_frame`），则 `frameId` 表示此框架的 ID 而非外部框架的 ID。框架 ID 在标签页内唯一。
 - `fromCache`
@@ -103,8 +103,16 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
     - `failoverTimeout`
       - : `integer`。故障转移超时时间（秒）。如果代理连接失败，则在此期间内将不再使用代理。
 
+- `redirectUrl`
+  - : `string`。新的 URL。
 - `requestId`
   - : `string`。请求的 ID。请求 ID 在浏览器会话中唯一，因此可以使用它们来关联与同一请求相关的不同事件。
+- `responseHeaders`
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}。该请求接收到的 HTTP 响应标头。
+- `statusCode`
+  - : `integer`。服务器返回的标准 HTTP 状态码。
+- `statusLine`
+  - : `string`。响应的 HTTP 状态行。对于 HTTP/0.9 响应（即缺少状态行的响应），该属性值为字符串”HTTP/0.9 200 OK”。
 - `tabId`
   - : `integer`。请求发生的标签页的 ID。如果请求与标签页无关，则为 -1。
 - `thirdParty`
@@ -138,18 +146,6 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
 
     更多跟踪器类型详细信息，参见 [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) 网站。`content` 后缀表示跟踪器同时提供内容服务，拦截这些跟踪器可以保护用户，但也可能会导致站点中断或元素无法显示。
 
-    **备注：** 如果 Firefox 跟踪保护阻止请求，则返回一个空对象且 `error` 包含以下状态码之一：
-
-    - `NS_ERROR_MALWARE_URI` 表示恶意软件 URI。
-    - `NS_ERROR_PHISHING_URI` 表示网络钓鱼 URI。
-    - `NS_ERROR_TRACKING_URI` 表示跟踪 URI。
-    - `NS_ERROR_UNWANTED_URI` 表示不需要的 URI。
-    - `NS_ERROR_BLOCKED_URI` 表示被阻止的 URI。
-    - `NS_ERROR_HARMFUL_URI` 表示有害 URI。
-    - `NS_ERROR_FINGERPRINTING` 表示指纹识别 URI。
-    - `NS_ERROR_CRYPTOMINING_URI` 表示加密货币挖矿 URI。
-    - `NS_ERROR_SOCIALTRACKING_URI` 表示社交跟踪 URI。
-
 ## 浏览器兼容性
 
 {{Compat}}
@@ -157,29 +153,30 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
 ## 示例
 
 ```js
-let target = "<all_urls>";
+let target = "https://developer.mozilla.org/*";
 
 /*
-例如没有网络连接时访问：
+例如：
+"https://developer.mozilla.org/"
 "https://developer.mozilla.org/zh-CN/"
-在 Firefox 中为 NS_ERROR_NET_ON_RESOLVED
-在 Chrome 中为 net::ERR_INTERNET_DISCONNECTED
 */
-function logError(responseDetails) {
+function logResponse(responseDetails) {
   console.log(responseDetails.url);
-  console.log(responseDetails.error);
+  console.log(responseDetails.redirectUrl);
 }
 
-browser.webRequest.onErrorOccurred.addListener(logError, { urls: [target] });
+browser.webRequest.onBeforeRedirect.addListener(logResponse, {
+  urls: [target],
+});
 ```
 
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.webRequest`](https://developer.chrome.google.cn/docs/extensions/reference/api/webRequest#event-onErrorOccurred) API。该文档衍生自 Chromium 代码中的 [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json)。
+> 此 API 基于 Chromium 的 [`chrome.webRequest`](https://developer.chrome.google.cn/docs/extensions/reference/api/webRequest#event-onBeforeRedirect) API。该文档衍生自 Chromium 代码中的 [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors。All rights reserved.
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -191,14 +188,14 @@ browser.webRequest.onErrorOccurred.addListener(logError, { urls: [target] });
 // copyright notice, this list of conditions and the following disclaimer
 // in the documentation and/or other materials provided with the
 // distribution.
-//    * Neither the name of Google Inc。nor the names of its
+//    * Neither the name of Google Inc. nor the names of its
 // contributors may be used to endorse or promote products derived from
 // this software without specific prior written permission.
 //
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
 // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
 // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED。IN NO EVENT SHALL THE COPYRIGHT
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
 // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
 // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
 // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
