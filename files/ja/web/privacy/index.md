@@ -99,8 +99,8 @@ l10n:
 ブラウザーには、ユーザーのプライバシー保護を自動的に強化する、いくつかのトラッキング防止機能が実装されています。これらの機能の多くは、 {{htmlelement("iframe")}} に埋め込まれたサードパーティのサイトが、最上位のドメインに設定されたクッキーにアクセスしたり、トラッキングスクリプトを実行したりする機能をブロックまたは制限したりするものです。
 
 - {{httpheader("Set-Cookie")}} ヘッダーの [`SameSite`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 属性の既定値が `Lax` に更新され、追跡や {{glossary("CSRF")}} 攻撃に対する保護が強化されました。詳細については、「[SameSite 属性によるサードパーティ Cookie の制御](/ja/docs/Web/HTTP/Guides/Cookies#samesite_属性によるサードパーティ_cookie_の制御)」を参照してください。
-- すべてのブラウザーは、既定でサードパーティークッキーをブロックするように設定されています。詳細については、「[ブラウザーはサードパーティークッキーをどのように処理するのか](/ja/docs/Web/Privacy/Guides/Third-party_cookies#how_do_browsers_handle_third-party_cookies)」を参照してください。
-- ブラウザーは、プライバシーを侵害しない特定の状況でのみ、サードパーティークッキーを許可する技術、または現在サードパーティークッキーを必要とする一般的な使用例を別の方法で実装する技術を実装しています。[サードパーティークッキーからの移行](/ja/docs/Web/Privacy/Guides/Third-party_cookies#transitioning_from_third-party_cookies)および[サードパーティークッキーの置き換え](/ja/docs/Web/Privacy/Guides/Third-party_cookies#replacing_third-party_cookies)を参照してください。
+- すべてのブラウザーは、既定でサードパーティークッキーをブロックするように設定されています。詳細については、「[ブラウザーはサードパーティークッキーをどのように処理するのか](/ja/docs/Web/Privacy/Guides/Third-party_cookies#ブラウザーはサードパーティクッキーをどのように処理するのか)」を参照してください。
+- ブラウザーは、プライバシーを侵害しない特定の状況でのみ、サードパーティークッキーを許可する技術、または現在サードパーティークッキーを必要とする一般的な使用例を別の方法で実装する技術を実装しています。[サードパーティークッキーからの移行](/ja/docs/Web/Privacy/Guides/Third-party_cookies#サードパーティクッキーからの移行)および[サードパーティークッキーの置き換え](/ja/docs/Web/Privacy/Guides/Third-party_cookies#サードパーティクッキーの置き換え)を参照してください。
 - Firefox、Safari、Brave などの一部のブラウザーは、URL から既知の追跡用引数を削除します。 [ClearURLs](https://addons.mozilla.org/en-GB/firefox/addon/clearurls/) などのブラウザー拡張機能も、この作業に役立ちます。
 - ブラウザーは、[リダイレクトの追跡保護](/ja/docs/Web/Privacy/Guides/Redirect_tracking_protection)を実装しています。
 
