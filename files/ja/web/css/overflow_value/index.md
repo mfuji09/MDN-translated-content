@@ -2,7 +2,7 @@
 title: <overflow>
 slug: Web/CSS/overflow_value
 l10n:
-  sourceCommit: afaf3aeeffa8408cf0a8a46c3d8fb0d347aad9f5
+  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
 {{CSSRef}}
