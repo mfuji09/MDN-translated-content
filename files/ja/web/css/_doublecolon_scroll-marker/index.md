@@ -1,7 +1,6 @@
 ---
 title: ::scroll-marker
 slug: Web/CSS/::scroll-marker
-page-type: css-pseudo-element
 l10n:
   sourceCommit: af550427ce6ddc8b22dae1f6c8a109ed4a5fbd91
 ---
@@ -191,6 +190,6 @@ li:last-child::scroll-marker {
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref(":target-current")}}
 - [CSS によるカルーセルの作成](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- [CSS lists and counters](/ja/docs/Web/CSS/CSS_lists)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
 - [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) (chrome.dev, 2025)
