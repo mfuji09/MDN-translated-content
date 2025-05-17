@@ -1,23 +1,23 @@
 ---
-title: 管理螢幕方向
+title: 控制畫面方向
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
-l10n:
-  sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
-{{DefaultAPISidebar("Screen Orientation API")}}
+{{SeeCompatTable}}{{APIRef}}
 
-*螢幕方向*這個術語是指瀏覽器[視區](/zh-TW/docs/Glossary/Viewport)是處於橫向模式（也就是視區的寬度大於高度），還是直向模式（視區的高度大於寬度）。
+## 摘要
 
-CSS 提供了 [`orientation`](/zh-TW/docs/Web/CSS/@media/orientation) 媒體功能，允許根據螢幕方向調整版面配置。
+畫面方向（Screen Orientation）與[裝置方向（Device Orientation）](/zh-TW/docs/Web/API/Device_orientation_events/Detecting_device_orientation)略有不同。有時甚至裝置本身不具備方向偵測功能，但裝置的螢幕仍搭載方向功能。如果裝置可測知本身的方向又能控制畫面方向，就能隨時配合 Web Apps 而達到最佳效果。
 
-[Screen Orientation API](/zh-TW/docs/Web/API/Screen_Orientation_API) 提供了一個程式化的 JavaScript API，用於處理螢幕方向，包括將視區鎖定為特定方向的功能。
+現有 2 種方法可處理畫面的方向，但均需搭配 CSS 與 JavaScript。第一種方法就是方向的 [Media Query](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation)。根據瀏覽器視窗為橫放（寬度大於高度）或直放（高度大於寬度）狀態，而透過 CSS 調整網頁內容的配置。
 
-## 根據方向調整版面配置
+第二種方法就是 JavaScript Screen Orientation API，可取得畫面目前的方向並進一步鎖定。
 
-最常見的方向變更案例之一是當你希望根據裝置的方向調整內容的版面配置。例如，你可能希望按鈕列沿著裝置顯示器的最長的方向延伸。透過使用媒體查詢，你可以輕鬆且自動地實現這一點。
+## 根據方向而調整配置
 
-以下是一個包含 HTML 程式碼的範例：
+方向改變最常見的情形之一，就是根據裝置的方向而修正內容的配置方式。舉例來說，你可能想將按鈕列拉到與裝置螢幕等長。而透過 Media Query 即可輕鬆達到此效果。
+
+來看看下列 HTML 程式碼範例：
 
 ```html
 <ul id="toolbar">
@@ -34,10 +34,10 @@ CSS 提供了 [`orientation`](/zh-TW/docs/Web/CSS/@media/orientation) 媒體功�
 </p>
 ```
 
-CSS 依賴方向媒體查詢來根據螢幕方向處理特定樣式：
+CSS 將根據方向的 Media Query，處理畫面方向的特殊樣式：
 
 ```css
-/* 首先定義一些通用樣式 */
+/* First let's define some common styles */
 
 html,
 body {
@@ -79,10 +79,10 @@ li {
 }
 ```
 
-一旦我們有了一些通用樣式，就可以開始為特定方向定義特殊情況：
+在設定某些通用的樣式之後，即可針對方向定義特殊條件：
 
 ```css
-/* 對於直向模式，我們希望工具列位於頂部 */
+/* For portrait, we want the tool bar on top */
 
 @media screen and (orientation: portrait) {
   #toolbar {
@@ -90,7 +90,7 @@ li {
   }
 }
 
-/* 對於橫向模式，我們希望工具列固定在左側 */
+/* For landscape, we want the tool bar stick on the left */
 
 @media screen and (orientation: landscape) {
   #toolbar {
@@ -109,70 +109,60 @@ li {
 }
 ```
 
-以下是結果：
+結果如下所示（若無法顯示，可至本文右上角切換回英文原文觀看）：
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">直向模式</th>
-      <th scope="col">橫向模式</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <div>
-          {{ EmbedLiveSample('根據方向調整版面配置', 180, 350) }}
-        </div>
-      </td>
-      <td>
-        <div>
-          {{ EmbedLiveSample('根據方向調整版面配置', 350, 180) }}
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Portrait                                              | Landscape                                             |
+| ----------------------------------------------------- | ----------------------------------------------------- |
+| {{ EmbedLiveSample('根據方向而調整配置', 180, 350) }} | {{ EmbedLiveSample('根據方向而調整配置', 350, 180) }} |
 
 > [!NOTE]
-> 方向媒體查詢實際上是根據瀏覽器視窗（或內嵌框架）的方向，而不是裝置的方向來應用。
+> 方向 Media Query 其實是以瀏覽器視窗 (或 iframe) 的方向為準，而非裝置本身的方向。
 
-## 鎖定螢幕方向
+## 鎖定畫面方向
 
-某些裝置（主要是行動裝置）可以根據其本身的方向動態改變螢幕的方向，確保使用者始終能夠閱讀螢幕上的內容。雖然這種行為很適合文字內容，但某些內容可能會受到方向變更的負面影響。例如，基於裝置方向的遊戲可能會因為方向變更而出現問題。
+> [!WARNING]
+> 此 API 仍屬實驗性質，目前仍具備 `moz` 前綴而僅能用於 [Firefox OS](/zh-TW/docs/Mozilla/Firefox_OS) 與 [Firefox for Android](/zh-TW/docs/Mozilla/Firefox_for_Android)，而 Windows 8.1 以上版本的 Internet Explorer 則使用 `ms` 前綴。
 
-螢幕方向 API 是為了防止或處理這種變更而設計的。
+某些裝置（主要為行動裝置）可根據本身方向而動態改變畫面的方向，讓使用者隨時閱讀畫面上的資訊。這種動作對文字類的內容影響不大，但某些內容就無法順利套用此功能。舉例來說，若遊戲需要裝置方向的相關資訊，就可能因為方向變化而發生混亂情形。
 
-### 監聽方向變更
+而 Screen Orientation API 即可用以避免或處理這類變化。
 
-每當螢幕方向改變時，{{domxref("ScreenOrientation")}} 介面的 {{domxref("ScreenOrientation.change_event", "change")}} 事件就會被觸發：
+### 監聽方向變化
+
+只要裝置改變了畫面方向與本身方向，就會觸發 [`orientationchange`](/zh-TW/docs/Web/API/Window/orientationchange_event) 事件，再由 {{domxref("Screen.orientation")}} 屬性讀取之。
 
 ```js
-screen.orientation.addEventListener("change", () => {
-  console.log(`螢幕的方向是：${screen.orientation}`);
+screen.addEventListener("orientationchange", function () {
+  console.log("The orientation of the screen is: " + screen.orientation);
 });
 ```
 
-### 防止方向變更
+### 避免方向改變
 
-任何網頁應用程式都可以根據自身需求鎖定螢幕方向。螢幕方向是透過 {{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} 方法鎖定的，並可透過 {{domxref("ScreenOrientation.unlock()", "screen.orientation.unlock()")}} 方法解鎖。
+任何 Web Apps 均可鎖定畫面以符合本身需求。{{domxref("Screen.lockOrientation()")}} 函式可鎖定畫面方向；{{domxref("Screen.unlockOrientation()")}} 函式可解鎖畫面方向。
 
-{{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} 方法接受以下值之一來定義要應用的鎖定類型：`any`、`natural`、`portrait-primary`、`portrait-secondary`、`landscape-primary`、`landscape-secondary`、`portrait` 和 `landscape`：
+{{domxref("Screen.lockOrientation()")}} 將接受一組字串或系列字串，以定義畫面鎖定的方向。有效字串為：「`portrait-primary`」、「`portrait-secondary`」、「`landscape-primary`」、「`landscape-secondary`」、「`portrait`」、「`landscape`」。另可參閱 {{domxref("Screen.lockOrientation")}} 進一步了解這些有效值。
 
 ```js
-screen.orientation.lock();
+screen.lockOrientation("landscape");
 ```
 
-此方法會回傳一個 [Promise](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在鎖定成功後解析。
-
 > [!NOTE]
-> 螢幕鎖定是以網頁應用程式為基準的。如果應用程式 A 鎖定為 `landscape` 模式，而應用程式 B 鎖定為 `portrait` 模式，在兩個應用程式間切換時不會觸發 `ScreenOrientation` 的 `change` 事件，因為兩個應用程式各自保持其原有的方向。
->
-> 然而，如果為了滿足鎖定要求而必須改變方向，則可能會觸發 `change` 事件。
+> 畫面鎖定功能將依 Web Apps 而有所不同。如果 App A 鎖定為 `landscape`；App B 鎖定為 `portrait，則此兩款 Apps 均將維持自己的方向。所以不論如何切換` A 與 B，均不會觸發 [`orientationchange`](/zh-TW/docs/Web/API/Window/orientationchange_event) 事件。但若必須改變方向以滿足畫面鎖定的需求，則鎖定方向時就會觸發 [`orientationchange`](/zh-TW/docs/Web/API/Window/orientationchange_event) 事件。
+
+## Firefox OS and Android: Orientation lock using the manifest
+
+For a Firefox OS and Firefox Android (soon to work on Firefox desktop too) specific way to lock orientation, you can set the [orientation](/zh-TW/docs/Web/Apps/Build/Manifest#orientation) field in app's your manifest file, for example:
+
+```json
+"orientation": "portrait"
+```
 
 ## 參見
 
-- {{domxref("Screen.orientation", "screen.orientation")}}
-- {{domxref("ScreenOrientation")}}
-- {{domxref("ScreenOrientation")}} 的 {{DOMxRef("ScreenOrientation.change_event", "change")}} 事件
-- [方向媒體查詢](/zh-TW/docs/Web/CSS/@media/orientation)
+- {{domxref("Screen.orientation")}}
+- {{domxref("Screen.lockOrientation()")}}
+- {{domxref("Screen.unlockOrientation()")}}
+- {{domxref("Screen.onorientationchange")}}
+- [方向的 Media Query](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation)
+- [Firefox 3.5 的 Media Queries 簡介](https://hacks.mozilla.org/2009/06/media-queries/)
