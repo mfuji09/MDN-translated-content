@@ -3,7 +3,7 @@ title: "HTMLImageElement: srcset プロパティ"
 short-title: srcset
 slug: Web/API/HTMLImageElement/srcset
 l10n:
-  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
+  sourceCommit: f4372ac9926fc2a1cbe408dae02b381b7f1909da
 ---
 
 {{APIRef("HTML DOM")}}
@@ -54,9 +54,11 @@ l10n:
 ```html
 <div class="box">
   <img
-    src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
+    src="/ja/docs/Web/HTML/Reference/Elements/img/clock-demo-200px.png"
     alt="Clock"
-    srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 2x" />
+    srcset="
+      /ja/docs/Web/HTML/Reference/Elements/img/clock-demo-400px.png 2x
+    " />
 </div>
 ```
 
@@ -83,11 +85,13 @@ CSS では、画像とその周囲のボックスは 200 ピクセル四方で�
 
 ```js
 window.addEventListener("load", () => {
-  let box = document.querySelector(".box");
-  let image = box.querySelector("img");
+  const box = document.querySelector(".box");
+  const image = box.querySelector("img");
 
-  let newElem = document.createElement("p");
-  newElem.innerHTML = `画像: <code>${image.currentSrc}</code>`;
+  const newElem = document.createElement("p");
+  newElem.textContent = "画像: ";
+  newElem.appendChild(document.createElement("code")).textContent =
+    image.currentSrc;
   box.appendChild(newElem);
 });
 ```
