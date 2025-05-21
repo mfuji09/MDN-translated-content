@@ -2,7 +2,7 @@
 title: CSS リファレンス
 slug: Web/CSS/Reference
 l10n:
-  sourceCommit: 583d48191a7a8605d831aff357bef6cc63aef2e3
+  sourceCommit: 7c0cd9f9b667fe9be0887e8902d09f0013290930
 ---
 
 {{CSSRef}}
@@ -13,7 +13,7 @@ l10n:
 
 ### スタイルルールの構文
 
-```css
+```plain
 スタイルルール ::=
     セレクターリスト {
       プロパティリスト
@@ -22,7 +22,7 @@ l10n:
 
 ここで、
 
-```css
+```plain
 セレクターリスト ::=
     セレクター[:擬似クラス] [::擬似要素]
     [, セレクターリスト]
@@ -102,7 +102,7 @@ div.menu-bar li:hover > ul {
 - [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) `::`
   - : HTML に含まれていないエンティティを表します。
 
-> **注目:** [Selectors Level 4 仕様書におけるセレクター](https://www.w3.org/TR/selectors/#overview)および[擬似要素の仕様書](https://drafts.csswg.org/css-pseudo/)も参照してください。
+> **注目:** [Selectors 仕様書におけるセレクター](https://drafts.csswg.org/selectors/)および[擬似要素の仕様書](https://drafts.csswg.org/css-pseudo/)も参照してください。
 
 ## 概念
 
@@ -136,6 +136,7 @@ div.menu-bar li:hover > ul {
 - [包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)
 - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- {{glossary("Replaced elements", "置換要素")}}
 - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
@@ -148,6 +149,11 @@ div.menu-bar li:hover > ul {
 - {{DOMxRef("HTMLElement.style")}}
 - {{DOMxRef("Element.className")}}
 - {{DOMxRef("Element.classList")}}
+- {{DOMxRef("StyleSheetList")}}
+- {{DOMxRef("CSSRuleList")}}
+- {{DOMxRef("CSSRule")}}
+- {{DOMxRef("CSSStyleRule")}}
+- {{DOMxRef("CSSStyleDeclaration")}}
 
 ### 重要なメソッド
 
