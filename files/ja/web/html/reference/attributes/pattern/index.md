@@ -10,7 +10,7 @@ l10n:
 
 **`pattern`** 属性は、フォームコントロールの値が一致すべき[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)を指定します。`null` 以外の値が `pattern` 値によって設定された制約に適合しない場合、{{domxref('ValidityState')}} オブジェクトの読み取り専用の {{domxref('ValidityState.patternMismatch','patternMismatch')}} プロパティが真になります。
 
-{{InteractiveExample("HTML Demo: pattern", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: pattern", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="username">ユーザー名: (3-16 文字)</label>
