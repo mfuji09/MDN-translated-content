@@ -2,7 +2,7 @@
 title: "HTML 属性: size"
 short-title: size
 slug: Web/HTML/Reference/Attributes/size
-10n:
+l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
@@ -14,7 +14,7 @@ slug: Web/HTML/Reference/Attributes/size
 
 `size` 属性は制約検証には影響しません。
 
-{{InteractiveExample("HTML Demo: size", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: size", "tabbed-standard")}}
 
 ```html interactive-example
 <label for="firstName">名前:</label>
