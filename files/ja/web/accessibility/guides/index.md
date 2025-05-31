@@ -3,7 +3,7 @@ title: アクセシビリティガイド
 short-title: ガイド
 slug: Web/Accessibility/Guides
 l10n:
-  sourceCommit: 5a195171d06aee3d9c1c78d71c7f0c3a060f5263
+  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
 ---
 
 このページには、ウェブアクセシビリティに関するガイドが掲載されています。
