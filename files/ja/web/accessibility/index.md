@@ -38,7 +38,7 @@ l10n:
     この文書では、認知のアクセシビリティと、認知や学習に違いのある人々のためのウェブのアクセシビリティの改善について紹介します。
 - [アクセシビリティと空間パターン](/ja/docs/Web/Accessibility/Guides/Accessibility_and_Spatial_Patterns)
   - : この文書では、光刺激性てんかん、前庭障碍、またはそれ以外の知覚の問題を有する人に身体的症状を引き起こす可能性のある視覚パターンについて説明しています。
-- [ウェブアクセシビリティ: 色とアクセシビリティを理解する](/ja/docs/Web/Accessibility/Guides/Colors_and_Luminance)
+- [ウェブアクセシビリティ: 色と輝度を理解する](/ja/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : 色、輝度、彩度を理解することは、すべての視力のあるユーザーにとってデザインや読みやすさのために重要ですが、視力低下や色覚障碍のあるユーザー、および特定の神経障害、認知障害、その他の障害のあるユーザーにとっては不可欠です。
 - [痙攣性疾患に対するウェブアクセシビリティ](/ja/docs/Web/Accessibility/Guides/Seizure_disorders)
   - : ウェブ上の視覚的コンテンツの中には、特定の脳疾患を持つ人に発作を引き起こす可能性があるものがあります。
