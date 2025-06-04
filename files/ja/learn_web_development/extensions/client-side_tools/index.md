@@ -11,7 +11,7 @@ l10n:
 
 ## 前提条件
 
-ここで紹介しているツールを使う前に、まずはコアの[HTML](/ja/docs/Learn_web_development/Core/Structuring_content)、[CSS](/ja/docs/Learn_web_development/Core/Styling_basics)、[JavaScript](/ja/docs/Learn_web_development/Core/Scripting)の基礎を学習することをお勧めします。また、[端末/コマンドライン](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)の使用にも慣れておいてください。
+ここで紹介しているツールを使う前に、まずはコアの [HTML](/ja/docs/Learn_web_development/Core/Structuring_content)、[CSS](/ja/docs/Learn_web_development/Core/Styling_basics)、[JavaScript](/ja/docs/Learn_web_development/Core/Scripting) の基礎を学習しておくことをお勧めします。また、[端末/コマンドライン](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)の使用にも慣れておいてください。
 
 ## ガイド
 
