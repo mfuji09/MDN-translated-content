@@ -1,7 +1,6 @@
 ---
 title: 502 Bad Gateway
 slug: Web/HTTP/Reference/Status/502
-original_slug: Web/HTTP/Status/502
 l10n:
   sourceCommit: 8ec1d24d4f935e73f39df9a7d69e58c098ebb003
 ---
@@ -63,5 +62,5 @@ Content-Length: 123
 
 ## 関連情報
 
-- {{HTTPStatus(504)}}
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
+- {{HTTPStatus("504", "504 Gateway Timeout")}}
