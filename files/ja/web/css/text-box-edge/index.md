@@ -2,7 +2,7 @@
 title: text-box-edge
 slug: Web/CSS/text-box-edge
 l10n:
-  sourceCommit: 19c64b411b90f999565db9fdb815463ba66c9714
+  sourceCommit: 9cc1f40340f37fa05d6573cc519c9844fa4940be
 ---
 
 {{CSSRef}}
