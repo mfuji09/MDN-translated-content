@@ -2,7 +2,7 @@
 title: RTCTrackEvent
 slug: Web/API/RTCTrackEvent
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 00f46adb5616d826821d63b11eac285faf1cf4a5
 ---
 
 {{APIRef("WebRTC")}}
