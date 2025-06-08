@@ -2,7 +2,7 @@
 title: Leading (行送り)
 slug: Glossary/Leading
 l10n:
-  sourceCommit: 58dd075cc106f92659ed0a940361969b117d47b1
+  sourceCommit: b6dacb9087010826a5a7d5b2d7c428e89d8135cf
 ---
 
 {{GlossarySidebar}}
