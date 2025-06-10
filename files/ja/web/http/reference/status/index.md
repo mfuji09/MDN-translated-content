@@ -1,7 +1,7 @@
 ---
 title: HTTP レスポンスステータスコード
 slug: Web/HTTP/Reference/Status
-o10n:
+l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
@@ -34,6 +34,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
 ## 成功レスポンス
 
 - {{HTTPStatus(200, "200 OK")}}
+
   - : リクエストが成功したことを示します。成功が意味することは、 HTTP メソッドにより異なります。
 
     - {{HTTPMethod("GET")}}: リソースが読み込まれ、メッセージ本文で転送された。
