@@ -284,7 +284,7 @@ YYYY-MM-DDTHH:mm:ss.sssZ
 - {{jsxref("Date.prototype.toString()")}}
   - : 指定された `Date` オブジェクトを表す文字列を返します。 {{jsxref("Object.prototype.toString()")}} メソッドを上書きします。
 - {{jsxref("Date.prototype.toTemporalInstant()")}} {{experimental_inline}}
-  - : この日時の[タイムスタンプ](#元期タイムスタンプ無効な日時)と同じ {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} を持つ新しい {{jsxref("Temporal.Instant")}} オブジェクトを返します。
+  - : この日時の[タイムスタンプ](#元期、タイムスタンプ、無効な日時)と同じ {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} を持つ新しい {{jsxref("Temporal.Instant")}} オブジェクトを返します。
 - {{jsxref("Date.prototype.toTimeString()")}}
   - : `Date` の「時刻」部を人間が読みやすい形式の文字列にして返します。
 - {{jsxref("Date.prototype.toUTCString()")}}
