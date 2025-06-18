@@ -2,14 +2,14 @@
 title: :lang()
 slug: Web/CSS/:lang
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{CSSRef}}
 
 **`:lang()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、指定された言語に基づいて要素を照合します。
 
-{{InteractiveExample("CSS Demo: :lang()", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :lang()", "tabbed-shorter")}}
 
 ```css interactive-example
 *:lang(en-US) {
@@ -30,13 +30,13 @@ l10n:
 ```
 
 > [!NOTE]
-> HTML では、言語は [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性と {{HTMLElement("meta")}} 要素、それに、可能であればプロトコルから得られる情報 (HTTP ヘッダーなど) の組み合わせで決められます。他の文書型では、文書の言語を決定する他の方法があるかもしれません。
+> HTML では、言語は [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性と {{HTMLElement("meta")}} 要素、それに、可能であればプロトコルから得られる情報（HTTP ヘッダーなど）の組み合わせで決められます。他の型の文書では、文書の言語を決定する他の方法があるかもしれません。
 
 ## 構文
 
 ### 形式文法
 
-```css-nolint
+```plain
 :lang(<language-code> [,<language-code> ]*) {
   /* ... */
 }
@@ -45,13 +45,13 @@ l10n:
 ### 引数
 
 - `<language-code>`
-  - : カンマで区切った 1 つ以上の {{cssxref("&lt;string&gt;")}} のリストで、 [BCP 47](https://tools.ietf.org/html/bcp47) の言語コードに従った言語値を持つ要素を対象とします。
-    言語の範囲による照合は大文字小文字を区別しません。
+  - : カンマで区切った 1 つ以上の {{cssxref("&lt;string&gt;")}} のリストで、 [BCP 47](https://www.rfc-editor.org/info/bcp47) の言語コードに従った言語値を持つ要素を対象とします。
+    言語の範囲による照合は、大文字小文字を区別しません。
 
 ## 解説
 
 言語を選択するとき、暗黙にワイルドカード照合が行われます。そのため、 `:lang(de-DE)` は `de-DE`, `de-DE-1996`, `de-Latn-DE`, `de-Latf-DE`, `de-Latn-DE-1996` に一致します。
-明示的にワイルドカードを使用する場合は、完全一致する言語サブタグを記載する必要があります。したがって、 `:lang("*-F*")` は不正ですが、 `:lang("*-Fr")` は有効です。
+明示的にワイルドカードを使用する場合は、完全に一致する言語サブタグを記載する必要があります。したがって、 `:lang("*-F*")` は無効ですが、 `:lang("*-Fr")` は有効です。
 
 ## 例
 
@@ -89,7 +89,7 @@ l10n:
 
 #### 結果
 
-{{EmbedLiveSample('Matching_children_of_a_given_language', '', '80')}}
+{{EmbedLiveSample('指定された言語の子の照合', '', '80')}}
 
 ### 複数の言語の照合
 
@@ -134,7 +134,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample('Matching_multiple_languages', '', '120')}}
+{{EmbedLiveSample('複数の言語の照合', '', '120')}}
 
 ## 仕様書
 

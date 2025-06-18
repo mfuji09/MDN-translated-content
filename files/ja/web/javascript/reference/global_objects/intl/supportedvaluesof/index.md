@@ -7,13 +7,14 @@ l10n:
 
 {{JSRef}}
 
-静的メソッド **`Intl.supportedValuesOf()`** は、実装で対応している暦、文字列の比較方法、通貨、数え方、単位が格納された配列を返します。
+**`Intl.supportedValuesOf()`** は静的メソッドで、この実装で対応している暦、文字列の比較方法、通貨、記数法、単位が格納された配列を返します。
 
-重複した値は除かれ、配列は辞書順の昇順で (より正確には、比較関数を `undefined` に設定した {{jsxref("Array/sort", "Array.prototype.sort()")}} を用いて) ソートされています。
+重複した値は省かれ、配列は辞書順の昇順で（より正確には、比較関数を `undefined` に設定した {{jsxref("Array/sort", "Array.prototype.sort()")}} を用いて）整列されています。
 
-このメソッドは、特定の実装が値に対応しているかの機能テストを行い、必要な場合のみポリフィルをダウンロードするために用いることができます。また、たとえば UI が WebGL やサーバーサイドで構築される場合に、ユーザーが好きなローカライズされた値を選択できる UI を構築するためにも使用できます。
+このメソッドは、特定の実装が値に対応しているかの機能テストを行い、必要な場合のみポリフィルをダウンロードするために用いることができます。
+また、たとえば UI が WebGL やサーバーサイドで構築されている場合に、ユーザーが推奨するロケールにローカライズされた値を選択できる UI を構築するためにも使用できます。
 
-このメソッドはロケールを認識しません。特定の識別子は、特定のロケールでのみ対応している、または推奨されている場合があります。特定のロケールで推奨される値を決定したい場合は、{{jsxref("Intl.Locale")}} オブジェクト ({{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}} など) を使用してください。
+このメソッドはロケールを認識しません。特定の識別子は、特定のロケールでのみ対応している、または推奨されている場合があります。特定のロケールで推奨される値を決定したい場合は、 {{jsxref("Intl.Locale")}} オブジェクト（{{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}} など）を使用してください。
 
 {{InteractiveExample("JavaScript デモ: Intl.supportedValuesOf()", "taller")}}
 
@@ -47,7 +48,7 @@ Intl.supportedValuesOf(key)
     - `"calendar"`: [対応している暦](#対応している暦)を参照してください。
     - `"collation"`: [対応している照合型](#対応している照合型)を参照してください。
     - `"currency"`: [対応している通貨識別子](#対応している通貨識別子)を参照してください。
-    - `"numberingSystem"`: [対応している命数法](#対応している命数法)を参照してください。
+    - `"numberingSystem"`: [対応している記数法](#対応している記数法)を参照してください。
     - `"timeZone"`: [対応しているタイムゾーン識別子](#対応しているタイムゾーン識別子)を参照してください。
     - `"unit"`: [対応している単位識別子](#対応している単位識別子)を参照してください。
 
@@ -138,7 +139,7 @@ Intl.supportedValuesOf(key)
 - [ISO 4217 Currency codes](https://www.iso.org/iso-4217-currency-codes.html)
 - [UTS 35, Currencies](https://unicode.org/reports/tr35/tr35-numbers.html#Currencies)
 
-#### 対応している命数法
+#### 対応している記数法
 
 次のものは、 `numberingSystem` キーに対してブラウザーが一般的に対応しているすべての値です。これらの値は、 `numberingSystem` オプションまたは `nu` [Unicode 拡張キー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)として {{jsxref("Intl.NumberFormat")}} などのオブジェクトを作成する際に使用することができます。「数字の文字」の行の場合、ランタイムは追加の操作を行わずに数字を 1 つずつ対応させます。それ以外で「アルゴリズム」とマークされているものは、数字を対応させるために追加のアルゴリズムが必要です。 Unicode コードポイントが高いほど、数値体系は新しく、すべてのブラウザーで対応していない可能性が高くなります。
 
