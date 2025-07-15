@@ -20,7 +20,7 @@ Uint8Array.fromBase64(string, options)
 ### 引数
 
 - `string`
-  - : base64 文字列で、 `Uint8Array` に変換するをバイト列をエンコードしたものです。文字列には、A～Z、a～z、0～9、および 2 つの特殊文字（`options` で `alphabet: "base64"` を使用している場合は `+` および `/`、`options` で `alphabet: "base64url"` を使用している場合は `-` および `_`）を含む base64 文字集合のみが含まれている必要があります。末尾にパディング文字 `=` を含むことができます。文字列内の ASCII ホワイトスペース文字は無視されます。
+  - : base64 文字列で、 `Uint8Array` に変換するバイト列をエンコードしたものです。文字列には、A～Z、a～z、0～9、および 2 つの特殊文字（`options` で `alphabet: "base64"` を使用している場合は `+` および `/`、`options` で `alphabet: "base64url"` を使用している場合は `-` および `_`）を含む base64 文字集合のみが含まれている必要があります。末尾にパディング文字 `=` を含むことができます。文字列内の ASCII ホワイトスペース文字は無視されます。
 - `options` {{optional_inline}}
   - : base64 文字列の解釈プロセスをカスタマイズするオブジェクトです。次のプロパティが含まれています。
     - `alphabet` {{optional_inline}}
