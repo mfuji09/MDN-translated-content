@@ -56,7 +56,7 @@ updateInkTrailStartPoint(event, style)
 
 ```html
 <canvas id="canvas"></canvas>
-<div id="div">引継がれたインクの跡は、この div の色と一致します。</div>
+<div id="div">代理インクの軌跡は、この div の色と一致します。</div>
 ```
 
 #### CSS
