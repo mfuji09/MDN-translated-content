@@ -39,7 +39,7 @@ const contentString = "Hello, world";
 document.body.innerHTML = contentString.blink();
 ```
 
-これにより、次の HTML が作成されます。
+これにより、次の HTML が生成されます。
 
 ```html
 <blink>Hello, world</blink>
