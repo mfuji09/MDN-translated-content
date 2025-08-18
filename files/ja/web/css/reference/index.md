@@ -2,10 +2,8 @@
 title: CSS リファレンス
 slug: Web/CSS/Reference
 l10n:
-  sourceCommit: 7c0cd9f9b667fe9be0887e8902d09f0013290930
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)、[関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule) の[アルファベット順の索引](#索引)として利用できます。また、すべての CSS [種類別セレクター](#セレクター) の一覧および [重要な CSS の概念](#概念) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#dom-css_cssom) も含まれています。
 
@@ -13,7 +11,7 @@ l10n:
 
 ### スタイルルールの構文
 
-```plain
+```css
 スタイルルール ::=
     セレクターリスト {
       プロパティリスト
@@ -22,7 +20,7 @@ l10n:
 
 ここで、
 
-```plain
+```css
 セレクターリスト ::=
     セレクター[:擬似クラス] [::擬似要素]
     [, セレクターリスト]
@@ -45,7 +43,7 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-初心者レベルの CSS セレクター構文への入門については、 [CSS セレクターのガイド](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)をご覧ください。ルール定義内での [CSS 構文](/ja/docs/Web/CSS/CSS_syntax/Syntax) エラーは、そのルール全体を無効にするので十分に注意してください。無効なルールはブラウザーにより無視されます。 CSS ルールの定義はすべて ({{Glossary("ASCII")}}) [テキストベース](https://www.w3.org/TR/css-syntax-3/#intro) であり、DOM-CSS / CSSOM (ルール管理システム) は [オブジェクトベース](https://www.w3.org/TR/cssom/#introduction) なので注意してください。
+初心者レベルの CSS セレクター構文への入門については、 [CSS セレクターのガイド](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)をご覧ください。ルール定義内での [CSS 構文](/ja/docs/Web/CSS/CSS_syntax/Syntax) エラーは、そのルール全体を無効にするので十分に注意してください。無効なルールはブラウザーにより無視されます。 CSS ルールの定義はすべて (Unicode) [テキストベース](https://drafts.csswg.org/css-syntax/#intro) であり、 DOM-CSS / CSSOM (ルール管理システム) は [オブジェクトベース](https://drafts.csswg.org/cssom/#introduction) なので注意してください。
 
 ### アットルールの構文
 
@@ -102,7 +100,8 @@ div.menu-bar li:hover > ul {
 - [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) `::`
   - : HTML に含まれていないエンティティを表します。
 
-> **注目:** [Selectors 仕様書におけるセレクター](https://drafts.csswg.org/selectors/)および[擬似要素の仕様書](https://drafts.csswg.org/css-pseudo/)も参照してください。
+> [!CALLOUT]
+> [Selectors Level 4 仕様書におけるセレクター](https://www.w3.org/TR/selectors/#overview)および[擬似要素の仕様書](https://drafts.csswg.org/css-pseudo/)も参照してください。
 
 ## 概念
 
@@ -136,7 +135,6 @@ div.menu-bar li:hover > ul {
 - [包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)
 - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- {{glossary("Replaced elements", "置換要素")}}
 - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
@@ -149,11 +147,6 @@ div.menu-bar li:hover > ul {
 - {{DOMxRef("HTMLElement.style")}}
 - {{DOMxRef("Element.className")}}
 - {{DOMxRef("Element.classList")}}
-- {{DOMxRef("StyleSheetList")}}
-- {{DOMxRef("CSSRuleList")}}
-- {{DOMxRef("CSSRule")}}
-- {{DOMxRef("CSSStyleRule")}}
-- {{DOMxRef("CSSStyleDeclaration")}}
 
 ### 重要なメソッド
 
