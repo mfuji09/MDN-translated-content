@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-**カンマ (`,`)** 演算子は、それぞれの演算対象を（左から右に）評価し、最後のオペランドの値を返します。これは、[`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) ループに複数の引数を提供する場合によく使用されます。
+**カンマ演算子 (`,`)** は、それぞれの演算対象を（左から右に）評価し、最後のオペランドの値を返します。これは、[`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) ループに複数の引数を提供する場合によく使用されます。
 
 {{InteractiveExample("JavaScript デモ: カンマ演算子 (,)")}}
 
