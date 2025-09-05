@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-**小なり演算子 (`<`)** は、左辺のオペランドが右辺のオペランドより小さい場合は `true` を返し、それ以外の場合は `false` を返します。
+**小なり演算子 (`<`)** は、左オペランドが右オペランドより小さい場合は `true` を返し、それ以外の場合は `false` を返します。
 
 {{InteractiveExample("JavaScript デモ: 小なり演算子 (<)")}}
 
@@ -34,7 +34,7 @@ x < y
 
 オペランドは複数の型変換を経て比較されます。概要は以下の通りです。
 
-- 最初に、オブジェクトは[プリミティブに変換](/ja/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion)されます。これはオブジェクトに対して [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) （`"number"` をヒントとして）、[`valueOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)、[`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) の各メソッドをこの順に呼び出すことで行われます。左辺のオペランドは常に右辺よりも先に変換されます。 なお、 `[Symbol.toPrimitive]()` は `"number"` のヒント付きで呼び出されます（つまりオブジェクトの数値への変換の優先度が少し高いということです）。しかし、文字列はまだ特別に扱われるため、返値は[数値に変換されません](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)。
+- 最初に、オブジェクトは[プリミティブに変換](/ja/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion)されます。これはオブジェクトに対して [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) （`"number"` をヒントとして）、[`valueOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)、[`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) の各メソッドをこの順に呼び出すことで行われます。左オペランドは常に右辺よりも先に変換されます。 なお、 `[Symbol.toPrimitive]()` は `"number"` のヒント付きで呼び出されます（つまりオブジェクトの数値への変換の優先度が少し高いということです）。しかし、文字列はまだ特別に扱われるため、返値は[数値に変換されません](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)。
 - 両方の値が文字列である場合、文字列として比較されます。比較は、それぞれに含まれている UTF-16 コード単位の値に基づいて行われます（Unicode コードポイントではない）。
 - それ以外の場合、 JavaScript は非数値型を数値に変換しようとします。
   - 論理値 `true` および `false` は、それぞれ 1 および 0 に変換されます。
