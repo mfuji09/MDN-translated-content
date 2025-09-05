@@ -16,7 +16,7 @@ console.log(5 > 3);
 console.log(3 > 3);
 // 予想される結果: false
 
-// Compare bigint to number
+// 長整数と数値との比較
 console.log(3n > 5);
 // 予想される結果: false
 
