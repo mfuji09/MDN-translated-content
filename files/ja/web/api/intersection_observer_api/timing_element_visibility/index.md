@@ -290,7 +290,7 @@ function handleVisibilityChange() {
 
 #### 交差状態の変化の処理
 
-ブラウザーのイベントループを通過するたびに、それぞれの {{domxref("IntersectionObserver")}} は、その対象要素のどれかがオブザーバーの交差比率の閾値のどれかを通過したかどうか調べます。それぞれのオブザーバーについて、対象のリストがコンパイルされ、オブザーバーのコールバックに {{domxref("IntersectionObserverEntry")}} オブジェクトの配列として送信されます。コールバックである `intersectionCallback()` は以下のようにしています。
+ブラウザーのイベントループを通過するたびに、それぞれの {{domxref("IntersectionObserver")}} は、その対象要素のどれかがオブザーバーの交差比率のしきい値のどれかを通過したかどうか調べます。それぞれのオブザーバーについて、対象のリストがコンパイルされ、オブザーバーのコールバックに {{domxref("IntersectionObserverEntry")}} オブジェクトの配列として送信されます。コールバックである `intersectionCallback()` は以下のようにしています。
 
 ```js
 function intersectionCallback(entries) {
