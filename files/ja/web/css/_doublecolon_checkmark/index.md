@@ -2,7 +2,7 @@
 title: ::checkmark
 slug: Web/CSS/::checkmark
 l10n:
-  sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
+  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
 {{SeeCompatTable}}
