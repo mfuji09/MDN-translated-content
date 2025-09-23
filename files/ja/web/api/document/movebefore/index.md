@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`moveBefore()`** は {{domxref("Document")}} インターフェイスのメソッドで、指定された {{domxref("Node")}} を呼び出し DOM ノード `Document` 内の直接の子として、指定された参照ノードの前に移動します。
+**`moveBefore()`** は {{domxref("Document")}} インターフェイスのメソッドで、指定された {{domxref("Node")}} を DOM ノード `Document` 内の直接の子として、指定された参照ノードの前に移動します。
 
 ## 構文
 
