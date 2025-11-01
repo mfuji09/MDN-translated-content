@@ -1,17 +1,17 @@
 ---
 title: ::-webkit-scrollbar
 slug: Web/CSS/::-webkit-scrollbar
+l10n:
+  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-{{CSSRef}}{{Non-standard_header}}Le pseudo-élément **`::-webkit-scrollbar`** permet de modifier le style de la barre de défilement associée à un élément. Il s'agit d'un pseudo-élément propriétaire, uniquement disponible pour les navigateurs WebKit.
+{{Non-standard_header}}
 
-## Syntaxe
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-scrollbar`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de modifier le style de la barre de défilement associée à un élément. Il s'agit d'un pseudo-élément propriétaire, uniquement disponible pour les navigateurs WebKit.
 
-{{CSSSyntax}}
+## Sélecteurs de barre de défilement
 
-## Sélecteurs de _scrollbars_
-
-You can use the following pseudo elements to customize various parts of the scrollbar for webkit browsers:
+Vous pouvez utiliser les pseudo-éléments suivants pour personnaliser différentes parties de la barre de défilement (<i lang="en">scrollbar</i>) pour les navigateurs WebKit&nbsp;:
 
 - `::-webkit-scrollbar` — la barre entière.
 - `::-webkit-scrollbar-button` — les boutons de la barre de défilement (les flèches vers le bas ou le haut)
@@ -21,33 +21,15 @@ You can use the following pseudo elements to customize various parts of the scro
 - `::-webkit-scrollbar-corner` — le coin inférieur de la barre où les barres horizontales et verticales se rencontrent.
 - `::-webkit-resizer` — le bouton qui apparaît dans le coin inférieur de certains éléments et qui permet de les redimensionner.
 
+## Accessibilité
+
+Les auteur·ice·s doivent éviter de mettre en forme les barres de défilement, car le changement de l'apparence des barres de défilement par rapport à la valeur par défaut [perturbe la cohérence externe <sup>(angl.)</sup>](https://inclusivedesignprinciples.info/#be-consistent), ce qui a un impact négatif sur l'utilisabilité. Si vous mettez en forme les barres de défilement, assurez-vous qu'il y a suffisamment de contraste de couleur et que les cibles tactiles mesurent au moins 44px de large et de haut. Voir [Techniques pour WCAG 2.0 : G183 : Utiliser un rapport de contraste de 3:1 <sup>(angl.)</sup>](https://www.w3.org/TR/WCAG20-TECHS/G183.html) et [Comprendre WCAG 2.1 : Taille de la cible <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html).
+
 ## Exemples
 
-```css
-.visible-scrollbar,
-.invisible-scrollbar,
-.mostly-customized-scrollbar {
-  display: block;
-  width: 10em;
-  overflow: auto;
-  height: 2em;
-}
-.invisible-scrollbar::-webkit-scrollbar {
-  display: none;
-}
+### Mettre en forme les barres de défilement en utilisant `-webkit-scrollbar`
 
-/* Demonstrate a "mostly customized" scrollbar
- * (won't be visible otherwise if width/height is specified) */
-.mostly-customized-scrollbar::-webkit-scrollbar {
-  width: 5px;
-  height: 8px;
-  background-color: #aaa; /* or add it to the track */
-}
-/* Add a thumb */
-.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-  background: #000;
-}
-```
+#### HTML
 
 ```html
 <div class="visible-scrollbar">
@@ -63,21 +45,120 @@ You can use the following pseudo elements to customize various parts of the scro
   Aliquam at enim ligula.
 </div>
 <div class="invisible-scrollbar">
-  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
+  C'estuntrèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèslongmot<br />
 </div>
 <div class="mostly-customized-scrollbar">
-  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br />
-  And pretty tall<br />
-  thing with weird scrollbars.<br />
-  Who thought scrollbars could be made weeeeird?
+  C'estuntrèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèslongmot<br />
+  Et une très grande<br />
+  chose avec des barres de défilement étranges.<br />
+  Qui aurait pensé que les barres de défilement pouvaient être rendues
+  étranges&nbsp;?
 </div>
 ```
 
-{{EmbedLiveSample('Exemples')}}
+#### CSS
+
+```css
+.visible-scrollbar,
+.invisible-scrollbar,
+.mostly-customized-scrollbar {
+  display: block;
+  width: 10em;
+  overflow: auto;
+  height: 2em;
+  padding: 1em;
+  margin: 1em auto;
+  outline: 2px dashed cornflowerblue;
+}
+
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Demonstrate a "mostly customized" scrollbar
+ * (won't be visible otherwise if width/height is specified) */
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaaaaa; /* or add it to the track */
+}
+/* Add a thumb */
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: black;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("mettre_en_forme_les_barres_de_défilement_en_utilisant_-webkit-scrollbar", 600, 300)}}
+
+### Ajouter une solution de repli pour les styles de barre de défilement
+
+Vous pouvez utiliser une règle {{cssxref("@supports")}} pour détecter si un navigateur prend en charge les propriétés standard {{cssxref("scrollbar-color")}} et {{cssxref("scrollbar-width")}}, et sinon utiliser une solution de repli avec les pseudo-éléments `::-webkit-scrollbar-*`.
+L'exemple suivant montre comment appliquer des couleurs aux barres de défilement en utilisant {{cssxref("scrollbar-color")}} si pris en charge et les pseudo-éléments `::-webkit-scrollbar-*` si ce n'est pas le cas.
+
+#### HTML
+
+```html
+<div class="scroll-box">
+  <h1>Yoshi</h1>
+  <p>
+    Yoshi est un dinosaure fictif qui apparaît dans des jeux vidéo publiés par
+    Nintendo. Yoshi a fait ses débuts dans Super Mario World (1990) sur la SNES
+    en tant qu'acolyte de Mario et Luigi.
+  </p>
+  <p>
+    Tout au long de la série principale de Super Mario, Yoshi sert généralement
+    de monture de confiance à Mario.
+  </p>
+  <p>
+    Avec un appétit glouton, Yoshi peut gober des ennemis avec sa longue langue,
+    et pondre des œufs qui fonctionnent également comme projectiles.
+  </p>
+</div>
+```
+
+#### CSS
+
+```css hidden
+.scroll-box {
+  overflow: auto;
+  width: 20rem;
+  height: 5rem;
+  border: 2px solid cornflowerblue;
+  margin: 2rem auto;
+  font-family: monospace;
+}
+```
+
+```css
+/* Pour les navigateurs qui prennent en charge les propriétés `scrollbar-*` */
+@supports (scrollbar-color: auto) {
+  .scroll-box {
+    scrollbar-color: aquamarine cornflowerblue;
+  }
+}
+
+/* Sinon, utilisez les pseudo-éléments `::-webkit-scrollbar-*` */
+@supports selector(::-webkit-scrollbar) {
+  .scroll-box::-webkit-scrollbar {
+    background: aquamarine;
+  }
+  .scroll-box::-webkit-scrollbar-thumb {
+    background: cornflowerblue;
+  }
+}
+```
+
+#### Résultat
+
+Dans l'exemple ci-dessous, vous pouvez faire défiler la boîte bordée verticalement pour voir l'effet de la mise en forme de la barre de défilement.
+
+{{EmbedLiveSample("ajouter_une_solution_de_repli_pour_les_styles_de_barre_de_défilement")}}
 
 ## Spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
+Ce pseudo-élément ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
@@ -85,6 +166,8 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Voir aussi
 
-- Billet du blog WebKit [sur la mise en forme des barres de défilement](https://webkit.org/blog/363/styling-scrollbars/)
-- {{cssxref('-ms-overflow-style')}}
 - {{CSSxRef("scrollbar-width")}}
+- {{CSSxRef("scrollbar-color")}}
+- Billet du blog Eric W. Bailey [N'utilisez pas de barres de défilement personnalisées <sup>(angl.)</sup>](https://ericwbailey.website/published/dont-use-custom-css-scrollbars/) (2023)
+- Billet du blog Chrome [Mettre en forme les barres de défilement](https://developer.chrome.com/docs/css-ui/scrollbar-styling) (2024)
+- Billet du blog WebKit [sur la mise en forme des barres de défilement <sup>(angl.)</sup>](https://webkit.org/blog/363/styling-scrollbars/) (2009)

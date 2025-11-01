@@ -2,10 +2,8 @@
 title: :scope
 slug: Web/CSS/:scope
 l10n:
-  sourceCommit: 88930816e169c5b51afdfcd22c3b2c54383a22b7
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`:scope`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、セレクターが選択する対象の参照点である要素を表します。
 
@@ -36,21 +34,11 @@ l10n:
 
 この例では、スタイルシートのルートレベルで使用した場合、 `:scope` が `:root` と等価であることを示しています。この場合、指定された CSS は `<html>` 要素の背景をオレンジ色に着色しています。
 
-#### HTML
-
-```html
-<html></html>
-```
-
-#### CSS
-
 ```css
 :scope {
   background-color: orange;
 }
 ```
-
-#### 結果
 
 {{ EmbedLiveSample("Using :scope as an alternative to :root", "100%", 50) }}
 
@@ -143,7 +131,7 @@ div {
 const context = document.getElementById("context");
 const selected = context.querySelectorAll(":scope > div");
 
-document.getElementById("results").innerHTML = Array.prototype.map
+document.getElementById("results").textContent = Array.prototype.map
   .call(selected, (element) => `#${element.getAttribute("id")}`)
   .join(", ");
 ```
@@ -166,7 +154,7 @@ document.getElementById("results").innerHTML = Array.prototype.map
 
 - {{cssxref("@scope")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
 - {{cssxref(":root")}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
-- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}} および {{domxref("Document.querySelectorAll()")}}
 - {{domxref("DocumentFragment.querySelector()")}} および {{domxref("DocumentFragment.querySelectorAll()")}}
