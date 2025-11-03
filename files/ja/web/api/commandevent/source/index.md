@@ -1,22 +1,22 @@
 ---
-title: "CommandEvent: source property"
+title: "CommandEvent: source プロパティ"
 short-title: source
 slug: Web/API/CommandEvent/source
-page-type: web-api-instance-property
-browser-compat: api.CommandEvent.source
+l10n:
+  sourceCommit: af550427ce6ddc8b22dae1f6c8a109ed4a5fbd91
 ---
 
 {{APIRef("Invoker Commands API")}}
 
-The **`source`** read-only property of the {{domxref("CommandEvent")}} interface returns an {{domxref("EventTarget")}} representing the control that invoked the given command.
+**`source`** は {{domxref("CommandEvent")}} インターフェイスの読み取り専用プロパティで、指定されたコマンドを呼び出したコントロールを表す {{domxref("EventTarget")}} を返します。
 
-## Value
+## 値
 
-An {{domxref("EventTarget")}} object. Usually an {{domxref("HTMLButtonElement")}}.
+{{domxref("EventTarget")}} オブジェクトです。通常は {{domxref("HTMLButtonElement")}} です。
 
-## Examples
+## 例
 
-In the following simple example we've set up an event listener to add a temporary class to the button element upon a CommandEvent:
+以下の簡単な例では、CommandEvent が発生した際にボタン要素に一時的なクラスを追加するイベントリスナーを設定しています。
 
 ```js
 document.body.addEventListener(
@@ -34,16 +34,16 @@ document.body.addEventListener(
 );
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- {{domxref("Invoker Commands API", "Invoker Commands API", "", "nocode")}}
+- {{domxref("Invoker Commands API", "呼び出しコマンド API", "", "nocode")}}
 - {{domxref("HTMLButtonElement.command")}}
 - {{domxref("HTMLButtonElement.commandForElement")}}
