@@ -1,22 +1,22 @@
 ---
-title: "CommandEvent: command property"
+title: "CommandEvent: command プロパティ"
 short-title: command
 slug: Web/API/CommandEvent/command
-page-type: web-api-instance-property
-browser-compat: api.CommandEvent.command
+l10n:
+  sourceCommit: ffa6f5871f50856c60983a125cef7de267be7aeb
 ---
 
 {{APIRef("Invoker Commands API")}}
 
-The **`command`** read-only property of the {{domxref("CommandEvent")}} interface returns a string containing the value of the {{domxref("HTMLButtonElement.command", "command")}} property at the time the event was dispatched.
+**`command`** は {{domxref("CommandEvent")}} インターフェイスの読み取り専用プロパティで、イベントが発信された時点での {{domxref("HTMLButtonElement.command", "command")}} プロパティの値を含む文字列を返します。
 
-## Value
+## 値
 
-A string.
+文字列です。
 
-## Examples
+## 例
 
-In the following simple example we've set up an event listener to listen for the "show-modal" command:
+次の簡単な例では、"show-modal" コマンドを監視するイベントリスナーを設定しています。
 
 ```js
 document.body.addEventListener(
@@ -25,23 +25,23 @@ document.body.addEventListener(
     const theAction = event.command;
 
     if (theAction === "show-modal") {
-      console.log("Showing modal dialog");
+      console.log("モーダルダイアログを表示");
     }
   },
   { capture: true },
 );
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- {{domxref("Invoker Commands API", "Invoker Commands API", "", "nocode")}}
+- {{domxref("Invoker Commands API", "呼び出しコマンド API", "", "nocode")}}
 - {{domxref("HTMLButtonElement.command")}}
 - {{domxref("HTMLButtonElement.commandForElement")}}
