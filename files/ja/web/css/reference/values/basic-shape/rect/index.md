@@ -3,10 +3,10 @@ title: rect()
 slug: Web/CSS/Reference/Values/basic-shape/rect
 original_slug: Web/CSS/basic-shape/rect
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 9fbbc6e777afd1291919d2231c42e43ab17fd484
 ---
 
-**`rect()`** は [CSS](/ja/docs/Web/CSS) 関数で、包含ブロックの上端と左端から指定した距離に矩形を作成します。これは {{cssxref("&lt;basic-shape&gt;")}} の基本図形関数です。[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)の基本図形関数です。 `rect()` 関数を {{cssxref("offset-path")}} のような CSS プロパティで使用し、要素が移動する矩形のパスを作成したり、 {{cssxref("clip-path")}} でクリッピング領域の図形を定義したりすることができます。
+**`rect()`** は [CSS](/ja/docs/Web/CSS) 関数で、包含ブロックの上端と左端から指定した距離に矩形を作成します。これは {{cssxref("&lt;basic-shape&gt;")}} の基本図形関数です。[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)の基本図形関数です。 `rect()` 関数を {{cssxref("offset-path")}} のような CSS プロパティで使用し、要素が移動する矩形のパスを作成したり、 {{cssxref("clip-path")}} でクリッピング領域の図形を定義したりすることができます。
 
 ## 構文
 
@@ -27,10 +27,6 @@ clip-path: rect(50px 70px 80% 20%);
 
 - `round <'border-radius'>`
   - : CSS は [`border-radius`](/ja/docs/Web/CSS/Reference/Properties/border-radius) の一括指定プロパティと同じ構文を用いて、矩形の角の丸みの半径を指定します。この引数はオプションです。
-
-## 形式文法
-
-{{CSSSyntax}}
 
 ## 例
 
@@ -112,8 +108,8 @@ clip-path: rect(50px 70px 80% 20%);
 
 ## 関連情報
 
-- {{cssxref("basic-shape/inset","inset()")}} 関数
-- {{cssxref("basic-shape/xywh","xywh()")}} 関数
+- [`inset()`](/ja/docs/Web/CSS/Reference/Values/basic-shape#inset) 関数
+- [`xywh()`](/ja/docs/Web/CSS/Reference/Values/basic-shape#xywh) 関数
 - {{cssxref("clip-path")}} プロパティ
 - {{cssxref("offset-path")}} プロパティ
 - {{cssxref("&lt;basic-shape&gt;")}} データ型
