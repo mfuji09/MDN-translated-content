@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::placeholder`** représente [le texte de substitution](/fr/docs/Web/HTML/Reference/Elements/input#placeholder) pour un élément {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::placeholder`** représente [le texte de substitution](/fr/docs/Web/HTML/Reference/Elements/input#placeholder) pour un élément {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::placeholder", "tabbed-shorter")}}
 
@@ -122,7 +122,7 @@ input::placeholder {
 
 ### Texte opaque
 
-Certains navigateurs rendent le texte de substitution moins opaque. Si vous souhaitez un texte entièrement opaque, définissez explicitement la valeur de la propriété {{CSSXref("color")}}. La valeur [`currentColor`](/fr/docs/Web/CSS/color_value#currentcolor_keyword) peut être utilisée pour avoir la même couleur que l'élément d'entrée correspondant.
+Certains navigateurs rendent le texte de substitution moins opaque. Si vous souhaitez un texte entièrement opaque, définissez explicitement la valeur de la propriété {{CSSXref("color")}}. La valeur [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) peut être utilisée pour avoir la même couleur que l'élément d'entrée correspondant.
 
 #### HTML
 

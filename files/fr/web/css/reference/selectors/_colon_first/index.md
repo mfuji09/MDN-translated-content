@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:first`**, liée à la règle @ {{cssxref("@page")}} décrit la mise en forme de la première page lors de l'impression d'un document. ( voir {{cssxref(":first-child")}} pour le premier élément d'un noeud )
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:first`**, liée à la règle @ {{cssxref("@page")}} décrit la mise en forme de la première page lors de l'impression d'un document. ( voir {{cssxref(":first-child")}} pour le premier élément d'un noeud )
 
 ```css
 /* Cible le contenu de la première page */
@@ -18,7 +18,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:
 ```
 
 > [!NOTE]
-> Vous ne pouvez pas modifier toutes les propriétés CSS avec cette pseudo-classe. Vous pouvez uniquement modifier les marges, {{cssxref("orphans")}}, {{cssxref("widows")}} et les sauts de page du document. De plus, vous ne pouvez utiliser que des unités de [longueur absolues](/fr/docs/Web/CSS/length#absolute_length_units) pour définir les marges. Toutes les autres propriétés seront ignorées.
+> Vous ne pouvez pas modifier toutes les propriétés CSS avec cette pseudo-classe. Vous pouvez uniquement modifier les marges, {{cssxref("orphans")}}, {{cssxref("widows")}} et les sauts de page du document. De plus, vous ne pouvez utiliser que des unités de [longueur absolues](/fr/docs/Web/CSS/Reference/Values/length#absolute_length_units) pour définir les marges. Toutes les autres propriétés seront ignorées.
 
 ## Syntaxe
 

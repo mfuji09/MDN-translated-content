@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::scroll-marker-group`** est généré à l'intérieur d'un {{glossary("scroll container","conteneur de défilement")}} et contient tout pseudo-élément {{cssxref("::scroll-marker")}} généré sur les descendants de ce conteneur.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::scroll-marker-group`** est généré à l'intérieur d'un {{glossary("scroll container","conteneur de défilement")}} et contient tout pseudo-élément {{cssxref("::scroll-marker")}} généré sur les descendants de ce conteneur.
 
 ## Syntaxe
 
@@ -189,5 +189,5 @@ ul::scroll-marker-group {
 - {{cssxref(":target-current")}}
 - [Créer des carrousels en CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels)
 - Le module de [positionnement par ancrage CSS](/fr/docs/Web/CSS/CSS_anchor_positioning)
-- Le module de [débordement CSS](/fr/docs/Web/CSS/CSS_overflow)
+- Le module de [débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)
 - [Galerie de carrousels CSS <sup>(angl.)</sup>](https://chrome.dev/carousel/) par chrome.dev (2025)
