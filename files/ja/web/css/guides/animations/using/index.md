@@ -1,6 +1,6 @@
 ---
 title: CSS アニメーションの使用
-short-title: Using animations
+short-title: アニメーションの使用
 slug: Web/CSS/Guides/Animations/Using
 l10n:
   sourceCommit: ca5d9f9e63b460fc0c9e15ac57d9739e10e4ea0d
