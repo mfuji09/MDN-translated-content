@@ -3,7 +3,7 @@ title: グリッドレイアウトの基本概念
 short-title: 基本概念
 slug: Web/CSS/Guides/Grid_layout/Basic_concepts
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)は、 2 次元グリッドシステムを CSS にもたらします。グリッドは、主要なページ領域や小さなユーザーインターフェイス要素のレイアウトに利用できます。このガイドでは、CSS グリッドレイアウトと、CSS グリッドレイアウト仕様の一部である用語について紹介します。この概要で示した機能については、このシリーズの他のガイドで詳しく説明します。

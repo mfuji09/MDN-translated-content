@@ -3,7 +3,7 @@ title: グリッドレイアウトと他のレイアウト方法との関係
 short-title: グリッドと他のレイアウト
 slug: Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods
 l10n:
-  sourceCommit: 98066c71788a31f0f8726f5bf3d4a2acf4a6ff88
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)はレイアウトを行うための完全なシステムの一部として、 CSS の他の機能と一緒に動作するよう設計されました。このガイドでは、既に使われている他の技術と、どのようにグリッドが適合するかを説明します。
