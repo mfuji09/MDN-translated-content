@@ -74,7 +74,7 @@ BigInt.asIntN(bits, bigint)
 
 ### 64 ビットの範囲に収める
 
-`BigInt.asIntN()` メソッドは、 64 ビットの数値の範囲に収めるのに便利です。
+`BigInt.asIntN()` メソッドは、64 ビットの数値の範囲に収めるのに便利です。
 
 ```js
 const max = 2n ** (64n - 1n) - 1n;
