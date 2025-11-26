@@ -3,7 +3,7 @@ title: <overflow>
 slug: Web/CSS/Reference/Values/overflow_value
 original_slug: Web/CSS/overflow_value
 l10n:
-  sourceCommit: afaf3aeeffa8408cf0a8a46c3d8fb0d347aad9f5
+  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
 **`<overflow>`** {{glossary("enumerated", "列挙")}}値型は、{{cssxref("overflow-block")}}、{{cssxref("overflow-inline")}}、{{cssxref("overflow-x")}}、{{cssxref("overflow-y")}} の個別指定プロパティと {{cssxref("overflow")}} 一括指定プロパティのキーワード値を表します。これらのプロパティは、ブロックコンテナー、フレックスコンテナー、グリッドコンテナーに適用されます。

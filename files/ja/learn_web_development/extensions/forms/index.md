@@ -2,10 +2,8 @@
 title: ウェブフォーム
 slug: Learn_web_development/Extensions/Forms
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 73a73bc44e12181c778910f3b7d73962e0dd9a29
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions")}}
 
@@ -20,7 +18,7 @@ l10n:
 上記のテキストは、なぜ私たちがウェブフォームを HTML、CSS、JavaScript のトピックに混ぜるのではなく、独立したモジュールにしたかを示す良い指標です。フォーム要素は他のほとんどの HTML 要素よりも複雑であり、またフォーム要素を最大限に活用するためには、関連する CSS と JavaScript のテクニックを密接に組み合わせる必要があります。
 
 > [!NOTE]
-> 自分のファイルを作ることができないコンピューター/タブレット/その他の端末で作業している場合、（大半の）コード例を [JS Bin](https://jsbin.com/) や [Glitch](https://glitch.com/) といったオンラインコーディングプログラムで試すことができます。
+> ファイルを作成できないコンピューター、タブレット、その他の端末で作業している場合は、[CodePen](https://codepen.io/) や [JSFiddle](https://jsfiddle.net/) などのオンラインエディターでコードを実行してみてください。
 
 ## 導入ガイド
 
@@ -56,7 +54,7 @@ l10n:
 - [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
   - : この記事ではユーザーがフォームを送信するときに何が起こるのかを見ます — データがどこに行くのか、そしてそこでデータを受けたらどう扱うかなどです。また、フォームデータ送信に関連するセキュリティ上の懸念もその一部です。
 
-## 高度なガイド
+## 高度な記事
 
 下記の記事は学習コースに必須ではないですが、上記のテクニックをマスターしてそれ以上知りたいときには、興味深く役立つものでしょう。
 
