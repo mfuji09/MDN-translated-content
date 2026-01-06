@@ -6,7 +6,7 @@ original_slug: Web/CSS/flex_value
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [тип данных](/ru/docs/Web/CSS/CSS_values_and_units/CSS_data_types) **`<flex>`** определяет гибкую длину в сеточном контейнере. Он используется в таких свойствах, как {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}}.
+[CSS](/ru/docs/Web/CSS) [тип данных](/ru/docs/Web/CSS/Reference/Values/Data_types) **`<flex>`** определяет гибкую длину в сеточном контейнере. Он используется в таких свойствах, как {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}}.
 
 ## Синтаксис
 
@@ -29,4 +29,4 @@ original_slug: Web/CSS/flex_value
 
 ## Смотрите также
 
-- [CSS Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout)
+- [CSS Grid Layout](/ru/docs/Web/CSS/Guides/Grid_layout)

@@ -96,7 +96,7 @@ grid-template-columns: unset;
 - `none`
   - : Указывает на отсутствие явной грид-раскладки. Все колонки будут создаваться неявным образом, а их размер будет определяться свойством {{cssxref("grid-auto-columns")}}.
 - `[linename]`
-  - : [`<custom-ident>`](/ru/docs/Web/CSS/custom-ident) задаёт имя для линии. Идентификатором может быть любая строка, кроме зарезервированных слов `span` и `auto`. У линий может быть несколько имён, перечисленных через пробел внутри квадратных скобок, например, `[line-name-a line-name-b]`.
+  - : [`<custom-ident>`](/ru/docs/Web/CSS/Reference/Values/custom-ident) задаёт имя для линии. Идентификатором может быть любая строка, кроме зарезервированных слов `span` и `auto`. У линий может быть несколько имён, перечисленных через пробел внутри квадратных скобок, например, `[line-name-a line-name-b]`.
 - {{cssxref("&lt;length&gt;")}}
   - : Неотрицательная длина, задающая ширину колонки.
 - {{cssxref("&lt;percentage&gt;")}}
@@ -129,7 +129,7 @@ grid-template-columns: unset;
   - : Представляет собой повторяющийся фрагмент списка полос, тем самым позволяя компактно определить большое количество колонок согласно повторяющемуся шаблону.
 - [`masonry`](/ru/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{Experimental_Inline}}
   - : Значение `masonry` указывает на то, что оси должны выстраиваться согласно алгоритму masonry (плиточной раскладки).
-- [`subgrid`](/ru/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [`subgrid`](/ru/docs/Web/CSS/Guides/Grid_layout/Subgrid)
   - : Значение `subgrid` указывает, что грид-раскладка примет размеры родительского грид-контейнера на соответствующих осях. Таким образом размеры колонок и рядов не задаются явно, а берутся из определения родительской грид-раскладки.
 
 > [!WARNING]
@@ -191,6 +191,6 @@ grid-template-columns: unset;
 ## Смотрите также
 
 - Связанные CSS-свойства: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- Руководство по грид-раскладке: _[Основы грид-раскладки - грид-полосы](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_tracks)_
+- Руководство по грид-раскладке: _[Основы грид-раскладки - грид-полосы](/ru/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#grid_tracks)_
 - Обучающее видео: _[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_
-- [Subgrid](/ru/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [Subgrid](/ru/docs/Web/CSS/Guides/Grid_layout/Subgrid)

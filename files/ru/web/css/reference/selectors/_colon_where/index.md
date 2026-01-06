@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:where
 original_slug: Web/CSS/:where
 ---
 
-{{CSSRef}}[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:where()`** в качестве аргумента принимает список селекторов и выбирает только те элементы, которые могут быть выбраны из переданного списка.
+{{CSSRef}}[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:where()`** в качестве аргумента принимает список селекторов и выбирает только те элементы, которые могут быть выбраны из переданного списка.
 
 ```css
 /* Выбирает любой параграф внутри header, main
@@ -23,7 +23,7 @@ footer p:hover {
 }
 ```
 
-Разница между `:where()` и {{CSSxRef(":is", ":is()")}} заключается в том, что `:where()` всегда имеет нулевую [специфичность селектора](/ru/docs/Web/CSS/CSS_cascade/Specificity), тогда как специфичность `:is()` равна самому специфичному селектору из списка переданных аргументов.
+Разница между `:where()` и {{CSSxRef(":is", ":is()")}} заключается в том, что `:where()` всегда имеет нулевую [специфичность селектора](/ru/docs/Web/CSS/Guides/Cascade/Specificity), тогда как специфичность `:is()` равна самому специфичному селектору из списка переданных аргументов.
 
 ### Парсинг forgiving-селектора
 
@@ -155,5 +155,5 @@ footer a {
 ## Смотрите также
 
 - {{CSSxRef(":is", ":is()")}}
-- [Список селекторов](/ru/docs/Web/CSS/Selector_list)
+- [Список селекторов](/ru/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Веб-компоненты](/ru/docs/Web/API/Web_components)

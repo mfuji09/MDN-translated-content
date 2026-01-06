@@ -6,7 +6,7 @@ original_slug: Web/CSS/var
 
 {{CSSRef}}
 
-[Функция](/ru/docs/Web/CSS/CSS_Functions) [CSS](/ru/docs/Web/CSS) **`var()`** используется для вставки значения [кастомного свойства](/ru/docs/Web/CSS/--*) (также известного как "CSS-переменная") в другое свойство.
+[Функция](/ru/docs/Web/CSS/CSS_Functions) [CSS](/ru/docs/Web/CSS) **`var()`** используется для вставки значения [кастомного свойства](/ru/docs/Web/CSS/Reference/Properties/--*) (также известного как "CSS-переменная") в другое свойство.
 
 {{InteractiveExample("CSS Demo: var()")}}
 
@@ -109,4 +109,4 @@ body {
 ## Смотрите также
 
 - {{cssxref("env()","env(…)")}} – доступные только для чтения переменные среды, контролируемые браузером
-- [Использование CSS-переменных](/ru/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
+- [Использование CSS-переменных](/ru/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
