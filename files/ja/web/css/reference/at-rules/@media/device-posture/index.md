@@ -1,9 +1,8 @@
 ---
 title: device-posture
 slug: Web/CSS/Reference/At-rules/@media/device-posture
-original_slug: Web/CSS/@media/device-posture
 l10n:
-  sourceCommit: 01e8b5077df6d79e52f2521dfbe734e0923d1fc4
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{seecompattable}}
@@ -50,6 +49,6 @@ l10n:
 ## 関連情報
 
 - {{domxref("DevicePosture")}}
-- [Device Posture API](/ja/docs/Web/API/Device_Posture_API)
+- [端末状態 API](/ja/docs/Web/API/Device_Posture_API)
 - [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
 - [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)
