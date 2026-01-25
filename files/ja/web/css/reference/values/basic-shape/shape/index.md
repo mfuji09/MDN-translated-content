@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`shape()`** は [CSS の関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、{{cssxref("clip-path")}} および {{cssxref("offset-path")}} プロパティの図形を定義するために使用されます。これは、図形のパスを定義する一連のシェイプコマンドと開始点を組み合わせたものです。`shape()` 関数は、{{cssxref("basic-shape")}} データ型のメンバーです。
+**`shape()`** は [CSS の関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、{{cssxref("clip-path")}} および {{cssxref("offset-path")}} プロパティの図形を定義するために使用されます。これは、図形のパスを定義する一連のシェイプコマンドと起点を組み合わせたものです。`shape()` 関数は、{{cssxref("basic-shape")}} データ型のメンバーです。
 
 ## 構文
 
@@ -66,16 +66,16 @@ clip-path: shape(
     > `<fill-rule>` は {{cssxref("offset-path")}} では対応しておらず、使用するとプロパティが無効になります。
 
 - `from <coordinate-pair>`
-  - : 最初の `<shape-command>` の始点を、[参照ボックス](/ja/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box) の左上角から測定される座標のペアとして定義します。座標は空白区切りで指定される `<x> <y>` の {{cssxref("&lt;length-percentage&gt;")}} 値であり、それぞれ左オフセットと上オフセットを表します。パーセント値は、それぞれ要素の参照ボックスの幅と高さからの相対値です。この引数の後にカンマを追加します。
+  - : 最初の `<shape-command>` の起点を、[参照ボックス](/ja/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box) の左上角から測定される座標のペアとして定義します。座標は空白区切りで指定される `<x> <y>` の {{cssxref("&lt;length-percentage&gt;")}} 値であり、それぞれ左オフセットと上オフセットを表します。パーセント値は、それぞれ要素の参照ボックスの幅と高さからの相対値です。この引数の後にカンマを追加します。
 
 - `<shape-command>`
-  - : 図形を定義する、カンマ区切りの1つ以上のコマンドのリストを指定します。構文は [SVG パスコマンド](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド)と同様です。コマンドには `<move-command>`、`<line-command>`、`<hv-line-command>`、`<curve-command>`、`<smooth-command>`、`<arc-command>`、`close` があります。それぞれのコマンドの開始点は前回のコマンドの終了点であり、図形の最初の点は [`from <coordinate-pair>`](#from_coordinate-pair) 引数で定義されます。
+  - : 図形を定義する、カンマ区切りの1つ以上のコマンドのリストを指定します。構文は [SVG パスコマンド](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド)と同様です。コマンドには `<move-command>`、`<line-command>`、`<hv-line-command>`、`<curve-command>`、`<smooth-command>`、`<arc-command>`、`close` があります。それぞれのコマンドの起点は前回のコマンドの終点であり、図形の最初の点は [`from <coordinate-pair>`](#from_coordinate-pair) 引数で定義されます。
 
 #### シェイプコマンド
 
 ほとんどのシェイプコマンドの構文は、`move` や `line` などのディレクティブとなるキーワードに、`by` または `to` キーワード、そして座標のセットが続く形式です。
 
-- `by`: `<coordinate-pair>` がコマンドの開始点に対する相対座標（「相対」値）であることを示します。
+- `by`: `<coordinate-pair>` がコマンドの起点に対する相対座標（「相対」値）であることを示します。
 - `to`: `<coordinate-pair>` が参照ボックスの左上角を基準とした相対座標であることを示します（「絶対」座標値）。
 
 > [!NOTE]
@@ -84,86 +84,86 @@ clip-path: shape(
 次の `<shape-command>` が指定できます。
 
 - `<move-command>`
-  - : `move [by | to] <coordinate-pair>` の形で指定します。このコマンドはシェイプコマンドのリストに [MoveTo コマンド](/ja/docs/Web/SVG/Reference/Attribute/d#moveto_path_commands)を追加します。何も描画されず、代わりに次のコマンドの開始位置を指定します。`by` または `to` キーワードは、それぞれ `<coordinate-pair>` の点が相対座標か絶対座標かを指定します。`<移動コマンド>` が `close` コマンドに続く場合、次の図形またはサブパスの始点を識別します。
+  - : `move [by | to] <coordinate-pair>` の形で指定します。このコマンドはシェイプコマンドのリストに [MoveTo コマンド](/ja/docs/Web/SVG/Reference/Attribute/d#moveto_path_commands)を追加します。何も描画されず、代わりに次のコマンドの起点を指定します。`by` または `to` キーワードは、それぞれ `<coordinate-pair>` の点が相対座標か絶対座標かを指定します。`<移動コマンド>` が `close` コマンドに続く場合、次の図形またはサブパスの起点を識別します。
 
 - `<line-command>`
-  - : `line [by | to] <coordinate-pair>` の形で指定します。このコマンドはシェイプコマンドのリストに [LineTo コマンド](/ja/docs/Web/SVG/Reference/Attribute/d#lineto_path_commands) を追加します。コマンドの開始点から終了点まで直線を描画します。`by` または `to` キーワードは、`<coordinate-pair>` で指定される終了点が相対座標か絶対座標かをそれぞれ指定します。
+  - : `line [by | to] <coordinate-pair>` の形で指定します。このコマンドはシェイプコマンドのリストに [LineTo コマンド](/ja/docs/Web/SVG/Reference/Attribute/d#lineto_path_commands) を追加します。コマンドの起点から終点まで直線を描画します。`by` または `to` キーワードは、`<coordinate-pair>` で指定される終点が相対座標か絶対座標かをそれぞれ指定します。
 
 - `<hv-line-command>`
-  - : `[hline | vline] [by | to] <length-percentage>` の形で指定します。このコマンドは、シェイプコマンドのリストに水平線 (`hline`) または垂直線 (`vline`) の [LineTo コマンド](/ja/docs/Web/SVG/Reference/Attribute/d#lineto_path_commands)を追加します。`hline` では、コマンドの開始点から `<length-percentage>` で定義された `x` 位置まで、または `x` 位置から `<length-percentage>` で定義された `y` 位置まで水平線が描画されます。`vline` では、コマンドの始点から `<length-percentage>` で定義された `y` 位置まで、または `y` 位置から `<length-percentage>` で定義された `x` 位置まで垂直線が描画されます。`by` または `to` キーワードは、それぞれ相対的または絶対的な終了点を決定します。このコマンドは、単一の `<length-percentage>` で一方の座標値を指定し、もう一方の座標値がコマンドの開始点から変更されない `<line-command>` と同等です。
+  - : `[hline | vline] [by | to] <length-percentage>` の形で指定します。このコマンドは、シェイプコマンドのリストに水平線 (`hline`) または垂直線 (`vline`) の [LineTo コマンド](/ja/docs/Web/SVG/Reference/Attribute/d#lineto_path_commands)を追加します。`hline` では、コマンドの起点から `<length-percentage>` で定義された `x` 位置まで、または `x` 位置から `<length-percentage>` で定義された `y` 位置まで水平線が描画されます。`vline` では、コマンドの起点から `<length-percentage>` で定義された `y` 位置まで、または `y` 位置から `<length-percentage>` で定義された `x` 位置まで垂直線が描画されます。`by` または `to` キーワードは、それぞれ相対的または絶対的な終点を決定します。このコマンドは、単一の `<length-percentage>` で一方の座標値を指定し、もう一方の座標値がコマンドの起点から変更されない `<line-command>` と同等です。
 
 - `<curve-command>`
-  - : Specified as `curve [by | to] <end-point> with <control-point> [/ <control-point>]`. This command adds a [Bézier curve command](/ja/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the `<end-point>`, is relative or absolute.
+  - : `curve [by | to] <end-point> with <control-point> [/ <control-point>]` の形で指定します。このコマンドは、シェイプコマンドのリストに [ベジェ曲線コマンド](/ja/docs/Web/SVG/Reference/Attribute/d#3_次ベジェ曲線) を追加します。`by` または `to` キーワードは、`<end-point>` で指定される曲線の終点が相対座標か絶対座標かを決定します。
 
-    The `with` keyword specifies the control points of the Bézier curve as follows.
-    - If only a single `<control-point>` is provided, the command draws a [quadratic Bézier curve](/ja/docs/Web/SVG/Reference/Attribute/d#quadratic_bézier_curve), which is defined by three points (the start point, control point, and end point).
-    - If two `<control-point>` values are provided, the command draws a cubic Bézier curve, which is defined by four points (the start point, two control points, and the end point).
+    `with` キーワードは、ベジェ曲線の制御点を次のとおり指定します。
+    - 単一の `<control-point>` のみが指定された場合、このコマンドは[二次ベジェ曲線](/ja/docs/Web/SVG/Reference/Attribute/d#2_次ベジェ曲線)を描画します。これは 3 つの点（起点、制御点、終点）によって定義されます。
+    - 2 つの `<control-point>` 値が指定された場合、コマンドは 4 つの点（起点、2 つの制御点、終点）で定義される 3 次べジェ曲線を描画します。
 
-    Valid values for `<end-point>` include:
-    - {{cssxref("&lt;position>")}} keywords or a `<coordinate-value-pair>`
-      - : Can be used if the curve end point is absolute (specified using `to`).
+    有効な `<end-point>` の値には以下のものがあります。
+    - {{cssxref("&lt;position>")}} キーワードまたは `<coordinate-value-pair>`
+      - : 曲線の終点が絶対位置の場合（`to` を使用して指定）に使用できます。
     - `<coordinate-value-pair>`
-      - : Can be used if the curve end point is relative (specified using `by`).
+      - : 曲線の終点が相対位置の場合（`by` を使用して指定）に使用できます。
 
-    Valid values for `<control-point>` include:
+    有効な `<control-point>` の値には以下のものがあります。
     - {{cssxref("&lt;position>")}}
-      - : Specifies a position keyword. This value is valid only when the curve end point is absolute (specified using `to`).
+      - : 位置キーワードを指定します。この値は、曲線の終点が絶対位置（`to` を使用して指定）の場合にのみ有効です。
     - `<coordinate-value-pair>`
-      - : Specifies a pair of {{cssxref("&lt;length-percentage>")}} values that define coordinates.
+      - : 座標を定義する {{cssxref("&lt;length-percentage>")}} 値のペアを指定します。
     - `<relative-control-point>`
-      - : Defines a `<coordinate-value-pair>` followed by the `from` keyword and one of the following keywords:
+      - : `<coordinate-value-pair>` を定義し、その後に `from` キーワードと次のキーワードのいずれかを続けます。
         - `start`
-          - : Indicates that the control point is relative to the start point of the current command.
+          - : 制御点が現在のコマンドの起点に対する相対位置であることを示します。
         - `end`
-          - : Indicates that the control point is relative to the end point of the current command.
+          - : 制御点が現在のコマンドの終点に対する相対位置であることを示します。
         - `origin`
-          - : Indicates that the control point is relative to the top-left (origin) point of the container the shape is being drawn inside.
+          - : 制御点が、図形が描画されているコンテナーの左上の点（原点）に対する相対位置であることを示します。
             > [!NOTE]
-            > If the `<relative-control-point>` keywords are not specified, making the `<control-point>` a regular `<coordinate-value-pair>`, the coordinates are relative to the start of the curve. In other words, `start` is the default setting.
+            > `<relative-control-point>` キーワードが指定されていない場合、`<control-point>` は通常の `<coordinate-value-pair>` となり、座標は曲線の起点に対する相対座標となります。言い換えれば、`start` がデフォルト設定となります。
 
 - `<smooth-command>`
-  - : Specified as `smooth [by | to] <end-point> [with <control-point>]`. This command adds a smooth [Bézier curve command](/ja/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the `<end-point>`, is relative or absolute.
+  - : `smooth [by | to] <end-point> [with <control-point>]` の形式で指定されます。このコマンドは、シェイプコマンドのリストに滑らかな [ベジェ曲線コマンド](/ja/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) を追加します。`by` または `to` キーワードは、`<end-point>` で指定される曲線の終点が相対座標か絶対座標かを決定します。
 
-    The `with` keyword specifies an optional control point for the Bézier curve:
-    - If `with <control-point>` is omitted, the command draws a smooth quadratic Bézier curve, which uses the previous control point and the current endpoint to define the curve.
-    - If the optional `with` keyword is included, it specifies a control points of the curve through `<control-point>`, drawing a smooth cubic Bézier curve defined by the previous control point, the current control point, and the current endpoint.
+    `with` キーワードは、ベジェ曲線に対するオプションの制御点を指定します。
+    - `with <control-point>` が省略された場合、コマンドは滑らかな二次ベジェ曲線を描画します。この曲線は、前回の使用された制御点と現在の終点を用いて定義されます。
+    - オプションの `with` キーワードが記載されている場合、`<control-point>` を通じて曲線の制御点を指定し、前制御点、現制御点、および現在の終点によって定義される滑らかな 3 次べジェ曲線を描画します。
 
-    Smooth curves ensure a continuous transition from the shape, while quadratic curves do not. Smooth quadratic curves maintain a seamless transition using a single control point, whereas smooth cubic curves provide a more refined transition using two control points.
+    滑らかな曲線は図形からの連続的な推移を実現しますが、二次曲線はそうではありません。滑らかな二次曲線は単一の制御点を使用してシームレスな推移を維持する一方、滑らかな三次曲線は二つの制御点を使用してより洗練された推移を提供します。
 
-    Valid values for the `<end-point>` and `<control-point>` components are the same as those for [`<curve-command>`](#curve-command).
+    `<end-point>` と `<control-point>` 成分で有効な値は、[`<curve-command>`](#curve-command) と同じです。
 
 - `<arc-command>`
-  - : Specified as `arc [by | to] <coordinate-pair> of <length-percentage> [<length-percentage>] [<arc-sweep> | <arc-size> | rotate <angle>]`. This command adds an [elliptical arc curve command](/ja/docs/Web/SVG/Reference/Attribute/d#elliptical_arc_curve) to the list of shape commands. It draws an elliptical arc between a starting point and an ending point. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively.
+  - : `arc [by | to] <coordinate-pair> of <length-percentage> [<length-percentage>] [<arc-sweep> | <arc-size> | rotate <angle>]` で指定します。このコマンドは、形状コマンドのリストに[楕円弧曲線コマンド](/ja/docs/Web/SVG/Reference/Attribute/d#elliptical_arc_curve)を追加します。起点と終点の間に楕円弧を描画します。`by` または `to` キーワードは、最初の `<coordinate-pair>` で指定される曲線の終点が、それぞれ相対座標か絶対座標かを決定します。
 
-    The elliptical arc curve command defines two possible ellipses, which intersect both the starting and ending points, and each can be traced clockwise or counterclockwise, resulting in four possible arcs depending on the arc size, direction, and angle. The `of` keyword specifies the size of the ellipse from which the arc is taken: the first `<length-percentage>` provides the horizontal radius of the ellipse, and the second `<length-percentage>` provides the vertical radius.
+    楕円弧曲線コマンドは、起点と終点の両方を通る 2 つの楕円を定義し、それぞれの楕円を時計回りまたは反時計回りにトレースできます。これにより、弧のサイズ、方向、角度に応じて4つの異なる弧が生成されます。`of` キーワードは弧が導かれる楕円のサイズを指定します。最初の `<length-percentage>` が楕円の水平半径を、次の `<length-percentage>` が垂直半径をそれぞれ提供します。
 
-    Specify the following parameters to choose which of the four arcs to use:
-    - `<arc-sweep>`: Indicates whether the desired arc is the one traced around the ellipse clockwise (`cw`) or counterclockwise (`ccw`). If omitted, this defaults to `ccw`.
-    - `<arc-size>`: Indicates whether the desired arc is the larger (`large`) or smaller (`small`) of the two arcs. If omitted, this defaults to `small`.
-    - `<angle>`: Specifies the angle, in degrees, by which to rotate the ellipse relative to the x-axis. A positive angle rotates the ellipse clockwise, and a negative angle rotates it counterclockwise. If omitted, this defaults to `0deg`.
+    次の引数を指定して、4 つの円弧のうちどれを使用するかを選択してください。
+    - `<arc-sweep>`: 指定された円弧が楕円を時計回り (`cw`) でトレースしたものか反時計回り (`ccw`) でトレースしたものかを示します。省略された場合、デフォルトは `ccw` です。
+    - `<arc-size>`: 求める円弧が、2つの円弧のうち大きい方 (`large`) か小さい方 (`small`) かを示します。省略した場合、デフォルトは `small` となります。
+    - `<angle>`: 楕円を x 軸に対して回転させる角度を度単位で指定します。正の値は楕円を時計回りに、負の値は反時計回りに回転させます。省略した場合、デフォルト値は `0deg` となります。
 
-    Special situations are handled as follows:
-    - If only one `<length-percentage>` is provided, the same value is used for both the horizontal and vertical radii, effectively creating a circle. In this case, `<arc-size>` and `<angle>` have no affect.
-    - If either radius is zero, the command is equivalent to a `<line-command>` to the ending point.
-    - If either radius is negative, its absolute value is used instead.
-    - If the horizontal and vertical radii don't describe an ellipse large enough to intersect both the starting point and ending points (after rotation by the specified `<angle>`), the radii are scaled up uniformly until the ellipse is just large enough to intersect both points.
-    - If the starting and ending points of the arc lie on exactly opposite sides of the ellipse, there is only one possible ellipse and two possible arcs. In this case, `<arc-sweep>` specifies the arc to choose, and `<arc-size>` has no effect.
+    特別な状況は次のとおり処理されます。
+    - `<length-percentage>` が 1 つだけ指定された場合、水平半径と垂直半径の両方に同じ値が使用され、実質的に円が作成されます。この場合、`<arc-size>` と `<angle>` は影響しません。
+    - どちらかの半径がゼロの場合、このコマンドは終点への`<line-command>`と同等になります。
+    - どちらかの半径が負の場合、その絶対値が代わりに使用されます。
+    - 水平半径と垂直半径が、指定された `<angle>` で回転させた後、起点と終点の両方に交わるのに十分な大きさの楕円を描かない場合、楕円が両点に交わるのにちょうど十分な大きさになるまで、半径は均一に変倍されます。
+    - 円弧の起点と終点が楕円の対称位置にある場合、可能な楕円は 1 つ、可能な円弧は 2 つしか存在しません。この場合、`<arc-sweep>` が選択する円弧を指定し、`<arc-size>` は効果を持ちません。
 
 - `close`
-  - : Adds a [ClosePath command](/ja/docs/Web/SVG/Reference/Attribute/d#closepath) to the list of shape commands, drawing a straight line from the current position (end of the last command) to the first point in the path defined in the `from <coordinate-pair>` parameter. To close the shape without drawing a line, include a `<move-command>` with the originating coordinates before the close command. If the `close` command is immediately followed by a `<move-command>`, it defines the starting point of the next shape or subpath.
+  - : シェイプコマンドのリストに [ClosePath コマンド](/ja/docs/Web/SVG/Reference/Attribute/d#closepath)を追加します。現在の位置（直前のコマンドの終点）から、`from <coordinate-pair>` 引数で定義されたパスの最初の点まで直線を描画します。線を引かずに図形を閉じるには、閉じるコマンドの前に開始座標を含む `<move-command>` を記載します。`close` コマンドの直後に `<move-command>` が続く場合、それは次の図形またはサブパスの起点として定義されます。
 
 ## 解説
 
-The `shape()` function allows you to define complex shapes. It is similar to the {{cssxref("basic-shape/path","path()")}} shape function in several ways:
+`shape()` 関数を使用すると、複雑な図形を定義することができます。この関数は、いくつかの方法で {{cssxref("basic-shape/path","path()")}} シェイプ関数と似ています。
 
-- The `<fill-rule>` parameter in the `shape()` function works exactly like the same parameter in the `path()` function.
-- The `shape()` function requires specifying one or more `<shape-command>`s, where each command uses an underlying [path command](/ja/docs/Web/SVG/Reference/Attribute/d#path_commands), such as [MoveTo](/ja/docs/Web/SVG/Reference/Attribute/d#moveto_path_commands), [LineTo](/ja/docs/Web/SVG/Reference/Attribute/d#lineto_path_commands), and [ClosePath](/ja/docs/Web/SVG/Reference/Attribute/d#closepath).
+- `shape()` 関数内の `<fill-rule>` 引数は、`path()` 関数内の同名の引数と全く同様に動作します。
+- `shape()` 関数では、1 つ以上の `<shape-command>` を指定する必要があります。それぞれのコマンドは、基盤となる[パスコマンド](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド)を使用します。例えば [MoveTo](/ja/docs/Web/SVG/Reference/Attribute/d#moveto_パスコマンド)、[LineTo](/ja/docs/Web/SVG/Reference/Attribute/d#lineto_パスコマンド)、[ClosePath](/ja/docs/Web/SVG/Reference/Attribute/d#closepath) などです。
 
-However, `shape()` offers several advantages over using `path()`:
+ただし、`shape()` は `path()` を使用する場合に比べていくつかの利点があります。
 
-- `shape()` uses standard CSS syntax, making it easier to create and modify shapes directly in your stylesheet. In comparison, `path()` uses the [SVG path](/ja/docs/Web/SVG/Reference/Element/path) syntax, which is less intuitive for those not familiar with SVG.
-- `shape()` supports a variety of CSS units, including percentages, `rem`, and `em`. `path()`, on the other hand, defines shapes as a single string and limits units to `px`.
-- `shape()` also allows the use of CSS math functions, like {{cssxref("calc")}}, {{cssxref("max")}}, and {{cssxref("abs")}}, providing more versatility when defining shapes.
+- `shape()` は標準の CSS 構文を使用するため、このスタイルシート内で直接図形を作成したり変更したりしやすくなります。一方、`path()` は [SVG パス](/ja/docs/Web/SVG/Reference/Element/path)構文を使用するため、SVG に慣れていないユーザーには直感的ではありません。
+- `shape()` はパーセント値、`rem`、`em` を含む様々な CSS の単位に対応しています。一方、`path()` は図形を単一の文字列で定義し、単位は `px` に限られます。
+- `shape()` では、{{cssxref("calc")}}、{{cssxref("max")}}、{{cssxref("abs")}} などの CSS 数学関数も同時に使用でき、図形を定義する柔軟性がさらに高まります。
 
 ## 形式文法
 
@@ -173,23 +173,23 @@ However, `shape()` offers several advantages over using `path()`:
 
 ### `shape()` を使用してパスを定義
 
-This example demonstrates how the `shape()` function can be used in the {{cssxref("offset-path")}} property to define the shape of the path an element can follow.
+この例では、`shape()` 関数を {{cssxref("offset-path")}} プロパティ内で使用し、要素がたどるパスの形状を定義する方法を示しています。
 
-The first shape, `shape1`, follows a cubic Bézier curved path defined by the `curve to` command. Next, the `close` command draws a straight line from the curve's end point back to the initial point defined in the `from` command. Finally, `shape1` moves to its new position at `0px 150px` and then proceeds along a horizontal line.
+最初の図形 `shape1` は、`curve to` コマンドで定義された3次べジェ曲線パスに沿って描画されます。次に `close` コマンドが、曲線の終点から `from` コマンドで定義された起点まで直線を引きます。最後に `shape1` は新しい位置 `0px 150px` に移動し、水平線に沿って進みます。
 
-The second shape, `shape2`, initially follows a horizontal line, then moves back to its starting position at `50px 90px`. Next, it follows a vertical line before closing the path back to the initial point.
+2 つ目の図形 `shape2` は、最初に水平線に沿って移動し、その後 `50px 90px` の起点に戻ります。次に垂直線に沿って移動した後、経路を閉じ、起点に戻ります。
 
-Both shapes start with their original colors and gradually transition to `hotpink` by the end of the `move` animation, reverting to their initial color as the animation restarts. This cyclic color change provides you a visual cue about the animation's progression and restart.
+どちらの図形も元の色から始まり、`move` アニメーションの終わりまでに徐々に`hotpink`へ変化し、アニメーションが再開されると元の色に戻ります。この周期的な色の変化により、アニメーションの進行状況と再開が視覚的に示されます。
 
 ```html hidden
 <div class="container">
-  Using <code>&lt;curve-command&gt;</code>
+  <code>&lt;curve-command&gt;</code> を使用
   <div class="shape shape1">>></div>
 </div>
 
 <div class="container">
-  Using <code>&lt;move-command&gt;</code> and
-  <code>&lt;hvline-command&gt;</code>
+  <code>&lt;move-command&gt;</code> と
+  <code>&lt;hvline-command&gt;</code> を使用
   <div class="shape shape2">>></div>
 </div>
 ```
@@ -215,7 +215,7 @@ body {
     display: none;
   }
   body::after {
-    content: "Your browser doesn't support the `shape()` function yet.";
+    content: "このブラウザーはまだ `shape()` 関数に対応していません。";
   }
 }
 ```
@@ -268,7 +268,7 @@ body {
 
 ### `shape()` を使用して要素の可視範囲を定義
 
-This example demonstrates how the `shape()` function can be used in the {{cssxref("clip-path")}} property to create different shapes for the clipping region. The first shape (`shape1`) uses a triangle defined by straight lines. The second shape (`shape2`) includes curves and smooth transitions; it also illustrates the use of the `<move-command>` after the `close` command, which adds a rectangular shape to the clipping region.
+この例は、`shape()` 関数を {{cssxref("clip-path")}} プロパティ内で使用することができることを示しています。これにより、クリッピング領域で異なる図形を生成することができます。まず、最初の図形 (`shape1`) は直線で定義された三角形を使用しています。2 つ目の図形 (`shape2`) は曲線と滑らかなトランジションを記載し、`<move-command>` を使用することで `close` コマンドの後にクリッピング領域に矩形図形を追加する手法も示しています。
 
 ```html hidden
 <div class="container">
@@ -301,7 +301,7 @@ body {
     display: none;
   }
   body::after {
-    content: "Your browser doesn't support the `shape()` function yet.";
+    content: "このブラウザーはまだ `shape()` 関数に対応していません。";
   }
 }
 ```
@@ -316,13 +316,12 @@ body {
   line-height: 50px;
 }
 
-/* Triangular clipping region */
+/* 三角形のクリッピング領域 */
 .shape1 {
   clip-path: shape(from 0% 0%, line to 100% 0%, line to 50% 100%, close);
 }
 
-/* A Heart clipping region using curve and arc transitions
-   and a box using hline and vline transitions */
+/* 曲線と円弧の遷移を使用するハート形のクリッピング領域と、水平線と垂直線の移動を伴うボックス */
 .shape2 {
   clip-path: shape(
     from 20px 70px,
@@ -346,12 +345,12 @@ body {
 
 ### `shape()` を使用して相対制御点付きのカーブを描画
 
-Like previous examples, this example also uses {{cssxref("clip-path")}} to create different shapes for the clipping regions of the elements. The shapes are specified using a combination of [`<curve-command>`](#curve-command) and [`<smooth-command>`](#smooth-command), and the control points are specified using [`<relative-control-point>`](#relative-control-point) values.
+前回の例と同様に、この例でも要素のクリッピング領域に異なる図形を作成するために {{cssxref("clip-path")}} を使用しています。図形は [`<curve-command>`](#curve-command) と [`<smooth-command>`](#smooth-command) の組み合わせで指定され、制御点は [`<relative-control-point>`](#relative-control-point) の値で指定されます。
 
-The first shape (`shape1`) draws two cubic Bézier curves.
+最初の図形 (`shape1`) では 2 つの 3 次べジェ曲線が描画されます。
 
-- The first curve starts from the center of the left edge of the box and is drawn to a point `200px` along the x-axis — the center of the box's right edge. It uses one control point relative to the start of the curve and one control point relative to the origin (top-left of the box).
-- The second curve starts from the center right of the box and is drawn `-200px` along the x-axis — the center of the box's left edge. It uses one control point relative to the origin and one control point relative to the start of the curve.
+- 最初の曲線は、ボックスの左端の中心から始まり、x 軸に沿って `200px` の位置（ボックスの右端の中心）まで描画されます。この曲線は、曲線の起点に対する制御点 1 つと、原点（ボックスの左上隅）に対する制御点 1 つを使用します。
+- 2 番目の曲線はボックスの中央右から始まり、x 軸に沿って `-200px` の位置（ボックスの左端の中心）に描画されます。この曲線は、原点に対する 1 つの制御点と、曲線の起点に対する 1 つの制御点を使用します。
 
 ```html hidden live-sample___relative-control-points
 <div class="container">
@@ -399,10 +398,10 @@ The first shape (`shape1`) draws two cubic Bézier curves.
 }
 ```
 
-The second shape (`shape2`) draws one quadratic Bézier curve and one cubic Bézier curve.
+2 つ目の図形 (`shape2`) は、1 本の 2 次ベジェ曲線と 1 本の 3 次べジェ曲線が描画されます。
 
-- The first curve starts from the center of the left edge of the box and is drawn to an absolute point `200px` from the origin along the x-axis and `100px` from the origin along the y-axis. It uses one control point relative to the start of the curve.
-- The second curve starts from the previous curve's end point and is drawn to the center left of the box. It uses one control point relative to the start of the curve and one control point relative to the end.
+- 最初の曲線は、ボックスの左端の中心から始まり、x 軸方向の原点から絶対座標 `200px`、y 軸方向の原点から絶対座標 `100px` の位置に描画されます。曲線の起点に対する相対位置で 1 つの制御点を使用します。
+- 2 つ目の曲線は、前回の曲線の終点から始まり、ボックスの左中央まで描画されます。曲線の起点に対する制御点 1 つと、終点に対する制御点 1 つを使用します。
 
 ```css live-sample___relative-control-points
 #shape2 {
@@ -418,10 +417,10 @@ The second shape (`shape2`) draws one quadratic Bézier curve and one cubic Béz
 }
 ```
 
-The third shape (`shape3`) draws one quadratic Bézier curve and one cubic Bézier curve using a `smooth` command.
+3 つ目の図形 (`shape3`) では、`smooth` コマンドが使用され、2 次ベジェ曲線 1 本と 3 次べジェ曲線 1 本が描画されます。
 
-- The first curve starts from the center of the left edge of the box and is drawn to a point `200px` along the x-axis. It uses one control point relative to the start of the curve.
-- The second curve starts from the previous curve's end point and is drawn to the center of the box. It uses one control point relative to the start of the curve (the last control point of the previous curve) and one control point relative to the origin.
+- 最初の曲線はボックスの左端の中心から始まり、x 軸に沿って `200px` の位置まで描画されます。曲線の起点に対する相対位置で 1 つの制御点を使用します。
+- 2 つ目の曲線は、前回の曲線の終点から始まり、ボックスの中心まで描画されます。この曲線は、曲線の起点（前回の曲線の最後の制御点）を基準とする制御点を 1 つと、原点を基準とする制御点を 1 つ使用します。
 
 ```css live-sample___relative-control-points
 #shape3 {
