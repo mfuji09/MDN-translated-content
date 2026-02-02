@@ -845,7 +845,7 @@
 /ja/docs/DOM/form.submit	/ja/docs/Web/API/HTMLFormElement/submit
 /ja/docs/DOM/form.target	/ja/docs/Web/API/HTMLFormElement/target
 /ja/docs/DOM/range	/ja/docs/Web/API/Range
-/ja/docs/DOM/range.collapsed	/ja/docs/Web/API/Range/collapsed
+/ja/docs/DOM/range.collapsed	/ja/docs/Web/API/AbstractRange/collapsed
 /ja/docs/DOM/range.intersectsNode	/ja/docs/Web/API/Range/intersectsNode
 /ja/docs/DOM/selection	/ja/docs/Web/API/Selection
 /ja/docs/DOM/stylesheet	/ja/docs/Web/API/StyleSheet
@@ -1095,7 +1095,7 @@
 /ja/docs/DOM:form.method	/ja/docs/Web/API/HTMLFormElement/method
 /ja/docs/DOM:form.submit	/ja/docs/Web/API/HTMLFormElement/submit
 /ja/docs/DOM:range	/ja/docs/Web/API/Range
-/ja/docs/DOM:range.collapsed	/ja/docs/Web/API/Range/collapsed
+/ja/docs/DOM:range.collapsed	/ja/docs/Web/API/AbstractRange/collapsed
 /ja/docs/DOM:selection	/ja/docs/Web/API/Selection
 /ja/docs/DOM:window	/ja/docs/Web/API/Window
 /ja/docs/DOM:window.alert	/ja/docs/Web/API/Window/alert
@@ -2512,6 +2512,7 @@
 /ja/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/blob/main/docs/kumascript/troubleshooting-errors.md
 /ja/docs/MDN/User_guide	https://github.com/mdn/yari/tree/main/docs
 /ja/docs/MDN/Writing_guidelines/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto
+/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template	/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_page_template
 /ja/docs/MDN/Writing_guidelines/Page_structures/Quicklinks	/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion	/ja/docs/MDN/Writing_guidelines/Criteria_for_inclusion
 /ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide	/ja/docs/MDN/Writing_guidelines/Code_style_guide
@@ -3320,16 +3321,11 @@
 /ja/docs/Web/API/RTCConfiguration	/ja/docs/Web/API/RTCPeerConnection/RTCPeerConnection
 /ja/docs/Web/API/RandomSource	/ja/docs/Web/API/Crypto/getRandomValues
 /ja/docs/Web/API/RandomSource/getRandomValues	/ja/docs/Web/API/Crypto/getRandomValues
-/ja/docs/Web/API/Range1	/ja/docs/Web/API/Range
-/ja/docs/Web/API/Range1/cloneContents	/ja/docs/Web/API/Range/cloneContents
-/ja/docs/Web/API/Range1/collapsed	/ja/docs/Web/API/Range/collapsed
-/ja/docs/Web/API/Range1/commonAncestorContainer	/ja/docs/Web/API/Range/commonAncestorContainer
-/ja/docs/Web/API/Range1/endContainer	/ja/docs/Web/API/Range/endContainer
-/ja/docs/Web/API/Range1/endOffset	/ja/docs/Web/API/Range/endOffset
-/ja/docs/Web/API/Range1/intersectsNode	/ja/docs/Web/API/Range/intersectsNode
-/ja/docs/Web/API/Range1/setStart	/ja/docs/Web/API/Range/setStart
-/ja/docs/Web/API/Range1/startContainer	/ja/docs/Web/API/Range/startContainer
-/ja/docs/Web/API/Range1/startOffset	/ja/docs/Web/API/Range/startOffset
+/ja/docs/Web/API/Range/collapsed	/ja/docs/Web/API/AbstractRange/collapsed
+/ja/docs/Web/API/Range/endContainer	/ja/docs/Web/API/AbstractRange/endContainer
+/ja/docs/Web/API/Range/endOffset	/ja/docs/Web/API/AbstractRange/endOffset
+/ja/docs/Web/API/Range/startContainer	/ja/docs/Web/API/AbstractRange/startContainer
+/ja/docs/Web/API/Range/startOffset	/ja/docs/Web/API/AbstractRange/startOffset
 /ja/docs/Web/API/Request/priority	/ja/docs/orphaned/Web/API/Request/priority
 /ja/docs/Web/API/Resource_Timing_API	/ja/docs/Web/API/Performance_API/Resource_timing
 /ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API	/ja/docs/Web/API/Performance_API/Resource_timing
@@ -3380,6 +3376,11 @@
 /ja/docs/Web/API/SpeechRecognitionError	/ja/docs/Web/API/SpeechRecognitionErrorEvent
 /ja/docs/Web/API/SpeechRecognitionEvent/emma	/ja/docs/Web/API/SpeechRecognitionEvent
 /ja/docs/Web/API/SpeechRecognitionEvent/interpretation	/ja/docs/Web/API/SpeechRecognitionEvent
+/ja/docs/Web/API/StaticRange/collapsed	/ja/docs/Web/API/AbstractRange/collapsed
+/ja/docs/Web/API/StaticRange/endContainer	/ja/docs/Web/API/AbstractRange/endContainer
+/ja/docs/Web/API/StaticRange/endOffset	/ja/docs/Web/API/AbstractRange/endOffset
+/ja/docs/Web/API/StaticRange/startContainer	/ja/docs/Web/API/AbstractRange/startContainer
+/ja/docs/Web/API/StaticRange/startOffset	/ja/docs/Web/API/AbstractRange/startOffset
 /ja/docs/Web/API/StorageEstimate	/ja/docs/Web/API/StorageManager/estimate
 /ja/docs/Web/API/SyncEvent/registration	/ja/docs/Web/API/SyncEvent
 /ja/docs/Web/API/Text/replaceWholeText	/ja/docs/Web/API/Text
@@ -3442,7 +3443,7 @@
 /ja/docs/Web/API/Window/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
 /ja/docs/Web/API/Window/arguments	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/back	/ja/docs/Web/API/History/back
-/ja/docs/Web/API/Window/console	/ja/docs/conflicting/Web/API/console_60401d2da71e30c9a41a6920151c1b4910a6c5782043e95b996891763b305aee
+/ja/docs/Web/API/Window/console	/ja/docs/Web/API/console
 /ja/docs/Web/API/Window/content	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/copy_event	/ja/docs/Web/API/Element/copy_event
 /ja/docs/Web/API/Window/cut_event	/ja/docs/Web/API/Element/cut_event
@@ -3517,7 +3518,7 @@
 /ja/docs/Web/API/WindowTimers/setTimeout	/ja/docs/Web/API/Window/setTimeout
 /ja/docs/Web/API/Worker/onerror	/ja/docs/Web/API/Worker/error_event
 /ja/docs/Web/API/Worker/onmessageerror	/ja/docs/Web/API/Worker/messageerror_event
-/ja/docs/Web/API/WorkerGlobalScope/console	/ja/docs/conflicting/Web/API/console
+/ja/docs/Web/API/WorkerGlobalScope/console	/ja/docs/Web/API/console
 /ja/docs/Web/API/XMLDocument/async	/ja/docs/Web/API/XMLDocument
 /ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest
 /ja/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data	/ja/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data
@@ -4598,7 +4599,7 @@
 /ja/docs/Web/CSS/Specificity	/ja/docs/Web/CSS/Guides/Cascade/Specificity
 /ja/docs/Web/CSS/Subsequent-sibling_combinator	/ja/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator
 /ja/docs/Web/CSS/Syntax	/ja/docs/Web/CSS/Guides/Syntax/Introduction
-/ja/docs/Web/CSS/Tools	/ja/docs/conflicting/Web/CSS
+/ja/docs/Web/CSS/Tools	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Type_selectors	/ja/docs/Web/CSS/Reference/Selectors/Type_selectors
 /ja/docs/Web/CSS/Understanding_z_index	/ja/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index
 /ja/docs/Web/CSS/Understanding_z_index/Adding_z-index	/ja/docs/Web/CSS/Guides/Positioned_layout/Using_z-index
