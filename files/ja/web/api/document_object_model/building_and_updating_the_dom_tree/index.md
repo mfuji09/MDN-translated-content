@@ -1,5 +1,5 @@
 ---
-title: JavaScript と DOM インターフェイスによる HTML の表の操作
+title: DOM ツリーの構築と更新
 slug: Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
 l10n:
   sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
