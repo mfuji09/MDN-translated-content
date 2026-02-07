@@ -221,9 +221,9 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.transform()")}}
   - : 現在の座標変換行列と引数で指定した行列を乗算します。
 - {{domxref("CanvasRenderingContext2D.setTransform()")}}
-  - : 現在の座標変換行列を単位行列にリセットしてから、引数で指定した行列から `transform()` メソッドを実行します。
+  - : 現在の座標変換行列を恒等行列にリセットしてから、引数で指定した行列から `transform()` メソッドを実行します。
 - {{domxref("CanvasRenderingContext2D.resetTransform()")}}
-  - : 現在の変換行列を単位行列にリセットします。
+  - : 現在の変換行列を恒等行列にリセットします。
 
 ### 合成
 
