@@ -93,7 +93,7 @@ ctx.fillRect(40, 90, 50, 20);
 
 ## ポリフィル
 
-{{domxref("CanvasRenderingContext2D.setTransform()", "setTransform()")}} メソッドを使用して、現在の変換を単位行列にリセットすることもできます。次のように記述します。
+{{domxref("CanvasRenderingContext2D.setTransform()", "setTransform()")}} メソッドを使用して、現在の変換を恒等行列にリセットすることもできます。次のように記述します。
 
 ```js
 ctx.setTransform(1, 0, 0, 1, 0, 0);
