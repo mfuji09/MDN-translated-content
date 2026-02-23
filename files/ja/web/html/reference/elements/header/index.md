@@ -86,7 +86,7 @@ header > time {
 
 ### 記事のヘッダー
 
-```html
+```html-nolint
 <article>
   <header>
     <h2>The Planet Earth</h2>
@@ -116,7 +116,9 @@ header > time {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"

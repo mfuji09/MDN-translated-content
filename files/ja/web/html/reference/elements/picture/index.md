@@ -44,54 +44,6 @@ l10n:
 
 DPI の高い（高解像度の）ディスプレイのために高解像度版の画像を提供する場合は、代わりに [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) 属性を `<img>` に使用してください。これによってブラウザーはデータ節約モードでは低解像度版を選択することができ、 `media` 条件を明示的に書かなくてもよくなります。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
-          >コンテンツカテゴリー</a
-        >
-      </th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
-          >フローコンテンツ</a
-        >, 記述コンテンツ, 埋め込みコンテンツ
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>
-        0 個以上の {{HTMLElement("source")}} 要素、その後に 1 個の
-        {{HTMLElement("img")}} 要素、任意でスクリプト対応要素と混在。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>埋め込みコンテンツを含むことができるすべての要素。</td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLPictureElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## 属性
 
 この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみを持ちます。
