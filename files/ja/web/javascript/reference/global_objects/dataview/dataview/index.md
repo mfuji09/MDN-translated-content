@@ -50,7 +50,7 @@ new DataView(buffer, byteOffset, byteLength)
 ### 例外
 
 - {{jsxref("RangeError")}}
-  - : `byteOffset` や `byteLength` 引数の値がバッファーの末尾を超えて広がる結果になる場合に発生します。言い換えると、`byteOffset + byteLength > buffer.byteLength` です。
+  - : `byteOffset` や `byteLength` 引数の値がバッファーの末尾を越えて広がる結果になる場合に発生します。言い換えると、`byteOffset + byteLength > buffer.byteLength` です。
 
 ## 例
 
