@@ -1,39 +1,41 @@
 ---
-title: font-stretch
-slug: Web/CSS/Reference/Properties/font-stretch
+title: font-width
+slug: Web/CSS/Reference/Properties/font-width
 l10n:
-  sourceCommit: 3c91c067a4d36b532a4bce72e5d8a2c5a9279db5
+  sourceCommit: de5b557883e8eff2514f0fe6eeb180db782575b1
 ---
 
+{{SeeCompatTable}}
+
 > [!NOTE]
-> `font-stretch` プロパティは [CSS Fonts specification](https://drafts.csswg.org/css-fonts/#font-stretch-prop) において {{cssxref("font-width")}} に改名されました。互換性を維持するため、この仕様書では `font-stretch` を `font-width` プロパティの古い別名として残しています。
+> `font-width` プロパティは、古い別名である {{cssxref("font-stretch")}} の新しい置き換えです。`font-width` は仕様書の推奨される名前ですが、`font-stretch` のほうが今のところより広くブラウザーが対応しています。詳しくは[フォールバックの例](#font-stretch_による代替の提供)と[ブラウザーの互換性](#ブラウザーの互換性)の表を参照してください。
 
-**`font-stretch`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの通常、圧縮、引き伸ばしのフェイスを選択します。
+**`font-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントから通常、圧縮、引き伸ばしのフェイスを選択します。
 
-{{InteractiveExample("CSS デモ: font-stretch")}}
+{{InteractiveExample("CSS Demo: font-width")}}
 
 ```css interactive-example-choice
-font-stretch: condensed;
+font-width: condensed;
 ```
 
 ```css interactive-example-choice
-font-stretch: expanded;
+font-width: expanded;
 ```
 
 ```css interactive-example-choice
-font-stretch: ultra-expanded;
+font-width: ultra-expanded;
 ```
 
 ```css interactive-example-choice
-font-stretch: 50%;
+font-width: 50%;
 ```
 
 ```css interactive-example-choice
-font-stretch: 100%;
+font-width: 100%;
 ```
 
 ```css interactive-example-choice
-font-stretch: 150%;
+font-width: 150%;
 ```
 
 ```html interactive-example
@@ -66,27 +68,27 @@ section {
 
 ```css
 /* キーワード値 */
-font-stretch: normal;
-font-stretch: ultra-condensed;
-font-stretch: extra-condensed;
-font-stretch: condensed;
-font-stretch: semi-condensed;
-font-stretch: semi-expanded;
-font-stretch: expanded;
-font-stretch: extra-expanded;
-font-stretch: ultra-expanded;
+font-width: normal;
+font-width: ultra-condensed;
+font-width: extra-condensed;
+font-width: condensed;
+font-width: semi-condensed;
+font-width: semi-expanded;
+font-width: expanded;
+font-width: extra-expanded;
+font-width: ultra-expanded;
 
 /* パーセント値 */
-font-stretch: 50%;
-font-stretch: 100%;
-font-stretch: 200%;
+font-width: 50%;
+font-width: 100%;
+font-width: 200%;
 
 /* グローバル値 */
-font-stretch: inherit;
-font-stretch: initial;
-font-stretch: revert;
-font-stretch: revert-layer;
-font-stretch: unset;
+font-width: inherit;
+font-width: initial;
+font-width: revert;
+font-width: revert-layer;
+font-width: unset;
 ```
 
 このプロパティは、単一のキーワードまたは単一の {{cssxref("&lt;percentage&gt;")}} 値として指定することができます。
@@ -122,13 +124,13 @@ font-stretch: unset;
 
 フォントファミリーによっては、通常より狭い文字（圧縮したフェイス）、通常より広い文字（引き伸ばしたフェイス）などの追加のフェイスを提供しています。
 
-`font-stretch` を使うと、そのようなフォントで圧縮したフェイスや引き伸ばしたフェイスを選択することができます。使用しているフォントが圧縮したフェイスや引き伸ばしたフェイスを提供していない場合は、このプロパティは効果がありません。
+`font-width` を使うと、そのようなフォントで圧縮したフェイスや引き伸ばしたフェイスを選択することができます。使用しているフォントが圧縮したフェイスや引き伸ばしたフェイスを提供していない場合は、このプロパティは効果がありません。
 
 #### フォントフェイスの選択
 
-`font-stretch` で与えられた値で選択されるフェイスは、フォントがそのフェイスに対応しているかによります。与えられた値に正確に一致するフェイスがフォントに存在しない場合、値が `100%` よりも小さい場合は圧縮したフェイスが割り当てられ、`100%` と等しいか大きい場合はより引き伸ばしたフェイスが割り当てられます。
+`font-width` で与えられた値で選択されるフェイスは、フォントがそのフェイスに対応しているかによります。与えられた値に正確に一致するフェイスがフォントに存在しない場合、値が 100% よりも小さい場合は圧縮したフェイスが割り当てられ、100% 以上の場合はより引き伸ばしたフェイスが割り当てられます。
 
-以下の表は 2 つの異なるフォントにおいて、`font-stretch` に様々なパーセント値を設定した場合の効果を示しています。
+以下の表は 2 つの異なるフォントにおいて、`font-width` に様々なパーセント値を設定した場合の効果を示しています。
 
 ```css hidden
 @font-face {
@@ -178,31 +180,31 @@ td {
 }
 
 td:nth-child(2) {
-  font-stretch: 50%;
+  font-width: 50%;
 }
 td:nth-child(3) {
-  font-stretch: 62.5%;
+  font-width: 62.5%;
 }
 td:nth-child(4) {
-  font-stretch: 75%;
+  font-width: 75%;
 }
 td:nth-child(5) {
-  font-stretch: 87.5%;
+  font-width: 87.5%;
 }
 td:nth-child(6) {
-  font-stretch: 100%;
+  font-width: 100%;
 }
 td:nth-child(7) {
-  font-stretch: 112.5%;
+  font-width: 112.5%;
 }
 td:nth-child(8) {
-  font-stretch: 125%;
+  font-width: 125%;
 }
 td:nth-child(9) {
-  font-stretch: 150%;
+  font-width: 150%;
 }
 td:nth-child(10) {
-  font-stretch: 200%;
+  font-width: 200%;
 }
 ```
 
@@ -253,6 +255,10 @@ td:nth-child(10) {
 
 {{EmbedLiveSample('Font face selection', "100%", "250px")}}
 
+ブラウザーが `font-width` プロパティに対応していない場合に備え、上の表がどのように表示されるかを以下のスクリーンショットに示します。
+
+![小文字の "e" を異なる幅（50%、62.5%、75%、87.5%、100%、112.5%、125%、150%、200%）で表示させた 2 行の比較表。上段は Inconsolata、下段は Anek Malayalam とラベル付けされています。どちらもサンセリフフォントですが、Inconsolata の文字は Anek Malayalam に比べてわずかに幅広くなっています。](font-face-selection.png)
+
 - [Inconsolata](https://fonts.google.com/specimen/Inconsolata) は、 50% から 200% まで連続的に幅を変化させることができる可変フォントです。 <!-- Note, dynamically obtained woff2 from Google fonts using query: https://fonts.googleapis.com/css2?family=Inconsolata:wdth@50..200 -->
 - [Anek Malayalam](https://fonts.google.com/specimen/Anek+Malayalam) は 75% から 125% の幅に対応している可変の Google フォントです。この範囲を下回る値や上回る値では、最も一致するフォントが選択されます。
 
@@ -262,11 +268,11 @@ td:nth-child(10) {
 
 ## 形式文法
 
-{{csssyntax("font-stretch")}}
+{{csssyntax("font-width")}}
 
 ## 例
 
-### フォントの引き伸ばしパーセント値の設定
+### フォントの幅のパーセント値の設定
 
 ```html
 <p class="condensed">an elephantine lizard</p>
@@ -288,19 +294,33 @@ p {
 }
 
 .condensed {
-  font-stretch: 50%;
+  font-width: 50%;
 }
 
 .normal {
-  font-stretch: 100%;
+  font-width: 100%;
 }
 
 .expanded {
-  font-stretch: 200%;
+  font-width: 200%;
 }
 ```
 
-{{EmbedLiveSample("Setting font stretch percentages", "100%", 200)}}
+{{EmbedLiveSample("Setting font width percentages", "100%", 200)}}
+
+### font-stretch による代替の提供
+
+`font-width` はまだブラウザーの対応が広くないため、代替手段として古い {{cssxref("font-stretch")}} プロパティを追加することをお勧めします。対応しているブラウザーが新しいプロパティを使用するように、`font-stretch` を `font-width` の前に記載してください。
+
+```css
+p {
+  font-stretch: condensed; /* font-width に対応していないブラウザー向け */
+  font-width: condensed;
+}
+```
+
+> [!NOTE]
+> この代替パターンについては、PostCSS 用の [postcss-preset-env](https://preset-env.cssdb.org/) プラグインを使用することで自動化できます。このプラグインには、[postcss-font-width-property](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-font-width-property) 変換機能が含まれており、`font-width` プロパティを自動的に `font-stretch` に変換します。
 
 ## 仕様書
 
@@ -312,8 +332,8 @@ p {
 
 ## 関連情報
 
-- {{cssxref("@font-face/font-stretch")}} 記述子 ({{cssxref("@font-face")}})
-- より新しい {{cssxref("font-width")}} プロパティ、`font-stretch` の後継
+- {{cssxref("@font-face/font-width")}} 記述子 ({{cssxref("@font-face")}})
+- 古い {{cssxref("font-stretch")}} の別名プロパティ（よりブラウザーの対応が広い）
 - {{cssxref("font-style")}} プロパティ
 - {{cssxref("font-weight")}} プロパティ
 - SVG の {{SVGAttr("font-stretch")}} 属性
