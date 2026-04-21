@@ -1,5 +1,6 @@
 ---
-title: "@namespace"
+title: "`@namespace` CSS アットルール"
+short-title: "@namespace"
 slug: Web/CSS/Reference/At-rules/@namespace
 l10n:
   sourceCommit: 1dcf976e9b654679c762568812562b1a2361c755
