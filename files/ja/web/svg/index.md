@@ -3,7 +3,7 @@ title: "SVG: スケーラブルベクターグラフィック"
 short-title: SVG
 slug: Web/SVG
 l10n:
-  sourceCommit: be9ba40fbef7f96beae73e5dd6d48a3ca875826f
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
 **スケーラブルベクターグラフィック (SVG)** は [XML](/ja/docs/Web/XML) ベースのマークアップ言語で、二次元ベースの[ベクターグラフィック](https://en.wikipedia.org/wiki/Vector_graphics)を記述します。
@@ -35,7 +35,7 @@ SVG は 1999 年から[ワールドワイドウェブコンソーシアム (W3C)
   - : 名前空間は、複数の XML 方言に対応するユーザーエージェントにとって不可欠です。
     ブラウザーは、とても厳格である必要があります。名前空間を理解する時間を割くことで、将来の頭痛の種を回避できます。
 - [スクリプティング](/ja/docs/Web/SVG/Guides/Scripting)
-  - : JavaScriptを 使用して SVG を生成する操作を行う方法はいくつかあります。
+  - : JavaScript で SVG を作成・編集する方法はいくつかあります。
     この記事では、イベント処理、インタラクティブ機能、埋め込み SVG コンテンツの操作について説明します。
 - [SMIL による SVG アニメーション](/ja/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
   - : SMIL は、インタラクティブなマルチメディアプレゼンテーションを作成するための XML ベースの言語です。
