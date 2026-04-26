@@ -18,14 +18,12 @@ SVG は 1999 年から[ワールドワイドウェブコンソーシアム (W3C)
 
 ## チュートリアル
 
-[SVG チュートリアル](/ja/docs/Web/SVG/Tutorials)は、基礎からより高度なテクニックへと段階的に進みながら、事前知識がないことを前提に各テーマを解説するよう設計されています。
-
 - [ゼロから始める SVG 入門](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch)
   - : このチュートリアルは SVG の内部を説明することを目的としており、技術的な詳細が詰まっています。単に美しい画像を描きたいだけなら、 [Inkscape のドキュメントページ](https://inkscape.org/learn/)にもっと有用なリソースがあるかもしれません。 W3C の [SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html) も SVG の良い入門書です。また、アドベントカレンダーをテーマにした 25 種類の SVG をコーディングする [SVG Tutorial](https://svg-tutorial.com/) もチェックしてみてください。
 
 ## ガイド
 
-[SVGガイド](/ja/docs/Web/SVG/Guides)は、ウェブ上でのSVGの扱い方を支援するもので、埋め込み、MIME（メディア）タイプ、スクリプトの処理、アニメーション、フィルターなどのトピックを網羅しています。
+[SVG ガイド](/ja/docs/Web/SVG/Guides)は、ウェブ上での SVG の扱い方を支援するもので、埋め込み、MIME（メディア）タイプ、スクリプトの処理、アニメーション、フィルターなどのトピックを網羅しています。
 
 - [SVG 効果の HTML コンテンツへの適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
   - : 現代のブラウザーは、CSSスタイル内でSVGを使用し、HTMLコンテンツにグラフィック効果を適用することに対応しています。
