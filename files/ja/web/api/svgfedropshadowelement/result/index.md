@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("SVG")}}
 
-**`result`** は {{domxref("SVGFEDropShadowElement")}} インターフェイスの読み取り専用プロパティで、SVG フィルタープリミティブの割り当てられた名前の文字列を {{domxref("SVGAnimatedString")}} で記述します。
+**`result`** は {{domxref("SVGFEDropShadowElement")}} インターフェイスの読み取り専用プロパティで、SVG フィルタープリミティブの割り当てられた名前の文字列を {{domxref("SVGAnimatedString")}} で表します。
 
-これは、{{SVGAttr("result")}} 属性を反映しています。この属性の値は、{{cssxref("custom-ident")}} です。これが指定されている場合、このフィルタープリミティブの処理によって生成されたグラフィックスは、同じ {{SVGElement("filter")}} 要素内の後続のフィルタープリミティブにおける {{SVGAttr("in")}} 属性によって参照することができます。
+これは、{{SVGAttr("result")}} 属性を反映します。この属性の値は、{{cssxref("custom-ident")}} です。指定されている場合、このフィルタープリミティブの処理によって生成されたグラフィックは、同じ {{SVGElement("filter")}} 要素内の後続のフィルタープリミティブにおける {{SVGAttr("in")}} 属性によって参照することができます。
 
 `result` 属性が定義されていない場合、フィルターの `result.baseVal` および `result.animVal` は空文字列となり、`<feDropShadow>` フィルターの出力は、次のフィルタープリミティブが `in` 属性に値を提供していない場合にのみ、そのプリミティブへの暗黙的な入力として再利用可能となります。
 
@@ -23,7 +23,7 @@ l10n:
 ```js
 const feDropShadowElement = document.querySelector("feDropShadow");
 const filterName = feDropShadowElement.result;
-console.log(filterName.baseVal); // フィルターの割り当てられた名前
+console.log(filterName.baseVal); // フィルターに割り当てられた名前
 ```
 
 ## 仕様書
