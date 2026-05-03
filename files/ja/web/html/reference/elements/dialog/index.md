@@ -96,10 +96,10 @@ JavaScript で `<dialog>` 要素を表示させたり閉じたりすることが
 
 ダイアログを閉じる方法は数多くあります。
 
-- `<form>` 要素に `method="dialog"` を設定し、`<dialog>` 要素内でフォームを送信します（[dialog open 属性の使用](#using_the_dialog_open_attribute)の例を参照してください）。
-- 「簡単に閉じる」が有効になっている場合、ダイアログ領域の外側をクリックすること（[ポップオーバー API の HTML 属性](#popover_api_html_attributes)の例を参照）。
-- ダイアログ内で有効になっている場合、<kbd>Esc</kbd>キーを押すこと（[ポップオーバー API の HTML 属性](#popover_api_html_attributes)の例を参照してください）。
-- {{domxref("HTMLDialogElement.close()")}}メソッドを呼び出すこと（[モーダルダイアログの例](#creating_a_modal_dialog)を参照してください）。
+- `<form>` 要素に `method="dialog"` を設定し、`<dialog>` 要素内でフォームを送信します（[dialog open 属性の使用](#ダイアログの_open_属性の使用)の例を参照してください）。
+- 「簡単に閉じる」が有効になっている場合、ダイアログ領域の外側をクリックすること（[ポップオーバー API の HTML 属性](#ポップオーバー_api_の_html_属性)の例を参照）。
+- ダイアログ内で有効になっている場合、<kbd>Esc</kbd>キーを押すこと（[ポップオーバー API の HTML 属性](#ポップオーバー_api_の_html_属性)の例を参照してください）。
+- {{domxref("HTMLDialogElement.close()")}}メソッドを呼び出すこと（[モーダルダイアログの例](#モーダルダイアログの作成)を参照してください）。
 
 ### CSS スタイル設定
 
@@ -309,7 +309,7 @@ closeButton.addEventListener("click", () => {
 このダイアログは、［ダイアログを表示］ボタンにイベントリスナーを設定することで開かれます。ボタンがクリックされると、{{domxref("HTMLDialogElement.showModal()")}} が呼び出されます。
 
 ［キャンセル］ボタンがクリックされるとダイアログが閉じられます。これは、`<button>` に [`formmethod="dialog"`](/ja/docs/Web/HTML/Reference/Elements/input/submit#formmethod) 属性が指定されているためです。
-フォームのメソッドが [`dialog`](#additional_notes) の場合、フォームの状態は保存されますが送信はされず、ダイアログが閉じられます（この属性は {{HTMLElement("form")}} のデフォルトである {{HTTPMethod("GET")}} メソッドを上書きします）。
+フォームのメソッドが [`dialog`](#追加メモ) の場合、フォームの状態は保存されますが送信はされず、ダイアログが閉じられます（この属性は {{HTMLElement("form")}} のデフォルトである {{HTTPMethod("GET")}} メソッドを上書きします）。
 `action` がない場合、既定の {{HTTPMethod("GET")}} メソッドでフォームを送信すると、ページの再読み込みが発生します。
 JavaScript を使用して、送信を阻止し、ダイアログを閉じるために、それぞれ {{domxref("event.preventDefault()")}} と {{domxref("HTMLDialogElement.close()")}} メソッドを使用しています。
 
