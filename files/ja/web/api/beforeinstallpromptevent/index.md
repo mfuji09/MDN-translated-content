@@ -80,5 +80,5 @@ installButton.addEventListener("click", async () => {
 
 ## 関連情報
 
-- [Making PWAs installable](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
+- [PWA をインストール可能にする](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
 - [How to provide your own in-app install experience](https://web.dev/articles/customize-install) - web.dev (2021)
