@@ -82,7 +82,7 @@ execCommand(commandName, showDefaultUI, valueArgument)
 
         > [!WARNING]
         > 入力は HTML として構文解析され、DOM に書き込まれます。
-        > このような API は[インジェクションシンク](/ja/docs/Web/API/Trusted_Types_API#concepts_and_usage)と呼ばれ、入力が攻撃者から来たものであれば、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS)攻撃の経路となる可能性があります。
+        > このような API は[インジェクションシンク](/ja/docs/Web/API/Trusted_Types_API#概念と使い方)と呼ばれ、入力が攻撃者から来たものであれば、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS)攻撃の経路となる可能性があります。
         >
         > このリスクを軽減するには、文字列の代わりに常に {{domxref("TrustedHTML")}} オブジェクトを割り当て、[信頼型を強制する](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)ようにしてください。
         > 詳しくは[信頼型 API](/ja/docs/Web/API/Trusted_Types_API) を参照してください。
