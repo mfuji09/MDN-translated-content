@@ -22,7 +22,7 @@ querySelectorAll(selectors)
   - : 文字列で、照合する 1 つまたは複数のセレクターを含みます。
     この文字列は有効な CSS セレクターでなければならず、そうでない場合は `SyntaxError` 例外が発生します。
 
-    なお、HTML 仕様では、属性値が有効な CSS 識別子である必要はありません。[`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) または [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性の値が有効な CSS 識別子でない場合、セレクター内で使用する前に、その値に対して {{domxref("CSS.escape_static", "CSS.escape()")}}を呼び出すか、[文字のエスケープ](/ja/docs/Web/CSS/Reference/Values/ident#文字のエスケープ)で説明されている手法のいずれかを使用する必要があります。例については、[属性値のエスケープ](#属性値のエスケープ)を参照してください。
+    なお、HTML 仕様書ではでは、属性値が有効な CSS 識別子であることを要求していません。[`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) または [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性の値が有効な CSS 識別子でない場合、セレクター内で使用する前に、その値に対して {{domxref("CSS.escape_static", "CSS.escape()")}} を呼び出すか、[文字のエスケープ](/ja/docs/Web/CSS/Reference/Values/ident#文字のエスケープ)で説明されている手法のいずれかを使用する必要があります。例については、[属性値のエスケープ](#属性値のエスケープ)を参照してください。
 
 ### 返値
 
@@ -87,7 +87,7 @@ highlightedItems.forEach((userItem) => {
 
 ### 属性値のエスケープ
 
-この例は、HTML 文書に、有効な [CSS 識別子](/ja/docs/Web/CSS/Reference/Values/ident)ではない [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) が含まれている場合、`querySelectorAll()` でそれを使用する前に、属性値をエスケープする必要があることを示しています。
+この例は、HTML 文書に [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) として有効な [CSS 識別子](/ja/docs/Web/CSS/Reference/Values/ident)ではないものが含まれている場合、`querySelector()` でそれを使用する前に、属性値をエスケープする必要があることを示しています。
 
 #### HTML
 
