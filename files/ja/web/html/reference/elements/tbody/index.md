@@ -13,27 +13,27 @@ l10n:
 ```html interactive-example
 <table>
   <caption>
-    Council budget (in £) 2018
+    2018 年の議会の予算 (£)
   </caption>
   <thead>
     <tr>
-      <th scope="col">Items</th>
-      <th scope="col">Expenditure</th>
+      <th scope="col">商品</th>
+      <th scope="col">支出</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Donuts</th>
+      <th scope="row">ドーナッツ</th>
       <td>3,000</td>
     </tr>
     <tr>
-      <th scope="row">Stationery</th>
+      <th scope="row">文具</th>
       <td>18,000</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
-      <th scope="row">Totals</th>
+      <th scope="row">合計</th>
       <td>21,000</td>
     </tr>
   </tfoot>
@@ -81,7 +81,7 @@ td {
 
 ### 非推奨の属性
 
-以下の属性は非推奨であり、使用すべきではありません。これらの属性は、既存のコードを更新する際の参考として、また歴史的な興味だけのために、以下に文書化されています。
+以下の属性は非推奨であり、使用すべきではありません。これらの属性は、既存のコードを更新する際の参考として、また歴史的な興味のためだけに、以下に文書化しています。
 
 - `align` {{deprecated_inline}}
   - : 本体内の各セルの水平方向の配置を指定します。指定可能な値は、`left`、`center`、`right`、`justify`、`char` です。対応している場合、`char` 値を指定すると、テキストコンテンツは [`char`](#char) 属性で定義された文字と、[`charoff`](#charoff) 属性で定義されたオフセットに基づいて配置されます。この属性は非推奨となっているため、代わりに CSS の {{cssxref("text-align")}} プロパティを使用してください。
@@ -101,7 +101,7 @@ td {
 - `<tbody>` は、{{HTMLElement("caption")}}、{{HTMLElement("colgroup")}}、{{HTMLElement("thead")}} の各要素の後に配置されます。
 - {{HTMLElement("tr")}} 要素が {{HTMLElement("table")}} の直接の子要素として指定されている場合（これが有効となる条件については、[技術的概要](#技術的概要)の「タグの省略」を参照してください）、ブラウザー によって生成されるマークアップには、それらをカプセル化する `<tbody>` 要素が含まれます。その結果、`table > tr` などの CSS セレクターでは、これらの要素を選択できません。また、[本体を指定しない場合](#本体を指定しない)の例も参照してください。
 - 1 つの表内で、すべて連続している限り、複数の `<tbody>` を使用することが可能です。これにより、大きな表内の行（{{HTMLElement("tr")}} 要素）をセクションに分割することができ、必要に応じてそれぞれの節を別個に書式化することができます。連続した要素としてマークアップされていない場合、ブラウザーはこの作成者のミスを修正し、{{HTMLElement("thead")}} 要素と {{HTMLElement("tfoot")}} 要素が、それぞれ表の最初と最後の要素として確実にレンダリングされるようにします。
-- 関連する {{HTMLElement("thead")}} および {{HTMLElement("tfoot")}} 要素と共に、`<tbody>` 要素は有用な {{Glossary("semantics", "意味的")}}情報を提供し、画面表示と印刷のどちらの場合にも使用できます。このような表のコンテンツグループを指定することは、スクリーンリーダーや検索エンジンを含む支援技術に対して、貴重な文脈情報を提供することに同時になります。
+- 関連する {{HTMLElement("thead")}} および {{HTMLElement("tfoot")}} 要素と共に、`<tbody>` 要素は有用な{{Glossary("semantics", "意味的")}}情報を提供し、画面表示と印刷のどちらの場合にも使用できます。このような表のコンテンツグループを指定することは、スクリーンリーダーや検索エンジンを含む支援技術に対して、貴重な文脈情報を提供することに同時になります。
 - 文書を表示する場合、複数ページにわたる表では、通常、{{HTMLElement("thead")}} および {{htmlelement("tfoot")}} 要素は、それぞれのページで同じ、あるいは少なくともとてもよく似た情報を指定しますが、`<tbody>` 要素のコンテンツは、一般的にページごとに異なります。
 - 表全体を表示させるのに十分な大きさのない画面コンテキスト（ウィンドウなど）で表が表示された場合、{{Glossary("user agent", "ユーザーエージェント")}}は、ユーザーが {{HTMLElement("thead")}}、 `<tbody>`、{{htmlelement("tfoot")}}、{{HTMLElement("caption")}} の各ブロックを、同じ親要素の {{htmlelement("table")}} に対して、別個にスクロールできるようにする場合があります。
 
@@ -431,9 +431,9 @@ tbody > tr > td:last-of-type {
 
 ## 関連情報
 
-- [Learn: HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
+- [学習: HTML 表の基本](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}: その他の表関係の要素
 - {{cssxref("background-color")}}: 本体の各セルの背景色を設定する CSS プロパティ
-- {{cssxref("border")}}: 列のセルの境界を制御する CSS プロパティ
+- {{cssxref("border")}}: 本体のセルの境界を制御する CSS プロパティ
 - {{cssxref("text-align")}}: 本体の各セルの水平方向の配置を設定する CSS プロパティ
 - {{cssxref("vertical-align")}}: 本体の各セルの垂直方向の配置を設定する CSS プロパティ
