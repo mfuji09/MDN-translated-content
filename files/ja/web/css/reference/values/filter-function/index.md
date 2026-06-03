@@ -2,7 +2,6 @@
 title: CSS `<filter-function>` データ型
 short-title: <filter-function>
 slug: Web/CSS/Reference/Values/filter-function
-original_slug: Web/CSS/filter-function
 l10n:
   sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
@@ -44,20 +43,9 @@ l10n:
 
 この例には、グラフィックと、種類のフィルター機能を選択するための選択メニュー、フィルター機能内で使用される値を変化させるためのスライダーが用意されています。コントロールを更新すると、フィルター効果がリアルタイムで更新されるので、さまざまなフィルターの効果を調べることができます。
 
-```css
-div {
-  width: 100%;
-  height: 512px;
-  background: url(fx-nightly-512.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  filter: <filter-function>(<value>);
-}
-```
+ドロップダウンで関数名を選択し、スライダーでその関数の引数値を設定します。`drop-shadow` の場合、この値は水平方向と垂直方向の両方のオフセットで使用されており、半径はその半分の値に設定されます。
 
-ここで、 `<filter-function>` はドロップダウンから選択したフィルターであり、 `<value>` はスライダーで設定した値です。
-
-```html live-sample___filter-functions
+```html hidden live-sample___filter-functions
 <div></div>
 <ul>
   <li>
@@ -82,11 +70,11 @@ div {
 </ul>
 ```
 
-```css live-sample___filter-functions
+```css hidden live-sample___filter-functions
 div {
   width: 100%;
   height: 512px;
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png");
   background-repeat: no-repeat;
   background-position: center center;
 }

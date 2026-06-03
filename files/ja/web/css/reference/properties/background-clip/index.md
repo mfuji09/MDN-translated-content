@@ -106,7 +106,7 @@ background-clip: unset;
 
 ### HTML
 
-```html-nolint live-sample___examples
+```html
 <p class="border-box">背景が境界の裏まで拡張されます。</p>
 <p class="padding-box">
   背景が境界の内側の縁まで拡張されます。
@@ -122,7 +122,7 @@ background-clip: unset;
 
 ### CSS
 
-```css live-sample___examples
+```css
 p {
   border: 0.8em darkviolet;
   border-style: dotted double;
@@ -156,7 +156,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample('Examples', 600, 630)}}
+{{EmbedLiveSample('例', 600, 630)}}
 
 ## 仕様書
 

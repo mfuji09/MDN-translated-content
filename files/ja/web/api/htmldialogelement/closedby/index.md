@@ -1,4 +1,4 @@
----
+。・---
 title: "HTMLDialogElement: closedBy プロパティ"
 short-title: closedBy
 slug: Web/API/HTMLDialogElement/closedBy

@@ -83,7 +83,7 @@ appearance: checkbox;
 
 - `<compat-auto>`
   - : 利用可能な値は `button`, `checkbox`, `listbox`, `menulist`, `meter`, `progress-bar`, `push-button`, `radio`, `searchfield`, `slider-horizontal`, `square-button`, `textarea` です。
-    すべての値は `auto` と同様に動作します。代わりに `auto` を使用してください。
+  すべての値は `auto` と同様に動作します。代わりに `auto` を使用してください。
 
 > [!NOTE]
 > 仕様では `base` 値も定義しています。これは現在どのブラウザーも対応していません。

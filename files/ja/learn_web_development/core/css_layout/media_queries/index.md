@@ -317,7 +317,7 @@ Firefox 開発者ツールの[レスポンシブデザインモード](https://f
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>メディアクエリー: 簡単なモバイルファーストデザイン、第 1 弾</title>
   <style>
-    /* Add styles here */
+    /* ここにスタイルを追加 */
   </style>
 </head>
 <div class="wrapper">

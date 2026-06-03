@@ -1,45 +1,33 @@
 ---
-title: Document：createRange() 方法
+title: Document.createRange()
 slug: Web/API/Document/createRange
-l10n:
-  sourceCommit: 73016bea54a98f70dc2aaad0724d0d421ef9839c
 ---
 
 {{APIRef("DOM")}}
 
-**`Document.createRange()`** 方法會回傳一個新的 {{domxref("Range")}} 物件。
+回傳一 {{domxref("Range")}} 物件。
 
 ## 語法
 
-```js-nolint
-createRange()
+```plain
+range = document.createRange();
 ```
 
-### 參數
+`創造 range` 為 {{domxref("Range")}} 物件.
 
-無。
-
-### 回傳值
-
-建立的 {{domxref("Range")}} 物件。
-
-## 範例
+## 示例
 
 ```js
-const range = document.createRange();
+var range = document.createRange();
 
 range.setStart(startNode, startOffset);
 range.setEnd(endNode, endOffset);
 ```
 
-## 備註
+## 註意
 
-一旦建立了 `Range`，你需要設定其邊界點，才能使用其大多數的方法。
+當 `Range` 被創建之後，必須先設定其範圍初始點及結束點， 才能使用大部分 {{domxref("Range")}} 所提供的方法。
 
 ## 規範
 
-{{Specifications}}
-
-## 瀏覽器相容性
-
-{{Compat}}
+- [DOM Level 2 Range: DocumentRange.createRange](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange)
