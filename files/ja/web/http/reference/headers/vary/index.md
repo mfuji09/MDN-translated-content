@@ -10,7 +10,7 @@ HTTP の **`Vary`** {{Glossary("response header", "レスポンスヘッダー")
 `Vary` ヘッダーを設定するすることで、`Vary` フィールドに設定されているヘッダーに基づいて、レスポンスが別個にキャッシュされるようにすることができます。
 多くの場合、これは[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)が使用されている際に、キャッシュキーを作成するために用いられます。
 
-指定されたURLに対するすべてのレスポンスでは、{{HTTPStatus("304")}} `Not Modified` レスポンスや「デフォルト」のレスポンスを含め、同じ `Vary` ヘッダー値を使用してください。
+指定された URL に対するすべてのレスポンスでは、{{HTTPStatus("304")}} `Not Modified` レスポンスや「デフォルト」のレスポンスを含め、同じ `Vary` ヘッダー値を使用してください。
 
 <table class="properties">
   <tbody>
