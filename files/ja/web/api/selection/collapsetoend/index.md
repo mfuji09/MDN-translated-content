@@ -18,7 +18,7 @@ collapseToEnd()
 
 ### 引数
 
-None.
+なし。
 
 ### 返値
 
