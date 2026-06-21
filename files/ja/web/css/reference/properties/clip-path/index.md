@@ -1,8 +1,9 @@
 ---
-title: clip-path
+title: CSS `clip-path` プロパティ
+short-title: clip-path
 slug: Web/CSS/Reference/Properties/clip-path
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`clip-path`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のどの部分を表示するかを設定するクリッピング領域を作ります。具体的には、領域の内部の部分は表示され、外側の部分は非表示になります。
@@ -41,7 +42,7 @@ clip-path: xywh(0 5px 100% 75% round 15% 0);
       id="example-element"
       src="/shared-assets/images/examples/balloon-small.jpg"
       width="150" />
-    私の仲間と私は、夕食の後、11時までに彼の家に電話して迎えに行くことを決めていました。この運動神経の優れた若いフランス人は、パリのスポーツマンたちの小さなグループに所属しており、彼らは「気球」を趣味としています。通常のスポーツで得られるすべてのスリル、さらには猛スピードで走る「自動車」のスリルさえも尽くした後、この「エアロクラブ」のメンバーたちは、今では空で、あらゆる大胆な技に挑戦し、地上ではもはや得られない、神経を刺激する興奮を求めています。
+    私の仲間と私は、夕食の後、11 時までに彼の家に電話して迎えに行くことを決めていました。この運動神経の優れた若いフランス人は、パリのスポーツマンたちの小さなグループに所属しており、彼らは「気球」を趣味としています。通常のスポーツで得られるすべてのスリル、さらには猛スピードで走る「自動車」のスリルさえも尽くした後、この「エアロクラブ」のメンバーたちは、今では空で、あらゆる大胆な技に挑戦し、地上ではもはや得られない、神経を刺激する興奮を求めています。
   </div>
 </section>
 ```
@@ -138,7 +139,7 @@ clip-path: unset;
     - `padding-box`
       - : [パディングボックス](/ja/docs/Web/CSS/Guides/Shapes/From_box_values#padding-box)を参照ボックスとして使用します。
     - `content-box`
-      - : [コンテンボックス](/ja/docs/Web/CSS/Guides/Shapes/From_box_values#content-box)を参照ボックスとして使用します。
+      - : [コンテンツボックス](/ja/docs/Web/CSS/Guides/Shapes/From_box_values#content-box)を参照ボックスとして使用します。
     - `fill-box`
       - : オブジェクトの境界ボックスを参照ボックスとして使用します。
     - `stroke-box`
@@ -209,7 +210,7 @@ div:last-of-type {
 
 前回の例を拡張して、異なる `<basic-shape>` 値を持つ同じ三角形を作成し、{{cssxref("basic-shape/shape", "shape()")}} および {{cssxref("basic-shape/path", "path()")}} 関数を使用してクリップパスを作成する方法、および `shape()` がより柔軟なソリューションである点を示します。
 
-最初の要素のクリップパスを定義するには `path()` を使用し、2 つ目の要素は `shape()` を使用します。どちらも、既定の `border-box` を参照ボックスとして使用します。
+最初の要素のクリップパスを定義するには `path()` を使用し、2 つ目の要素のクリップパスを定義するには `shape()` を使用します。どちらも、既定の `border-box` を参照ボックスとして使用します。
 
 ```css live-sample___shapes2 live-sample___shapes3
 div {
@@ -270,7 +271,7 @@ div {
 
 #### CSS
 
-[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)を使用して、利用可能な空間がある場合に、要素を隙間を空けて横に並べるようにしています。 `<div>` 要素の両方に {{cssxref("gradient/conic-gradient", "conic-gradient()")}} 背景画像を定義し、 {{cssxref("border")}} とともに、クリップしたときの興味深い視覚効果を提供しています。
+[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)を使用して、利用可能な空間がある場合に、要素を隙間を空けて横に並べるようにしています。 `<div>` 要素の両方に {{cssxref("gradient/conic-gradient", "conic-gradient()")}} 背景画像を定義し、{{cssxref("border")}} とともに、クリップしたときの興味深い視覚効果を提供しています。
 
 ```css
 body {
