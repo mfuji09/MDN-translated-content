@@ -3,7 +3,7 @@ title: 個別区画化された状態を持つクッキー (CHIPS)
 short-title: CHIPS
 slug: Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies
 l10n:
-  sourceCommit: d7a0ef33dfce20818a160557b5a72d6565cec254
+  sourceCommit: 5ef5a171a41dbcb48c953cc3c98c1237566796e9
 ---
 
 **個別区画化された状態を持つクッキー**（**CHIPS**、**区画化クッキー**とも呼ばれる）、開発者はクッキーを分割されたストレージに保存でき、最上位サイトごとに個別のクッキー容器が作成されます。
