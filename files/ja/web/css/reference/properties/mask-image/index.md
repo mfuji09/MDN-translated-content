@@ -1,8 +1,9 @@
 ---
-title: mask-image
+title: CSS `mask-image` プロパティ
+short-title: mask-image
 slug: Web/CSS/Reference/Properties/mask-image
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`mask-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のマスクレイヤーとして使用する画像を設定し、マスク画像のアルファチャンネルと、 {{cssxref("mask-mode")}} プロパティの値に応じて、マスク画像の色の輝度に基づいて、マスク画像が設定されている要素の領域を非表示にします。
@@ -46,7 +47,7 @@ mask-image: unset;
 
 `mask-image` プロパティは、適用される要素の一部を非表示にするマスクを提供します。値は、マスク参照のカンマ区切りリストです。それぞれのマスク参照は、`<image>`、`<mask-source>`、またはキーワード `none` です。
 
-`<image>` には、[CSS グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient)などの生成画像を含む、あらゆる種類の画像を指定することができます。
+`<image>` には、[CSS グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient) などの生成画像を含む、あらゆる種類の画像を指定することができます。
 
 `mask-image` プロパティの値に 1 つの値しか指定されておらず、その値が `none` の場合、マスク効果は現れません。複数の値が指定されている場合、リストに含まれる `none` 値は直接的な効果は持ちませんが、同じリスト内の他の `mask-*` 値は、透明な黒のマスクレイヤーに適用され、視覚的な効果はありません。
 
@@ -287,6 +288,6 @@ body:has(:checked) img {
 - {{cssxref("clip-path")}}
 - {{cssxref("background-image")}}
 - [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
-- [CSS のマスクプロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
 - [複数のマスクの宣言](/ja/docs/Web/CSS/Guides/Masking/Multiple_masks)
 - [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
