@@ -371,6 +371,7 @@ function setTime() {
 
 1. ハードドライブ上に `custom-video-player` という名前の新しいディレクトリーを作成します。
 2. その中に `index.html` という名前の新しいファイルを作成し、以下の内容を記述してください。
+
    ```html
    <!doctype html>
    <html lang="ja">
@@ -414,6 +415,7 @@ function setTime() {
      </body>
    </html>
    ```
+
 3. その中に `style.css` という名前の新しいファイルをもう 1 つ作成し、以下の内容を記述します。
 
    ```css
