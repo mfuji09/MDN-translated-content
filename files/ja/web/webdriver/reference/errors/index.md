@@ -1,6 +1,6 @@
 ---
 title: WebDriver のエラー
-short-title: Errors
+short-title: エラー
 slug: Web/WebDriver/Reference/Errors
 l10n:
   sourceCommit: 421a9c26127cf11e33e72184b14656c9d406294d
