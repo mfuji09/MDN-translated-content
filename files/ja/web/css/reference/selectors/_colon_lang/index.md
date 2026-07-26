@@ -1,9 +1,9 @@
 ---
-title: :lang()
+title: CSS `:lang()` 擬似クラス
+short-title: :lang()
 slug: Web/CSS/Reference/Selectors/:lang
-original_slug: Web/CSS/:lang
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:lang()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、指定された言語に基づいて要素を照合します。
@@ -18,8 +18,8 @@ l10n:
 
 ```html interactive-example
 <p lang="en-US">
-  Music during road trips and long commutes aren’t a problem, but using
-  headphones isn’t the best thing to do while driving in your car.
+  Music during road trips and long commutes aren't a problem, but using
+  headphones isn't the best thing to do while driving in your car.
 </p>
 
 <p lang="pl-PL">
@@ -29,11 +29,9 @@ l10n:
 ```
 
 > [!NOTE]
-> HTML では、言語は [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性と {{HTMLElement("meta")}} 要素、それに、可能であればプロトコルから得られる情報（HTTP ヘッダーなど）の組み合わせで決められます。他の型の文書では、文書の言語を決定する他の方法があるかもしれません。
+> HTML では、言語は [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性と {{HTMLElement("meta")}} 要素、それに、可能であればプロトコルから得られる情報（HTTP ヘッダーなど）の組み合わせで決められます。他の文書型では、文書の言語を決定する他の方法があるかもしれません。
 
 ## 構文
-
-### 形式文法
 
 ```plain
 :lang(<language-code> [,<language-code> ]*) {
@@ -44,8 +42,8 @@ l10n:
 ### 引数
 
 - `<language-code>`
-  - : カンマで区切った 1 つ以上の {{cssxref("&lt;string&gt;")}} のリストで、 [BCP 47](https://www.rfc-editor.org/info/bcp47) の言語コードに従った言語値を持つ要素を対象とします。
-    言語の範囲による照合は、大文字小文字を区別しません。
+  - : [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性に設定された {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}に基づいて要素を指定する、1 つ以上の {{cssxref("&lt;string&gt;")}} をカンマ区切りで列挙したリストです。
+    言語の範囲による照合は大文字小文字を区別しません。
 
 ## 解説
 
@@ -148,4 +146,4 @@ p {
 - {{cssxref(":dir")}} 擬似クラスはテキストの方向で照合します
 - HTML の [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性
 - HTML の [`translate`](/ja/docs/Web/HTML/Reference/Global_attributes/translate) 属性
-- {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}
+- {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}
