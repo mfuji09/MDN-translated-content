@@ -149,7 +149,7 @@ li {
 @layer no-support {
   @supports not (column-rule-visibility-items: around) {
     body::before {
-      content: "Your browser doesn't support the column-rule-visibility-items property";
+      content: "このブラウザーは column-rule-visibility-items プロパティに対応していません。";
       background-color: wheat;
       display: block;
       text-align: center;
