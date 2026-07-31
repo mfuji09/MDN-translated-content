@@ -120,6 +120,7 @@ column-rule-width: 1rem, repeat(3, thick, thin);
 ```
 
 `<line-width>` として、`<line-width>` に解決されるカスタムプロパティを含む、任意の値を使用することができます。`repeat()` を使用すると、特に複雑な長さの計算を行う場合、値の記述が簡単になります。これにより、列・段の数に関係なく、単一の関数だけで繰り返しパターンを記述できるようになります。以下の宣言は同等です。
+
 ```css
 column-rule-width:
   1rem, min(calc(var(--base) - 3px), 10px), abs(calc(var(--secondary) - 30px)),
