@@ -8,8 +8,6 @@ l10n:
 
 HTTP の **`X-Forwarded-Host`** (XFH) {{Glossary("request header", "リクエストヘッダー")}}は、HTTP の {{HTTPHeader("Host")}} リクエストヘッダー内でクライアントからリクエストされたオリジンホストを特定するための事実上の標準となっているヘッダーです。
 
-リバース{{Glossary("Proxy_server", "プロキシー")}}（ロードバランサー、CDN）のホスト名とポート番号は、リクエストを扱うオリジンサーバーとは異なってもよく、この場合はもともと使用されていたのがどのホストであるかを特定するのに `X-Forwarded-Host` ヘッダーが便利です。
-
 標準化されたバージョンのヘッダーは HTTP の {{HTTPHeader("Forwarded")}} ヘッダーですが、使用されている頻度ははるかに低くなっています。
 
 <table class="properties">
