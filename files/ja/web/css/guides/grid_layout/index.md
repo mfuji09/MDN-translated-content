@@ -4,7 +4,6 @@ short-title: グリッドレイアウト
 slug: Web/CSS/Guides/Grid_layout
 l10n:
   sourceCommit: b02c4fe0f8c485fa3fd0af10005310aaecef64ca
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **CSS グリッドレイアウト**モジュールは、ページを大きな領域に分割することや、 HTML のプリミティブから構成されたコントロールの部品間の、寸法、位置、レイヤーに関する関係を定義することに優れています。
