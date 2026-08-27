@@ -2,7 +2,7 @@
 title: ウェブアニメーション API
 slug: Web/API/Web_Animations_API
 l10n:
-  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
+  sourceCommit: 8a10694edf44bde124fa8f18af65651855f632dc
 ---
 
 {{DefaultAPISidebar("Web Animations")}}
