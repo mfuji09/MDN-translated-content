@@ -89,13 +89,13 @@ setInterval(func, delay, param1, param2, /* …, */ paramN)
 `setInterval()` と {{domxref("Window.setTimeout", "setTimeout()")}} は同じ ID プールを共有しており、 `clearInterval()` と {{domxref("Window.clearTimeout", "clearTimeout()")}} は技術的に入れ替えて使用できることに注意してください。
 ただし明確さのために、コードを整備するときは混乱を避けるため、常に一致させるようにするべきです。
 
-### Ensure that execution duration is shorter than interval frequency
+### 実行時間を実行間隔の頻度よりも短く保つ
 
-If there is a possibility that your logic could take longer to execute than the interval time, it is recommended that you recursively call a named function using {{domxref("Window.setTimeout", "setTimeout()")}}.
-For example, if using `setInterval()` to poll a remote server every 5 seconds, network latency, an unresponsive server, and a host of other issues could prevent the request from completing in its allotted time.
-As such, you may find yourself with queued up XHR requests that won't necessarily return in order.
+ロジックの実行に間隔時間よりも長くかかる可能性がある場合は、{{domxref("Window.setTimeout", "setTimeout()")}} を使用して、名前付き関数を再帰的に呼び出すことをお勧めします。
+例えば、`setInterval()` を使用して 5 秒ごとにリモートサーバーをポーリングする場合、ネットワークの遅延、サーバーの応答停止、その他のさまざまな課題により、リクエストが割り当てられた時間内に完了しない可能性があります。
+そのため、キューに蓄積された XHR リクエストが必ずしも順番通りに返ってこないという状況に直面する可能性があります。
 
-In these cases, a recursive `setTimeout()` pattern is preferred:
+このような場合、再帰的な `setTimeout()` パターンを使用することを推奨します。
 
 ```js
 (function loop() {
@@ -107,9 +107,9 @@ In these cases, a recursive `setTimeout()` pattern is preferred:
 })();
 ```
 
-In the above snippet, a named function `loop()` is declared and is immediately executed.
-`loop()` is recursively called inside `setTimeout()` after the logic has completed executing.
-While this pattern does not guarantee execution on a fixed interval, it does guarantee that the previous interval has completed before recursing.
+上記のコードスニペットでは、名前付き関数 `loop()` が宣言され、直ちに実行されます。
+`loop()` は、ロジックの実行が完了した後、`setTimeout()` 内で再帰的に呼び出されます。
+このパターンでは、一定の間隔での実行は保証されませんが、再帰が行われる前に前回の処理が完了していることは保証されます。
 
 ### 関数はグローバルの `this` と共に呼び出される
 
