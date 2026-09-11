@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Table_accessibility
 original_slug: Learn/HTML/Tables/Advanced
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content")}}
 
 En el segundo artículo de este módulo, analizamos algunas características más avanzadas de las tablas HTML, como los subtítulos/resúmenes, la agrupación de filas en las secciones del encabezado, el cuerpo y el pie de página; y también analizamos la accesibilidad de las tablas para usuarios con discapacidad visual.
 
@@ -48,7 +48,7 @@ Como puedes deducir a partir del breve ejemplo anterior, el título debe contene
 Los subtítulos se colocan directamente debajo de la etiqueta `<table>`.
 
 > [!NOTE]
-> El atributo [`summary`](/es/docs/Web/HTML/Reference/Elements/table#summary) también se puede usar en el elemento `table` para proporcionar una descripción; los lectores de pantalla también lo leen. Sin embargo, recomendamos usar el elemento `caption`, porque [`summary`](/es/docs/Web/HTML/Reference/Elements/table#summary) está {{glossary("obsoleto")}} conforme a la especificación HTML5 y porque los usuarios sin discapacidad visual no pueden leerlo (no aparece en la página).
+> El atributo [`summary`](/es/docs/Web/HTML/Reference/Elements/table#summary) también se puede usar en el elemento `table` para proporcionar una descripción; los lectores de pantalla también lo leen. Sin embargo, recomendamos usar el elemento `caption`, porque [`summary`](/es/docs/Web/HTML/Reference/Elements/table#summary) está obsoleto y porque los usuarios sin discapacidad visual no pueden leerlo (no aparece en la página).
 
 ### Aprendizaje activo: Añadir un subtítulo
 
@@ -458,4 +458,4 @@ Volviendo a nuestro ejemplo de gastos, los dos fragmentos anteriores podrían re
 
 Podrías aprender algo más sobre las tablas en HTML, pero en realidad te hemos proporcionado toda la información que necesitas saber en este momento. En este punto, es posible que desees ir y aprender sobre la aplicación de estilo a tablas HTML: consulta [Aplicar estilo a las tablas](/es/docs/Learn_web_development/Core/Styling_basics/Tables).
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content")}}
