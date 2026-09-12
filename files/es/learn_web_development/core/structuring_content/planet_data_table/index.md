@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Planet_data_table
 original_slug: Learn/HTML/Tables/Structuring_planet_data
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
 
 En nuestra evaluación te proporcionamos datos sobre los planetas de nuestro sistema solar y tu los estructurarás en una tabla HTML.
 
@@ -38,11 +38,7 @@ Para comenzar esta evaluación, crea una copia local de [blank-template.html](ht
 
 Estás trabajando en la escuela; tus estudiantes están estudiando los planetas de nuestro sistema solar y quieres proporcionarles una forma sencilla de seguir los datos para buscar hechos sobre los planetas. Una tabla HTML sería ideal — tienes que coger los datos que tienes disponibles y convertirlos en una tabla siguiendo los pasos de abajo.
 
-La tabla finalizada debería de verse así:
-
-![](assessment-table.png)
-
-También puedes ver el ejemplo [aquí](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) (no mires el código fuente — ¡no hagas trampas!)
+Puedes ver cómo debería quedar la tabla finalizada en el ejemplo [aquí](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) (no mires el código fuente — ¡no hagas trampas!)
 
 ## Pasos para completarlo
 
@@ -66,4 +62,4 @@ Los siguientes pasos describen lo que necesitas para completar el ejemplo de la 
 
 Si estas siguiendo esta evaluación como parte de un curso organizado, deberías de ser capaz de entregar tu trabajo a tu profesor(a)/mentor para ver la puntuación. Si estas aprendiendo por tu cuenta, puedes obtener la guía de puntuación preguntando en [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) o en el canal IRC [#mdn](irc://irc.mozilla.org/mdn) en [Mozilla IRC](https://wiki.mozilla.org/IRC). Intenta hacer el ejercicio primero — ¡haciendo trampas no aprenderás nada!
 
-{{PreviousMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}
+{{PreviousMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
