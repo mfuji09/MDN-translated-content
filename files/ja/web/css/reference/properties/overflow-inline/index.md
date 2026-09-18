@@ -1,5 +1,5 @@
 ---
-title: CSS `overflow-inline` プロパティ
+title: "`overflow-inline` プロパティ (CSS)"
 short-title: overflow-inline
 slug: Web/CSS/Reference/Properties/overflow-inline
 l10n:
