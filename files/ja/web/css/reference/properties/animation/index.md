@@ -178,7 +178,7 @@ animation:
 
 #### CSS
 
-まず、太陽と空を作成します。空は HTML 文書の {{cssxref(":root")}} です。 {{cssxref("overflow")}} を hidden に設定することで、ビューポートの外側にあるコンテンツ、この場合は太陽の地平線より下にある部分を非表示にします。同時に、 {{cssxref("justify-content")}}  プロパティを使用して、太陽を背景の中央に配置します。太陽の色を黄色にし、{{cssxref("height")}} をビューポートの高さ (`100vh`) に設定し、{{cssxref("aspect-ratio")}}  を `1` に設定して幅を高さと等しくします。さらに、{{cssxref("border-radius")}}  プロパティを使用して、正方形の `<div>` を円に変えます。
+まず、太陽と空を作成します。空は HTML 文書の {{cssxref(":root")}} です。 {{cssxref("overflow")}} を hidden に設定することで、ビューポートの外側にあるコンテンツ、この場合は太陽の地平線より下にある部分を非表示にします。同時に、{{cssxref("justify-content")}} プロパティを使用して、太陽を背景の中央に配置します。太陽の色を黄色にし、{{cssxref("height")}} をビューポートの高さ (`100vh`) に設定し、{{cssxref("aspect-ratio")}} を `1` に設定して幅を高さと等しくします。さらに、{{cssxref("border-radius")}} プロパティを使用して、正方形の `<div>` を円に変えます。
 
 ```css
 :root {
@@ -197,7 +197,7 @@ animation:
 }
 ```
 
-次に、適用された要素をビューポートの下まで押し下げ、その後[CSSトランスフォーム](/ja/docs/Web/CSS/Guides/Transforms)を使用してその要素をデフォルトの位置に戻すアニメーション{{cssxref(「@keyframes」)}}を定義します：
+次に、適用された要素をビューポートの下まで押し下げ、その後 [CSS 座標変換](/ja/docs/Web/CSS/Guides/Transforms)を使用して、その要素をデフォルトの位置に戻すアニメーション {{cssxref("@keyframes")}} を定義します。
 
 ```css
 @keyframes sunrise {
