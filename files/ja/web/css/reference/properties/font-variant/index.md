@@ -2,7 +2,7 @@
 title: font-variant
 slug: Web/CSS/Reference/Properties/font-variant
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 **`font-variant`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、フォントのすべての変化形を設定することができます。
