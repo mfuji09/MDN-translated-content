@@ -1,5 +1,5 @@
 ---
-title: CSS `::-webkit-meter-even-less-good-value` 擬似要素
+title: "`::-webkit-meter-even-less-good-value` 擬似要素 (CSS)"
 short-title: ::-webkit-meter-even-less-good-value
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-even-less-good-value
 l10n:
@@ -93,7 +93,8 @@ if (isSafari) {
 ## 関連情報
 
 WebKit/Blink で {{htmlelement("meter")}} 要素のほかの部分にスタイル設定するために使用される擬似要素:
-  - {{cssxref("::-webkit-meter-inner-element")}}
-  - {{cssxref("::-webkit-meter-even-less-good-value")}}
-  - {{cssxref("::-webkit-meter-optimum-value")}}
-  - {{cssxref("::-webkit-meter-suboptimum-value")}}
+
+- {{cssxref("::-webkit-meter-inner-element")}}
+- {{cssxref("::-webkit-meter-even-less-good-value")}}
+- {{cssxref("::-webkit-meter-optimum-value")}}
+- {{cssxref("::-webkit-meter-suboptimum-value")}}

@@ -1,5 +1,5 @@
 ---
-title: CSS `::-webkit-meter-inner-element` 擬似要素
+title: "`::-webkit-meter-inner-element` 擬似要素 (CSS)"
 short-title: ::-webkit-meter-inner-element
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-inner-element
 l10n:

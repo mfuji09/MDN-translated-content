@@ -197,7 +197,7 @@ div {
 
 {{EmbedLiveSample("auto", "", "300px")}}
 
-```html hidden live-sample___auto
+```html-nolint hidden live-sample___auto
 <div>
   <h2>overflow: auto;</h2>
 </div>
@@ -254,7 +254,7 @@ div {
 
 {{EmbedLiveSample("clip", "", "350")}}
 
-```html hidden live-sample___clip
+```html-nolint hidden live-sample___clip
 <div>
   <h2>overflow: clip;</h2>
 </div>
@@ -488,6 +488,6 @@ p.auto {
 - {{Cssxref("clip")}}, {{Cssxref("display")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
 - SVG の {{SVGAttr("overflow")}} 属性
 - [スクロール進行タイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines)
--- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール
 - [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) - adrianroselli.com (2022)

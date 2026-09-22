@@ -1,5 +1,5 @@
 ---
-title: CSS `::-moz-range-progress` 擬似要素
+title: "`::-moz-range-progress` 擬似要素 (CSS)"
 short-title: ::-moz-range-progress
 slug: Web/CSS/Reference/Selectors/::-moz-range-progress
 l10n:
