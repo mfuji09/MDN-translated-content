@@ -2,7 +2,7 @@
 title: MVC
 slug: Glossary/MVC
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 19578c2d5bf6f2742a189198d5b1f402a9ae573c
 ---
 
 **MVC**（Model-View-Controller、モデル-ビュー-コントローラー）は、ソフトウェア設計のパターンです。 これは、ソフトウェアのビジネスロジックと表示の間の分離を強調します。 この「関心の分離」により、分業をよりうまく行い、メンテナンスを改善できます。MVVM（Model-View-Viewmodel、モデル-ビュー-ビューモデル）、MVP（Model-View-Presenter、モデル-ビュー-プレゼンター）、MVW（Model-View-Whatever、モデル-ビューその他）などの他のデザインパターンも MVC に基づいています。
