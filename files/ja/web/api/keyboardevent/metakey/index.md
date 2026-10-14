@@ -3,7 +3,7 @@ title: "KeyboardEvent: metaKey プロパティ"
 short-title: metaKey
 slug: Web/API/KeyboardEvent/metaKey
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 358daf81ac9cf3db999cc8af7aed81ef4ff0c3f6
 ---
 
 {{APIRef("UI Events")}}
@@ -13,8 +13,10 @@ l10n:
 > [!NOTE]
 > Macintosh のキーボードでは、これは <kbd>⌘ Command</kbd> キーです。
 
-> [!WARNING]
-> 少なくとも Firefox 48 の時点で、 <kbd>⊞ Windows</kbd> キーは "Meta" キーとみなされなくなりました。<kbd>⊞ Windows</kbd> キーが押されたとき `KeyboardEvent.metaKey` は `false` になります。
+> [!NOTE]
+> Firefox 118 以前では、<kbd>⊞ Windows</kbd> キーは "Meta" キーではなく "OS" キーとして処理されていました。<kbd>⊞ Windows</kbd> キーが押された際、`KeyboardEvent.metaKey` の値は `false` となっていました。
+
+<kbd>Meta</kbd> キー自体が押されたり離されたりした際、このプロパティは、{{domxref("Element/keydown_event", "keydown")}} イベントでは `true` となり、{{domxref("Element/keyup_event", "keyup")}} イベントでは `false` となります。これは、どちらのイベントも状態の変化の後に発生するためです。
 
 ## 値
 
@@ -23,16 +25,16 @@ l10n:
 ## 例
 
 ```html
-<button onclick="ismetaKey(event)">Click me with the meta key</button>
+<button>Click me with the meta key</button>
 
 <p id="output"></p>
 ```
 
 ```js
-function ismetaKey(e) {
+document.querySelector("button").addEventListener("click", (e) => {
   document.querySelector("#output").textContent =
     `metaKey pressed? ${e.metaKey}`;
-}
+});
 ```
 
 #### 結果

@@ -3,12 +3,14 @@ title: "KeyboardEvent: altKey プロパティ"
 short-title: altKey
 slug: Web/API/KeyboardEvent/altKey
 l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+  sourceCommit: 358daf81ac9cf3db999cc8af7aed81ef4ff0c3f6
 ---
 
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.altKey`** は読み取り専用のプロパティで、イベント発生時に <kbd>alt</kbd> キー（macOS では <kbd>Option</kbd> または <kbd>⌥</kbd>）が押されたか (`true`) または押されていないか (`false`) を示す論理値です。
+
+<kbd>Alt</kbd> キー自体が押されたり離されたりした際、このプロパティは、{{domxref("Element/keydown_event", "keydown")}} イベントでは `true` となり、{{domxref("Element/keyup_event", "keyup")}} イベントでは `false` となります。これは、どちらのイベントも状態の変化の後に発生するためです。
 
 ## 値
 
@@ -17,38 +19,26 @@ l10n:
 ## 例
 
 ```html
-<!doctype html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>altKey の例</title>
-
-    <script>
-      function showChar(e) {
-        alert(
-          "Key KeyDown: " +
-            String.fromCharCode(e.charCode) +
-            "\n" +
-            "charCode: " +
-            e.charCode +
-            "\n" +
-            "ALT key KeyDown: " +
-            e.altKey +
-            "\n",
-        );
-      }
-    </script>
-  </head>
-
-  <body onkeydown="showChar(event);">
-    <p>
-      ALT キーを押したまま、または押さずに、任意の文字キーを押してください。<br />
-      また、 SHIFT キーと ALT キーを同時に使用することもできます。
-    </p>
-  </body>
-</html>
+<p>
+  ALT キーを押したまま、または押さずに、任意の文字キーを押してください。<br />
+  また、 SHIFT キーと ALT キーを同時に使用することもできます。
+</p>
+<pre id="output"></pre>
 ```
+
+```js
+const output = document.getElementById("output");
+
+function showChar(e) {
+  output.textContent = `Key KeyDown: "${e.key}"
+ALT key KeyDown: ${e.altKey}
+`;
+}
+
+document.addEventListener("keydown", showChar);
+```
+
+{{EmbedLiveSample("examples", "", "400")}}
 
 ## 仕様書
 
