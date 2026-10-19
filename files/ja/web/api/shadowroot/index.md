@@ -2,12 +2,12 @@
 title: ShadowRoot
 slug: Web/API/ShadowRoot
 l10n:
-  sourceCommit: 4558d208395a5b1df4db44b0c8ef4e9a0f8adbbf
+  sourceCommit: a23122d0e86fb376234614beb5b350b217068054
 ---
 
-{{APIRef('Shadow DOM')}}
+{{APIRef("Shadow DOM")}}
 
-**`ShadowRoot`** はシャドウ DOM API のインターフェイスで、文書の DOM ツリーから分離してレンダリングされた部分ツリーのルートノードを指します。
+**`ShadowRoot`** は[シャドウ DOM API](/ja/docs/Web/API/Web_components/Using_shadow_DOM) のインターフェイスで、文書の DOM ツリーから分離してレンダリングされた部分ツリーのルートノードを指します。
 
 要素のシャドウルートへの参照は {{domxref("Element.shadowRoot")}} プロパティで受け取ることができます。これは {{domxref("Element.attachShadow()")}} で `mode` オプションが `open` に設定されて作成されたときに提供されます。
 
@@ -22,6 +22,8 @@ l10n:
     これらは、同じ親 {{domxref("Document")}} ノードを共有する他の DOM サブツリーや、文書自身と共有されることがあります。
 - {{domxref("ShadowRoot.clonable")}} {{ReadOnlyInline}}
   - : 論理値で、シャドウルートがクローン可能であるかどうかを示します。
+- {{domxref("ShadowRoot.customElementRegistry")}} {{ReadOnlyInline}}
+  - : このシャドウルートに関連付けられた {{domxref("CustomElementRegistry")}} オブジェクトを返します。設定されていない場合は `null` を返します。
 - {{domxref("ShadowRoot.delegatesFocus")}} {{ReadOnlyInline}}
   - : 論理値で、フォーカスできないノードが選択された場合に、シャドウルートがフォーカスを譲るかどうかを示します。
 - {{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}
@@ -38,6 +40,8 @@ l10n:
 - {{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}
   - : ポインターがロックされている間、マウスイベントのターゲットとして設定されている {{DOMxRef('Element')}} を返します。
     ロックが保留中か、ポインターがロックされていないか、ターゲットがほかのツリーにある場合は `null` を返します。
+- `ShadowRoot.referenceTarget` {{Experimental_Inline}} {{non-standard_inline}}
+  - : ヌルを許容する文字列値で、ホスト要素の外部からシャドウホストに対して行われる要素参照の有効なターゲットを示します。この値は、シャドウ DOM 内の要素の ID である必要があります。この値が設定されている場合、シャドウ DOM の外部からホスト要素への参照が行われると、参照先の対象要素が、そのホスト要素への参照の有効なターゲットとして発生します。
 - {{DOMxRef("ShadowRoot.serializable")}} {{ReadOnlyInline}}
   - : 論理値で、シャドウルートがシリアライズ可能かどうかを示します。
     要素内のシリアライズ可能なシャドウルートは、[`options.serializableShadowRoots`](/ja/docs/Web/API/Element/getHTML#serializableshadowroots) 引数が `true` に設定されている場合、{{DOMxRef('Element.getHTML()')}} または {{DOMxRef('ShadowRoot.getHTML()')}} によってシリアライズされます。
@@ -57,8 +61,10 @@ l10n:
   - : 指定された座標における最上位の要素を返します。
 - {{domxref("ShadowRoot.elementsFromPoint()")}} {{Non-standard_Inline}}
   - : 指定された座標における全要素からなる配列を返します。
+- {{DOMxRef("ShadowRoot.setHTML()")}}
+  - : HTML 文字列を {{domxref("DocumentFragment")}}に構文解析・無害化するための、XSS 対策済みのメソッドを提供します。これにより、シャドウ DOM 内の既存のツリーが置き換えられるようになります。
 - {{DOMxRef("ShadowRoot.setHTMLUnsafe()")}}
-  - : HTML 文字列を、無害化せずに文書フラグメントとして解析し、シャドウルートに元から存在するサブツリーを置き換えます。HTML 文字列には宣言型のシャドウルートを記載することができます。これは、[`ShadowRoot.innerHTML`](#shadowroot.innerhtml) を使用して設定された HTML のテンプレート要素として解釈されます。
+  - : HTML 文字列を、無害化せずに文書フラグメントとして解析し、シャドウルートに元から存在するサブツリーを置き換えます。HTML 文字列には宣言型のシャドウルートを記載することができます。これは、[`ShadowRoot.innerHTML`](/ja/docs/Web/API/ShadowRoot/innerHTML) を使用して設定された HTML のテンプレート要素として解釈されます。
 
 ## イベント
 
@@ -74,18 +80,23 @@ l10n:
 `<custom-square>` 要素のクラス定義の中に、外部関数である `updateStyle()` を呼び出すライフサイクルコールバックが含まれています。`updateStyle()` は要素のサイズと色を適用します。`this` (カスタム要素自身) を引数として関数に渡していることが分かるでしょう。
 
 ```js
-connectedCallback() {
-  console.log('四角形のカスタム要素がページに追加されました。');
-  updateStyle(this);
-}
+class Square extends HTMLElement {
+  // …
+  connectedCallback() {
+    console.log("四角形のカスタム要素がページに追加されました。");
+    updateStyle(this);
+  }
 
-attributeChangedCallback(name, oldValue, newValue) {
-  console.log('四角形のカスタム要素の属性が変更されました。');
-  updateStyle(this);
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log("四角形のカスタム要素の属性が変更されました。");
+    updateStyle(this);
+  }
+  // …
 }
 ```
 
-`updateStyle()` 関数の中では、{{domxref("Element.shadowRoot")}} を利用してシャドウ DOM への参照を取得しています。シャドウ DOM 内では、標準的な DOM の探索手法を用いて {{htmlelement("style")}} を探し、CSS を更新しています。
+`updateStyle()` 関数の中では、{{domxref("Element.shadowRoot")}} を利用してシャドウ DOM への参照を取得しています。
+シャドウ DOM 内では、標準的な DOM の探索手法を用いて {{htmlelement("style")}} を探し、CSS を更新しています。
 
 ```js
 function updateStyle(elem) {
@@ -112,3 +123,8 @@ div {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- [シャドウ DOM の使用](/ja/docs/Web/API/Web_components/Using_shadow_DOM)
+- [ウェブコンポーネント](/ja/docs/Web/API/Web_components)
