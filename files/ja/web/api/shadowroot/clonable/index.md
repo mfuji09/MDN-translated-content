@@ -3,7 +3,7 @@ title: "ShadowRoot: clonable プロパティ"
 short-title: clonable
 slug: Web/API/ShadowRoot/clonable
 l10n:
-  sourceCommit: 26091e4af9c73bb6c5d1466df5070c949498fdbd
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("Shadow DOM")}}
