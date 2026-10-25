@@ -1,5 +1,5 @@
 ---
-title: "`word-spacing` プロパティ (CSS)"
+title: "`word-spacing` プロパティ"
 short-title: word-spacing
 slug: Web/CSS/Reference/Properties/word-spacing
 l10n:

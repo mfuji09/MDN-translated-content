@@ -1,5 +1,5 @@
 ---
-title: "`::-webkit-meter-bar` 擬似要素 (CSS)"
+title: "`::-webkit-meter-bar` 擬似要素"
 short-title: ::-webkit-meter-bar
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-bar
 l10n:

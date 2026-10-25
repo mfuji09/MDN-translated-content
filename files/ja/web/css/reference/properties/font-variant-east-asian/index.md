@@ -1,5 +1,5 @@
 ---
-title: "`font-variant-east-asian` プロパティ (CSS)"
+title: "`font-variant-east-asian` プロパティ"
 short-title: font-variant-east-asian
 slug: Web/CSS/Reference/Properties/font-variant-east-asian
 l10n:

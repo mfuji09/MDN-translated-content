@@ -1,5 +1,5 @@
 ---
-title: "`border` プロパティ (CSS)"
+title: "`border` プロパティ"
 short-title: border
 slug: Web/CSS/Reference/Properties/border
 l10n:

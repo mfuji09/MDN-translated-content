@@ -1,5 +1,5 @@
 ---
-title: "`marker-end` プロパティ (CSS)"
+title: "`marker-end` プロパティ"
 short-title: marker-end
 slug: Web/CSS/Reference/Properties/marker-end
 l10n:

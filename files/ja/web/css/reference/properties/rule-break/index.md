@@ -1,5 +1,5 @@
 ---
-title: "`rule-break` プロパティ (CSS)"
+title: "`rule-break` プロパティ"
 short-title: rule-break
 slug: Web/CSS/Reference/Properties/rule-break
 l10n:

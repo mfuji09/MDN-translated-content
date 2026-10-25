@@ -1,5 +1,5 @@
 ---
-title: "`:interest-source` 擬似クラス (CSS)"
+title: "`:interest-source` 擬似クラス"
 short-title: :interest-source
 slug: Web/CSS/Reference/Selectors/:interest-source
 l10n:

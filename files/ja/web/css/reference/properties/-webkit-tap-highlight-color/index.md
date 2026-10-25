@@ -1,5 +1,5 @@
 ---
-title: "`-webkit-tap-highlight-color` プロパティ (CSS)"
+title: "`-webkit-tap-highlight-color` プロパティ"
 short-title: -webkit-tap-highlight-color
 slug: Web/CSS/Reference/Properties/-webkit-tap-highlight-color
 l10n:

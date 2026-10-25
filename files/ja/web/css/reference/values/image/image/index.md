@@ -1,5 +1,5 @@
 ---
-title: "`image()` 関数 (CSS)"
+title: "`image()` 関数"
 short-title: image()
 slug: Web/CSS/Reference/Values/image/image
 l10n:

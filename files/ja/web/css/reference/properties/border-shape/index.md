@@ -1,5 +1,5 @@
 ---
-title: "`border-shape` プロパティ (CSS)"
+title: "`border-shape` プロパティ"
 short-title: border-shape
 slug: Web/CSS/Reference/Properties/border-shape
 l10n:

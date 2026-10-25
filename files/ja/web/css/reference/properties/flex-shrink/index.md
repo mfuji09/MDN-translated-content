@@ -1,5 +1,5 @@
 ---
-title: "`flex-shrink` プロパティ (CSS)"
+title: "`flex-shrink` プロパティ"
 short-title: flex-shrink
 slug: Web/CSS/Reference/Properties/flex-shrink
 l10n:

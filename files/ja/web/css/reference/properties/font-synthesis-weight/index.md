@@ -1,5 +1,5 @@
 ---
-title: "`font-synthesis-weight` プロパティ (CSS)"
+title: "`font-synthesis-weight` プロパティ"
 short-title: font-synthesis-weight
 slug: Web/CSS/Reference/Properties/font-synthesis-weight
 l10n:

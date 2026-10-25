@@ -1,5 +1,5 @@
 ---
-title: "`letter-spacing` プロパティ (CSS)"
+title: "`letter-spacing` プロパティ"
 short-title: letter-spacing
 slug: Web/CSS/Reference/Properties/letter-spacing
 l10n:

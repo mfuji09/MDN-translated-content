@@ -1,5 +1,5 @@
 ---
-title: "`column-count` プロパティ (CSS)"
+title: "`column-count` プロパティ"
 short-title: column-count
 slug: Web/CSS/Reference/Properties/column-count
 l10n:

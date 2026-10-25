@@ -1,5 +1,5 @@
 ---
-title: "`animation-duration` プロパティ (CSS)"
+title: "`animation-duration` プロパティ"
 short-title: animation-duration
 slug: Web/CSS/Reference/Properties/animation-duration
 l10n:

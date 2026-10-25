@@ -1,5 +1,5 @@
 ---
-title: "`stroke-linecap` プロパティ (CSS)"
+title: "`stroke-linecap` プロパティ"
 short-title: stroke-linecap
 slug: Web/CSS/Reference/Properties/stroke-linecap
 l10n:

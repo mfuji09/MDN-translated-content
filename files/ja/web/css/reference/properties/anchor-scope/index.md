@@ -1,5 +1,5 @@
 ---
-title: "`anchor-scope` プロパティ (CSS)"
+title: "`anchor-scope` プロパティ"
 short-title: anchor-scope
 slug: Web/CSS/Reference/Properties/anchor-scope
 l10n:

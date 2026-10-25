@@ -1,5 +1,5 @@
 ---
-title: "`stroke-width` プロパティ (CSS)"
+title: "`stroke-width` プロパティ"
 short-title: stroke-width
 slug: Web/CSS/Reference/Properties/stroke-width
 l10n:

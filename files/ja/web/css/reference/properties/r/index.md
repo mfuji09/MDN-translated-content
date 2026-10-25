@@ -1,5 +1,5 @@
 ---
-title: "`r` プロパティ (CSS)"
+title: "`r` プロパティ"
 short-title: r
 slug: Web/CSS/Reference/Properties/r
 l10n:

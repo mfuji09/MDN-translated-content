@@ -1,5 +1,5 @@
 ---
-title: "`column-wrap` プロパティ (CSS)"
+title: "`column-wrap` プロパティ"
 short-title: column-wrap
 slug: Web/CSS/Reference/Properties/column-wrap
 l10n:

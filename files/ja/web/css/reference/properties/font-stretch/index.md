@@ -1,5 +1,5 @@
 ---
-title: "`font-stretch` プロパティ (CSS)"
+title: "`font-stretch` プロパティ"
 short-title: font-stretch
 slug: Web/CSS/Reference/Properties/font-stretch
 l10n:

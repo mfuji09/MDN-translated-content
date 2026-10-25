@@ -1,5 +1,5 @@
 ---
-title: "`border-right-width` プロパティ (CSS)"
+title: "`border-right-width` プロパティ"
 short-title: border-right-width
 slug: Web/CSS/Reference/Properties/border-right-width
 l10n:

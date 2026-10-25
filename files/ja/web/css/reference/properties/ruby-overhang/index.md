@@ -1,5 +1,5 @@
 ---
-title: "`ruby-overhang` プロパティ (CSS)"
+title: "`ruby-overhang` プロパティ"
 short-title: ruby-overhang
 slug: Web/CSS/Reference/Properties/ruby-overhang
 l10n:

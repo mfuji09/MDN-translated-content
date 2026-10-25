@@ -1,5 +1,5 @@
 ---
-title: "`field-sizing` プロパティ (CSS)"
+title: "`field-sizing` プロパティ"
 short-title: field-sizing
 slug: Web/CSS/Reference/Properties/field-sizing
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "`marker-mid` プロパティ (CSS)"
+title: "`marker-mid` プロパティ"
 short-title: marker-mid
 slug: Web/CSS/Reference/Properties/marker-mid
 l10n:

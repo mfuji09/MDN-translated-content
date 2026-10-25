@@ -1,5 +1,5 @@
 ---
-title: "`border-inline-start-color` プロパティ (CSS)"
+title: "`border-inline-start-color` プロパティ"
 short-title: border-inline-start-color
 slug: Web/CSS/Reference/Properties/border-inline-start-color
 l10n:

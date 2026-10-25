@@ -1,5 +1,5 @@
 ---
-title: "`corner-shape` プロパティ (CSS)"
+title: "`corner-shape` プロパティ"
 short-title: corner-shape
 slug: Web/CSS/Reference/Properties/corner-shape
 l10n:

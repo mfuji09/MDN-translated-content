@@ -1,5 +1,5 @@
 ---
-title: "`:past` 擬似クラス (CSS)"
+title: "`:past` 擬似クラス"
 short-title: :past
 slug: Web/CSS/Reference/Selectors/:past
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "`:stalled` 擬似クラス (CSS)"
+title: "`:stalled` 擬似クラス"
 short-title: :stalled
 slug: Web/CSS/Reference/Selectors/:stalled
 l10n:

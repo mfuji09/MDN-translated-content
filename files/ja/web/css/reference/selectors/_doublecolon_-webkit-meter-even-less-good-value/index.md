@@ -1,5 +1,5 @@
 ---
-title: "`::-webkit-meter-even-less-good-value` 擬似要素 (CSS)"
+title: "`::-webkit-meter-even-less-good-value` 擬似要素"
 short-title: ::-webkit-meter-even-less-good-value
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-even-less-good-value
 l10n:

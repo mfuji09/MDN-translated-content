@@ -1,5 +1,5 @@
 ---
-title: "`-webkit-border-before` プロパティ (CSS)"
+title: "`-webkit-border-before` プロパティ"
 short-title: -webkit-border-before
 slug: Web/CSS/Reference/Properties/-webkit-border-before
 l10n:

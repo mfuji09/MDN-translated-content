@@ -1,5 +1,5 @@
 ---
-title: "`font-palette` プロパティ (CSS)"
+title: "`font-palette` プロパティ"
 short-title: font-palette
 slug: Web/CSS/Reference/Properties/font-palette
 l10n:

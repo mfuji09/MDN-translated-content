@@ -1,5 +1,5 @@
 ---
-title: "`clear` プロパティ (CSS)"
+title: "`clear` プロパティ"
 short-title: clear
 slug: Web/CSS/Reference/Properties/clear
 l10n:

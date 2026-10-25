@@ -1,5 +1,5 @@
 ---
-title: "`caret` プロパティ (CSS)"
+title: "`caret` プロパティ"
 short-title: caret
 slug: Web/CSS/Reference/Properties/caret
 l10n:

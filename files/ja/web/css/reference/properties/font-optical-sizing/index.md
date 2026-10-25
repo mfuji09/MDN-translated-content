@@ -1,5 +1,5 @@
 ---
-title: "`font-optical-sizing` プロパティ (CSS)"
+title: "`font-optical-sizing` プロパティ"
 short-title: font-optical-sizing
 slug: Web/CSS/Reference/Properties/font-optical-sizing
 l10n:

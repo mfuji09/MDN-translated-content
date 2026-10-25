@@ -1,5 +1,5 @@
 ---
-title: "`text-size-adjust` プロパティ (CSS)"
+title: "`text-size-adjust` プロパティ"
 short-title: text-size-adjust
 slug: Web/CSS/Reference/Properties/text-size-adjust
 l10n:

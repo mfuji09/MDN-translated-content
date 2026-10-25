@@ -1,5 +1,5 @@
 ---
-title: "`flex-flow` プロパティ (CSS)"
+title: "`flex-flow` プロパティ"
 short-title: flex-flow
 slug: Web/CSS/Reference/Properties/flex-flow
 l10n:

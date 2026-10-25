@@ -1,5 +1,5 @@
 ---
-title: "`font-weight` プロパティ (CSS)"
+title: "`font-weight` プロパティ"
 short-title: font-weight
 slug: Web/CSS/Reference/Properties/font-weight
 l10n:

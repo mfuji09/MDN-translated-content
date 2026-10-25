@@ -1,5 +1,5 @@
 ---
-title: "`view-transition-class` プロパティ (CSS)"
+title: "`view-transition-class` プロパティ"
 short-title: view-transition-class
 slug: Web/CSS/Reference/Properties/view-transition-class
 l10n:

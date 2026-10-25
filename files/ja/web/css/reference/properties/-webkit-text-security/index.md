@@ -1,5 +1,5 @@
 ---
-title: "`-webkit-text-security` プロパティ (CSS)"
+title: "`-webkit-text-security` プロパティ"
 short-title: -webkit-text-security
 slug: Web/CSS/Reference/Properties/-webkit-text-security
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "`::-moz-focus-inner` 擬似要素 (CSS)"
+title: "`::-moz-focus-inner` 擬似要素"
 short-title: ::-moz-focus-inner
 slug: Web/CSS/Reference/Selectors/::-moz-focus-inner
 l10n:

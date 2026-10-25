@@ -1,5 +1,5 @@
 ---
-title: "`::-moz-list-number` 擬似要素 (CSS)"
+title: "`::-moz-list-number` 擬似要素"
 short-title: ::-moz-list-number
 slug: Web/CSS/Reference/Selectors/::-moz-list-number
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "`:interest-target` 擬似クラス (CSS)"
+title: "`:interest-target` 擬似クラス"
 short-title: :interest-target
 slug: Web/CSS/Reference/Selectors/:interest-target
 l10n:

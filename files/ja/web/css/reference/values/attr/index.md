@@ -1,5 +1,5 @@
 ---
-title: "`attr()` 関数 (CSS)"
+title: "`attr()` 関数"
 short-title: attr()
 slug: Web/CSS/Reference/Values/attr
 l10n:

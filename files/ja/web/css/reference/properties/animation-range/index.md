@@ -1,5 +1,5 @@
 ---
-title: "`animation-range` プロパティ (CSS)"
+title: "`animation-range` プロパティ"
 short-title: animation-range
 slug: Web/CSS/Reference/Properties/animation-range
 l10n:

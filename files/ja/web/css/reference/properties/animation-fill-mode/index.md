@@ -1,5 +1,5 @@
 ---
-title: "`animation-fill-mode` プロパティ (CSS)"
+title: "`animation-fill-mode` プロパティ"
 short-title: animation-fill-mode
 slug: Web/CSS/Reference/Properties/animation-fill-mode
 l10n:

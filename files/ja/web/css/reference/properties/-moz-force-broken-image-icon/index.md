@@ -1,5 +1,5 @@
 ---
-title: "`-moz-force-broken-image-icon` プロパティ (CSS)"
+title: "`-moz-force-broken-image-icon` プロパティ"
 short-title: -moz-force-broken-image-icon
 slug: Web/CSS/Reference/Properties/-moz-force-broken-image-icon
 l10n:

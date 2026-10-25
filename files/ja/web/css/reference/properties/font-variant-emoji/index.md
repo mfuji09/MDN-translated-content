@@ -1,5 +1,5 @@
 ---
-title: "`font-variant-emoji` プロパティ (CSS)"
+title: "`font-variant-emoji` プロパティ"
 short-title: font-variant-emoji
 slug: Web/CSS/Reference/Properties/font-variant-emoji
 l10n:

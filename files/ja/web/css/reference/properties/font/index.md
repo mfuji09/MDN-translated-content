@@ -1,5 +1,5 @@
 ---
-title: "`font` プロパティ (CSS)"
+title: "`font` プロパティ"
 short-title: font
 slug: Web/CSS/Reference/Properties/font
 l10n:

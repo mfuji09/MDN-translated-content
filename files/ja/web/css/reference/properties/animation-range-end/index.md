@@ -1,5 +1,5 @@
 ---
-title: "`animation-range-end` プロパティ (CSS)"
+title: "`animation-range-end` プロパティ"
 short-title: animation-range-end
 slug: Web/CSS/Reference/Properties/animation-range-end
 l10n:

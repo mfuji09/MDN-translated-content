@@ -1,5 +1,5 @@
 ---
-title: "`animation-timeline` プロパティ (CSS)"
+title: "`animation-timeline` プロパティ"
 short-title: animation-timeline
 slug: Web/CSS/Reference/Properties/animation-timeline
 l10n:

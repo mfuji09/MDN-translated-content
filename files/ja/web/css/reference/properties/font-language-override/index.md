@@ -1,5 +1,5 @@
 ---
-title: "`font-language-override` プロパティ (CSS)"
+title: "`font-language-override` プロパティ"
 short-title: font-language-override
 slug: Web/CSS/Reference/Properties/font-language-override
 l10n:

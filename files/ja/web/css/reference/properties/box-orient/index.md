@@ -1,5 +1,5 @@
 ---
-title: "`box-orient` プロパティ (CSS)"
+title: "`box-orient` プロパティ"
 short-title: box-orient
 slug: Web/CSS/Reference/Properties/box-orient
 l10n:

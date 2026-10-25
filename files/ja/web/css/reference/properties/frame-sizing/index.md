@@ -1,5 +1,5 @@
 ---
-title: "`frame-sizing` プロパティ (CSS)"
+title: "`frame-sizing` プロパティ"
 short-title: frame-sizing
 slug: Web/CSS/Reference/Properties/frame-sizing
 l10n:

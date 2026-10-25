@@ -1,5 +1,5 @@
 ---
-title: "`font-feature-settings` プロパティ (CSS)"
+title: "`font-feature-settings` プロパティ"
 short-title: font-feature-settings
 slug: Web/CSS/Reference/Properties/font-feature-settings
 l10n:

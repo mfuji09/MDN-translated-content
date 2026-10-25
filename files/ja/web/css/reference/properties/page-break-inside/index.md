@@ -1,5 +1,5 @@
 ---
-title: "`page-break-inside` プロパティ (CSS)"
+title: "`page-break-inside` プロパティ"
 short-title: page-break-inside
 slug: Web/CSS/Reference/Properties/page-break-inside
 l10n:

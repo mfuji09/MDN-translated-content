@@ -1,5 +1,5 @@
 ---
-title: "`-moz-orient` プロパティ (CSS)"
+title: "`-moz-orient` プロパティ"
 short-title: -moz-orient
 slug: Web/CSS/Reference/Properties/-moz-orient
 l10n:

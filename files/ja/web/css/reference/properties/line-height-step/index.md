@@ -1,5 +1,5 @@
 ---
-title: "`line-height-step` プロパティ (CSS)"
+title: "`line-height-step` プロパティ"
 short-title: line-height-step
 slug: Web/CSS/Reference/Properties/line-height-step
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "`:volume-locked` 擬似クラス (CSS)"
+title: "`:volume-locked` 擬似クラス"
 short-title: :volume-locked
 slug: Web/CSS/Reference/Selectors/:volume-locked
 l10n:

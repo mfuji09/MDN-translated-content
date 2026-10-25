@@ -1,5 +1,5 @@
 ---
-title: "`:-moz-window-inactive` 擬似クラス (CSS)"
+title: "`:-moz-window-inactive` 擬似クラス"
 short-title: :-moz-window-inactive
 slug: Web/CSS/Reference/Selectors/:-moz-window-inactive
 l10n:

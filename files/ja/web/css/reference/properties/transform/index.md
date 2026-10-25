@@ -1,5 +1,5 @@
 ---
-title: "`transform` プロパティ (CSS)"
+title: "`transform` プロパティ"
 short-title: transform
 slug: Web/CSS/Reference/Properties/transform
 l10n:

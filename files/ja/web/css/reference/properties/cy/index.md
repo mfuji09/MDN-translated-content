@@ -1,5 +1,5 @@
 ---
-title: "`cy` プロパティ (CSS)"
+title: "`cy` プロパティ"
 short-title: cy
 slug: Web/CSS/Reference/Properties/cy
 l10n:

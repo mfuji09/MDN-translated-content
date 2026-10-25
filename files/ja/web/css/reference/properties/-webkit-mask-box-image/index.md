@@ -1,5 +1,5 @@
 ---
-title: "`-webkit-mask-box-image` プロパティ (CSS)"
+title: "`-webkit-mask-box-image` プロパティ"
 short-title: -webkit-mask-box-image
 slug: Web/CSS/Reference/Properties/-webkit-mask-box-image
 l10n:

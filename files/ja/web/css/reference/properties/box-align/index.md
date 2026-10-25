@@ -1,5 +1,5 @@
 ---
-title: "`box-align` プロパティ (CSS)"
+title: "`box-align` プロパティ"
 short-title: box-align
 slug: Web/CSS/Reference/Properties/box-align
 l10n:

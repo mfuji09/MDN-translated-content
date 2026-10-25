@@ -1,5 +1,5 @@
 ---
-title: "`-webkit-text-stroke-color` プロパティ (CSS)"
+title: "`-webkit-text-stroke-color` プロパティ"
 short-title: -webkit-text-stroke-color
 slug: Web/CSS/Reference/Properties/-webkit-text-stroke-color
 l10n:

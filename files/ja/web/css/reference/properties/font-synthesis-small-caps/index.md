@@ -1,5 +1,5 @@
 ---
-title: "`font-synthesis-small-caps` プロパティ (CSS)"
+title: "`font-synthesis-small-caps` プロパティ"
 short-title: font-synthesis-small-caps
 slug: Web/CSS/Reference/Properties/font-synthesis-small-caps
 l10n:

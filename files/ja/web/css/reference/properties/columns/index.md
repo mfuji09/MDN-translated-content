@@ -1,5 +1,5 @@
 ---
-title: "`columns` プロパティ (CSS)"
+title: "`columns` プロパティ"
 short-title: columns
 slug: Web/CSS/Reference/Properties/columns
 l10n:

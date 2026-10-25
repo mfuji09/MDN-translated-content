@@ -1,5 +1,5 @@
 ---
-title: "`row-rule-break` プロパティ (CSS)"
+title: "`row-rule-break` プロパティ"
 short-title: row-rule-break
 slug: Web/CSS/Reference/Properties/row-rule-break
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "`<basic-shape>` データ型 (CSS)"
+title: "`<basic-shape>` データ型"
 short-title: <basic-shape>
 slug: Web/CSS/Reference/Values/basic-shape
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "`font-kerning` プロパティ (CSS)"
+title: "`font-kerning` プロパティ"
 short-title: font-kerning
 slug: Web/CSS/Reference/Properties/font-kerning
 l10n:

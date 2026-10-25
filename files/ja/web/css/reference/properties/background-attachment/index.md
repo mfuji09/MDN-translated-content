@@ -1,5 +1,5 @@
 ---
-title: "`background-attachment` プロパティ (CSS)"
+title: "`background-attachment` プロパティ"
 short-title: background-attachment
 slug: Web/CSS/Reference/Properties/background-attachment
 l10n:

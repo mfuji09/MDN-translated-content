@@ -1,5 +1,5 @@
 ---
-title: "`-webkit-text-stroke` プロパティ (CSS)"
+title: "`-webkit-text-stroke` プロパティ"
 short-title: -webkit-text-stroke
 slug: Web/CSS/Reference/Properties/-webkit-text-stroke
 l10n:

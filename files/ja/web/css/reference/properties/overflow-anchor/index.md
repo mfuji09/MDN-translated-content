@@ -1,5 +1,5 @@
 ---
-title: "`overflow-anchor` プロパティ (CSS)"
+title: "`overflow-anchor` プロパティ"
 short-title: overflow-anchor
 slug: Web/CSS/Reference/Properties/overflow-anchor
 l10n:

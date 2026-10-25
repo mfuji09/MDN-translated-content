@@ -1,5 +1,5 @@
 ---
-title: "`animation-direction` プロパティ (CSS)"
+title: "`animation-direction` プロパティ"
 short-title: animation-direction
 slug: Web/CSS/Reference/Properties/animation-direction
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "`stroke-dashoffset` プロパティ (CSS)"
+title: "`stroke-dashoffset` プロパティ"
 short-title: stroke-dashoffset
 slug: Web/CSS/Reference/Properties/stroke-dashoffset
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "`view-transition-scope` プロパティ (CSS)"
+title: "`view-transition-scope` プロパティ"
 short-title: view-transition-scope
 slug: Web/CSS/Reference/Properties/view-transition-scope
 l10n:

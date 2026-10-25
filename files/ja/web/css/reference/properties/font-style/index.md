@@ -1,5 +1,5 @@
 ---
-title: "`font-style` プロパティ (CSS)"
+title: "`font-style` プロパティ"
 short-title: font-style
 slug: Web/CSS/Reference/Properties/font-style
 l10n:

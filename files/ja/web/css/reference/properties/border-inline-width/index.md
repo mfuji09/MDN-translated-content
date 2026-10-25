@@ -1,5 +1,5 @@
 ---
-title: "`border-inline-width` プロパティ (CSS)"
+title: "`border-inline-width` プロパティ"
 short-title: border-inline-width
 slug: Web/CSS/Reference/Properties/border-inline-width
 l10n:

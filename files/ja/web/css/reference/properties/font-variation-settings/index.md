@@ -1,5 +1,5 @@
 ---
-title: "`font-variation-settings` プロパティ (CSS)"
+title: "`font-variation-settings` プロパティ"
 short-title: font-variation-settings
 slug: Web/CSS/Reference/Properties/font-variation-settings
 l10n:

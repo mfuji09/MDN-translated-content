@@ -1,5 +1,5 @@
 ---
-title: "`:-moz-handler-crashed` 擬似クラス (CSS)"
+title: "`:-moz-handler-crashed` 擬似クラス"
 short-title: :-moz-handler-crashed
 slug: Web/CSS/Reference/Selectors/:-moz-handler-crashed
 l10n:

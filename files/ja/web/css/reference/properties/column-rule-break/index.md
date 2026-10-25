@@ -1,5 +1,5 @@
 ---
-title: "`column-rule-break` プロパティ (CSS)"
+title: "`column-rule-break` プロパティ"
 short-title: column-rule-break
 slug: Web/CSS/Reference/Properties/column-rule-break
 l10n:

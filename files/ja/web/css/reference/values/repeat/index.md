@@ -1,5 +1,5 @@
 ---
-title: "`repeat()` 関数 (CSS)"
+title: "`repeat()` 関数"
 short-title: repeat()
 slug: Web/CSS/Reference/Values/repeat
 l10n:

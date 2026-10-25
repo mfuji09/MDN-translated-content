@@ -1,5 +1,5 @@
 ---
-title: "`overflow-x` プロパティ (CSS)"
+title: "`overflow-x` プロパティ"
 short-title: overflow-x
 slug: Web/CSS/Reference/Properties/overflow-x
 l10n:

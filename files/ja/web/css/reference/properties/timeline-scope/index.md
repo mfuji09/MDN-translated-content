@@ -1,5 +1,5 @@
 ---
-title: "`timeline-scope` プロパティ (CSS)"
+title: "`timeline-scope` プロパティ"
 short-title: timeline-scope
 slug: Web/CSS/Reference/Properties/timeline-scope
 l10n:

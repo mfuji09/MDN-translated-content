@@ -1,5 +1,5 @@
 ---
-title: "`overflow-wrap` プロパティ (CSS)"
+title: "`overflow-wrap` プロパティ"
 short-title: overflow-wrap
 slug: Web/CSS/Reference/Properties/overflow-wrap
 l10n:

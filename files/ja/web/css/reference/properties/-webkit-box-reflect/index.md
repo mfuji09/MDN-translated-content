@@ -1,5 +1,5 @@
 ---
-title: "`-webkit-box-reflect` プロパティ (CSS)"
+title: "`-webkit-box-reflect` プロパティ"
 short-title: -webkit-box-reflect
 slug: Web/CSS/Reference/Properties/-webkit-box-reflect
 l10n:

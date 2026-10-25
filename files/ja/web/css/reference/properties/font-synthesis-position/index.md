@@ -1,5 +1,5 @@
 ---
-title: "`font-synthesis-position` プロパティ (CSS)"
+title: "`font-synthesis-position` プロパティ"
 short-title: font-synthesis-position
 slug: Web/CSS/Reference/Properties/font-synthesis-position
 l10n:

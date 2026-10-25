@@ -1,5 +1,5 @@
 ---
-title: "`flex-line-count` プロパティ (CSS)"
+title: "`flex-line-count` プロパティ"
 short-title: flex-line-count
 slug: Web/CSS/Reference/Properties/flex-line-count
 l10n:

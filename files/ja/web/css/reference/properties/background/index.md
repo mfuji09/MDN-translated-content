@@ -1,5 +1,5 @@
 ---
-title: "`background` プロパティ (CSS)"
+title: "`background` プロパティ"
 short-title: background
 slug: Web/CSS/Reference/Properties/background
 l10n:

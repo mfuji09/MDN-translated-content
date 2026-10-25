@@ -1,5 +1,5 @@
 ---
-title: "`animation-play-state` プロパティ (CSS)"
+title: "`animation-play-state` プロパティ"
 short-title: animation-play-state
 slug: Web/CSS/Reference/Properties/animation-play-state
 l10n:

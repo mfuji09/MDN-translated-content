@@ -1,5 +1,5 @@
 ---
-title: "`-webkit-touch-callout` プロパティ (CSS)"
+title: "`-webkit-touch-callout` プロパティ"
 short-title: -webkit-touch-callout
 slug: Web/CSS/Reference/Properties/-webkit-touch-callout
 l10n:

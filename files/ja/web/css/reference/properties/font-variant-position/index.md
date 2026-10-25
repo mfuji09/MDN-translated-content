@@ -1,5 +1,5 @@
 ---
-title: "`font-variant-position` プロパティ (CSS)"
+title: "`font-variant-position` プロパティ"
 short-title: font-variant-position
 slug: Web/CSS/Reference/Properties/font-variant-position
 l10n:

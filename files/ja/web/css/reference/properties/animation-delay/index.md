@@ -1,5 +1,5 @@
 ---
-title: "`animation-delay` プロパティ (CSS)"
+title: "`animation-delay` プロパティ"
 short-title: animation-delay
 slug: Web/CSS/Reference/Properties/animation-delay
 l10n:

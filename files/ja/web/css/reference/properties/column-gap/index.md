@@ -1,5 +1,5 @@
 ---
-title: "`column-gap` プロパティ (CSS)"
+title: "`column-gap` プロパティ"
 short-title: column-gap
 slug: Web/CSS/Reference/Properties/column-gap
 l10n:

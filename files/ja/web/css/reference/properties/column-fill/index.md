@@ -1,5 +1,5 @@
 ---
-title: "`column-fill` プロパティ (CSS)"
+title: "`column-fill` プロパティ"
 short-title: column-fill
 slug: Web/CSS/Reference/Properties/column-fill
 l10n:

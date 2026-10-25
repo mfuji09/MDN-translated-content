@@ -1,5 +1,5 @@
 ---
-title: "`box-direction` プロパティ (CSS)"
+title: "`box-direction` プロパティ"
 short-title: box-direction
 slug: Web/CSS/Reference/Properties/box-direction
 l10n:

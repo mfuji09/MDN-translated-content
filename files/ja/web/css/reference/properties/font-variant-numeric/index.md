@@ -1,5 +1,5 @@
 ---
-title: "`font-variant-numeric` プロパティ (CSS)"
+title: "`font-variant-numeric` プロパティ"
 short-title: font-variant-numeric
 slug: Web/CSS/Reference/Properties/font-variant-numeric
 l10n:

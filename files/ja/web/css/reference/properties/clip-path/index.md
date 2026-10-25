@@ -1,5 +1,5 @@
 ---
-title: "`clip-path` プロパティ (CSS)"
+title: "`clip-path` プロパティ"
 short-title: clip-path
 slug: Web/CSS/Reference/Properties/clip-path
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "`dynamic-range-limit` プロパティ (CSS)"
+title: "`dynamic-range-limit` プロパティ"
 short-title: dynamic-range-limit
 slug: Web/CSS/Reference/Properties/dynamic-range-limit
 l10n:

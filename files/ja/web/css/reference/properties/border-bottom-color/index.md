@@ -1,5 +1,5 @@
 ---
-title: "`border-bottom-color` プロパティ (CSS)"
+title: "`border-bottom-color` プロパティ"
 short-title: border-bottom-color
 slug: Web/CSS/Reference/Properties/border-bottom-color
 l10n:

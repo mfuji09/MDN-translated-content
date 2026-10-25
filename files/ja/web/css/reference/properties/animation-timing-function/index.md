@@ -1,5 +1,5 @@
 ---
-title: "`animation-timing-function` プロパティ (CSS)"
+title: "`animation-timing-function` プロパティ"
 short-title: animation-timing-function
 slug: Web/CSS/Reference/Properties/animation-timing-function
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "`rule` プロパティ (CSS)"
+title: "`rule` プロパティ"
 short-title: rule
 slug: Web/CSS/Reference/Properties/rule
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "`overflow-y` プロパティ (CSS)"
+title: "`overflow-y` プロパティ"
 short-title: overflow-y
 slug: Web/CSS/Reference/Properties/overflow-y
 l10n:

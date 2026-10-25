@@ -1,5 +1,5 @@
 ---
-title: "`writing-mode` プロパティ (CSS)"
+title: "`writing-mode` プロパティ"
 short-title: writing-mode
 slug: Web/CSS/Reference/Properties/writing-mode
 l10n:

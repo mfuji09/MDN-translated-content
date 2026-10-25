@@ -1,5 +1,5 @@
 ---
-title: "`speak-as` プロパティ (CSS)"
+title: "`speak-as` プロパティ"
 short-title: speak-as
 slug: Web/CSS/Reference/Properties/speak-as
 l10n:

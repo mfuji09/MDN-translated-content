@@ -1,5 +1,5 @@
 ---
-title: "`-webkit-mask-composite` プロパティ (CSS)"
+title: "`-webkit-mask-composite` プロパティ"
 short-title: -webkit-mask-composite
 slug: Web/CSS/Reference/Properties/-webkit-mask-composite
 l10n:

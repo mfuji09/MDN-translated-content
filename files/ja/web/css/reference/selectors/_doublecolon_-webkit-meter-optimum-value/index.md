@@ -1,5 +1,5 @@
 ---
-title: "`::-webkit-meter-optimum-value` 擬似要素 (CSS)"
+title: "`::-webkit-meter-optimum-value` 擬似要素"
 short-title: ::-webkit-meter-optimum-value
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-optimum-value
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "`animation-iteration-count` プロパティ (CSS)"
+title: "`animation-iteration-count` プロパティ"
 short-title: animation-iteration-count
 slug: Web/CSS/Reference/Properties/animation-iteration-count
 l10n:

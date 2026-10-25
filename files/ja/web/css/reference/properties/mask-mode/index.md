@@ -1,5 +1,5 @@
 ---
-title: "`mask-mode` プロパティ (CSS)"
+title: "`mask-mode` プロパティ"
 short-title: mask-mode
 slug: Web/CSS/Reference/Properties/mask-mode
 l10n:

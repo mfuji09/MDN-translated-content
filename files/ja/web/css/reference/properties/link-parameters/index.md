@@ -1,5 +1,5 @@
 ---
-title: "`link-parameters` プロパティ (CSS)"
+title: "`link-parameters` プロパティ"
 short-title: link-parameters
 slug: Web/CSS/Reference/Properties/link-parameters
 l10n:

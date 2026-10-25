@@ -1,5 +1,5 @@
 ---
-title: "`-moz-image-rect()` 関数 (CSS)"
+title: "`-moz-image-rect()` 関数"
 short-title: -moz-image-rect()
 slug: Web/CSS/Reference/Values/-moz-image-rect
 l10n:

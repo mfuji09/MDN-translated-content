@@ -1,5 +1,5 @@
 ---
-title: "`@font-face` アットルール (CSS)"
+title: "`@font-face` アットルール"
 short-title: "@font-face"
 slug: Web/CSS/Reference/At-rules/@font-face
 l10n:

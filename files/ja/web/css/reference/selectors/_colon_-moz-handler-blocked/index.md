@@ -1,5 +1,5 @@
 ---
-title: "`:-moz-handler-blocked` 擬似クラス (CSS)"
+title: "`:-moz-handler-blocked` 擬似クラス"
 short-title: :-moz-handler-blocked
 slug: Web/CSS/Reference/Selectors/:-moz-handler-blocked
 l10n:

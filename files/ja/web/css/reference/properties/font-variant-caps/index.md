@@ -1,5 +1,5 @@
 ---
-title: "`font-variant-caps` プロパティ (CSS)"
+title: "`font-variant-caps` プロパティ"
 short-title: font-variant-caps
 slug: Web/CSS/Reference/Properties/font-variant-caps
 l10n:

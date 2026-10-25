@@ -1,5 +1,5 @@
 ---
-title: "`font-variant-ligatures` プロパティ (CSS)"
+title: "`font-variant-ligatures` プロパティ"
 short-title: font-variant-ligatures
 slug: Web/CSS/Reference/Properties/font-variant-ligatures
 l10n:

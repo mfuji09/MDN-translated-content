@@ -1,5 +1,5 @@
 ---
-title: "`font-smooth` プロパティ (CSS)"
+title: "`font-smooth` プロパティ"
 short-title: font-smooth
 slug: Web/CSS/Reference/Properties/font-smooth
 l10n:

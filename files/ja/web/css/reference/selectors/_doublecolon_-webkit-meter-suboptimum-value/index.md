@@ -1,5 +1,5 @@
 ---
-title: "`::-webkit-meter-suboptimum-value` 擬似要素 (CSS)"
+title: "`::-webkit-meter-suboptimum-value` 擬似要素"
 short-title: ::-webkit-meter-suboptimum-value
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-suboptimum-value
 l10n:

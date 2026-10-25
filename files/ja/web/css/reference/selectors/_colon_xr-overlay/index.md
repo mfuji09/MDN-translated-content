@@ -1,5 +1,5 @@
 ---
-title: "`:xr-overlay` 擬似クラス (CSS)"
+title: "`:xr-overlay` 擬似クラス"
 short-title: :xr-overlay
 slug: Web/CSS/Reference/Selectors/:xr-overlay
 l10n:

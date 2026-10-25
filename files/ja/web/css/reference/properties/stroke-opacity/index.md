@@ -1,5 +1,5 @@
 ---
-title: "`stroke-opacity` プロパティ (CSS)"
+title: "`stroke-opacity` プロパティ"
 short-title: stroke-opacity
 slug: Web/CSS/Reference/Properties/stroke-opacity
 l10n:

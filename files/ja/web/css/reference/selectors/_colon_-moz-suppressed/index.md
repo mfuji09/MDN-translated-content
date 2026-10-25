@@ -1,5 +1,5 @@
 ---
-title: "`:-moz-suppressed` 擬似クラス (CSS)"
+title: "`:-moz-suppressed` 擬似クラス"
 short-title: :-moz-suppressed
 slug: Web/CSS/Reference/Selectors/:-moz-suppressed
 l10n:

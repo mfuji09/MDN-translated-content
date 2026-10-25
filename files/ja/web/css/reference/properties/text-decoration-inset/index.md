@@ -1,5 +1,5 @@
 ---
-title: "`text-decoration-inset` プロパティ (CSS)"
+title: "`text-decoration-inset` プロパティ"
 short-title: text-decoration-inset
 slug: Web/CSS/Reference/Properties/text-decoration-inset
 l10n:

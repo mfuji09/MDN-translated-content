@@ -1,5 +1,5 @@
 ---
-title: "`::-moz-range-thumb` 擬似要素 (CSS)"
+title: "`::-moz-range-thumb` 擬似要素"
 short-title: ::-moz-range-thumb
 slug: Web/CSS/Reference/Selectors/::-moz-range-thumb
 l10n:

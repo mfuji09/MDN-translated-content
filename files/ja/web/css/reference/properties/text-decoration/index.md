@@ -1,5 +1,5 @@
 ---
-title: "`text-decoration` プロパティ (CSS)"
+title: "`text-decoration` プロパティ"
 short-title: text-decoration
 slug: Web/CSS/Reference/Properties/text-decoration
 l10n:

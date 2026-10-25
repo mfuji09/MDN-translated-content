@@ -1,5 +1,5 @@
 ---
-title: "`flood-opacity` プロパティ (CSS)"
+title: "`flood-opacity` プロパティ"
 short-title: flood-opacity
 slug: Web/CSS/Reference/Properties/flood-opacity
 l10n:
