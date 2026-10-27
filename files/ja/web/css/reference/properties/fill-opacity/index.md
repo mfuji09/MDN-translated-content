@@ -1,5 +1,5 @@
 ---
-title: "`fill-opacity` プロパティ"
+title: "`fill-opacity` プロパティ (CSS)"
 short-title: fill-opacity
 slug: Web/CSS/Reference/Properties/fill-opacity
 l10n:

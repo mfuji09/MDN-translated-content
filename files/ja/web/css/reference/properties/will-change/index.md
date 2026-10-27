@@ -1,5 +1,5 @@
 ---
-title: "`will-change` プロパティ"
+title: "`will-change` プロパティ (CSS)"
 short-title: will-change
 slug: Web/CSS/Reference/Properties/will-change
 l10n:

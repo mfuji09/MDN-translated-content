@@ -1,5 +1,5 @@
 ---
-title: "`stop-color` プロパティ"
+title: "`stop-color` プロパティ (CSS)"
 short-title: stop-color
 slug: Web/CSS/Reference/Properties/stop-color
 l10n:

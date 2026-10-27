@@ -1,5 +1,5 @@
 ---
-title: "`random()` 関数"
+title: "`random()` 関数 (CSS)"
 short-title: random()
 slug: Web/CSS/Reference/Values/random
 l10n:
