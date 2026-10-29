@@ -1,5 +1,5 @@
 ---
-title: "`background-repeat` プロパティ"
+title: "`background-repeat` プロパティ (CSS)"
 short-title: background-repeat
 slug: Web/CSS/Reference/Properties/background-repeat
 l10n:

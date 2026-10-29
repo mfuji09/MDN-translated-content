@@ -1,5 +1,5 @@
 ---
-title: "`param()` 関数"
+title: "`param()` 関数 (CSS)"
 short-title: param()
 slug: Web/CSS/Reference/Values/param
 l10n:

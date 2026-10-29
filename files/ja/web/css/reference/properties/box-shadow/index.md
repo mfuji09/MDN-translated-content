@@ -1,5 +1,5 @@
 ---
-title: "`box-shadow` プロパティ"
+title: "`box-shadow` プロパティ (CSS)"
 short-title: box-shadow
 slug: Web/CSS/Reference/Properties/box-shadow
 l10n:

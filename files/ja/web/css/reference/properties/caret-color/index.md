@@ -1,5 +1,5 @@
 ---
-title: "`caret-color` プロパティ"
+title: "`caret-color` プロパティ (CSS)"
 short-title: caret-color
 slug: Web/CSS/Reference/Properties/caret-color
 l10n:

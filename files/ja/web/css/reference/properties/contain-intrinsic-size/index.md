@@ -1,5 +1,5 @@
 ---
-title: "`contain-intrinsic-size` プロパティ"
+title: "`contain-intrinsic-size` プロパティ (CSS)"
 short-title: contain-intrinsic-size
 slug: Web/CSS/Reference/Properties/contain-intrinsic-size
 l10n:

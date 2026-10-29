@@ -1,5 +1,5 @@
 ---
-title: "`contain-intrinsic-height` プロパティ"
+title: "`contain-intrinsic-height` プロパティ (CSS)"
 short-title: contain-intrinsic-height
 slug: Web/CSS/Reference/Properties/contain-intrinsic-height
 l10n:

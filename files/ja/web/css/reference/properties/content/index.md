@@ -1,5 +1,5 @@
 ---
-title: "`content` プロパティ"
+title: "`content` プロパティ (CSS)"
 short-title: content
 slug: Web/CSS/Reference/Properties/content
 l10n:

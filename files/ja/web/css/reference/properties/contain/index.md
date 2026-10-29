@@ -1,5 +1,5 @@
 ---
-title: "`contain` プロパティ"
+title: "`contain` プロパティ (CSS)"
 short-title: contain
 slug: Web/CSS/Reference/Properties/contain
 l10n:

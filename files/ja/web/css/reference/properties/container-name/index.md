@@ -1,5 +1,5 @@
 ---
-title: "`container-name` プロパティ"
+title: "`container-name` プロパティ (CSS)"
 short-title: container-name
 slug: Web/CSS/Reference/Properties/container-name
 l10n:
