@@ -1,6 +1,7 @@
 ---
 title: どんなテキストエディターが利用できるか
-slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
+slug: conflicting/Learn_web_development/Getting_started/Environment_setup/Code_editors
+original_slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
@@ -12,7 +13,7 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        <a href="/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need"
+        <a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
         >ウェブサイトを構築するために必要な各種ソフトウェア</a
         >について理解していること。
       </td>

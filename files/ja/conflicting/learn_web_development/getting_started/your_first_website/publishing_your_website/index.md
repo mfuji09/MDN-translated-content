@@ -1,6 +1,7 @@
 ---
 title: ウェブで何かするのにかかるコスト
-slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
+slug: conflicting/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
+original_slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 l10n:
   sourceCommit: e488eba036b2fee56444fd579c3759ef45ff2ca8
 ---
@@ -12,7 +13,7 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        すでに<a href="/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need"
+        すでに<a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >どのソフトウェアが必要か</a
         >、<a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
           >ウェブページやウェブサイトなどの違い</a
@@ -148,5 +149,5 @@ FTP は本質的に安全ではないので、 SFTP - 最近ではほとんど�
 
 さて、ウェブサイトがどのような費用を要するかを理解したところで、いよいよそのウェブサイトの設計と[作業環境の設定](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)を開始することになります。
 
-- [テキストエディターの選び方とインストール方法](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors)について読んでください。
+- [テキストエディターの選び方とインストール方法](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors)について読んでください。
 - デザイン重視の方は、[ウェブページの解剖](/ja/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts)を見てみてください。

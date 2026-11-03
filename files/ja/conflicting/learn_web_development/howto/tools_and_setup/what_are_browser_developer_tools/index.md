@@ -1,6 +1,7 @@
 ---
 title: ウェブサイトが正しく動作することを確認するには
-slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
+slug: conflicting/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
+original_slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 l10n:
   sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
@@ -13,7 +14,7 @@ l10n:
       <th scope="row">前提条件:</th>
       <td>
         <a
-          href="/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server"
+          href="/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website"
           >ウェブサーバーにファイルをアップロードする</a
         >方法を知っている必要があります。
       </td>
@@ -86,7 +87,7 @@ Firefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ �
 
 !['s' を削除します。](code-correct.png)
 
-保存して[サーバーにプッシュし](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)、ブラウザーでページを再読み込みします。
+保存して[サーバーにプッシュし](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)、ブラウザーでページを再読み込みします。
 
 ![画像はブラウザーで正しく読み込まれます。](image-corrected.png)
 
