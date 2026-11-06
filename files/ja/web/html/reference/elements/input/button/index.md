@@ -3,10 +3,13 @@ title: '`<input type="button">` 属性値'
 short-title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
 {{HTMLElement("input")}} 要素の **`button`** 型は、プッシュボタンとして描画され、イベントハンドラー関数（ふつうは {{domxref("Element/click_event", "click")}} イベント）を割り当てることで、ウェブページのあらゆる場所でカスタム機能を制御するようにプログラムすることができます。
+
+> [!NOTE]
+> `<input>` 要素の `button` 型は完全に妥当な HTML ですが、ボタンの作成には {{HTMLElement("button")}} 要素が好まれます。{{HTMLElement("button")}} のラベル文字列は開始タグと終了タグの間に挿入されるため、画像を含む HTML をラベルに含めることができます。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
 
@@ -46,9 +49,6 @@ l10n:
     inset 2px 2px 3px rgb(0 0 0 / 60%);
 }
 ```
-
-> [!NOTE]
-> `<input>` 要素の `button` 型は完全に妥当な HTML ですが、より新しい {{HTMLElement("button")}} 要素が、ボタンの作成にはより好まれるようになりました。 {{HTMLElement("button")}} のラベル文字列は開始タグと終了タグの間に挿入され、ラベルに画像を含む HTML を含めることができます。
 
 ## 値
 
@@ -364,10 +364,6 @@ draw();
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>なし</td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
