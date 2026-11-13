@@ -21,12 +21,12 @@ l10n:
 ここでは、メインスクリプトからアクセスする例を示します。
 
 ```js
-// reference registration
+// 登録を参照
 const registration = await navigator.serviceWorker.ready;
 
-// feature detection
+// 機能検出
 if ("index" in registration) {
-  // Content Index API functionality
+  // Content Index API の機能
   const contentIndex = registration.index;
 }
 ```
@@ -34,7 +34,7 @@ if ("index" in registration) {
 [サービスワーカー](/ja/docs/Web/API/ServiceWorker)からの呼び出し例です。
 
 ```js
-// service worker script
+// サービスワーカースクリプト
 
 const contentIndex = self.registration.index;
 ```
