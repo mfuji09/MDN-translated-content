@@ -1,15 +1,16 @@
 ---
 title: "EditContext: updateText() メソッド"
+short-title: updateText()
 slug: Web/API/EditContext/updateText
 l10n:
-  sourceCommit: 7d7b014191b4892e7a059493a90f0c511cfdf633
+  sourceCommit: ffff697fbd3004c3da50323ef4d868b3ad47e4d0
 ---
 
 {{APIRef("EditContext API")}}{{SeeCompatTable}}
 
-{{domxref("EditContext")}} インターフェイスの **`updateText()`** メソッドは、`EditContext` オブジェクト内部のテキストコンテンツを更新します。
+**`updateText()`** は {{domxref("EditContext")}} インターフェイスのメソッドで、`EditContext` オブジェクト内部のテキストコンテンツを更新します。
 
-ユーザーが関連付けられた要素にテキストを打ち込む際には、このメソッドを使う必要はありません。`EditContext` オブジェクトが自動的に内部のテキストコンテンツを更新し、必要に応じて {{domxref("EditContext.textupdate_event", "textupdate")}} イベントを発火します。
+ユーザーが関連付けられた要素にテキストを打ち込む際には、このメソッドを使う必要はありません。`EditContext` オブジェクトが自動的に内部のテキストコンテンツを更新し、必要に応じて {{domxref("EditContext.textupdate_event", "textupdate")}} イベントを発生させます。
 
 しかし、このメソッドは、クリップボードからテキストを貼り付けるときなど、ユーザーがそれ以外の方法でテキストコンテンツを操作する際に使用できます。
 
@@ -28,9 +29,14 @@ updateText(rangeStart, rangeEnd, text)
 - `text`
   - : 新しいテキストコンテンツを表す文字列です。
 
+### 返値
+
+なし（`undefined`）です。
+
 ### 例外
 
-- 渡された引数が 3 個未満の場合は、`TypeError` {{domxref("DOMException")}} が投げられます。
+- {{jsxref("TypeError")}}
+  - : 引数が 3 個未満でこのメソッドが呼び出された場合に発生します。
 
 ## 例
 
@@ -61,7 +67,7 @@ editContext.addEventListener("textupdate", (e) => {
 });
 
 canvas.addEventListener("keydown", async (e) => {
-  if (e.key == "v" && (e.ctrlKey || e.metaKey)) {
+  if (e.key === "v" && (e.ctrlKey || e.metaKey)) {
     const pastedText = await navigator.clipboard.readText();
     console.log(
       `The user pasted the text: ${pastedText}. Updating the EditContext text.`,
