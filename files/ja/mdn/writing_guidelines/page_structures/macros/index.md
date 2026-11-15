@@ -19,14 +19,21 @@ l10n:
 
 - マクロ名は大文字と小文字を区別しますが、よくある大文字・小文字の誤りはある程度自動的に修正されます。マクロ名に大文字が含まれていてもすべて小文字で入力したり、通常は小文字で始まるマクロ名を大文字で始めたりできます。
 - 引数はカンマで区切ります。
-- 引数がない場合は、括弧を省略できます。例えば、`\{{APIRef()}}` と `\{{APIRef}}` は同じです。
-- 数値の引数は引用符で囲んでも囲まなくてもかまいません。ただし、複数の小数点を含むバージョン番号は引用符で囲む必要があります。
+- 引数がない場合は、括弧を省略できます。例えば、マクロ `\{{APIRef()}}` と `\{{APIRef}}` は同じです。
+- 数値の引数は引用符で囲んでも囲まなくてもかまいません。ただし、複数のピリオドを含むバージョン番号は引用符で囲む必要があります。
 
 マクロは大きなテキストブロックを挿入したり、 MDN の他記事からの内容で置き換えたりするようなシンプルなこともできますし、サイトを走査して目次をまるごと作り上げたり、出力のスタイル付けをしたり、リンクを張ったりといった複雑なこともできます。
 
 ## 関連情報
 
 - [よく使われるマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)
+- [サイドバーマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
+- [リンクマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Links)
+- [サイドバーマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
+- [リンクマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Links)
+- [サイドバーマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
+- [リンクマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Links)
+- [サイドバーマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
 - [リンクマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Links)
 - [サイドバーマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
 - [機能状態マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status)
