@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 696a0436bb4dd20eb4d30ac3f1d4fc5140d1eee9
 ---
 
-一般に「動的インポート」と呼ばれる **`import()`** 構文は、ECMAScript モジュールを非同期かつ動的に[読み込み](/ja/docs/Web/JavaScript/Guide/Modules/Module_graph#グラフの読み込み)、モジュールではない環境でも使用できる関数風の式です。
+**`import()`** 構文は、一般に「動的インポート」と呼ばれ、ECMAScript モジュールを非同期かつ動的に[読み込み](/ja/docs/Web/JavaScript/Guide/Modules/Module_graph#グラフの読み込み)、モジュールではない環境でも使用できる関数風の式です。
 
 [静的なインポート宣言](/ja/docs/Web/JavaScript/Reference/Statements/import)とは異なり、動的インポートでは必要なときにのみモジュールが評価され、構文もより柔軟です。
 
