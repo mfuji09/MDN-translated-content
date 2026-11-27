@@ -11,8 +11,8 @@ l10n:
 
 | キーワード        | 説明                                                                                                |
 | ----------------- | --------------------------------------------------------------------------------------------------- |
-| `anonymous`       | この要素に対するクライアントの CORS リクエストでは、資格情報フラグが 'same-origin' に設定されます。 |
-| `use-credentials` | この要素に対するクライアントの CORS リクエストでは、資格情報フラグが 'include' に設定されます。     |
+| `anonymous`       | この要素に対するクライアントの CORS リクエストでは、資格情報フラグが `same-origin` に設定されます。 |
+| `use-credentials` | この要素に対するクライアントの CORS リクエストでは、資格情報フラグが `include` に設定されます。     |
 | `""`              | `crossorigin` または `crossorigin=""` のように属性に空の値を設定すると、`anonymous` と同じです。    |
 
 この属性は、HTML の [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性と同じ処理規則に従います。
